@@ -1,6 +1,6 @@
-package com.kosta268.eco_connect.controller;
+package com.kosta268.eco_connect.controller.member;
 
-import com.kosta268.eco_connect.dto.MemberDto;
+import com.kosta268.eco_connect.dto.member.MemberDto;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;

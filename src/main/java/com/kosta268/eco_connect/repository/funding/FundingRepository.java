@@ -1,4 +1,4 @@
-package com.kosta268.eco_connect.repository;
+package com.kosta268.eco_connect.repository.funding;
 
 public class FundingRepository {
 }

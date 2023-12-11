@@ -1,4 +1,4 @@
-package com.kosta268.eco_connect.entity;
+package com.kosta268.eco_connect.entity.member;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

@@ -1,35 +1,21 @@
-import logo from './logo.svg';
-import React, { useState, useEffect } from "react";
+// import logo from './logo.svg';
+import React, {useState, useEffect} from "react";
 import "./App.css";
-import axios, {Axios} from "axios";
+import Axios from "axios";
+import {BrowserRouter as Router, Routes, Route, BrowserRouter} from 'react-router-dom';
+import Member from "./pages/member/MemberList";
+import Main from './Main';
 
 function App() {
-  const [member, setMember] = useState("");
-  useEffect(() => {
-    Axios.post("/api/users").then((response) => {
-      if (response.data) {
-        // console.log(response.data);
-        setMember(response.data);
-      } else {
-        alert("failed to ");
-      }
-    });
-}, []);
-  return (
-    <div className="App">
-      <header className="App-header">
-        <h1>{member.id}</h1>
-        <h1>{member.name}</h1>
-        <h1>{member.password}</h1>
-        <h1>{member.email}</h1>
-        <h1>{member.address}</h1>
-      </header>
-      <p className={"App-intro"}>
-        To get started, edit <code>src/App.js</code> and save to reload.
-      </p>
-    </div>
-  );
+    return (
+        <Router>
+            <Routes>
+                {/*  // main, member routes */}
+                <Route path={"/"} element={<Main/>}/>
+                <Route path={"/member"} element={<Member/>}/>
+            </Routes>
+        </Router>
+    );
 }
-export default App;
 
 export default App;
