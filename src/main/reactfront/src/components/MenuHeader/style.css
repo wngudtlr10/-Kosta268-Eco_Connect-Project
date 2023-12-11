@@ -1,0 +1,106 @@
+.menu-header {
+  align-items: flex-start;
+  display: inline-flex;
+  gap: 40px;
+  position: relative;
+}
+
+.menu-header .about {
+  font-family: "Roboto", Helvetica;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.menu-header .features {
+  font-family: "Roboto", Helvetica;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.menu-header .pricing {
+  font-family: "Roboto", Helvetica;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.menu-header .gallery {
+  font-family: "Roboto", Helvetica;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.menu-header .team {
+  font-family: "Roboto", Helvetica;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.menu-header .property-1-default {
+  color: #000000;
+}
+
+.menu-header .property-1-white {
+  color: var(--cold-greywhite);
+}
+
+.menu-header .property-1-0-default {
+  color: #000000;
+}
+
+.menu-header .property-1-0-white {
+  color: var(--cold-greywhite);
+}
+
+.menu-header .property-1-1-default {
+  color: #000000;
+}
+
+.menu-header .property-1-1-white {
+  color: var(--cold-greywhite);
+}
+
+.menu-header .property-1-2-default {
+  color: #000000;
+}
+
+.menu-header .property-1-2-white {
+  color: var(--cold-greywhite);
+}
+
+.menu-header .property-1-3-default {
+  color: #000000;
+}
+
+.menu-header .property-1-3-white {
+  color: var(--cold-greywhite);
+}

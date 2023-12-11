@@ -1,0 +1,1 @@
+export { ExpandRightDouble } from "./ExpandRightDouble";
