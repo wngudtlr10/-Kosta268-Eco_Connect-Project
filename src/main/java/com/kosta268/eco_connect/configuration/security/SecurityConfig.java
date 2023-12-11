@@ -1,9 +1,9 @@
-package com.example.websocketchat.config.security;
+package com.kosta268.eco_connect.configuration.security;
 
-import com.example.websocketchat.jwt.JwtAccessDeniedHandler;
-import com.example.websocketchat.jwt.JwtAuthenticationEntryPoint;
-import com.example.websocketchat.jwt.JwtSecurityConfig;
-import com.example.websocketchat.jwt.TokenProvider;
+//import com.example.websocketchat.jwt.JwtAccessDeniedHandler;
+//import com.example.websocketchat.jwt.JwtAuthenticationEntryPoint;
+//import com.example.websocketchat.jwt.JwtSecurityConfig;
+//import com.example.websocketchat.jwt.TokenProvider;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -24,11 +24,11 @@ import org.springframework.web.filter.CorsFilter;
 @EnableMethodSecurity
 @RequiredArgsConstructor
 public class SecurityConfig {
-    private final TokenProvider tokenProvider;
+//    private final TokenProvider tokenProvider;
     private final CorsFilter corsFilter;
 //    private final CorsConfigurationSource corsConfigurationSource;
-    private final JwtAuthenticationEntryPoint jwtAuthenticationEntryPoint;
-    private final JwtAccessDeniedHandler jwtAccessDeniedHandler;
+//    private final JwtAuthenticationEntryPoint jwtAuthenticationEntryPoint;
+//    private final JwtAccessDeniedHandler jwtAccessDeniedHandler;
 
     @Bean
     public PasswordEncoder passwordEncoder() {
@@ -44,29 +44,26 @@ public class SecurityConfig {
 //            .cors(cors -> cors.configurationSource((corsConfigurationSource)))
 
             .addFilterBefore(corsFilter, UsernamePasswordAuthenticationFilter.class)
-            // exception handling
-            .exceptionHandling(exceptionHandling -> exceptionHandling
-                .accessDeniedHandler(jwtAccessDeniedHandler)
-                .authenticationEntryPoint(jwtAuthenticationEntryPoint)
-            )
-
+//            // exception handling
+//            .exceptionHandling(exceptionHandling -> exceptionHandling
+//                .accessDeniedHandler(jwtAccessDeniedHandler)
+//                .authenticationEntryPoint(jwtAuthenticationEntryPoint)
+//            )
 
             // HttpServletRequest 를 사용하는 요청들에 대한 접근 제한을 설정
             .authorizeHttpRequests(authorizeHttpRequests -> authorizeHttpRequests
 //                            .requestMatchers("/api/auth/**").permitAll()   // API 인증 불필요
 //                                         .anyRequest().authenticated());   // API 인증 필요
-                .anyRequest().permitAll()
+                .anyRequest().permitAll() //데이터 요청에 대한 모든 권한
             )
 
             // 스프링 시큐리티는 기본적으로 세션을 사용
             // 세션을 사용하지 않기 때문에 세션 설정을 Stateless로 설정
             .sessionManagement(sessionManagement -> sessionManagement
                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
-            )
+            );
 
-            .with(new JwtSecurityConfig(tokenProvider), customizer -> {});
-
+//            .with(new JwtSecurityConfig(tokenProvider), customizer -> {});
         return http.build();
     }
-
 }

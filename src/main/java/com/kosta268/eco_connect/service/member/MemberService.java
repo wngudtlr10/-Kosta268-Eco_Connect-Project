@@ -1,7 +1,7 @@
-package com.kosta268.eco_connect.service;
+package com.kosta268.eco_connect.service.member;
 
-import com.kosta268.eco_connect.entity.Member;
-import com.kosta268.eco_connect.repository.MemberRepository;
+import com.kosta268.eco_connect.entity.member.Member;
+import com.kosta268.eco_connect.repository.member.MemberRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

@@ -1,4 +1,4 @@
-package com.example.websocketchat.config.security;
+package com.kosta268.eco_connect.configuration.security;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -19,6 +19,7 @@ public class CorsConfig {
         config.addAllowedHeader("*");
         config.addAllowedMethod("*");
 
+        config.addAllowedOrigin("http://localhost:3000");
         source.registerCorsConfiguration("/api/**", config);
         return new CorsFilter(source);
     }

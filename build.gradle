@@ -28,9 +28,21 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity6'
+
+
+
+
+
+    // 개발용 경량화 데이터베이스
+    runtimeOnly 'com.h2database:h2'
+    // 소스 코드 내용 변경시 서버 재시작 없이 서버가 자동으로 재시작해주는 라이브러리
+    developmentOnly 'org.springframework.boot:spring-boot-devtools'
+
+    // getter, setter, 생성자를 자동으로 만들어주는 라이브러리
     compileOnly 'org.projectlombok:lombok'
     runtimeOnly 'com.mysql:mysql-connector-j'
     annotationProcessor 'org.projectlombok:lombok'
+
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'org.springframework.security:spring-security-test'
 }
