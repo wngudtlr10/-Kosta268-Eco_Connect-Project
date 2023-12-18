@@ -2,7 +2,6 @@ package com.kosta268.eco_connect.dto.member;
 
 import lombok.*;
 
-import java.sql.Timestamp;
 import java.time.LocalDateTime;
 
 @Data
