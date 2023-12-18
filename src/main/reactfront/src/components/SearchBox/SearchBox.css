@@ -1,0 +1,21 @@
+/* 검색 */
+.main-wrapper .search {
+    display: flex;
+    justify-content: center;
+}
+.main-wrapper #search-input {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: var(--medium);
+    padding: 15px 0px;
+    border-radius: 30px;
+    border: 0px;
+    width: 600px;
+    text-align: center;
+    margin-top: -15px;
+}
+
+.main-wrapper #search-input::placeholder {
+    color: rgb(169, 169, 169);
+    font-size: var(--medium);
+}
