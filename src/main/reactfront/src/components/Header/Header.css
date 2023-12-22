@@ -1,0 +1,134 @@
+.header-index {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.header-index .header-wrap-wrapper {
+    background-color: #ffffff;
+    height: 163px;
+    width: 1440px;
+}
+
+.header-index .header-wrap {
+    align-items: center;
+    display: flex;
+    height: 163px;
+    justify-content: center;
+    position: relative;
+    width: 1440px;
+}
+
+.header-index .logo-wrap {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 163px;
+    justify-content: center;
+    padding: 42px 2px;
+    position: relative;
+    width: 290px;
+}
+
+.header-index .eco-connect-logo {
+    height: 69.37px;
+    object-fit: cover;
+    position: relative;
+    width: 190px;
+}
+
+.header-index .menu-wrap {
+    align-items: center;
+    display: flex;
+    gap: 80px;
+    height: 163px;
+    justify-content: center;
+    position: relative;
+    width: 880px;
+}
+
+.header-index .menu-cccc {
+    color: #000000;
+    font-family: "BMDOHYEON";
+    font-size: 25px;
+    font-weight: 400;
+    height: 60px;
+    letter-spacing: 0;
+    line-height: 60px;
+    position: relative;
+    text-align: center;
+    width: 100px;
+    cursor: pointer;
+}
+
+.header-index .menu-cccc:hover {
+    color: #8d8d8d;
+}
+
+.header-index .menu-ccc {
+    color: #000000;
+    font-family: "BMDOHYEON";
+    font-size: 25px;
+    font-weight: 400;
+    height: 60px;
+    letter-spacing: 0;
+    line-height: 60px;
+    position: relative;
+    text-align: center;
+    width: 75px;
+    cursor: pointer;
+}
+
+.header-index .menu-ccc:hover {
+    color: #8d8d8d;
+}
+
+.header-index .menu-cc {
+    color: #000000;
+    font-family: "BMDOHYEON";
+    font-size: 25px;
+    font-weight: 400;
+    height: 60px;
+    letter-spacing: 0;
+    line-height: 60px;
+    position: relative;
+    text-align: center;
+    width: 50px;
+    cursor: pointer;
+}
+
+.header-index .menu-cc:hover {
+    color: #8d8d8d;
+}
+
+.header-index .login-wrap {
+    align-items: center;
+    display: flex;
+    gap: 30px;
+    height: 163px;
+    justify-content: center;
+    padding: 13px 49px;
+    position: relative;
+    width: 270px;
+}
+
+.header-index .login-menu {
+    color: #000000;
+    font-family: "BMDOHYEON";
+    font-size: 18px;
+    font-weight: 400;
+    height: 60px;
+    letter-spacing: 0;
+    line-height: 70px;
+    position: relative;
+    text-align: center;
+    width: 100px;
+    cursor: pointer;
+}
+
+.header-index .login-menu:hover {
+    color: #8d8d8d;
+}

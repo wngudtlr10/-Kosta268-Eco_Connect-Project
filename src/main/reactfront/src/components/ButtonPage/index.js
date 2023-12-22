@@ -1,1 +1,0 @@
-export { ButtonPage } from "./ButtonPage";
