@@ -3,9 +3,9 @@ import React  from "react";
 import axios from "axios";
 import Nav from 'react-bootstrap/Nav';
 import "./home.css";
-import MissionComponent2 from "./missionComponent2";
-import GatheringComponent from "./gatheringComponent";
-import FundingComponent from "./fundingComponent";
+import MissionComponent2 from "../../components/Card/MainPageCards/missionComponent2";
+import GatheringComponent from "../../components/Card/MainPageCards/gatheringComponent";
+import FundingComponent from "../../components/Card/MainPageCards//fundingComponent";
 
  const Home = () => {
   const scrollRef = useRef(null);
