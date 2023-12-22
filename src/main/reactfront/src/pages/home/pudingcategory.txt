@@ -1,0 +1,59 @@
+ <div className="group-6">
+        <button className="overlap-3" onClick={() => handleButtonClick('all')}>
+          <img
+            className="free-icon-cube"
+            alt="Free icon cube"
+            src="https://cdn.animaapp.com/projects/6566e67221a5f8ac6355e523/releases/656fffff39fbdde4fdb84a78/img/free-icon-cube-359399-1.png"
+          />
+          <div className="text-wrapper-11">전체</div>
+        </button>
+        <button className="overlap-4 ${activeCategory === 'best' ? 'active' : ''}"  onClick={() => handleButtonClick('best')}>
+          <div className="text-wrapper-12">Best</div>
+          <img
+            className="free-icon-badge"
+            alt="Free icon badge"
+            src="https://cdn.animaapp.com/projects/6566e67221a5f8ac6355e523/releases/656fffff39fbdde4fdb84a78/img/free-icon-badge-5629363-1.png"
+          />
+        </button>
+        <div className="overlap-5 ${activeCategory === 'fasion' ? 'active' : ''}" onClick={() => handleButtonClick('fasion')}>
+          <div className="rectangle-2" />
+          <div className="text-wrapper-13">패션 잡화</div>
+          <img
+            className="free-icon-fashion"
+            alt="Free icon fashion"
+            src="https://cdn.animaapp.com/projects/6566e67221a5f8ac6355e523/releases/656fffff39fbdde4fdb84a78/img/free-icon-fashion-1198307-1.png"
+          />
+        </div>
+        <div className="overlap-6 ${activeCategory === 'tech' ? 'active' : ''}"  onClick={() => handleButtonClick('tech')}>
+          <img
+            className="free-icon-electric"
+            alt="Free icon electric"
+            src="https://cdn.animaapp.com/projects/6566e67221a5f8ac6355e523/releases/656fffff39fbdde4fdb84a78/img/free-icon-electric-appliance-3362661-1.png"
+          />
+          <div className="text-wrapper-14">테크 가전</div>
+        </div>
+        <div className="overlap-7 ${activeCategory === 'food' ? 'active' : ''}"  onClick={() => handleButtonClick('food')}>
+          <img
+            className="icons"
+            alt="Icons"
+            src="https://cdn.animaapp.com/projects/6566e67221a5f8ac6355e523/releases/656fffff39fbdde4fdb84a78/img/icons8--------64-1.png"
+          />
+          <div className="text-wrapper-15">푸드</div>
+        </div>
+        <div className="overlap-8 ${activeCategory === 'etc' ? 'active' : ''}"  onClick={() => handleButtonClick('etc')}>
+          <img
+            className="icons-2"
+            alt="Icons"
+            src="https://cdn.animaapp.com/projects/6566e67221a5f8ac6355e523/releases/656fffff39fbdde4fdb84a78/img/icons8---64-1.png"
+          />
+          <div className="text-wrapper-16">기타</div>
+        </div>
+        <div className="overlap-9 ${activeCategory === 'beauty' ? 'active' : ''}"  onClick={() => handleButtonClick('beauty')}>
+          <img
+            className="free-icon-makeup"
+            alt="Free icon makeup"
+            src="https://cdn.animaapp.com/projects/6566e67221a5f8ac6355e523/releases/656fffff39fbdde4fdb84a78/img/free-icon-makeup-6106906-1.png"
+          />
+          <div className="text-wrapper-17">뷰티</div>
+        </div>
+      </div> 
