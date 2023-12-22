@@ -1,5 +1,5 @@
 import React from 'react'
-import { AppContent, AppSidebar, AppHeader } from '../components/admin/index'
+import { AppContent, AppSidebar, AppHeader } from '../components/index'
 
 
 
