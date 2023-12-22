@@ -1,8 +1,7 @@
-package com.example.lastweb.service.admin;
+package com.kosta268.eco_connect.service.admin;
 
-import com.example.lastweb.Repository.admin.QnaRepository;
-import com.example.lastweb.entity.admin.Qna;
-import com.example.lastweb.exception.ResourceNotFoundException;
+import com.kosta268.eco_connect.entity.admin.Qna;
+import com.kosta268.eco_connect.repository.admin.QnaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
@@ -27,14 +26,14 @@ public class QnaService {
   }
   public ResponseEntity<Qna> getQnaById(@PathVariable Integer qna_id) {
     Qna qna = qnaRepository.findById(qna_id)
-        .orElseThrow(() -> new ResourceNotFoundException("Qna not exist with id : " + qna_id));
+        .orElseThrow(() -> new com.example.lastweb.exception.ResourceNotFoundException("Qna not exist with id : " + qna_id));
 
     return ResponseEntity.ok(qna);
   }
 
   public ResponseEntity<Qna> updateQna(@PathVariable Integer qna_id, @RequestBody Qna qnaDetails) {
     Qna qna = qnaRepository.findById(qna_id)
-        .orElseThrow(() -> new ResourceNotFoundException("Qna not exist with id : " + qna_id));
+        .orElseThrow(() -> new com.example.lastweb.exception.ResourceNotFoundException("Qna not exist with id : " + qna_id));
 
     qna.setContent(qnaDetails.getContent());
     qna.setTitle(qnaDetails.getTitle());
@@ -49,7 +48,7 @@ public class QnaService {
 
   public ResponseEntity<Map<String , Boolean>> deleteQna(@PathVariable Integer qna_id) {
     Qna qna = qnaRepository.findById(qna_id)
-        .orElseThrow(() -> new ResourceNotFoundException("Qna not exist with id : " + qna_id));
+        .orElseThrow(() -> new com.example.lastweb.exception.ResourceNotFoundException("Qna not exist with id : " + qna_id));
 
     qnaRepository.delete(qna);
     Map<String, Boolean> response = new HashMap<>();

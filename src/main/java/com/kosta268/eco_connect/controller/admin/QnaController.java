@@ -1,7 +1,8 @@
-package com.example.lastweb.controller.admin;
+package com.kosta268.eco_connect.controller.admin;
 
-import com.example.lastweb.entity.admin.Qna;
-import com.example.lastweb.service.admin.QnaService;
+
+import com.kosta268.eco_connect.entity.admin.Qna;
+import com.kosta268.eco_connect.service.admin.QnaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

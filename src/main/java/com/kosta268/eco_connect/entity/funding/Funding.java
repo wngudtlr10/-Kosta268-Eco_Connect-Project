@@ -1,6 +1,6 @@
 package com.kosta268.eco_connect.entity.funding;
 
-import com.kosta268.eco_connect.constant.ItemSellStatus;
+//import com.kosta268.eco_connect.constant.ItemSellStatus;
 import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
@@ -34,7 +34,7 @@ public class Funding {
 
     private LocalDateTime endAt; // 펀딩 마감 시간
 
-    private ItemSellStatus itemSellStatus;
+//    private ItemSellStatus itemSellStatus;
 
 
     private int likes; //펀딩 좋아요
