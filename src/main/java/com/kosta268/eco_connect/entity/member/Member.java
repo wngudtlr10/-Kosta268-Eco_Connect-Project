@@ -1,27 +1,36 @@
 package com.kosta268.eco_connect.entity.member;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import jakarta.persistence.*;
+import lombok.*;
+
 import java.time.LocalDateTime;
 
 
 @Entity
 @Getter
 @Setter
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 @ToString
 public class Member {
 
     @Id
-    private Long member_id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long memberId;
     private String id;
-    private String name;
+    private String password;
     private String email;
     private String profile;
     private String address;
-    private LocalDateTime created_in;
+    private LocalDateTime createdIn;
 
+    @Builder.Default
+    @Enumerated(EnumType.STRING)
+    private Role role = Role.ROLE_USER;
+
+    @PrePersist
+    public void prePersist() {
+        this.createdIn = LocalDateTime.now();
+    }
 }

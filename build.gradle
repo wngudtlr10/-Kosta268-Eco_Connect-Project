@@ -28,6 +28,7 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity6'
+    implementation 'org.springframework.boot:spring-boot-starter-mail'
 
     // JSON Web Token
     implementation 'io.jsonwebtoken:jjwt-api:0.11.5'
@@ -39,8 +40,6 @@ dependencies {
     annotationProcessor "com.querydsl:querydsl-apt:5.0.0:jakarta"
     annotationProcessor "jakarta.annotation:jakarta.annotation-api"
     annotationProcessor "jakarta.persistence:jakarta.persistence-api"
-
-    // Other necessary dependencies (e.g., Spring Boot Starter Web, Database Drivers, etc.)
 
     // 개발용 경량화 데이터베이스
     runtimeOnly 'com.h2database:h2'

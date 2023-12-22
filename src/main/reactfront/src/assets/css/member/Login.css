@@ -1,0 +1,408 @@
+.login-index {
+    background-color: rgba(255, 255, 255, 1);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.login-index .login-wrap-wrapper {
+    background: rgba(255, 255, 255, 1) linear-gradient(180deg, rgb(3, 199, 90) 62.5%, rgba(3, 199, 90, 0) 62.51%);
+    height: 920px;
+    width: 1440px;
+}
+
+.login-index .login-wrap {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 920px;
+    position: relative;
+    width: 1440px;
+}
+
+.login-index .login-header-wrap {
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    height: 100px;
+    padding: 7.5px 10px;
+    position: relative;
+    width: 1440px;
+}
+
+.login-index .logo {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 85px;
+    padding: 10px;
+    position: relative;
+    width: 235px;
+}
+
+.login-index .element {
+    height: 65px;
+    margin-right: -2px;
+    position: relative;
+    width: 217px;
+}
+
+.login-index .overlap-group {
+    background-color: #13954c;
+    border-radius: 31.91px/32.01px;
+    height: 64px;
+    left: 0;
+    position: absolute;
+    top: 1px;
+    width: 64px;
+}
+
+.login-index .icon-leaf {
+    height: 43px;
+    left: 15px;
+    position: absolute;
+    top: 11px;
+    width: 33px;
+}
+
+.login-index .ECO-CONNECT {
+    color: #ffffff;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    left: 68px;
+    letter-spacing: 0;
+    line-height: 30px;
+    position: absolute;
+    top: 0;
+    width: 147px;
+}
+
+.login-index .login-content-wrap {
+    align-items: center;
+    display: flex;
+    height: 820px;
+    position: relative;
+    width: 1440px;
+}
+
+.login-index .text-partition {
+    align-items: flex-start;
+    display: flex;
+    gap: 10px;
+    height: 820px;
+    justify-content: flex-end;
+    padding: 120px 0;
+    position: relative;
+    width: 400px;
+}
+
+.login-index .text-wrap {
+    align-items: flex-start;
+    display: inline-flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    position: relative;
+}
+
+.login-index .text-wrapper {
+    color: #ffffff;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 34px;
+    font-weight: 600;
+    height: 50px;
+    letter-spacing: 0;
+    line-height: 50px;
+    margin-top: -1px;
+    position: relative;
+    width: 300px;
+}
+
+.login-index .text-1 {
+    color: #ffffff;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    height: 40px;
+    letter-spacing: 0;
+    line-height: 40px;
+    position: relative;
+    width: 300px;
+}
+
+.login-index .text-2 {
+    color: #ffffff;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 13px;
+    font-weight: 300;
+    height: 115px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: relative;
+    width: 300px;
+}
+
+.login-index .img-partition {
+    align-items: flex-start;
+    display: flex;
+    height: 820px;
+    justify-content: center;
+    position: relative;
+    width: 450px;
+}
+
+.login-index .login-img {
+    height: 462px;
+    object-fit: cover;
+    position: relative;
+    width: 442px;
+}
+
+.login-index .login-partition {
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    height: 820px;
+    justify-content: center;
+    position: relative;
+    width: 550px;
+}
+
+.login-index .login-info-wrap {
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 40px;
+    box-shadow: 10px 4px 20px #00000040;
+    display: flex;
+    flex-direction: column;
+    /*gap: 10px;*/
+    /*height: 679px;*/
+    overflow: hidden;
+    padding: 50px;
+    position: relative;
+    width: 540px;
+}
+
+.login-index .login-info-header {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    /*gap: 10px;*/
+    height: 79px;
+    position: relative;
+    width: 440px;
+}
+
+.login-index .login-info-header-2 {
+    color: transparent;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    height: 15px;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    white-space: nowrap;
+    width: 170px;
+}
+
+.login-index .welcome-1 {
+    color: #000000;
+}
+
+.login-index .welcome-2 {
+    color: #03c75a;
+}
+
+.login-index .login-info-header-text {
+    color: #000000;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    height: 50px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: relative;
+    white-space: nowrap;
+    width: 170px;
+}
+
+.login-index .login-info-form {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    /*gap: 7px;*/
+    /*height: 222px;*/
+    padding: 10px 0 0 0;
+    position: relative;
+    width: 440px;
+}
+
+.login-index .login-input-wrap {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    /*height: 86px;*/
+    justify-content: center;
+    padding: 10px;
+    position: relative;
+    width: 400px;
+}
+
+.login-index .login-input-text {
+    color: #000000;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    height: 16px;
+    letter-spacing: 0;
+    line-height: 16px;
+    /*margin-top: -1px;*/
+    position: relative;
+    width: 100px;
+}
+
+.login-index .login-input {
+    border: 1px solid #a0a0a0;
+    border-radius: 5px;
+    height: 40px;
+    position: relative;
+    width: 380px;
+
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 14px;
+    padding: 0 10px;
+}
+
+.login-index .form-id-validation {
+    color: #ff0000;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    height: 16px;
+    letter-spacing: 0;
+    line-height: 7px;
+    position: relative;
+    width: 360px;
+    padding: 0 3px;
+}
+
+.login-index .forgot-info {
+    color: #a0a0a0;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    height: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: relative;
+    text-align: right;
+    width: 380px;
+}
+
+.login-index .forgot-info:hover {
+    color: #000000;
+}
+
+.login-index .login-info-button {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /*height: 276px;*/
+    justify-content: center;
+    padding: 10px;
+    position: relative;
+    width: 400px;
+}
+
+.login-index .login-button {
+    align-items: center;
+    background-color: #12904a;
+    border-radius: 5px;
+    display: flex;
+    /*gap: 10px;*/
+    height: 45px;
+    justify-content: center;
+    margin-top: 20px;
+    overflow: hidden;
+    position: relative;
+    width: 380px;
+
+    border: 1px solid #12904a;
+    font-size: 16px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 700;
+    color: #ffffff;
+
+    cursor: pointer;
+}
+
+.login-index .login-button:hover {
+    border: 1px solid #03c75a;
+    background-color: #FFFFFF;
+    color: #03c75a;
+}
+
+.login-index .img {
+    height: 46px;
+    object-fit: cover;
+    position: relative;
+    width: 380px;
+    cursor: pointer;
+}
+
+.login-index .join-wrap {
+    align-items: flex-start;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: center;
+    /*margin-bottom: -1px;*/
+    padding: 10px 0;
+    position: relative;
+    width: 380px;
+}
+
+.login-index .join-text {
+    color: #000000;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    height: 16px;
+    letter-spacing: 0;
+    line-height: 16px;
+    /*margin-top: -1px;*/
+    position: relative;
+    width: 380px;
+}
+
+.login-index .join-button {
+    align-items: center;
+    background-color: #ffffff;
+    border: 1px solid #03c75a;
+    border-radius: 10px;
+    display: flex;
+    height: 45px;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    width: 380px;
+
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    color: #03c75a;
+
+    cursor: pointer;
+}
+
+.login-index .join-button:hover {
+    background-color: #03c75a;
+    color: #FFFFFF;
+}
