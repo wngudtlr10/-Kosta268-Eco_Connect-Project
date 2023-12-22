@@ -1,0 +1,106 @@
+.errorPage-index {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .errorPage-index .div {
+    background-color: #ffffff;
+    height: 1076px;
+    position: relative;
+    width: 1440px;
+  }
+  
+  .errorPage-index .text-wrapper {
+    color: #000000;
+    font-family: "Font Awesome 6 Free-Solid", Helvetica;
+    font-size: 250px;
+    font-weight: 400;
+    left: 362px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 271px;
+    white-space: nowrap;
+   
+  }
+  
+  .errorPage-index .text-wrapper-2 {
+    color: #000000;
+    font-family: "Font Awesome 6 Free-Solid", Helvetica;
+    font-size: 250px;
+    font-weight: 400;
+    left: 892px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 271px;
+    width: 185px;
+    
+  }
+  
+  .errorPage-index .p {
+    color: #000000;
+    font-family: "Font Awesome 5 Free-Solid", Helvetica;
+    font-size: 30px;
+    font-weight: 400;
+    left: 362px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 598px;
+    white-space: nowrap;
+  }
+  
+  .errorPage-index .text-wrapper-3 {
+    color: #000000;
+    font-family: "Font Awesome 5 Free-Solid", Helvetica;
+    font-size: 20px;
+    font-weight: 400;
+    left: 405px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 678px;
+    width: 630px;
+    text-align: center;
+  }
+  
+  .errorPage-index .overlap-group {
+    background-color: #ffffff;
+    border: 1px solid;
+    border-color: #000000;
+    height: 41px;
+    left: 634px;
+    position: absolute;
+    top: 798px;
+    width: 135px;
+    text-align: center;
+  }
+  
+  .errorPage-index .text-wrapper-4 {
+    color: #000000;
+    font-family: "Font Awesome 6 Free-Solid", Helvetica;
+    font-size: 18px;
+    font-weight: 400;
+    left: 2px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 10px;
+    white-space: nowrap;
+    
+  }
+  
+  .errorPage-index .image {
+    height: 280px;
+    left: 550px;
+    object-fit: cover;
+    position: absolute;
+    top: 272px;
+    width: 280px;
+  }
+  
