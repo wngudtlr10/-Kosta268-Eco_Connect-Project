@@ -1,0 +1,376 @@
+.join-index {
+    background-color: rgba(255, 255, 255, 1);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.join-index .join-wrap-wrapper {
+    background: rgba(255, 255, 255, 1) linear-gradient(180deg, rgb(3, 199, 90) 50%, rgba(3, 199, 90, 0) 50.01%);
+    height: 1100px;
+    width: 1440px;
+}
+
+.join-index .join-wrap {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 1100px;
+    position: relative;
+    width: 1440px;
+}
+
+.join-index .join-header-wrap {
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    height: 100px;
+    padding: 7.5px 10px;
+    position: relative;
+    width: 1440px;
+}
+
+.join-index .logo {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 85px;
+    padding: 10px;
+    position: relative;
+    width: 235px;
+}
+
+.join-index .element {
+    height: 65px;
+    margin-right: -2px;
+    position: relative;
+    width: 217px;
+}
+
+.join-index .overlap-group {
+    background-color: #13954c;
+    border-radius: 31.91px/32.01px;
+    height: 64px;
+    left: 0;
+    position: absolute;
+    top: 1px;
+    width: 64px;
+}
+
+.join-index .icon-leaf {
+    height: 43px;
+    left: 15px;
+    position: absolute;
+    top: 11px;
+    width: 33px;
+}
+
+.join-index .ECO-CONNECT {
+    color: #ffffff;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    left: 68px;
+    letter-spacing: 0;
+    line-height: 30px;
+    position: absolute;
+    top: 0;
+    width: 147px;
+}
+
+.join-index .join-content-wrap {
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    height: 1000px;
+    justify-content: center;
+    padding: 10px;
+    position: relative;
+    width: 1440px;
+}
+
+.join-index .join-info-wrap {
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 40px;
+    box-shadow: 0 4px 35px #00000040;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow: hidden;
+    padding: 50px;
+    position: relative;
+    width: 540px;
+}
+
+.join-index .join-info-header {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 90px;
+    position: relative;
+    width: 440px;
+}
+
+.join-index .header-msg {
+    color: transparent;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    height: 15px;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    white-space: nowrap;
+    width: 170px;
+    margin-bottom: 5px;
+}
+
+.join-index .text-wrapper {
+    color: #000000;
+}
+
+.join-index .span {
+    color: #03c75a;
+}
+
+.join-index .div {
+    color: #000000;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 40px;
+    font-weight: 500;
+    height: 50px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: relative;
+    white-space: nowrap;
+    width: 170px;
+}
+
+.join-index .join-info-form {
+    align-items: center;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 7px;
+    padding: 10px 0;
+    position: relative;
+    width: 440px;
+}
+
+.join-index .info-wrap {
+    align-items: flex-start;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: center;
+    padding: 5px 10px;
+    position: relative;
+    width: 400px;
+}
+
+.join-index .title-text-wrapper {
+    color: #000000;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    height: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    width: 380px;
+}
+
+.join-index .form-input {
+    align-items: center;
+    border: 1px solid #a0a0a0;
+    border-radius: 5px;
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    overflow: hidden;
+    padding: 0 10px;
+    position: relative;
+    width: 380px;
+}
+
+.join-index .form-input-m {
+    align-items: center;
+    border: 1px solid #a0a0a0;
+    border-radius: 5px;
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    overflow: hidden;
+    padding: 0 10px;
+    position: relative;
+    width: 300px;
+}
+
+.join-index .form-input-sm {
+    align-items: center;
+    border: 1px solid #a0a0a0;
+    border-radius: 5px;
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    overflow: hidden;
+    padding: 0 10px;
+    position: relative;
+    width: 280px;
+}
+
+.join-index .text-wrapper-3 {
+    color: #a0a0a0;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    height: 40px;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    width: 360px;
+}
+
+.join-index .form-id-validation {
+    color: #ff0000;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    height: 16px;
+    letter-spacing: 0;
+    line-height: 7px;
+    position: relative;
+    width: 400px;
+    padding: 0 3px;
+}
+
+.join-index .form-id-success {
+    color: #0000ff;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    height: 16px;
+    letter-spacing: 0;
+    line-height: 7px;
+    position: relative;
+    width: 400px;
+    padding: 0 3px;
+}
+
+.join-index .input-btn-wrap {
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    height: 40px;
+    position: relative;
+    width: 380px;
+}
+
+.join-index .form-email-btn {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+
+    border: 1px solid #03c75a;
+    border-radius: 10px;
+    height: 40px;
+    overflow: hidden;
+    position: relative;
+    width: 90px;
+
+    background-color: #FFFFFF;
+    color: #03c75a;
+
+    cursor: pointer;
+}
+
+.join-index .form-email-btn:hover {
+    border: 1px solid #03c75a;
+    background-color: #03c75a;
+    color: #FFFFFF;
+}
+
+.join-index .form-email-btn:disabled {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+
+    border: 1px solid #808080;
+    border-radius: 10px;
+    height: 40px;
+    overflow: hidden;
+    position: relative;
+    width: 90px;
+
+    background-color: #FFFFFF;
+    color: #808080;
+
+    cursor: default;
+}
+
+/*.join-index .form-address-btn {*/
+/*    font-family: 'Noto Sans KR', sans-serif;*/
+/*    font-weight: 400;*/
+/*    border: 1px solid #03c75a;*/
+/*    border-radius: 10px;*/
+/*    height: 40px;*/
+/*    overflow: hidden;*/
+/*    position: relative;*/
+/*    width: 180px;*/
+
+/*    font-size: 14px;*/
+/*    background-color: #FFFFFF;*/
+/*    color: #03c75a;*/
+
+/*    cursor: pointer;*/
+/*}*/
+
+/*.join-index .form-address-btn:hover {*/
+/*    border: 1px solid #03c75a;*/
+/*    background-color: #03c75a;*/
+/*    color: #FFFFFF;*/
+/*}*/
+
+.join-index .btn-form {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 60px;
+    justify-content: center;
+    padding: 10px;
+    position: relative;
+    width: 440px;
+}
+
+.join-index .submit-btn {
+    align-items: center;
+    background-color: #03c75a;
+    border-radius: 10px;
+    box-shadow: 0 4px 19px #7793414c;
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    width: 400px;
+
+    border: 1px solid #FFFFFF;
+    font-size: 15px;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.join-index .submit-btn:hover{
+    border: 1px solid #03c75a;
+    background-color: #FFFFFF;
+    color: #03c75a;
+}
