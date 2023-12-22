@@ -16,6 +16,7 @@ import FundingDetail from './pages/funding/FundingDetail';
 import FundingUpdate from './pages/funding/FundingUpdate';
 import FundingDelete from './pages/funding/FundingDelete';
 import FundingPayment from './pages/funding/FundingPayment';
+import DefaultLayout from './pages/admin/layout/AdminLayout'
 
 import Error400 from "./pages/errors/Error400"
 import Error500 from "./pages/errors/Error500"
@@ -41,6 +42,7 @@ function App() {
                     <Route path={"/funding/update"} element={<FundingUpdate />} />
                     <Route path={"/funding/delete"} element={<FundingDelete />} />
                     <Route path={"/funding/payment"} element={<FundingPayment />} />
+                    <Route path={"/admin"} element={<DefaultLayout />} />
                 </Route>
                 {/*error 400, 500*/}
                 <Route path={"/error400"} element={<Error400/>}/>
