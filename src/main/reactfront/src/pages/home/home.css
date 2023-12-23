@@ -14,7 +14,7 @@
 
   
   .home .main-banner {
-    height: 450px;
+    height: 350px;
     object-fit: cover;
     position: relative;
     width: 1440px;
@@ -243,9 +243,9 @@
     background-image: url(https://cdn.animaapp.com/projects/6566e67221a5f8ac6355e523/releases/657012a3157386e1edbc12b0/img/nature-3289812-1920-2.png);
     background-position: 50% 50%;
     background-size: cover;
-    height: 230.89px;
+    height: 180px;
     position: relative;
-    width: 1280px;
+    width: 1200px;
     border-radius: 25px;
   }
   .home .banner_text {
@@ -253,7 +253,7 @@
     font-size: 24px;
     position: relative;
     left: 30px;
-    top: 160px;
+    top: 120px;
     font-weight: 600;
   }
 
@@ -261,9 +261,9 @@
     background-image: url(https://cdn.animaapp.com/projects/6560b21274de9042f7d947f4/releases/6570992a80abe6b84bdfe96b/img/mission-image.png);
     background-position: 50% 50%;
     background-size: cover;
-    height: 230.89px;
+    height: 180px;
     position: relative;
-    width: 1280px;
+    width: 1200px;
     border-radius: 25px;
   }
   
@@ -271,9 +271,9 @@
     background-image: url(https://i.postimg.cc/VvwBZBDy/black-friday-1898114-1280.jpg);
     background-position: 50% 50%;
     background-size: cover;
-    height: 230.89px;
+    height: 180px;
     position: relative;
-    width: 1280px;
+    width: 1200px;
     border-radius: 25px;
   }
   
