@@ -2,9 +2,9 @@ import {
     CButton,
     CFormSelect
   } from '@coreui/react'
- import React from 'react'
- import axios from 'axios'
- import { useState, useEffect } from 'react'
+import React from 'react'
+import AuthAxios from "../../../../utils/axios/AuthAxios";
+import { useState, useEffect } from 'react'
  
  
  const MissionUserSubmit =  ({muId, onUpdate}) => {
@@ -16,7 +16,7 @@ import {
 const handleUpdate = async () => {
   try {
     // 수정된 데이터를 서버에 전송
-    await axios.put(`http://localhost:8080/api/mission/user/${muId}`, formData);
+    await AuthAxios.put(`http://localhost:8080/api/mission/user/${muId}`, formData);
     console.log('Updating with formData:', formData);
     onUpdate();
   } catch (error) {
@@ -32,7 +32,7 @@ useEffect(() => {
 const fetchMissionUserData = async () => {
   try {
     // 서버에서 공지사항 데이터 가져오기
-    const response = await axios.get(`http://localhost:8080/api/mission/user/${muId}`);
+    const response = await AuthAxios.get(`http://localhost:8080/api/mission/user/${muId}`);
     // 이전 값으로 초기화
     setFormData({
       status: response.data.status || ''
@@ -55,9 +55,8 @@ const handleInputChange = (e) => {
    aria-label="Default select example"
    options={[
     'Open this select menu',
-    { label: '수락대기중', value: "0"},
-    { label: '수락', value: '1' },
-    { label: '보류', value: '2' }
+    { label: '반려', value: "REJECTED"},
+    { label: '미션승인', value: "COMPLETED" }
   ]}
   value={formData.status}
 />

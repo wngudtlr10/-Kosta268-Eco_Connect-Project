@@ -11,6 +11,6 @@ import static org.junit.jupiter.api.Assertions.*;
 @TestPropertySource(locations="classpath:application-test.properties")
 class FundingRepositoryTest {
 
-    @Autowired
+
 
 }

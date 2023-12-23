@@ -3,6 +3,8 @@ package com.kosta268.eco_connect.service.member;
 import com.kosta268.eco_connect.dto.member.*;
 import com.kosta268.eco_connect.entity.member.Member;
 import com.kosta268.eco_connect.entity.member.RefreshToken;
+import com.kosta268.eco_connect.entity.mission.MemberMission;
+import com.kosta268.eco_connect.entity.point.Point;
 import com.kosta268.eco_connect.jwt.TokenProvider;
 import com.kosta268.eco_connect.repository.member.MemberRepository;
 import com.kosta268.eco_connect.repository.member.RefreshTokenRepository;
@@ -18,12 +20,14 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
 import java.util.NoSuchElementException;
 
 @Slf4j
 @Service
 @RequiredArgsConstructor
 @Transactional
+
 public class MemberService {
     private final AuthenticationManagerBuilder authenticationManagerBuilder;
     private final MemberRepository memberRepository;
@@ -150,5 +154,21 @@ public class MemberService {
         findMember.setPassword(passwordEncoder.encode(memberRequestDto.getPassword()));
 
         return MemberResponseDto.fromEntity(memberRepository.save(findMember));
+    }
+    @Transactional(readOnly = true)
+    public Member getMemberById(Long memberId) {
+        return memberRepository.findById(memberId).orElseThrow(() -> new IllegalArgumentException("no such data"));
+    }
+
+    @Transactional(readOnly = true)
+    public List<MemberMission> findMemberMissions(Long memberId) {
+        Member member = memberRepository.findById(memberId).orElseThrow(() -> new IllegalArgumentException("no such member"));
+
+        return member.getMemberMissions();
+    }
+    @Transactional(readOnly = true)
+    public Point findMemberPoint(Long memberId) {
+        Member member = memberRepository.findById(memberId).orElseThrow(() -> new IllegalArgumentException("no such member"));
+        return member.getPoint();
     }
 }

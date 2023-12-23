@@ -1,0 +1,674 @@
+.gathering-index {
+    align-items: center;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 2113px;
+    padding: 10px;
+    position: relative;
+}
+
+
+.gathering-index .logo-wrap {
+    align-items: flex-start;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 4px;
+    position: relative;
+}
+
+.gathering-index .ellipse {
+    background-color: #13954c;
+    border-radius: 32.5px;
+    height: 65px;
+    position: relative;
+    width: 65px;
+}
+
+.gathering-index .ECO-CONNECT {
+    color: #000000;
+    font-family: "Alata", Helvetica;
+    font-size: 30px;
+    font-weight: 400;
+    height: 68px;
+    letter-spacing: 0;
+    line-height: 30px;
+    margin-top: -1px;
+    position: relative;
+    width: 217px;
+}
+
+.gathering-index .icon-leaf {
+    height: 44px;
+    left: 16px;
+    position: absolute;
+    top: 12px;
+    width: 34px;
+}
+
+.gathering-index .text-wrapper {
+    color: #000000;
+    font-family: "Do Hyeon", Helvetica;
+    font-size: 25px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    width: fit-content;
+}
+
+.gathering-index .div-wrapper {
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 10px;
+    justify-content: center;
+    padding: 10px;
+    position: relative;
+}
+
+
+.gathering-index .card-info {
+    align-items: center;
+    background-color: #03c75a;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    height: 547px;
+    justify-content: center;
+    position: relative;
+    width: 1458px;
+}
+
+.gathering-index .card-info-text-big {
+    align-items: flex-start;
+    display: flex;
+    gap: 10px;
+    height: 120px;
+    position: relative;
+    width: 476px;
+}
+
+.gathering-index .p {
+    color: #ffffff;
+    font-family: "Poppins", Helvetica;
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    text-align: center;
+    width: fit-content;
+}
+
+.gathering-index .card-info-text-small {
+    align-items: flex-start;
+    display: flex;
+    gap: 10px;
+    height: 60px;
+    position: relative;
+    width: 322px;
+}
+
+.gathering-index .card-info-text-small-2 {
+    color: #ffffff;
+    font-family: "Poppins", Helvetica;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    text-align: center;
+    width: fit-content;
+}
+
+.gathering-index .middle-menu-wrap {
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 40px;
+    justify-content: center;
+    position: relative;
+}
+
+.gathering-index .middle-menu-total {
+    align-items: flex-start;
+    display: flex;
+    gap: 10px;
+    height: 50px;
+    justify-content: center;
+    position: relative;
+    width: 37px;
+}
+
+.gathering-index .middle-menu-total-2 {
+    color: #000000;
+    font-family: "Poppins", Helvetica;
+    font-size: 20px;
+    font-weight: 300;
+    height: 50px;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    text-align: center;
+    width: 37px;
+}
+
+.gathering-index .div-2 {
+    align-items: center;
+    display: flex;
+    height: 50px;
+    justify-content: center;
+    position: relative;
+    width: 133px;
+}
+
+.gathering-index .middle-menu-clean {
+    background-image: url(https://cdn.animaapp.com/projects/6560b21274de9042f7d947f4/releases/656753efcb8de04689f6bb1b/img/middle-menu-clean-image-wrap@2x.png);
+    background-position: 50% 50%;
+    background-size: cover;
+    height: 50px;
+    position: relative;
+    width: 43px;
+}
+
+.gathering-index .middle-menu-clean-wrapper {
+    align-items: flex-start;
+    display: flex;
+    gap: 10px;
+    height: 50px;
+    justify-content: center;
+    position: relative;
+    width: 90px;
+}
+
+.gathering-index .middle-menu-clean-2 {
+    color: #000000;
+    font-family: "Poppins", Helvetica;
+    font-size: 20px;
+    font-weight: 300;
+    height: 50px;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-left: -6.5px;
+    margin-right: -6.5px;
+    margin-top: 10px;
+    position: relative;
+    text-align: center;
+    width: 103px;
+}
+
+.gathering-index .middle-menu-talent {
+    background-image: url(https://cdn.animaapp.com/projects/6560b21274de9042f7d947f4/releases/656753efcb8de04689f6bb1b/img/middle-menu-talent-image-wrap@2x.png);
+    background-position: 50% 50%;
+    background-size: cover;
+    height: 35px;
+    position: relative;
+    width: 20px;
+}
+
+.gathering-index .div-wrapper-2 {
+    align-items: flex-start;
+    display: flex;
+    gap: 10px;
+    height: 50px;
+    justify-content: center;
+    position: relative;
+    width: 103px;
+}
+
+.gathering-index .text-wrapper-2 {
+    color: #000000;
+    font-family: "Poppins", Helvetica;
+    font-size: 20px;
+    font-weight: 300;
+    height: 50px;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: 10px;
+    position: relative;
+    text-align: center;
+    width: 103px;
+}
+
+.gathering-index .middle-menu-donation {
+    background-image: url(https://cdn.animaapp.com/projects/6560b21274de9042f7d947f4/releases/656753efcb8de04689f6bb1b/img/middle-menu-donation-icon-wrap@2x.png);
+    background-position: 50% 50%;
+    background-size: cover;
+    height: 30px;
+    position: relative;
+    width: 30px;
+}
+
+.gathering-index .middle-menu-blank {
+    height: 50px;
+    position: relative;
+    width: 100px;
+}
+
+.gathering-index .middle-menu-search {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 50px;
+    justify-content: center;
+    position: relative;
+    width: 380px;
+    z-index: 1;
+    opacity: 1;
+}
+
+.gathering-index .search-box {
+    background-color: #03c75a;
+    border: 1px solid;
+    border-color: #000000;
+    border-radius: 5px;
+    flex: 0 0 auto;
+    position: relative;
+    width: 200px;
+    height: 35px;
+    z-index: -1;
+    text-align: center;
+}
+
+.gathering-index .search-box:focus {
+    outline: none;
+    width: 200px;
+    text-align: left;
+}
+
+.gathering-index .search-icon {
+    height: 24px;
+    left: px;
+    object-fit: cover;
+    position: absolute;
+    top: 15px;
+    width: 24px;
+}
+
+.gathering-index .gathering-banner {
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    padding: 10px;
+    position: relative;
+}
+
+.gathering-index .img {
+    height: 373px;
+    object-fit: cover;
+    position: relative;
+    width: 1209px;
+}
+
+.gathering-index .gathering-list-wrap {
+    align-items: flex-start;
+    /* align-self: stretch; */
+    background-color: #ffffff;
+    /* display: flex; */
+    /* flex: 0 0 auto; */
+    /* flex-wrap: wrap; */
+    gap: 10px 10px;
+    justify-content: center;
+    padding: 10px;
+    position: relative;
+    /* width: 100%; */
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+    width: fit-content;
+    align-self: center;
+}
+
+.gathering-index .gathering-list-wrap .gathering-list:nth-child(n+9) {
+    display: none;
+}
+
+.gathering-index .gathering-list {
+    align-items: center;
+    box-shadow: 0px 4px 4px #00000040, 0px 4px 4px #00000040, 0px 4px 4px #00000040;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 10px;
+    position: relative;
+    border-radius: 30px;
+    width: fit-content;
+}
+
+.gathering-index .gathering-list-2 {
+    align-items: center;
+    background-color: #ffffff;
+    border: 1px solid;
+    border-color: #000000;
+    border-radius: 30px;
+    display: flex;
+    gap: 10px;
+    height: 164px;
+    justify-content: center;
+    padding: 10px;
+    position: relative;
+    width: 600px;
+}
+
+.gathering-index .gathering-list-image {
+    /*background-image: url(https://cdn.animaapp.com/projects/6560b21274de9042f7d947f4/releases/656753efcb8de04689f6bb1b/img/gathering-list-image-wrap@2x.png);*/
+    background-position: 50% 50%;
+    background-size: cover;
+    border-radius: 30px;
+    height: 144px;
+    position: relative;
+    width: 173px;
+}
+
+.gathering-index .gathering-list-info {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 144px;
+    justify-content: center;
+    padding: 10px;
+    position: relative;
+    width: 377px;
+}
+
+.gathering-index .gathering-list-title {
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    height: 28px;
+    margin-top: -4px;
+    position: relative;
+    width: 357px;
+}
+
+.gathering-index .gathering-list-title-2 {
+    color: #000000;
+    font-family: "Poppins", Helvetica;
+    font-size: 18px;
+    font-weight: 300;
+    height: 28px;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-right: -3.18px;
+    margin-top: -1px;
+    position: relative;
+    width: 360.18px;
+}
+
+.gathering-index .gathering-list-sum {
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    height: 21px;
+    position: relative;
+    width: 357px;
+    word-break: break-word;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-align: left;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+
+
+
+
+.gathering-index .gathering-list-3 {
+    align-items: center;
+    display: flex;
+    height: 63px;
+    margin-bottom: -4px;
+    position: relative;
+    width: 357px;
+}
+
+.gathering-index .gathering-list-4 {
+    height: 63px;
+    position: relative;
+    width: 210.28px;
+}
+
+.gathering-index .gathering-list-5 {
+    align-items: center;
+    display: flex;
+    gap: 5px;
+    height: 63px;
+    justify-content: center;
+    position: relative;
+    width: 101px;
+}
+
+.gathering-index .gathering-list-6 {
+    height: 28px;
+    position: relative;
+    width: 35px;
+}
+
+.gathering-index .gathering-list-7 {
+    height: 27px;
+    position: relative;
+    width: 50.98px;
+}
+
+.gathering-index .text-wrapper-3 {
+    color: #000000;
+    font-family: "Poppins", Helvetica;
+    font-size: 18px;
+    font-weight: 300;
+    left: 0;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: -1px;
+    width: 51px;
+}
+
+.gathering-index .gathering-list-8 {
+    align-items: center;
+    align-self: stretch;
+    display: flex;
+    flex: 0 0 auto;
+    gap: 222px;
+    justify-content: center;
+    padding: 0px 200px;
+    position: relative;
+    width: 100%;
+}
+
+.gathering-index .pagination-button {
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    height: 35px;
+    justify-content: center;
+    position: relative;
+    width: 500px;
+}
+
+.gathering-index .pagination-left-wrap {
+    align-items: center;
+    display: flex;
+    height: 35px;
+    justify-content: center;
+    opacity: 0.4;
+    padding: 4px;
+    position: relative;
+    width: 25px;
+}
+
+.gathering-index .pagination-left {
+    align-items: center;
+    display: flex;
+    height: 35px;
+    justify-content: center;
+    margin-bottom: -4px;
+    margin-left: -4px;
+    margin-right: -4px;
+    margin-top: -4px;
+    position: relative;
+    width: 25px;
+    cursor: pointer;
+}
+
+.gathering-index .img-2 {
+    height: 35px;
+    position: relative;
+    width: 25px;
+}
+
+.gathering-index .pagination {
+    align-items: center;
+    /* border: 1px solid;
+    border-color: var(--neutral-400);
+    border-radius: 5px; */
+    display: flex;
+    gap: 5px;
+    height: 35px;
+    justify-content: center;
+    position: relative;
+    width: fit-content;
+}
+button.active {
+    background-color: #03c75a;
+    color: white;
+    border: 2px solid #03c75a;
+}
+
+.gathering-index .text-wrapper-4 {
+    color: var(--neutral-800);
+    font-family: "Poppins", Helvetica;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: normal;
+    position: relative;
+    width: 40px;
+    height: 40px;
+}
+
+.gathering-index .pagination-num {
+    align-items: center;
+    background-color: #03c75a;
+    border-radius: 5px;
+    display: flex;
+    gap: 5px;
+    height: 35px;
+    justify-content: center;
+    position: relative;
+    width: 35px;
+}
+
+.gathering-index .element {
+    color: var(--white);
+    font-family: "Poppins", Helvetica;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: normal;
+    position: relative;
+    width: fit-content;
+}
+
+.gathering-index .pagination-right {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 35px;
+    justify-content: center;
+    position: relative;
+    width: 25px;
+}
+
+.gathering-index .double-right-wrapper {
+    align-items: center;
+    display: flex;
+    height: 35px;
+    justify-content: center;
+    position: relative;
+    width: 25px;
+    cursor: pointer;
+}
+
+.gathering-index .register-button-wrap {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 39px;
+    justify-content: center;
+    position: relative;
+    width: 132px;
+}
+
+.gathering-index .register-button {
+    align-items: center;
+    background-color: #03c75a;
+    border-radius: 9px;
+    display: flex;
+    height: 39px;
+    justify-content: center;
+    position: relative;
+    width: 132px;
+}
+
+.gathering-index .register-text {
+    color: #ffffff;
+    font-family: "Poppins", Helvetica;
+    font-size: 14px;
+    font-weight: 600;
+    height: 39px;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    text-align: center;
+    width: 132px;
+}
+
+
+
+.gathering-index .div-wrapper-3 {
+    align-items: flex-start;
+    display: flex;
+    gap: 10px;
+    height: 20px;
+    position: relative;
+    width: 59px;
+}
+
+.gathering-index .text-wrapper-5 {
+    color: #000000;
+    font-family: "Roboto", Helvetica;
+    font-size: 16px;
+    font-weight: 400;
+    height: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    text-align: center;
+    width: 59px;
+}
+
+.register-button {
+    text-decoration: none;
+    color: black;
+}
+
+.gathering-list-info a {
+    text-decoration: none;
+    color: black;
+}
