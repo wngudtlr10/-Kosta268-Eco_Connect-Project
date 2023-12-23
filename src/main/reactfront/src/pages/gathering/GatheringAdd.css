@@ -1,0 +1,397 @@
+.gathering-add-index {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.gathering-add-index .add-wrap-wrapper {
+    background-color: #ffffff;
+    height: 2332px;
+    width: 1473px;
+}
+
+.gathering-add-index .add-wrap {
+    align-items: center;
+    display: inline-flex;
+    flex-direction: column;
+    gap: 230px;
+    left: 10px;
+    position: relative;
+    top: 20px;
+}
+
+.gathering-add-index .header-wrap {
+    align-items: flex-start;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 10px;
+    justify-content: center;
+    position: relative;
+}
+
+.gathering-add-index .header {
+    align-items: center;
+    background-color: transparent;
+    display: flex;
+    gap: 20px;
+    height: 139px;
+    justify-content: center;
+    padding: 32.5px 38px;
+    position: relative;
+    width: 1453px;
+}
+
+.gathering-add-index .header-logo-wrap {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 68px;
+    justify-content: center;
+    margin-left: -6.3px;
+    position: relative;
+    width: 286px;
+}
+
+.gathering-add-index .logo-wrap {
+    align-items: flex-start;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 4px;
+    position: relative;
+}
+
+.gathering-add-index .ellipse {
+    background-color: #13954c;
+    border-radius: 32.5px;
+    height: 65px;
+    position: relative;
+    width: 65px;
+}
+
+.gathering-add-index .ECO-CONNECT {
+    color: #000000;
+    font-family: "Alata", Helvetica;
+    font-size: 30px;
+    font-weight: 400;
+    height: 68px;
+    letter-spacing: 0;
+    line-height: 30px;
+    margin-top: -1px;
+    position: relative;
+    width: 217px;
+}
+
+.gathering-add-index .icon-leaf {
+    height: 44px;
+    left: 16px;
+    position: absolute;
+    top: 12px;
+    width: 34px;
+}
+
+.gathering-add-index .header-menu-wrap {
+    align-items: center;
+    background-color: #ffffff;
+    display: flex;
+    gap: 117px;
+    justify-content: center;
+    margin-bottom: -32.5px;
+    margin-top: -32.5px;
+    padding: 44px 0px;
+    position: relative;
+    width: 903px;
+}
+
+.gathering-add-index .header-mission-wrap {
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    height: 51px;
+    justify-content: center;
+    padding: 10px;
+    position: relative;
+    width: 97px;
+}
+
+.gathering-add-index .text-wrapper {
+    color: #000000;
+    font-family: "Do Hyeon", Helvetica;
+    font-size: 25px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    width: fit-content;
+}
+
+.gathering-add-index .div-wrapper {
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 10px;
+    justify-content: center;
+    padding: 10px;
+    position: relative;
+}
+
+.gathering-add-index .header-icon-wrap {
+    margin-right: -6.3px;
+    position: relative;
+    width: 160.6px;
+}
+
+.gathering-add-index .gathering-add-form-wrap {
+    align-items: flex-start;
+    display: inline-flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 30px;
+    padding: 58px 43px;
+    position: relative;
+}
+
+.gathering-add-index .gathering-add-text {
+    color: #000000;
+    font-family: "Noto Sans KR", Helvetica;
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 16px;
+    margin-top: -1px;
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+}
+
+.gathering-add-index .gathering-add-form {
+    align-items: flex-start;
+    display: inline-flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 10px;
+    padding: 50px 0px;
+    position: relative;
+}
+
+.gathering-add-index .form-title {
+    color: #000000;
+    font-family: "Noto Sans KR", Helvetica;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 16px;
+    margin-top: -1px;
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+}
+
+.gathering-add-index .title {
+    background-color: #ffffff;
+    border: 1px solid;
+    border-color: #000000;
+    border-radius: 25px;
+    height: 41px;
+    position: relative;
+    width: 403px;
+}
+
+.gathering-add-index .text-wrapper-2 {
+    color: #000000;
+    font-family: "Noto Sans KR", Helvetica;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 16px;
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+}
+
+.gathering-add-index .intro {
+    background-color: #ffffff;
+    border: 1px solid;
+    border-color: #000000;
+    border-radius: 25px;
+    height: 217px;
+    position: relative;
+    width: 831px;
+}
+
+.gathering-add-index .img {
+    position: relative;
+
+}
+
+.gathering-add-index .img-preview {
+    background-color: #ffffff;
+    border: 1px solid;
+    border-color: #000000;
+    border-radius: 25px;
+    height: 223px;
+    position: relative;
+    width: 388px;
+}
+
+.gathering-add-index .zonecode {
+    background-color: #ffffff;
+    border: 1px solid;
+    border-color: #000000;
+    border-radius: 10px;
+    height: 40px;
+    position: relative;
+    width: 200px;
+    margin-right: 10px;
+}
+
+.gathering-add-index .full-address {
+    height: 40px;
+    width: 500px;
+    border-radius: 10px;
+    border: 1px solid;
+}
+.gathering-add-index .sub-address {
+    height: 40px;
+    width: 500px;
+    border-radius: 10px;
+    border: 1px solid;
+}
+
+.gathering-add-index .location {
+    background-color: #ffffff;
+    border: 1px solid;
+    border-color: #000000;
+    border-radius: 25px;
+    height: 44px;
+    position: relative;
+    width: 502px;
+}
+
+.gathering-add-index .capacity {
+    background-color: #ffffff;
+    border: 1px solid;
+    border-color: #000000;
+    border-radius: 25px;
+    height: 44px;
+    position: relative;
+    width: 259px;
+}
+
+.gathering-add-index .etc {
+    background-color: #ffffff;
+    border: 1px solid;
+    border-color: #000000;
+    border-radius: 25px;
+    height: 214px;
+    position: relative;
+    width: 687px;
+}
+
+.gathering-add-index .add-button-wrap {
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    position: relative;
+}
+
+.gathering-add-index .add-button {
+    align-items: center;
+    background-color: #03c75a;
+    border-radius: 15px;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 10px;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.gathering-add-index .add-button-text {
+    color: #ffffff;
+    font-family: "Inter", Helvetica;
+    font-size: 18px;
+    font-weight: 700;
+    height: 54px;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    text-align: center;
+    width: 209px;
+    background-color: #03c75a;
+}
+
+.gathering-add-index .footer-wrap {
+    align-items: center;
+    background-color: #ffffff;
+    border-color: #000000;
+    border-top-style: solid;
+    border-top-width: 1px;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 10px;
+    justify-content: center;
+    position: relative;
+}
+
+.gathering-add-index .footer-logo-wrap {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 159px;
+    justify-content: center;
+    padding: 10px;
+    position: relative;
+    width: 209px;
+}
+
+.gathering-add-index .footer-image-wrap {
+    background-image: url(https://cdn.animaapp.com/projects/6560b21274de9042f7d947f4/releases/65653f5621a5f8ac6355e1a6/img/footer-logo@2x.png);
+    background-position: 50% 50%;
+    background-size: cover;
+    height: 69px;
+    position: relative;
+    width: 189px;
+}
+
+.gathering-add-index .footer-menu-wrap {
+    align-items: center;
+    display: flex;
+    gap: 40px;
+    height: 159px;
+    justify-content: center;
+    padding: 10px;
+    position: relative;
+    width: 880px;
+}
+
+.gathering-add-index .div-wrapper-2 {
+    align-items: flex-start;
+    display: flex;
+    gap: 10px;
+    height: 20px;
+    position: relative;
+    width: 59px;
+}
+
+.gathering-add-index .text-wrapper-3 {
+    color: #000000;
+    font-family: "Roboto", Helvetica;
+    font-size: 16px;
+    font-weight: 400;
+    height: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    text-align: center;
+    width: 59px;
+}

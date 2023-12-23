@@ -1,18 +1,29 @@
 package com.kosta268.eco_connect.controller.member;
 
+import com.kosta268.eco_connect.dto.gathering.GatheringDto;
 import com.kosta268.eco_connect.dto.member.MemberRequestDto;
 import com.kosta268.eco_connect.dto.member.MemberResponseDto;
 import com.kosta268.eco_connect.dto.member.TokenReissueRequestDto;
 import com.kosta268.eco_connect.dto.member.TokenResponseDto;
+import com.kosta268.eco_connect.dto.mission.MemberMissionDto;
+import com.kosta268.eco_connect.dto.point.PointDto;
+import com.kosta268.eco_connect.entity.gathering.MemberGathering;
+import com.kosta268.eco_connect.entity.member.Member;
+import com.kosta268.eco_connect.entity.mission.MemberMission;
+import com.kosta268.eco_connect.entity.point.Point;
+import com.kosta268.eco_connect.security.CustomUserDetails;
 import com.kosta268.eco_connect.service.member.MemberService;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping(value="/api/member")
@@ -69,5 +80,41 @@ public class MemberController {
     @PostMapping("/find-pw/change-pw")
     public ResponseEntity<MemberResponseDto> memberChangePw(@RequestBody MemberRequestDto memberRequestDto) {
         return ResponseEntity.ok(memberService.changeMemberPassword(memberRequestDto));
+    }
+
+    @GetMapping("/me")
+    public ResponseEntity<?> getMe(@AuthenticationPrincipal CustomUserDetails userDetails) {
+        log.info("userDetails = {}", userDetails);
+        return ResponseEntity.ok(userDetails);
+    }
+
+
+    @GetMapping("/{memberId}/gatherings")
+    public List<GatheringDto> getMemberGatherings(@AuthenticationPrincipal CustomUserDetails userDetails) {
+        Member member = memberService.getMemberById(userDetails.getMemberId());
+        List<MemberGathering> memberGatherings = member.getMemberGatherings();
+
+        List<GatheringDto> gatheringDtos = memberGatherings.stream()
+                .map(MemberGathering::getGathering)
+                .map(GatheringDto::fromEntity)
+                .collect(Collectors.toList());
+
+        log.info("gatherings = {}", gatheringDtos);
+        return gatheringDtos;
+    }
+    @GetMapping("/{memberId}/missions")
+    public ResponseEntity<List<MemberMissionDto>> getMemberMissions(@AuthenticationPrincipal CustomUserDetails userDetails) {
+        List<MemberMission> memberMissions = memberService.findMemberMissions(userDetails.getMemberId());
+        List<MemberMissionDto> memberMissionDtos = memberMissions.stream()
+                .map(MemberMissionDto::fromEntity)
+                .collect(Collectors.toList());
+        return ResponseEntity.ok(memberMissionDtos);
+    }
+
+    @GetMapping("/{memberId}/point")
+    public ResponseEntity<PointDto> getMemberPoint(@AuthenticationPrincipal CustomUserDetails userDetails) {
+        Point memberPoint = memberService.findMemberPoint(userDetails.getMemberId());
+        PointDto pointDto = PointDto.fromEntity(memberPoint);
+        return ResponseEntity.ok(pointDto);
     }
 }

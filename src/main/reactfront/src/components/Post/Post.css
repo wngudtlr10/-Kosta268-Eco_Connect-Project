@@ -1,0 +1,22 @@
+.address-btn {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 400;
+    border: 1px solid #03c75a;
+    border-radius: 10px;
+    height: 40px;
+    overflow: hidden;
+    position: relative;
+    width: 180px;
+
+    font-size: 14px;
+    background-color: #FFFFFF;
+    color: #03c75a;
+
+    cursor: pointer;
+}
+
+.address-btn:hover {
+    border: 1px solid #03c75a;
+    background-color: #03c75a;
+    color: #FFFFFF;
+}

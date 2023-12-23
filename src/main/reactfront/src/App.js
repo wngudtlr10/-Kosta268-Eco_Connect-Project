@@ -17,6 +17,12 @@ import FundingUpdate from './pages/funding/FundingUpdate';
 import FundingDelete from './pages/funding/FundingDelete';
 import FundingPayment from './pages/funding/FundingPayment';
 import AdminLayout from './components/Layout/AdminLayout';
+import GatheringList from "./pages/gathering/GatheringList";
+import GatheringDetail from "./pages/gathering/GatheringDetail";
+import GatheringAdd from "./pages/gathering/GatheringAdd";
+import GatheringUpdate from "./pages/gathering/GatheringUpdate";
+import MissionList from "./pages/mission/MissionList";
+import MissionDetail from "./pages/mission/MissionDetail";
 
 import Error400 from "./pages/errors/Error400"
 import Error500 from "./pages/errors/Error500"
@@ -43,7 +49,14 @@ function App() {
                     <Route path={"/funding/update"} element={<FundingUpdate />} />
                     <Route path={"/funding/delete"} element={<FundingDelete />} />
                     <Route path={"/funding/payment"} element={<FundingPayment />} />
-                   
+                    {/* gathering */}
+                    <Route path={"/gathering"} element={<GatheringList />} />
+                    <Route path={"/gathering/:gatheringId"} element={<GatheringDetail />} />
+                    <Route path={"/gathering/add"} element={<GatheringAdd />} />
+                    <Route path={"/gathering/update/:gatheringId"} element={<GatheringUpdate />} />
+                    {/* mission */}
+                    <Route path={"/mission"} element={<MissionList />} />
+                    <Route path={"/mission/:missionId"} element={<MissionDetail />} />
                 </Route>
                 {/*error 400, 500*/}
                 <Route path={"/error400"} element={<Error400/>}/>
