@@ -1,4 +1,4 @@
-package com.example.lastweb.entity.admin;
+package com.kosta268.eco_connect.entity.admin;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

@@ -6,14 +6,14 @@ import CIcon from '@coreui/icons-react'
 
 import { AppSidebarNav } from './AppSidebarNav'
 
-import  logoNegative from '../assets/brand/eco-connect-logo.png'
+
 
 
 import SimpleBar from 'simplebar-react'
 import 'simplebar/dist/simplebar.min.css'
 
 // sidebar nav config
-import navigation from '../_nav'
+import navigation from '../../pages/admin/_nav';
 
 const AppSidebar = () => {
   const dispatch = useDispatch()
@@ -30,8 +30,8 @@ const AppSidebar = () => {
       }}
     >
       <CSidebarBrand className="d-none d-md-flex" to="/">
-        <CIcon className="sidebar-brand-full" icon={logoNegative} height={35} />
-        <CIcon className="sidebar-brand-narrow" icon={logoNegative} height={35} />
+        <CIcon className="sidebar-brand-full"  height={35} />
+        <CIcon className="sidebar-brand-narrow"  height={35} />
       </CSidebarBrand>
       <CSidebarNav>
         <SimpleBar>

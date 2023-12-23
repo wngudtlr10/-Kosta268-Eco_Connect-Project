@@ -1,8 +1,9 @@
-package com.example.lastweb.service.admin;
+package com.kosta268.eco_connect.service.admin;
 
-import com.example.lastweb.Repository.admin.NoticeRepository;
-import com.example.lastweb.entity.admin.Notice;
-import com.example.lastweb.exception.ResourceNotFoundException;
+
+
+import com.kosta268.eco_connect.entity.admin.Notice;
+import com.kosta268.eco_connect.repository.admin.NoticeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
@@ -27,14 +28,14 @@ public class NoticeService {
   }
   public ResponseEntity<Notice> getNoticeById(@PathVariable Integer notice_id) {
     Notice notice = noticeRepository.findById(notice_id)
-        .orElseThrow(() -> new ResourceNotFoundException("Notice not exist with id : " + notice_id));
+        .orElseThrow(() -> new com.example.lastweb.exception.ResourceNotFoundException("Notice not exist with id : " + notice_id));
 
     return ResponseEntity.ok(notice);
   }
 
   public ResponseEntity<Notice> updateNotice(@PathVariable Integer notice_id, @RequestBody Notice noticesDetails) {
     Notice notice = noticeRepository.findById(notice_id)
-        .orElseThrow(() -> new ResourceNotFoundException("Notice not exist with id : " + notice_id));
+        .orElseThrow(() -> new com.example.lastweb.exception.ResourceNotFoundException("Notice not exist with id : " + notice_id));
 
     notice.setContent(noticesDetails.getContent());
     notice.setTitle(noticesDetails.getTitle());
@@ -45,7 +46,7 @@ public class NoticeService {
 
   public ResponseEntity<Map<String , Boolean>> deleteNotice(@PathVariable Integer notice_id) {
     Notice notice = noticeRepository.findById(notice_id)
-        .orElseThrow(() -> new ResourceNotFoundException("Notice not exist with id : " + notice_id));
+        .orElseThrow(() -> new com.example.lastweb.exception.ResourceNotFoundException("Notice not exist with id : " + notice_id));
 
     noticeRepository.delete(notice);
     Map<String, Boolean> response = new HashMap<>();

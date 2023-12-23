@@ -1,10 +1,11 @@
-package com.example.lastweb.Repository.admin;
+package com.kosta268.eco_connect.repository.admin;
 
-import com.example.lastweb.entity.admin.Notice;
+
+import com.kosta268.eco_connect.entity.admin.Notice;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface NoticeRepository extends JpaRepository <Notice, Integer> {
+public interface NoticeRepository extends JpaRepository<Notice, Integer> {
 
 }

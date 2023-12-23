@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
-const PundingComponent = () => {
+const FundingComponent = () => {
   const [pundings, setPundings] = useState([]);
 
   useEffect(() => {
@@ -55,4 +55,4 @@ const PundingComponent = () => {
   );
 };
 
-export default PundingComponent;
+export default FundingComponent;

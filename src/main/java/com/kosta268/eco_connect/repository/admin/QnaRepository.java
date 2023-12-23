@@ -1,10 +1,11 @@
-package com.example.lastweb.Repository.admin;
+package com.kosta268.eco_connect.repository.admin;
 
-import com.example.lastweb.entity.admin.Qna;
+
+import com.kosta268.eco_connect.entity.admin.Qna;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface QnaRepository extends JpaRepository <Qna, Integer> {
+public interface QnaRepository extends JpaRepository<Qna, Integer> {
 
 }

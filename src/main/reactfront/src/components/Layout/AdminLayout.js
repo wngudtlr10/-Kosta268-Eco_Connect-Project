@@ -1,9 +1,9 @@
 import React from 'react'
-import { AppContent, AppSidebar, AppHeader } from '../components/index'
+import { AppContent, AppSidebar, AppHeader } from '../AdminPageComponent/index'
 
 
 
-const DefaultLayout = () => {
+const AdminLayout = () => {
   return (
    
     <div>
@@ -20,4 +20,4 @@ const DefaultLayout = () => {
   )
 }
 
-export default DefaultLayout
+export default AdminLayout;

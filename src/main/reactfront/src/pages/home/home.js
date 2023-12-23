@@ -3,9 +3,9 @@ import React  from "react";
 import axios from "axios";
 import Nav from 'react-bootstrap/Nav';
 import "./home.css";
-import MissionComponent2 from "./missionComponent2";
-import GatheringComponent from "./gatheringComponent";
-import PundingComponent from "./pundingComponent";
+import MissionComponent2 from "../../components/Card/MainPageCards/missionComponent2";
+import GatheringComponent from "../../components/Card/MainPageCards/gatheringComponent";
+import FundingComponent from "../../components/Card/MainPageCards//fundingComponent";
 
  const Home = () => {
   const scrollRef = useRef(null);
@@ -201,7 +201,7 @@ import PundingComponent from "./pundingComponent";
       onMouseUp={onDragEnd}
       onMouseLeave={onDragEnd}
       ref={scrollRef}>
-          <PundingComponent />
+          <FundingComponent />
           {/* 내용 컴포넌트를 선택된 카테고리에 따라 렌더링 추후 백과 연결후 활성화 */}
     {/* {selectedCategory === '전체' && <PundingComponent />}
       {selectedCategory === '참여형' && <PundingComponent category={0}/>}
