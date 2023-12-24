@@ -1,7 +1,7 @@
 import React from 'react';
 import { CPagination, CPaginationItem, } from '@coreui/react';
 
-const MissionPageNation = ({ page, totalPages, setPage }) => {
+const MGPageNation = ({ page, totalPages, setPage }) => {
 
   const handlePageChange = (newPage) => {
     console.log('Page clicked', newPage);
@@ -33,4 +33,4 @@ const MissionPageNation = ({ page, totalPages, setPage }) => {
   );
 };
 
-export default MissionPageNation;
+export default MGPageNation;

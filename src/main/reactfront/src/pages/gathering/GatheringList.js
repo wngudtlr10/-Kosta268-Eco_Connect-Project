@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { useLocation, useSearchParams, Link } from "react-router-dom";
 import AuthAxios from "../../utils/axios/AuthAxios";
 import Nav from 'react-bootstrap/Nav';
+import MGPageNation from "../../components/PageNation/MGPageNation";
 
 function GatheringList() {
 
@@ -227,7 +228,7 @@ function GatheringList() {
                 ))}
             </div>
             <div className="gathering-list-8">
-                <div className="pagination-button">
+                {/* <div className="pagination-button">
                     <div className="pagination-left-wrap">
                         <button className="pagination-left" onClick={() => setPage(oldPage => Math.max(oldPage - 1, 0))} disabled={page === 0}>
                             &lt;&lt;
@@ -249,13 +250,15 @@ function GatheringList() {
                             &gt;&gt;
                         </button>
                     </div>
-                </div>
+                </div> */}
+                 <MGPageNation page={page} totalPages={totalPages} setPage={setPage} />
                 <div className="register-button-wrap">
                     <div className="register-button">
                         <div className="register-text"><Link to="/gathering/add" className="register-button">작성</Link></div>
                     </div>
                 </div>
             </div>
+            
         </div>
     )
 }

@@ -5,7 +5,7 @@ import { Link, useSearchParams } from "react-router-dom";
 import AuthAxios from "../../utils/axios/AuthAxios";
 import Nav from 'react-bootstrap/Nav';
 
-import MissionPageNation from "../../components/PageNation/MissionPageNation";
+import MissionPageNation from "../../components/PageNation/MGPageNation";
 
 function MissionList() {
     const [lists, setLists] = useState([]);
