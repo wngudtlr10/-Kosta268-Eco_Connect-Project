@@ -1,7 +1,7 @@
 import React from "react";
 import "./ErrorPage.css";
 
- const ErrorPage = () => {
+ const ErrorPage400 = () => {
   return (
     <div className="errorPage-index">
       <div className="div">
@@ -25,4 +25,4 @@ import "./ErrorPage.css";
   );
 };
 
-export default ErrorPage;
+export default ErrorPage400;

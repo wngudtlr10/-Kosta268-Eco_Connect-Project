@@ -3,6 +3,8 @@ import { useEffect, useState} from "react";
 import AuthAxios from "../../utils/axios/AuthAxios";
 import { useParams, useNavigate } from "react-router-dom";
 import "./GatheringDetails.css";
+import Button from "react-bootstrap/esm/Button";
+
 
 function GatheringDetail() {
 
@@ -98,6 +100,9 @@ function GatheringDetail() {
 
     return (
         <div className="detail-index">
+             <div className="gathering-title">
+                    <div className="title">{gathering ? gathering.title : "Loading..."}</div>
+                </div>
             <div className="div">
                 <div className="overlap-group">
                     <div className="detail-main-wrap">
@@ -153,11 +158,10 @@ function GatheringDetail() {
                                         <p>님이 참가중이에요.</p>
                                     </>)
                                 }) : null }
-                                <div className="detail-main-check-wrapper">
                                     {/* <div className="detail-main-check-3">확인하기</div> */}
-                                    <button className="detail-main-check-3" onClick={fetchGatheringMembers}>확인하기</button>
+                                    <Button className="detail-main-check-3" onClick={fetchGatheringMembers} variant="danger">확인하기</Button>
 
-                                </div>
+                              
                             </div>
                             <div className="detail-main-info">
                                 <div className="detail-info-text">안내사항</div>
@@ -197,23 +201,6 @@ function GatheringDetail() {
                             </div>
                         </div>
                     </div>
-                    <img
-                        className="profile-icon"
-                        alt="Profile icon"
-                        src="https://cdn.animaapp.com/projects/6560b21274de9042f7d947f4/releases/656794b954eecaa3161d736b/img/profile-icon.svg"
-                    />
-                </div>
-                <div className="gathering-title">
-                    <div className="title">{gathering ? gathering.title : "Loading..."}</div>
-                </div>
-                <div className="gathering-banner">
-                    <img
-                        className="nature-2"
-                        alt="Nature"
-                        src="https://cdn.animaapp.com/projects/6560b21274de9042f7d947f4/releases/656794b954eecaa3161d736b/img/nature-3289812-1920-2-1.png"
-                    />
-                    <div className="banner-text-big">모임에 참석해 보세요!</div>
-                    <p className="banner-text-small">소규모 모임부터 봉사 모임까지 주변 사람들과 모여서 봉사활동을 시작하세요!</p>
                 </div>
             </div>
         </div>

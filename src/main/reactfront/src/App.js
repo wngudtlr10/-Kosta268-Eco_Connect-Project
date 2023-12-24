@@ -24,17 +24,18 @@ import GatheringUpdate from "./pages/gathering/GatheringUpdate";
 import MissionList from "./pages/mission/MissionList";
 import MissionDetail from "./pages/mission/MissionDetail";
 
-import Error400 from "./pages/errors/Error400"
-import Error500 from "./pages/errors/Error500"
+import Error400 from './pages/errorpage/ErrorPage400'
+import Error500 from './pages/errorpage/ErrorPage500'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './assets/css/admin/style.scss';
+import Home from "./pages/home/home";
 
 function App() {
     return (
         <Router>
             <Routes>
                 {/*main, member routes */}
-                <Route path={"/"} element={<Main/>}/>
+                
 
                 <Route path={"/join"} element={<Join />} />
                 <Route path={"/login"} element={<Login />} />
@@ -42,6 +43,8 @@ function App() {
                 <Route path={"/find-pw"} element={<FindPw />} />
                 <Route element={<Layout />}>
                     <Route path={"/membertest"} element={<MemberTest />} />
+                    <Route path={"/"} element={<Home/>}/>
+
                     {/*funding*/}
                     <Route path={"/funding/view"} element={<FundingView />} />
                     <Route path={"/funding/write"} element={<FundingWrite />} />
