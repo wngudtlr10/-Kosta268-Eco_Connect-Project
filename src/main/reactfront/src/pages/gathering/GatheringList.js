@@ -3,7 +3,7 @@ import "./GatheringList.css";
 import { useState, useEffect } from "react";
 import { useLocation, useSearchParams, Link } from "react-router-dom";
 import AuthAxios from "../../utils/axios/AuthAxios";
-
+import Nav from 'react-bootstrap/Nav';
 
 function GatheringList() {
 
@@ -136,9 +136,9 @@ function GatheringList() {
     return (
         <div className="gathering-index">
             <div className="div">
-                <div className="card-info">
-                    <div className="card-info-text-big">
-                        <p className="p">
+                <div className="main-banner">
+                    <div className="main-banner-big-text-wrapper">
+                        <p className="main-banner-big-text">
                             똑같은 봉사라도 더 다채롭게 <br />
                             만들어 줄 원데이 취향 모임
                         </p>
@@ -146,34 +146,30 @@ function GatheringList() {
                     <div className="card-info-text-small">
                         <p className="card-info-text-small-2">
                             누구나 열고 참여할 수 있는 원데이모임,
-                            <br />
+                        
                             소셜링으로 가볍고 즐겁게 만나보세요!
                         </p>
                     </div>
                 </div>
             </div>
             <div className="middle-menu-wrap">
-                <div className="middle-menu-total">
-                    <div className="middle-menu-total-2">전체</div>
-                </div>
-                <div className="div-2">
-                    <div className="middle-menu-clean" />
-                    <div className="middle-menu-clean-wrapper">
-                        <div className="middle-menu-clean-2">환경미화</div>
-                    </div>
-                </div>
-                <div className="div-2">
-                    <div className="middle-menu-talent" />
-                    <div className="div-wrapper-2">
-                        <div className="text-wrapper-2">재능기부</div>
-                    </div>
-                </div>
-                <div className="div-2">
-                    <div className="middle-menu-donation" />
-                    <div className="div-wrapper-2">
-                        <div className="text-wrapper-2">기부모임</div>
-                    </div>
-                </div>
+               
+            <Nav variant="phills" defaultActiveKey="#">
+      <Nav.Item >
+        <Nav.Link href="#" className="nav-text">전체</Nav.Link>
+      </Nav.Item>
+      <Nav.Item>
+        <Nav.Link eventKey="link-1" href="#"className="nav-text">환경미화</Nav.Link>
+      </Nav.Item>
+      <Nav.Item>
+      <Nav.Link eventKey="link-2" href="#"className="nav-text">재능기부</Nav.Link>
+      </Nav.Item>
+      <Nav.Item>
+      <Nav.Link eventKey="link-3" href="#"className="nav-text">재능기부</Nav.Link>
+      </Nav.Item>
+    </Nav>
+
+
                 {/* <div className="middle-menu-blank" /> */}
                 <div className="middle-menu-search">
                     <img
@@ -195,13 +191,7 @@ function GatheringList() {
                     </select>
                 </div>
             </div>
-            <div className="gathering-banner">
-                <img
-                    className="img"
-                    alt="Gathering banner"
-                    src="https://cdn.animaapp.com/projects/6560b21274de9042f7d947f4/releases/65673b953ef9bbba272aaf86/img/gathering-banner-image.png"
-                />
-            </div>
+           
 
 
             <div className="gathering-list-wrap">

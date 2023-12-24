@@ -3,6 +3,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import AuthAxios from "../../utils/axios/AuthAxios";
+import Nav from 'react-bootstrap/Nav';
 
 function MissionList() {
     const [lists, setLists] = useState([]);
@@ -72,70 +73,43 @@ function MissionList() {
                             src="https://cdn.animaapp.com/projects/6560b21274de9042f7d947f4/releases/6570992a80abe6b84bdfe96b/img/mission-image.png"
                         />
                     </div>
+                    {/* <div className="div" onClick={() => handleCategory("전체")}>전체&nbsp;&nbsp;&nbsp;&nbsp; |</div> */}
                     <div className="mission-middle-menu">
-                        <div className="menu-select">
-                            <div className="menu-total">
-                                <div className="div" onClick={() => handleCategory("전체")}>전체&nbsp;&nbsp;&nbsp;&nbsp; |</div>
-                            </div>
-                            <div className="menu-activity">
-                                <div className="div-2">
-                                    <img
-                                        className="img-2"
-                                        alt="Menu activity icon"
-                                        src="https://cdn.animaapp.com/projects/6560b21274de9042f7d947f4/releases/6570992a80abe6b84bdfe96b/img/menu-activity-icon.png"
-                                    />
-                                </div>
-                                <div className="div-2">
-                                    <div className="div" onClick={() => handleCategory("활동형")}>활동형&nbsp;&nbsp;&nbsp;&nbsp; |</div>
-                                </div>
-                            </div>
-                            <div className="div-3">
-                                <div className="div-4">
-                                    <img
-                                        className="img-2"
-                                        alt="Menu participate"
-                                        src="https://cdn.animaapp.com/projects/6560b21274de9042f7d947f4/releases/6570992a80abe6b84bdfe96b/img/menu-participate-icon.png"
-                                    />
-                                </div>
-                                <div className="div-4">
-                                    <div className="div" onClick={() => handleCategory("참여형")}>참여형&nbsp;&nbsp;&nbsp;&nbsp; |</div>
-                                </div>
-                            </div>
-                            <div className="div-3">
-                                <div className="div-5">
-                                    <img
-                                        className="img-2"
-                                        alt="Menu challenge icon"
-                                        src="https://cdn.animaapp.com/projects/6560b21274de9042f7d947f4/releases/6570992a80abe6b84bdfe96b/img/menu-challenge-icon.png"
-                                    />
-                                </div>
-                                <div className="div-5">
-                                    <div className="div" onClick={() => handleCategory("도전형")}>도전형</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="middle-menu-blank" />
-                        <div className="menu-search">
-                            <div className="menu-search-wrap">
-                                <div className="menu-search-input" />
-                                <div className="placeholder">Search Here</div>
-                                <div className="menu-search-icon">
-                                    <img
-                                        className="menu-search-icon-2"
-                                        alt="Menu search icon"
-                                        src="https://cdn.animaapp.com/projects/6560b21274de9042f7d947f4/releases/6570992a80abe6b84bdfe96b/img/menu-search-icon.png"
-                                    />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="hr-wrap">
-                        <img
-                            className="hr"
-                            alt="Hr"
-                            src="https://cdn.animaapp.com/projects/6560b21274de9042f7d947f4/releases/6570992a80abe6b84bdfe96b/img/hr.svg"
+                        <Nav variant="phills" defaultActiveKey="#">
+                              <Nav.Item >
+                                <Nav.Link href="#" className="nav-text" onClick={() => handleCategory("전체")}>전체</Nav.Link>
+                              </Nav.Item>
+                              <Nav.Item>
+                                <Nav.Link eventKey="link-1" href="#"className="nav-text" onClick={() => handleCategory("참여형")}>참여형</Nav.Link>
+                              </Nav.Item>
+                              <Nav.Item>
+                              <Nav.Link eventKey="link-2" href="#"className="nav-text" onClick={() => handleCategory("도전형")}>도전형</Nav.Link>
+                              </Nav.Item>
+                              <Nav.Item>
+                              <Nav.Link eventKey="link-3" href="#"className="nav-text" onClick={() => handleCategory("활동형")}>활동형</Nav.Link>
+                              </Nav.Item>
+                            </Nav>
+                             
+                            <div className="middle-menu-search">
+                    <img
+                            className="search-icon"
+                            alt="Search icon"
+                            src="https://ifh.cc/g/mWbmjO.png"
                         />
-                    </div>
+                    <input className="search-box" type="text" placeholder="검색">
+                        
+                    </input>
+                 </div>
+                 <div className="select-wrap">
+                    <select 
+                    >
+                        <option value="">-- 선택하세요 --</option>
+                        <option value="OPEN">진행중 미션</option>
+                        <option value="CLOSED">종료된 미션</option> 
+                    </select>
+                     </div>
+                     </div>
+
                     <div className="main-wrap">
                         <div className="main-info">
                             <div className="div-6">
@@ -205,9 +179,9 @@ function MissionList() {
                                     </div>
                                 </div>
                                 <div className="main-new-challenge">
-                                    <div className="main-image-wrap">
+                                    <div className="sub-banner-wrap">
                                         <img
-                                            className="main-image"
+                                            className="sub-banner"
                                             alt="Main image"
                                             src="https://cdn.animaapp.com/projects/6560b21274de9042f7d947f4/releases/65715de20811290773747d5e/img/main-image.png"
                                         />

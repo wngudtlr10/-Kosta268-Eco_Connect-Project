@@ -8,69 +8,19 @@
 
 .gathering-update-index .add-wrap-wrapper {
     background-color: #ffffff;
-    height: 2332px;
+    height: 1500px;
     width: 1473px;
 }
 
 .gathering-update-index .add-wrap {
     align-items: center;
-    display: inline-flex;
+    display: flex;
     flex-direction: column;
-    gap: 230px;
     left: 10px;
     position: relative;
     top: 20px;
 }
 
-.gathering-update-index .logo-wrap {
-    align-items: flex-start;
-    display: inline-flex;
-    flex: 0 0 auto;
-    gap: 4px;
-    position: relative;
-}
-
-.gathering-update-index .ellipse {
-    background-color: #13954c;
-    border-radius: 32.5px;
-    height: 65px;
-    position: relative;
-    width: 65px;
-}
-
-.gathering-update-index .ECO-CONNECT {
-    color: #000000;
-    font-family: "Alata", Helvetica;
-    font-size: 30px;
-    font-weight: 400;
-    height: 68px;
-    letter-spacing: 0;
-    line-height: 30px;
-    margin-top: -1px;
-    position: relative;
-    width: 217px;
-}
-
-.gathering-update-index .icon-leaf {
-    height: 44px;
-    left: 16px;
-    position: absolute;
-    top: 12px;
-    width: 34px;
-}
-
-
-.gathering-update-index .text-wrapper {
-    color: #000000;
-    font-family: "Do Hyeon", Helvetica;
-    font-size: 25px;
-    font-weight: 400;
-    letter-spacing: 0;
-    line-height: normal;
-    margin-top: -1px;
-    position: relative;
-    width: fit-content;
-}
 
 .gathering-update-index .div-wrapper {
     align-items: center;
@@ -82,11 +32,7 @@
     position: relative;
 }
 
-.gathering-update-index .header-icon-wrap {
-    margin-right: -6.3px;
-    position: relative;
-    width: 160.6px;
-}
+
 
 .gathering-update-index .gathering-update-form-wrap {
     align-items: flex-start;
@@ -180,7 +126,6 @@
     position: relative;
     width: 388px;
 }
-
 .gathering-update-index .zonecode {
     background-color: #ffffff;
     border: 1px solid;
@@ -204,7 +149,6 @@
     border-radius: 10px;
     border: 1px solid;
 }
-
 .gathering-update-index .location {
     background-color: #ffffff;
     border: 1px solid;
@@ -270,27 +214,4 @@
     text-align: center;
     width: 209px;
     background-color: #03c75a;
-}
-
-.gathering-update-index .div-wrapper-2 {
-    align-items: flex-start;
-    display: flex;
-    gap: 10px;
-    height: 20px;
-    position: relative;
-    width: 59px;
-}
-
-.gathering-update-index .text-wrapper-3 {
-    color: #000000;
-    font-family: "Roboto", Helvetica;
-    font-size: 16px;
-    font-weight: 400;
-    height: 20px;
-    letter-spacing: 0;
-    line-height: normal;
-    margin-top: -1px;
-    position: relative;
-    text-align: center;
-    width: 59px;
 }

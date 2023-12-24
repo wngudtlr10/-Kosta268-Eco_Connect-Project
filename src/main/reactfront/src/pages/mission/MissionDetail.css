@@ -1,153 +1,40 @@
 .mission-detail-index {
-    align-items: center;
     background-color: #ffffff;
-    display: inline-flex;
-    flex-direction: column;
-    gap: 10px;
-    padding: 10px;
-    position: relative;
-}
-
-.mission-detail-index .header-login {
-    align-items: flex-start;
-    background-color: #ffffff;
-    display: flex;
+    margin: 0 auto;
+    width: fit-content;
+    align-items: center;
+    display: contents;
+   
+  }
+  
+  .mission-detail-index .mission-detail-start {
+    align-items: center;
+    margin: 0 auto;
     flex: 0 0 auto;
-    flex-direction: column;
-    gap: 10px;
-    position: relative;
-    width: 1440px;
-}
-
-.mission-detail-index .header-wrap {
-    align-items: center;
-    display: inline-flex;
-    flex: 0 0 auto;
-    justify-content: center;
-    position: relative;
-}
-
-.mission-detail-index .eco-connect-logo {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    height: 163px;
-    justify-content: center;
-    padding: 42px 2px;
-    position: relative;
-    width: 290px;
-}
-
-.mission-detail-index .img {
-    height: 69.37px;
-    object-fit: cover;
-    position: relative;
-    width: 190px;
-}
-
-.mission-detail-index .header-menu-wrap {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    height: 163px;
-    justify-content: center;
-    padding: 25px 49px;
-    position: relative;
-    width: 880px;
-}
-
-.mission-detail-index .header-menu {
-    align-items: center;
-    display: flex;
-    gap: 80px;
-    height: 31px;
-    justify-content: center;
-    position: relative;
-    width: 648px;
-}
-
-.mission-detail-index .text-wrapper {
-    color: #000000;
-    font-family: "Do Hyeon", Helvetica;
-    font-size: 25px;
-    font-weight: 400;
-    height: 31px;
-    letter-spacing: 0;
-    line-height: normal;
-    margin-top: -1px;
-    position: relative;
-    width: 77px;
-}
-
-.mission-detail-index .reward {
-    color: #000000;
-    font-family: "Do Hyeon", Helvetica;
-    font-size: 25px;
-    font-weight: 400;
-    height: 31px;
-    letter-spacing: 0;
-    line-height: normal;
-    margin-top: -1px;
-    position: relative;
-    width: 58px;
-}
-
-.mission-detail-index .funding {
-    color: #000000;
-    font-family: "Do Hyeon", Helvetica;
-    font-size: 25px;
-    font-weight: 400;
-    height: 31px;
-    letter-spacing: 0;
-    line-height: normal;
-    margin-top: -1px;
-    position: relative;
-    width: 39px;
-}
-
-.mission-detail-index .header-icons {
-    height: 163px;
-    position: relative;
-    width: 270px;
-}
-
-.mission-detail-index .mission-detail-start {
-    align-items: center;
-    display: inline-flex;
-    flex: 0 0 auto;
-    flex-direction: column;
     gap: 42px;
     position: relative;
-}
+    width: fit-content;
+  }
+  
 
-.mission-detail-index .div {
+  
+  .mission-detail-index .mission-detail-start-2 {
+    height: 150px;
+    width: 1100px;
+    margin: auto;
+   
+  }
+  
+  .mission-detail-index .mission-detail-start-wrapper {
     align-items: flex-start;
-    display: inline-flex;
-    flex: 0 0 auto;
-    flex-direction: column;
-    gap: 10px;
-    position: relative;
-}
-
-.mission-detail-index .mission-detail-start-2 {
-    height: 228px;
-    object-fit: cover;
-    position: relative;
-    width: 1040.93px;
-}
-
-.mission-detail-index .mission-detail-start-wrapper {
-    align-items: flex-start;
-    display: inline-flex;
+    display: flex;
     gap: 10px;
     left: 39px;
     position: absolute;
-    top: 56px;
-}
-
-.mission-detail-index .mission-detail-start-3 {
+    top: 46px;
+  }
+  
+  .mission-detail-index .mission-detail-start-3 {
     color: #ffffff;
     font-family: "Poppins", Helvetica;
     font-size: 28px;
@@ -158,18 +45,18 @@
     position: relative;
     text-align: center;
     width: fit-content;
-}
-
-.mission-detail-index .div-wrapper {
+  }
+  
+  .mission-detail-index .div-wrapper {
     align-items: flex-start;
     display: inline-flex;
     gap: 10px;
     left: 39px;
     position: absolute;
-    top: 140px;
-}
-
-.mission-detail-index .p {
+    top: 110px;
+  }
+  
+  .mission-detail-index .p {
     color: #ffffff;
     font-family: "Poppins", Helvetica;
     font-size: 14px;
@@ -180,29 +67,20 @@
     position: relative;
     text-align: center;
     width: fit-content;
-}
-
-.mission-detail-index .mission-detail-title {
-    align-items: flex-start;
+  }
+  
+  .mission-detail-index .mission-detail-title {
     background-color: #ffffff;
-    display: inline-flex;
-    flex: 0 0 auto;
-    flex-direction: column;
+    width: fit-content;
     gap: 10px;
-    padding: 60px 110px;
+    padding: 50px;
+    margin: 0 auto;
     position: relative;
-}
-
-.mission-detail-index .mission-detail-title-2 {
-    align-items: flex-start;
-    display: inline-flex;
-    flex: 0 0 auto;
-    flex-direction: column;
-    gap: 14px;
-    position: relative;
-}
-
-.mission-detail-index .mission-detail-title-3 {
+  }
+  
+ 
+  
+  .mission-detail-index .mission-detail-title-3 {
     color: #000000;
     font-family: "Poppins", Helvetica;
     font-size: 18px;
@@ -214,75 +92,71 @@
     position: relative;
     text-align: center;
     width: 200px;
-}
-
-.mission-detail-index .mission-detail-title-4 {
+  }
+  
+  .mission-detail-index .mission-detail-title-4 {
     height: 5px;
     object-fit: cover;
     position: relative;
-    width: 1207px;
-}
-
-.mission-detail-index .mission-detail-main {
-    align-items: flex-start;
+    width: fit-content;
+  }
+  
+  .mission-detail-index .mission-detail-main {
     background-color: #ffffff;
     border: 1px solid;
-    border-color: #000000;
+    border-color: #c0c0c0;
     border-radius: 25px;
-    display: inline-flex;
-    flex: 0 0 auto;
-    flex-direction: column;
     gap: 10px;
-    overflow: hidden;
-    padding: 18px 26px;
+    padding: 15px 25px;
     position: relative;
-}
-
-.mission-detail-index .mission-detail-main-2 {
+    width: fit-content;
+    margin: auto;
+    margin-bottom: 40px;
+  }
+  
+  .mission-detail-index .mission-detail-main-2 {
     align-items: center;
-    display: inline-flex;
-    flex: 0 0 auto;
-    gap: 23px;
+    display: flex;
     position: relative;
-}
-
-.mission-detail-index .mission-detail-image {
+  }
+  
+  .mission-detail-index .mission-detail-image {
     align-items: flex-start;
-    display: inline-flex;
+    display: flex;
     flex: 0 0 auto;
     flex-direction: column;
     gap: 10px;
     padding: 10px;
     position: relative;
-}
-
-.mission-detail-index .mission-detail-image-2 {
-    height: 547px;
-    object-fit: cover;
+  }
+  
+  .mission-detail-index .mission-detail-image-2 {
+    height: 400px;
+    object-fit: fit ;
     position: relative;
-    width: 614px;
-}
-
-.mission-detail-index .mission-detail-info {
+    width: 500px;
+  }
+  
+  .mission-detail-index .mission-detail-info {
     align-items: center;
     display: flex;
     flex-direction: column;
-    gap: 48px;
-    height: 537px;
+    gap: 10px;
+    height: 300px;
     padding: 20px 0px;
     position: relative;
-    width: 491px;
-}
-
-.mission-detail-index .div-wrapper-2 {
+    width: 580px;
+  }
+  
+  .mission-detail-index .div-wrapper-2 {
     align-items: center;
-    display: inline-flex;
+    display: flex;
     flex: 0 0 auto;
     gap: 10px;
     position: relative;
-}
-
-.mission-detail-index .mission-detail {
+  }
+  
+  .mission-detail-index .mission-detail {
     color: #000000;
     font-family: "Poppins", Helvetica;
     font-size: 18px;
@@ -294,9 +168,10 @@
     position: relative;
     text-align: center;
     width: 480px;
-}
-
-.mission-detail-index .mission-detail-get {
+    margin: 0 auto;
+  }
+  
+  .mission-detail-index .mission-detail-get {
     color: #000000;
     font-family: "Poppins", Helvetica;
     font-size: 18px;
@@ -308,9 +183,9 @@
     position: relative;
     text-align: center;
     width: 241px;
-}
-
-.mission-detail-index .mission-detail-host {
+  }
+  
+  .mission-detail-index .mission-detail-host {
     color: #000000;
     font-family: "Poppins", Helvetica;
     font-size: 18px;
@@ -322,9 +197,10 @@
     position: relative;
     text-align: center;
     width: 304px;
-}
-
-.mission-detail-index .mission-detail-2 {
+    margin-bottom: 10px;
+  }
+  
+  .mission-detail-index .mission-detail-2 {
     color: #000000;
     font-family: "Poppins", Helvetica;
     font-size: 18px;
@@ -336,37 +212,20 @@
     position: relative;
     text-align: center;
     width: 384px;
-}
-
-.mission-detail-index .mission-detail-date {
-    color: #000000;
-    font-family: "Poppins", Helvetica;
-    font-size: 18px;
-    font-weight: 400;
-    height: 30px;
-    letter-spacing: 0;
-    line-height: normal;
-    margin-top: -1px;
-    position: relative;
-    text-align: center;
-    width: 384px;
-}
-
-.mission-detail-index .mission-detail-wrapper {
+    margin-bottom: 50px;
+  }
+  
+  .mission-detail-index .mission-detail-wrapper {
     align-items: center;
     background-color: #03c75a;
-    border-radius: 9px;
-    display: inline-flex;
-    flex: 0 0 auto;
-    gap: 10px;
-    overflow: hidden;
+    border-radius: 15px;
     position: relative;
-}
-
-.mission-detail-index .mission-detail-3 {
+  }
+  
+  .mission-detail-index .mission-detail-3 {
     color: #ffffff;
     font-family: "Inter", Helvetica;
-    font-size: 12px;
+    font-size: 18px;
     font-weight: 400;
     height: 40px;
     letter-spacing: 0;
@@ -375,12 +234,13 @@
     position: relative;
     text-align: center;
     width: 242px;
-}
-
-.mission-detail-index .mission-detail-4 {
+    margin-top: 8px;
+  }
+  
+  .mission-detail-index .mission-detail-4 {
     color: #a1a1a1;
     font-family: "Poppins", Helvetica;
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 400;
     height: 28px;
     letter-spacing: 0;
@@ -389,35 +249,31 @@
     position: relative;
     text-align: center;
     width: 432px;
-}
-
-.mission-detail-index .mission-detail-more {
-    align-items: flex-start;
+  }
+  
+  .mission-detail-index .mission-detail-more {
     background-color: #ffffff;
-    display: inline-flex;
-    flex: 0 0 auto;
     gap: 10px;
     padding: 10px;
     position: relative;
-}
-
-.mission-detail-index .mission-detail-more-2 {
-    align-items: flex-start;
-    display: inline-flex;
-    flex: 0 0 auto;
-    flex-direction: column;
+    margin: auto;
+    width : fit-content;
+    margin-bottom: 20px;
+  }
+  
+  .mission-detail-index .mission-detail-more-2 {
     position: relative;
-}
-
-.mission-detail-index .div-wrapper-3 {
-    align-items: flex-start;
-    display: inline-flex;
-    flex: 0 0 auto;
+    margin: auto;
+  }
+  
+  .mission-detail-index .div-wrapper-3 {
+    display: flex;
     gap: 10px;
     position: relative;
-}
-
-.mission-detail-index .text-wrapper-2 {
+    margin: auto;
+  }
+  
+  .mission-detail-index .text-wrapper-2 {
     color: #000000;
     font-family: "Poppins", Helvetica;
     font-size: 18px;
@@ -429,48 +285,49 @@
     position: relative;
     text-align: center;
     width: 249px;
-}
-
-.mission-detail-index .more-hr {
+  }
+  
+  .mission-detail-index .more-hr {
     height: 5px;
     margin-top: -1px;
     object-fit: cover;
     position: relative;
-    width: 1207px;
-}
-
-.mission-detail-index .midssion-detail {
-    align-items: flex-start;
-    display: inline-flex;
-    flex: 0 0 auto;
+    margin: auto;   
+    width: 1240px;
+  }
+  
+  .mission-detail-index .more-mission {
+    align-items: center;
+    display: flex;
     flex-direction: column;
-    gap: 52px;
+    gap: 22px;
     position: relative;
-}
-
-.mission-detail-index .mission-list-another {
+    margin: auto;
+    margin-bottom: 30px;
+  }
+  
+  .mission-detail-index .mission-list-another {
     align-items: flex-start;
     display: inline-flex;
     flex: 0 0 auto;
     gap: 30px;
     position: relative;
-}
-
-.mission-detail-index .mission-list-wrap {
-    align-items: flex-start;
+  }
+  
+  .mission-detail-index .mission-list-wrap {
+    align-items: center;
     background-color: #ffffff;
     border: 1px solid;
     border-color: #000000;
-    border-radius: 9px;
-    display: inline-flex;
-    flex: 0 0 auto;
+    border-radius: 25px;
+    display: flex;
     gap: 10px;
-    overflow: hidden;
     padding: 10px;
     position: relative;
-}
-
-.mission-detail-index .mission-frame {
+    margin: auto;
+  }
+  
+  .mission-detail-index .mission-frame {
     align-items: center;
     display: inline-flex;
     flex: 0 0 auto;
@@ -478,9 +335,9 @@
     gap: 10px;
     height: 271px;
     position: relative;
-}
-
-.mission-detail-index .mission-image-wrap {
+  }
+  
+  .mission-detail-index .mission-image-wrap {
     align-items: center;
     display: inline-flex;
     flex: 0 0 auto;
@@ -488,15 +345,15 @@
     gap: 10px;
     padding: 10px 0px;
     position: relative;
-}
-
-.mission-detail-index .mission-image {
+  }
+  
+  .mission-detail-index .mission-image {
     height: 152px;
     position: relative;
     width: 249px;
-}
-
-.mission-detail-index .mission-info {
+  }
+  
+  .mission-detail-index .mission-info {
     align-items: center;
     background-color: #ffffff;
     display: inline-flex;
@@ -504,18 +361,18 @@
     flex-direction: column;
     gap: 10px;
     position: relative;
-}
-
-.mission-detail-index .mission-info-wrap {
+  }
+  
+  .mission-detail-index .mission-info-wrap {
     align-items: center;
     display: inline-flex;
     flex: 0 0 auto;
     gap: 59px;
     justify-content: center;
     position: relative;
-}
-
-.mission-detail-index .mission-name-text {
+  }
+  
+  .mission-detail-index .mission-name-text {
     color: #000000;
     font-family: "Poppins", Helvetica;
     font-size: 18px;
@@ -527,9 +384,9 @@
     position: relative;
     text-align: center;
     width: 121px;
-}
-
-.mission-detail-index .mission-point {
+  }
+  
+  .mission-detail-index .mission-point {
     align-items: center;
     display: inline-flex;
     flex: 0 0 auto;
@@ -537,9 +394,9 @@
     height: 29px;
     justify-content: center;
     position: relative;
-}
-
-.mission-detail-index .mission-point-text {
+  }
+  
+  .mission-detail-index .mission-point-text {
     color: #03c75a;
     font-family: "Poppins", Helvetica;
     font-size: 14px;
@@ -550,9 +407,9 @@
     position: relative;
     text-align: center;
     width: 51px;
-}
-
-.mission-detail-index .challenge-button {
+  }
+  
+  .mission-detail-index .challenge-button {
     align-items: center;
     background-color: #03c75a;
     border-radius: 9px;
@@ -563,9 +420,9 @@
     overflow: hidden;
     position: relative;
     width: 242px;
-}
-
-.mission-detail-index .challenge {
+  }
+  
+  .mission-detail-index .challenge {
     color: #ffffff;
     font-family: "Inter", Helvetica;
     font-size: 12px;
@@ -575,9 +432,9 @@
     position: relative;
     text-align: center;
     width: fit-content;
-}
-
-.mission-detail-index .footer {
+  }
+  
+  .mission-detail-index .footer {
     align-items: flex-start;
     background-color: #ffffff;
     border-bottom-style: none;
@@ -591,38 +448,10 @@
     flex-direction: column;
     gap: 10px;
     position: relative;
-}
-
-.mission-detail-index .footer-wrap {
-    align-items: center;
-    display: flex;
-    height: 279px;
-    justify-content: center;
-    position: relative;
-    width: 1440px;
-}
-
-.mission-detail-index .logo-wrap {
-    align-items: center;
-    display: flex;
-    height: 279px;
-    justify-content: center;
-    position: relative;
-    width: 390px;
-}
-
-.mission-detail-index .menu-wrap {
-    align-items: center;
-    display: flex;
-    gap: 40px;
-    height: 279px;
-    justify-content: center;
-    padding: 126px 0px;
-    position: relative;
-    width: 650px;
-}
-
-.mission-detail-index .text-wrapper-3 {
+  }
+  
+  
+  .mission-detail-index .text-wrapper-3 {
     color: #000000;
     font-family: "Roboto", Helvetica;
     font-size: 16px;
@@ -634,9 +463,9 @@
     text-align: center;
     white-space: nowrap;
     width: 59px;
-}
-
-.mission-detail-index .q-a {
+  }
+  
+  .mission-detail-index .q-a {
     color: #000000;
     font-family: "Roboto", Helvetica;
     font-size: 16px;
@@ -648,9 +477,9 @@
     text-align: center;
     white-space: nowrap;
     width: 32px;
-}
-
-.mission-detail-index .text-wrapper-4 {
+  }
+  
+  .mission-detail-index .text-wrapper-4 {
     color: #000000;
     font-family: "Roboto", Helvetica;
     font-size: 16px;
@@ -662,9 +491,9 @@
     text-align: center;
     white-space: nowrap;
     width: 178px;
-}
-
-.mission-detail-index .inquiry-button-wrap {
+  }
+  
+  .mission-detail-index .inquiry-button-wrap {
     align-items: center;
     display: flex;
     gap: 30px;
@@ -673,9 +502,9 @@
     padding: 111px 43px;
     position: relative;
     width: 400px;
-}
-
-.mission-detail-index .inquiry {
+  }
+  
+  .mission-detail-index .inquiry {
     color: #000000;
     font-family: "Roboto", Helvetica;
     font-size: 22px;
@@ -687,9 +516,9 @@
     text-align: center;
     white-space: nowrap;
     width: 81px;
-}
-
-.mission-detail-index .direct-button {
+  }
+  
+  .mission-detail-index .direct-button {
     align-items: center;
     background-color: var(--colorsbluedark);
     border-radius: 15px;
@@ -700,9 +529,9 @@
     padding: 5px 26px;
     position: relative;
     width: 160px;
-}
-
-.mission-detail-index .direct {
+  }
+  
+  .mission-detail-index .direct {
     color: #ffffff;
     font-family: "Roboto", Helvetica;
     font-size: 16px;
@@ -714,4 +543,5 @@
     text-align: center;
     white-space: nowrap;
     width: 59px;
-}
+  }
+  

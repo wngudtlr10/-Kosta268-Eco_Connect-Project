@@ -1,84 +1,33 @@
 .detail-index {
-    background-color: #ffffff;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
-}
-
-.detail-index .div {
-    background-color: #ffffff;
-    height: 2582px;
-    overflow: hidden;
-    position: relative;
-    width: 1443px;
-}
-
-.detail-index .div-wrapper {
-    align-items: flex-start;
-    display: flex;
-    gap: 10px;
-    height: 20px;
-    position: relative;
-    width: 59px;
-}
-
-.detail-index .text-wrapper {
-    color: #000000;
-    font-family: "Roboto", Helvetica;
-    font-size: 16px;
-    font-weight: 400;
-    height: 20px;
-    letter-spacing: 0;
-    line-height: normal;
-    margin-top: -1px;
-    position: relative;
-    text-align: center;
-    width: 59px;
+    margin: 0 auto;
+    width: fit-content;
+    margin-bottom: 50px;
 }
 
 
-.detail-index .overlap-group {
-    height: 1748px;
-    left: 31px;
-    position: absolute;
-    top: 590px;
-    width: 1390px;
-}
 
-.detail-index .detail-main-wrap {
-    align-items: flex-start;
-    background-color: #f2f2f2;
-    display: flex;
-    gap: 10px;
-    height: 1748px;
-    justify-content: center;
-    left: 0;
-    padding: 10px;
-    position: absolute;
-    top: 0;
-    width: 1390px;
-}
+
 
 .detail-index .detail-main {
     align-items: center;
     align-self: stretch;
     background-color: #f2f2f2;
     border-radius: 21px;
-    display: inline-flex;
-    flex: 0 0 auto;
+    display: flex;
+    margin: 0 auto;
     flex-direction: column;
     gap: 10px;
-    overflow: hidden;
     padding: 10px;
     position: relative;
+    
 }
 
 .detail-index .nature {
     height: 295px;
     object-fit: cover;
     position: relative;
-    width: 879px;
+    width: fit-content;
+    margin: 0 auto;
 }
 
 .detail-index .detail-main-writer {
@@ -89,10 +38,9 @@
     flex: 0 0 auto;
     flex-direction: column;
     gap: 10px;
-    overflow: hidden;
-    padding: 57px 311px;
+    padding: 57px;
     position: relative;
-    width: 875px;
+    width: 900px;
 }
 
 .detail-index .detail-writer {
@@ -128,9 +76,8 @@
     flex: 0 0 auto;
     flex-direction: column;
     gap: 10px;
-    padding: 24px 40px;
     position: relative;
-    width: 835px;
+    width: 800px;
 }
 
 .detail-index .p {
@@ -153,7 +100,7 @@
     flex-direction: column;
     gap: 10px;
     position: relative;
-    width: 834px;
+    width: 800px;
 }
 
 .detail-index .text-wrapper-2 {
@@ -232,7 +179,8 @@
     overflow: hidden;
     padding: 10px;
     position: relative;
-    width: 100%;
+    width: 800px;
+    margin : 0 auto;
 }
 
 .detail-index .img {
@@ -252,40 +200,31 @@
     width: fit-content;
 }
 
-.detail-index .detail-main-check-wrapper {
-    align-items: center;
-    background-color: #ff0000;
-    border-radius: 15px;
-    display: inline-flex;
-    flex: 0 0 auto;
-    gap: 10px;
-    overflow: hidden;
-    position: relative;
-}
+
 
 .detail-index .detail-main-check-3 {
-    color: #000000;
+    color: #ffffff;
     font-family: "Inter", Helvetica;
     font-size: 12px;
-    font-weight: 400;
-    height: 25px;
+    font-weight: 300;
+    height: 30px;
     letter-spacing: 0;
     line-height: normal;
     margin-top: 5px;
     position: relative;
     text-align: center;
     width: 100px;
+    background-color: #c7030e;
 }
 
 .detail-index .detail-main-info {
     align-items: flex-start;
-    align-self: stretch;
     display: flex;
     flex: 0 0 auto;
     flex-direction: column;
     gap: 10px;
     position: relative;
-    width: 100%;
+    width: 850px;
 }
 
 .detail-index .detail-main-details {
@@ -416,24 +355,26 @@
 
 .detail-index .text-wrapper-update{
     font-family: "Inter", Helvetica;
-    font-size: 12px;
-    font-weight: 400;
+    font-size: 18px;
+    font-weight: 500;
     height: 40px;
     letter-spacing: 0;
     line-height: normal;
+    margin-top: 15px;
     position: relative;
     text-align: center;
     width: 133px;
     background-color: #6f4ff2;
     border: none;
-    color: #ffffff
+    color: #ffffff;
+    margin: auto;
 }
 
 
 .detail-index .text-wrapper-delete {
     font-family: "Inter", Helvetica;
-    font-size: 12px;
-    font-weight: 400;
+    font-size: 18px;
+    font-weight: 500;
     height: 40px;
     letter-spacing: 0;
     line-height: normal;
@@ -442,7 +383,8 @@
     width: 133px;
     background-color: #c7030e;
     border: none;
-    color: #ffffff
+    color: #ffffff;
+    
 }
 
 .detail-index .detail-delete-button {
@@ -469,14 +411,14 @@
     overflow: hidden;
     padding: 10px 0px;
     position: relative;
-    width: 100%;
-    margin-top: 10px;
+    width: 400px;
+    margin: 10px auto;
 }
 
 .detail-index .detail-join-text {
     color: #ffffff;
     font-family: "Inter", Helvetica;
-    font-size: 30px;
+    font-size: 20px;
     font-weight: 600;
     letter-spacing: 0;
     line-height: normal;
@@ -491,14 +433,14 @@
 }
 
 .detail-index .profile-icon {
+   
     height: 43px;
-    left: 674px;
-    position: absolute;
-    top: 337px;
+    position: relative;
     width: 43px;
 }
 
 .detail-index .gathering-title {
+    
     align-items: center;
     border-bottom-style: solid;
     border-bottom-width: 1px;
@@ -506,12 +448,12 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
-    height: 91px;
-    left: 70px;
-    padding: 10px;
-    position: absolute;
-    top: 494px;
-    width: 1270px;
+    height: 40px;
+   
+   
+    position: relative;
+    margin: 50px auto;
+    width: 1200px;
 }
 
 .detail-index .title {
@@ -542,11 +484,10 @@
 
 .detail-index .nature-2 {
     align-self: stretch;
-    flex: 1;
-    flex-grow: 1;
     object-fit: cover;
     position: relative;
-    width: 100%;
+    
+    
 }
 
 .detail-index .banner-text-big {
@@ -575,57 +516,6 @@
     width: 859px;
 }
 
-
-.detail-index .logo-wrap {
-    align-items: flex-start;
-    display: inline-flex;
-    flex: 0 0 auto;
-    gap: 4px;
-    position: relative;
-}
-
-.detail-index .ellipse {
-    background-color: #13954c;
-    border-radius: 32.5px;
-    height: 65px;
-    position: relative;
-    width: 65px;
-}
-
-.detail-index .ECO-CONNECT {
-    color: #000000;
-    font-family: "Alata", Helvetica;
-    font-size: 30px;
-    font-weight: 400;
-    height: 68px;
-    letter-spacing: 0;
-    line-height: 30px;
-    margin-top: -1px;
-    position: relative;
-    width: 217px;
-}
-
-.detail-index .icon-leaf {
-    height: 44px;
-    left: 16px;
-    position: absolute;
-    top: 12px;
-    width: 34px;
-}
-
-
-.detail-index .text-wrapper-4 {
-    color: #000000;
-    font-family: "Do Hyeon", Helvetica;
-    font-size: 25px;
-    font-weight: 400;
-    letter-spacing: 0;
-    line-height: normal;
-    margin-top: -1px;
-    position: relative;
-    width: fit-content;
-}
-
 .detail-index .div-wrapper-2 {
     align-items: center;
     display: inline-flex;
@@ -636,11 +526,7 @@
     position: relative;
 }
 
-.detail-index .header-icon-wrap {
-    margin-right: -6.3px;
-    position: relative;
-    width: 160.6px;
-}
+
 
 .detail-index a {
     text-decoration: none;
