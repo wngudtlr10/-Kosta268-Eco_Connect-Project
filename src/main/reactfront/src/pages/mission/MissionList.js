@@ -5,6 +5,8 @@ import { Link, useSearchParams } from "react-router-dom";
 import AuthAxios from "../../utils/axios/AuthAxios";
 import Nav from 'react-bootstrap/Nav';
 
+import MissionPageNation from "../../components/PageNation/MGPageNation";
+
 function MissionList() {
     const [lists, setLists] = useState([]);
     const [page, setPage] = useState(0);
@@ -12,6 +14,7 @@ function MissionList() {
     const [searchParams, setSearchParams] = useSearchParams();
     const [category, setCategory] = useState('전체');
 
+    
     const fetchMission = () => {
         AuthAxios.get(`/api/missions?page=${page}`)
             .then((response) => {
@@ -243,7 +246,7 @@ function MissionList() {
                                 )
                             })}
                         </div>
-                        <div className="pagination-button">
+                        {/* <div className="pagination-button">
                             <div className="pagination-left-wrap">
                                 <button className="pagination-left" onClick={() => {
                                     console.log("Left button clicked")
@@ -271,7 +274,8 @@ function MissionList() {
                                     &gt;&gt;
                                 </button>
                             </div>
-                        </div>
+                        </div> */}
+                        <MissionPageNation page={page} totalPages={totalPages} setPage={setPage} />
                     </div>
                 </div>
             </div>

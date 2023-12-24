@@ -8,7 +8,7 @@
 
 .gathering-update-index .add-wrap-wrapper {
     background-color: #ffffff;
-    height: 1500px;
+    height: 1700px;
     width: 1473px;
 }
 
@@ -32,8 +32,49 @@
     position: relative;
 }
 
+.gathering-update-index .zonecode {
+    background-color: #ffffff;
+    border: 1px solid;
+    border-color: #777777;
+    border-radius: 10px;
+    height: 40px;
+    position: relative;
+    width: 200px;
+    margin-right: 10px; 
+}
 
+.gathering-update-index .full-address {
+    height: 40px;
+    width: 500px;
+    border-radius: 10px;
+    border: 1px solid;
+    border-color: #777777;
+    
+}
+.gathering-update-index .sub-address {
+    height: 40px;
+    width: 500px;
+    border-radius: 10px;
+    border: 1px solid;
+    border-color: #777777;
+}
 
+.gathering-update-index .deadline {
+    width: 200px;
+    height: 40px;
+    border-radius: 25px;
+    text-align: center;
+    border-color: #777777;
+    border: 1px solid;
+}
+.gathering-update-index .startAt {
+    width: 200px;
+    height: 40px;
+    border-radius: 25px;
+    text-align: center;
+    border-color: #777777;
+    border: 1px solid;
+}
 .gathering-update-index .gathering-update-form-wrap {
     align-items: flex-start;
     display: inline-flex;
@@ -126,29 +167,7 @@
     position: relative;
     width: 388px;
 }
-.gathering-update-index .zonecode {
-    background-color: #ffffff;
-    border: 1px solid;
-    border-color: #000000;
-    border-radius: 10px;
-    height: 40px;
-    position: relative;
-    width: 200px;
-    margin-right: 10px;
-}
 
-.gathering-update-index .full-address {
-    height: 40px;
-    width: 500px;
-    border-radius: 10px;
-    border: 1px solid;
-}
-.gathering-update-index .sub-address {
-    height: 40px;
-    width: 500px;
-    border-radius: 10px;
-    border: 1px solid;
-}
 .gathering-update-index .location {
     background-color: #ffffff;
     border: 1px solid;
@@ -179,27 +198,8 @@
     width: 687px;
 }
 
-.gathering-update-index .add-button-wrap {
-    align-items: center;
-    display: inline-flex;
-    flex: 0 0 auto;
-    flex-direction: column;
-    gap: 10px;
-    padding: 10px;
-    position: relative;
-}
 
-.gathering-update-index .add-button {
-    align-items: center;
-    background-color: #03c75a;
-    border-radius: 15px;
-    display: inline-flex;
-    flex: 0 0 auto;
-    gap: 10px;
-    justify-content: center;
-    overflow: hidden;
-    position: relative;
-}
+
 
 .gathering-update-index .add-button-text {
     color: #ffffff;
@@ -207,11 +207,13 @@
     font-size: 18px;
     font-weight: 700;
     height: 54px;
-    letter-spacing: 0;
-    line-height: normal;
-    margin-top: -1px;
     position: relative;
     text-align: center;
     width: 209px;
     background-color: #03c75a;
+    border-radius: 20px;
+    border : none
+}
+.gathering-update-index button:active {
+    background-color: #009e47;
 }

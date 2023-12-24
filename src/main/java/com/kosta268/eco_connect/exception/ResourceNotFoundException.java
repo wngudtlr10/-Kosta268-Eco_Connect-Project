@@ -1,4 +1,4 @@
-package com.example.lastweb.exception;
+package com.kosta268.eco_connect.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
