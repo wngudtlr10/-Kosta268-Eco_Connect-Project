@@ -802,14 +802,17 @@
   
   .mission-list-index .mission-list-wrap-2 {
     align-items: center;
-    display: flex;
+    display: grid;
     flex: 0 0 auto;
     flex-direction: column;
-    gap: 0px;
+    gap: 40px;
     justify-content: center;
-    padding: 50px 49px;
+    
     position: relative;
-    width: 1292px;
+    width: 1200px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    transform: scale(0.9);
+    margin: 0 auto;
   }
   
   .mission-list-index .mission-list {
@@ -1181,3 +1184,5 @@
     color: #ffffff;
     background-color: #03c75a;
 }
+
+

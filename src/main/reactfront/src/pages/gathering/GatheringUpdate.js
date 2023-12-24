@@ -3,6 +3,7 @@ import { useState, useRef, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import Post from "../../components/Post/Post";
 import AuthAxios from "../../utils/axios/AuthAxios";
+import './GatheringUpdate.css';
 
 function GatheringUpdate() {
     const now = new Date();

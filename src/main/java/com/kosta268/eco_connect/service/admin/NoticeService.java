@@ -28,14 +28,14 @@ public class NoticeService {
   }
   public ResponseEntity<Notice> getNoticeById(@PathVariable Integer notice_id) {
     Notice notice = noticeRepository.findById(notice_id)
-        .orElseThrow(() -> new com.example.lastweb.exception.ResourceNotFoundException("Notice not exist with id : " + notice_id));
+        .orElseThrow(() -> new com.kosta268.eco_connect.exception.ResourceNotFoundException("Notice not exist with id : " + notice_id));
 
     return ResponseEntity.ok(notice);
   }
 
   public ResponseEntity<Notice> updateNotice(@PathVariable Integer notice_id, @RequestBody Notice noticesDetails) {
     Notice notice = noticeRepository.findById(notice_id)
-        .orElseThrow(() -> new com.example.lastweb.exception.ResourceNotFoundException("Notice not exist with id : " + notice_id));
+        .orElseThrow(() -> new com.kosta268.eco_connect.exception.ResourceNotFoundException("Notice not exist with id : " + notice_id));
 
     notice.setContent(noticesDetails.getContent());
     notice.setTitle(noticesDetails.getTitle());
@@ -46,7 +46,7 @@ public class NoticeService {
 
   public ResponseEntity<Map<String , Boolean>> deleteNotice(@PathVariable Integer notice_id) {
     Notice notice = noticeRepository.findById(notice_id)
-        .orElseThrow(() -> new com.example.lastweb.exception.ResourceNotFoundException("Notice not exist with id : " + notice_id));
+        .orElseThrow(() -> new com.kosta268.eco_connect.exception.ResourceNotFoundException("Notice not exist with id : " + notice_id));
 
     noticeRepository.delete(notice);
     Map<String, Boolean> response = new HashMap<>();

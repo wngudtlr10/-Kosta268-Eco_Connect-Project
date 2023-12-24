@@ -1,7 +1,8 @@
 package com.kosta268.eco_connect.service.admin;
 
-import com.example.lastweb.exception.ResourceNotFoundException;
+
 import com.kosta268.eco_connect.entity.admin.Faq;
+import com.kosta268.eco_connect.exception.ResourceNotFoundException;
 import com.kosta268.eco_connect.repository.admin.FaqRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
