@@ -41,10 +41,12 @@ public class Gathering {
     @Column
     private String image;
 
+    @Builder.Default
     @Column(columnDefinition = "VARCHAR(10) default 'OPEN'")
     @Enumerated(EnumType.STRING)
     private Status status = Status.OPEN;
 
+    @Builder.Default
     @Column(columnDefinition = "INT default 1")
     private int count = 1;
 
@@ -58,6 +60,7 @@ public class Gathering {
     private LocalDateTime deadline;
     private LocalDateTime startAt;
 
+    @Builder.Default
     @OneToMany(mappedBy = "gathering", cascade = CascadeType.REMOVE)
     private List<MemberGathering> memberGatherings = new ArrayList<>();
 
