@@ -111,7 +111,9 @@ function MissionDetail() {
                     </div>
                 </div>
             </div>
+            <div className="another-mission-wrap">
             <MissionComponent2 />
+            </div>
         </div>
     )
 }
