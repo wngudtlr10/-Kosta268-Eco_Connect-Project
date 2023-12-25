@@ -1,0 +1,25 @@
+.msg-btn-wrap {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    text-align: center;
+    width: 60px;
+    height: 60px;
+}
+
+.msg-btn {
+    width: 60px;
+    height: 60px;
+    padding: 0;
+    border: 0;
+    background-color:transparent;
+    cursor: pointer;
+}
+
+.msg-btn, .cxl-btn {
+    filter: drop-shadow(2px 2px 5px #c8c8c8);
+}
+
+.msg-btn :hover, .cxl-btn :hover {
+    filter: drop-shadow(2px 2px 5px #a0a0a0);
+}

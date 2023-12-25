@@ -1,0 +1,101 @@
+.chat-room-list-null-index {
+    align-items: flex-start;
+    background-color: #ffffff;
+    border: 2px solid #8d8d8d;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    /*min-height: 100vh;*/
+    padding: 20px 10px;
+    /*position: relative;*/
+
+    width: 400px;
+    height: 700px;
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    border-radius: 20px;
+    box-shadow: 3px 3px 3px 3px #808080;
+    z-index: 1;
+}
+
+.chat-room-list-null-index .chat-room-title {
+    color: #000000;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    height: 35px;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -2px;
+    position: relative;
+    text-align: center;
+    width: 100px;
+}
+
+.chat-room-list-null-index .chat-room-list-null {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 10px;
+    justify-content: center;
+    /*overflow-y: scroll;*/
+    padding: 10px 10px;
+    position: relative;
+    width: 380px;
+}
+
+.chat-room-list-null-index .chat-room-header {
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    height: 54px;
+    justify-content: center;
+    padding: 14px 13px;
+    position: relative;
+    width: 55px;
+}
+
+.chat-room-list-null-index .logo {
+    background-color: #13954c;
+    border-radius: 25px;
+    height: 50px;
+    margin: -12px -10.5px;
+    position: relative;
+    width: 50px;
+}
+
+.chat-room-list-null-index .icon-leaf {
+    height: 24px;
+    left: 14px;
+    position: absolute;
+    top: 15px;
+    width: 20px;
+}
+
+.chat-room-list-null-index .chat-room-null-content {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    height: 79px;
+    justify-content: center;
+    position: relative;
+    width: 355px;
+}
+
+.chat-room-list-null-index .text-wrapper {
+    align-self: stretch;
+    color: #000000;
+    flex: 1;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 19px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    text-align: center;
+}
