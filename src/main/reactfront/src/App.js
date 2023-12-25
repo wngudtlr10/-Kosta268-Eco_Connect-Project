@@ -42,6 +42,7 @@ function App() {
                 <Route path={"/find-id"} element={<FindId />} />
                 <Route path={"/find-pw"} element={<FindPw />} />
                 <Route element={<Layout />}>
+                    <Route path={"/membertest"} element={<MemberTest />} />
                     <Route path={"/"} element={<Home/>}/>
 
                     {/*funding*/}
@@ -59,9 +60,6 @@ function App() {
                     {/* mission */}
                     <Route path={"/mission"} element={<MissionList />} />
                     <Route path={"/mission/:missionId"} element={<MissionDetail />} />
-
-                    {/* chat test */}
-                    <Route path={"/chat-test"} element={<MemberTest />} />
                 </Route>
                 {/*error 400, 500*/}
                 <Route path={"/error400"} element={<Error400/>}/>
