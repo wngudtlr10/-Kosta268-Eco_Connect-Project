@@ -1,13 +1,17 @@
 package com.kosta268.eco_connect.dto.member;
 
 import com.kosta268.eco_connect.entity.member.Member;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 @Data
 @Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class MemberRequestDto {
     private String id;
     private String password;

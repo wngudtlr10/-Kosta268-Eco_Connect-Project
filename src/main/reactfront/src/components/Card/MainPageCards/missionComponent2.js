@@ -19,6 +19,7 @@ const MissionComponent2 = ({ category }) => {
         }
   
         const response = await axios.get(url);
+
         const fetchedMissions = response.data;
   
         // 최대 8개의 미션만 가져오도록 수정
