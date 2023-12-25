@@ -148,16 +148,18 @@ function GatheringDetail() {
                                     src="https://cdn.animaapp.com/projects/6560b21274de9042f7d947f4/releases/656794b954eecaa3161d736b/img/detail-main-check-plus.svg"
                                 />
                                 <p className="detail-main-check-2">함께 할 멤버들을 먼저 확인하고 참여해 보세요!</p>
-                                {/* {gathering && gathering.participants.map(participant => {
+                                {/* {gathering && gathering.divarticipants.map(participant => {
                                             return <li key={participant.memberId}>{participant.id}</li>
                                         })}
                                         <p>님이 함께 하고 있어요.</p> */}
+                                        <div className="participant-wrap">
                                 {participants ? participants.map(participant => {
                                     return (<>
-                                        <p key={participant.memberId}>{participant.id}</p>
-                                        <p>님이 참가중이에요.</p>
+                                        <div className="participant" key={participant.memberId}>{participant.id}</div>
                                     </>)
                                 }) : null }
+                                </div>
+                                    <p className="detail-main-check-4">님이 참가중이에요.</p>
                                     {/* <div className="detail-main-check-3">확인하기</div> */}
                                     <Button className="detail-main-check-3" onClick={fetchGatheringMembers} variant="danger">확인하기</Button>
 

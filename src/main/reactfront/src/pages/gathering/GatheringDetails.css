@@ -168,19 +168,17 @@
 
 .detail-index .detail-main-check {
     align-items: center;
-    align-self: stretch;
+    flex-direction: column;
     background-color: #ffeded;
     border-radius: 25px;
     display: flex;
-    flex-direction: column;
-    gap: 10px;
-    height: 186px;
+    height: 200px;
     justify-content: center;
-    overflow: hidden;
     padding: 10px;
-    position: relative;
     width: 800px;
     margin : 0 auto;
+    overflow: hidden;
+    
 }
 
 .detail-index .img {
@@ -198,6 +196,7 @@
     line-height: normal;
     position: relative;
     width: fit-content;
+    white-space: nowrap;
 }
 
 
@@ -215,8 +214,11 @@
     text-align: center;
     width: 100px;
     background-color: #c7030e;
+    white-space: nowrap;
 }
-
+.detail-index .detail-main-check-4{
+    white-space: nowrap;
+}
 .detail-index .detail-main-info {
     align-items: flex-start;
     display: flex;
@@ -438,7 +440,21 @@
     position: relative;
     width: 43px;
 }
-
+.detail-index .participant {
+    display: flex;
+    float: left;
+    white-space: nowrap;
+    width: fit-content;
+    flex-wrap: nowrap;
+   
+}
+.detail-index .participant-wrap {
+    display: flex;
+    flex-direction: row;
+  
+    height: fit-content;
+    gap: 10px;
+}
 .detail-index .gathering-title {
     
     align-items: center;

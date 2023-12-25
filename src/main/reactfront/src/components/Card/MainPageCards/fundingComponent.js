@@ -8,7 +8,7 @@ const FundingComponent = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://localhost:3001/punding'); // API 엔드포인트를 실제 서버의 엔드포인트로 변경하세요.
+        const response = await axios.get('http://localhost:8080/funding'); // API 엔드포인트를 실제 서버의 엔드포인트로 변경하세요.
         const fetchedPundings = response.data;
 
         const limitedPunding = fetchedPundings.slice(0, 10);
