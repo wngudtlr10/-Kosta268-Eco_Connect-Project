@@ -931,6 +931,8 @@
     overflow: hidden;
     position: relative;
     width: 242px;
+    color: white;
+    font-weight: 500;
   }
   
   .mission-list-index .pagination-button {

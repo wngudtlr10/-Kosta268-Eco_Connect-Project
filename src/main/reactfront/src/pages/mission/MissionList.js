@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import AuthAxios from "../../utils/axios/AuthAxios";
 import Nav from 'react-bootstrap/Nav';
+import Button from "react-bootstrap/esm/Button";
 
 import MissionPageNation from "../../components/PageNation/MGPageNation";
 
@@ -234,27 +235,28 @@ function MissionList() {
                                         <div className="mission-frame-wrapper">
                                             <div className="mission-frame">
                                                 <div className="mission-image-wrapper">
-                                                    <Link to={`/mission/${item.missionId}`}>
+                                                   
                                                         <img
                                                             className="mission-image-2"
                                                             alt="Mission image"
                                                             src="https://cdn.animaapp.com/projects/6560b21274de9042f7d947f4/releases/6570992a80abe6b84bdfe96b/img/mission-image-1.svg"
                                                         />
-                                                    </Link>
+                                                    
                                                 </div>
                                                 <div className="mission-info">
                                                     <div className="mission-info-wrap">
                                                         <div className="div-2">
-                                                            <Link to={`/mission/${item.missionId}`}><div className="mission-name-text">{item ? item.title : "Loading..."} </div></Link>
+                                                            <div className="mission-name-text">{item ? item.title : "Loading..."} </div>
                                                         </div>
                                                         <div className="mission-point">
-                                                            <Link to={`/mission/${item.missionId}`}><div className="mission-point-text">{item ? item.point : "Loading..."} P</div></Link>
+                                                            <div className="mission-point-text">{item ? item.point : "Loading..."} P</div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div className="challenge-button">
-                                                    <button className="text-wrapper-4" onClick={() => joinMission(item.missionId)}>도전하기</button>
-                                                </div>
+                                                <Link to={`/missions/${item.missionId}`} style={{ textDecoration: 'none' }}>
+                                                <Button className="challenge-button" variant="success" to={`/missions/${item.missionId}`}>
+                                                   도전하기
+                                                </Button></Link>
                                             </div>
                                         </div>
                                     </div>

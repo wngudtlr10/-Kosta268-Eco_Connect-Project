@@ -62,7 +62,7 @@ import FundingComponent from "../../components/Card/MainPageCards//fundingCompon
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://localhost:3001/notice'); // 서버 주소에 맞게 수정
+        const response = await axios.get('http://localhost:8080/api/notice'); // 서버 주소에 맞게 수정
         setNotice(response.data);
       } catch (error) {
         console.error('데이터를 불러오는 중 오류 발생:', error);
