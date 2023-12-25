@@ -235,6 +235,8 @@
     text-align: center;
     width: 242px;
     margin-top: 8px;
+    background: none;
+    border: none;
   }
   
   .mission-detail-index .mission-detail-4 {

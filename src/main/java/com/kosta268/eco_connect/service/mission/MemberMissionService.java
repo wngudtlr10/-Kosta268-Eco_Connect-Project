@@ -33,6 +33,12 @@ public class MemberMissionService {
         Member member = memberRepository.findById(memberId).orElseThrow(() -> new IllegalArgumentException("no such member"));
         Mission mission = missionRepository.findById(missionId).orElseThrow(() -> new IllegalArgumentException("no such mission"));
 
+        boolean isAlreadyJoin = memberMissionRepository.existsByMemberMemberIdAndMissionMissionId(memberId, missionId);
+
+        if (isAlreadyJoin) {
+            throw new IllegalArgumentException("이미 참여하고 있는 미션입니다.");
+        }
+
         MemberMission memberMission = new MemberMission();
 
         member.addMemberMission(memberMission);

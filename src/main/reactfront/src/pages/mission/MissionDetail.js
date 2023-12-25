@@ -22,6 +22,20 @@ function MissionDetail() {
         return result;
     }
 
+    const joinMission = async () => {
+        try {
+            const response = await AuthAxios.post(`/api/missions/${missionId}/join`)
+            if (response.status === 200) {
+                alert("미션 참여에 성공했습니다.");
+            } else {
+                alert("미션 참여에 실패했습니다.");
+            }
+        } catch (error) {
+            console.error(error);
+            alert("미션 참여 중 오류가 발생했습니다.");
+        }
+    }
+
     useEffect(() => {
 
         console.log(missionId);
@@ -89,7 +103,7 @@ function MissionDetail() {
                             <div className="mission-detail-date">미션일시 {mission ? prettyDate() : "Loading..."}</div>
                         </div>
                         <div className="mission-detail-wrapper">
-                            <div className="mission-detail-3">도전하기</div>
+                            <button className="mission-detail-3" onClick={joinMission}>도전하기</button>
                         </div>
                         <div className="div-wrapper-2">
                             <p className="mission-detail-4">※ 미션 인증과정에 오류가 있다면 문의해주시기 바랍니다</p>

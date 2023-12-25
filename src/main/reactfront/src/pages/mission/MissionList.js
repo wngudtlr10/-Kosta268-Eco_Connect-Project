@@ -24,6 +24,21 @@ function MissionList() {
             })
     }
 
+    const joinMission = async (missionId) => {
+        try {
+            const response = await AuthAxios.post(`/api/missions/${missionId}/join`)
+            if (response.status === 200) {
+                alert("미션 참여에 성공했습니다.");
+            } else {
+                alert("미션 참여에 실패했습니다.");
+            }
+        } catch (error) {
+            console.error(error);
+            alert("미션 참여 중 오류가 발생했습니다.")
+        }
+
+    }
+
     function createPageNumberArray(startPage, endPage) {
         let pages = []
         for (let i = startPage; i <= endPage; i ++) {
@@ -219,7 +234,7 @@ function MissionList() {
                                         <div className="mission-frame-wrapper">
                                             <div className="mission-frame">
                                                 <div className="mission-image-wrapper">
-                                                    <Link to={`/missions/${item.missionId}`}>
+                                                    <Link to={`/mission/${item.missionId}`}>
                                                         <img
                                                             className="mission-image-2"
                                                             alt="Mission image"
@@ -230,15 +245,15 @@ function MissionList() {
                                                 <div className="mission-info">
                                                     <div className="mission-info-wrap">
                                                         <div className="div-2">
-                                                            <Link to={`/missions/${item.missionId}`}><div className="mission-name-text">{item ? item.title : "Loading..."} </div></Link>
+                                                            <Link to={`/mission/${item.missionId}`}><div className="mission-name-text">{item ? item.title : "Loading..."} </div></Link>
                                                         </div>
                                                         <div className="mission-point">
-                                                            <Link to={`/missions/${item.missionId}`}><div className="mission-point-text">{item ? item.point : "Loading..."} P</div></Link>
+                                                            <Link to={`/mission/${item.missionId}`}><div className="mission-point-text">{item ? item.point : "Loading..."} P</div></Link>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div className="challenge-button">
-                                                    <div className="text-wrapper-4">도전하기</div>
+                                                    <button className="text-wrapper-4" onClick={() => joinMission(item.missionId)}>도전하기</button>
                                                 </div>
                                             </div>
                                         </div>
