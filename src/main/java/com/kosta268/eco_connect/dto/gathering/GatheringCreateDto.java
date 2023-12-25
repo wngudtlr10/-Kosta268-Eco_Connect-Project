@@ -4,9 +4,7 @@ import com.kosta268.eco_connect.entity.Address;
 import com.kosta268.eco_connect.entity.Status;
 import com.kosta268.eco_connect.entity.gathering.Gathering;
 import com.kosta268.eco_connect.entity.member.Member;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.time.LocalDateTime;
@@ -15,6 +13,8 @@ import java.util.List;
 @Getter
 @Setter
 @Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class GatheringCreateDto {
     private Long creatorId;
 

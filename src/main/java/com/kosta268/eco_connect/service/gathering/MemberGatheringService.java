@@ -25,6 +25,9 @@ public class MemberGatheringService {
         Member member = memberRepository.findById(memberId).orElseThrow(() -> new IllegalArgumentException("no such member"));
         Gathering gathering = gatheringRepository.findById(gatheringId).orElseThrow(() -> new IllegalArgumentException("no such gathering"));
 
+        if (memberGatheringRepository.existsByMemberAndGathering(member, gathering)) {
+            throw new IllegalArgumentException("이미 참여한 모임입니다.");
+        }
         if (gathering.getCount() + 1 > gathering.getCapacity()) {
             log.info("모임 정원 초과");
             throw new Exception("모임 정원 초과");

@@ -32,7 +32,7 @@ public class MemberGatheringController {
     private final GatheringService gatheringService;
     private final MemberGatheringService memberGatheringService;
 
-    @GetMapping("/member/{memberId}/gathering/{gatheringId}/join")
+    @GetMapping("/gathering/{gatheringId}/join")
     public void joinGathering(@AuthenticationPrincipal CustomUserDetails userDetails, @PathVariable Long gatheringId) throws Exception {
         log.info("memberDetails = {}", userDetails.getMemberId());
         Member member = memberService.getMemberById(userDetails.getMemberId());
