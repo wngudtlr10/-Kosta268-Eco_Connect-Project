@@ -1,0 +1,141 @@
+.chat-room-login-index {
+    align-items: flex-start;
+    background-color: #ffffff;
+    border: 2px solid #8d8d8d;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    /*min-height: 100vh;*/
+    padding: 20px 10px;
+    /*position: relative;*/
+
+    width: 400px;
+    height: 700px;
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    border-radius: 20px;
+    box-shadow: 3px 3px 3px 3px #808080;
+    z-index: 1;
+}
+
+.chat-room-login-index .chat-room-title {
+    color: #000000;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    height: 35px;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -2px;
+    position: relative;
+    text-align: center;
+    width: 100px;
+}
+
+.chat-room-login-index .chat-room-list {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    flex-grow: 1;
+    /*gap: 10px;*/
+    /*overflow-y: scroll;*/
+    padding: 10px 10px;
+    position: relative;
+    width: 380px;
+}
+
+.chat-room-login-index .chat-room {
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 600px;
+    justify-content: center;
+    overflow: hidden;
+    padding: 10px 10px;
+    position: relative;
+    width: 380px;
+}
+
+.chat-room-login-index .chat-room-header {
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    height: 54px;
+    justify-content: center;
+    padding: 14px 13px;
+    position: relative;
+    width: 55px;
+}
+
+.chat-room-login-index .logo {
+    background-color: #13954c;
+    border-radius: 25px;
+    height: 50px;
+    margin: -12px -10.5px;
+    position: relative;
+    width: 50px;
+}
+
+.chat-room-login-index .icon-leaf {
+    height: 24px;
+    left: 14px;
+    position: absolute;
+    top: 15px;
+    width: 20px;
+}
+
+.chat-room-login-index .chat-room-content {
+    align-items: center;
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    height: 67px;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+}
+
+.chat-room-login-index .text-wrapper {
+    color: #000000;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 19px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    position: relative;
+    text-align: center;
+    width: fit-content;
+}
+
+.chat-room-login-index .login-button {
+    align-items: center;
+    background-color: #12904a;
+    border-radius: 5px;
+    display: flex;
+    gap: 10px;
+    height: 45px;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    width: 266px;
+
+    border: 1px solid #12904a;
+    font-size: 16px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 700;
+    color: #ffffff;
+
+    cursor: pointer;
+}
+
+.chat-room-login-index .login-button:hover {
+    border: 2px solid #03c75a;
+    background-color: #FFFFFF;
+    color: #03c75a;
+}
