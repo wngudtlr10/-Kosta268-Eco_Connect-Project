@@ -7,3 +7,18 @@ export const loginState = atom({
     default: false,
     effects_UNSTABLE: [persistAtom]
 });
+
+export const lastMsg = atom({
+    key: "lastMsg",
+    default: "",
+});
+
+export const createRoom = atom({
+    key: "createRoom",
+    default: false,
+});
+
+export const addMemberCount = atom({
+    key: "addMemberCount",
+    default: false,
+});

@@ -163,11 +163,11 @@ function Join() {
                                     <div className="info-wrap">
                                         <div className="title-text-wrapper">비밀번호</div>
                                         <input name={"password"} className="form-input" placeholder={"8~20자 이내, 문자/숫자/기호 사용 가능합니다."}
-                                               onChange={onPasswordHandler}/>
+                                               onChange={onPasswordHandler} type={"password"}/>
                                         {isPasswordInvalid && <div className="form-id-validation">8-20자 이내로 입력해주세요.</div>}
                                         <div className="title-text-wrapper">비밀번호 확인</div>
                                         <input className="form-input" placeholder={"비밀번호와 똑같이 입력해주세요."}
-                                                onChange={onCheckPasswordHandler}/>
+                                                onChange={onCheckPasswordHandler} type={"password"}/>
                                         {isPasswordMismatch && <div className="form-id-validation">비밀번호와 똑같이 입력해주세요.</div>}
                                     </div>
                                     <div className="info-wrap">

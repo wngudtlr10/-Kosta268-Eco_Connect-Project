@@ -132,3 +132,31 @@
 .header-index .login-menu:hover {
     color: #8d8d8d;
 }
+
+.header-index .msg {
+    height: 22.5px;
+    position: relative;
+    width: 24.5px;
+    cursor: pointer;
+}
+
+.header-index .icon-bell {
+    height: 26.61px;
+    position: relative;
+    width: 24.1px;
+    cursor: pointer;
+}
+
+.header-index .icon-profile-circled {
+    height: 31.5px;
+    position: relative;
+    width: 31.5px;
+    cursor: pointer;
+}
+
+.header-index .icon-logout {
+    height: 30px;
+    position: relative;
+    width: 30px;
+    cursor: pointer;
+}

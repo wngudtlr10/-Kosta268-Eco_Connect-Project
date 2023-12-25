@@ -1,5 +1,8 @@
 package com.kosta268.eco_connect.entity.member;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.kosta268.eco_connect.entity.chat.ChatMessage;
+import com.kosta268.eco_connect.entity.chat.ChatRoomMember;
 import com.kosta268.eco_connect.entity.gathering.Gathering;
 import com.kosta268.eco_connect.entity.gathering.MemberGathering;
 import com.kosta268.eco_connect.entity.mission.MemberMission;
@@ -19,7 +22,7 @@ import java.util.List;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@ToString
+@ToString(exclude = {"chatMessageList", "chatRoomMemberList"})
 public class Member {
 
     @Id
@@ -52,6 +55,14 @@ public class Member {
     @OneToMany(mappedBy = "member", fetch = FetchType.LAZY, cascade = CascadeType.REMOVE)
     private List<MissionLike> likeMissions = new ArrayList<>();
 
+    @JsonManagedReference
+    @OneToMany(mappedBy = "member", fetch = FetchType.LAZY)
+    private List<ChatMessage> chatMessageList = new ArrayList<>();
+
+    @JsonManagedReference
+    @OneToMany(mappedBy = "member", fetch = FetchType.LAZY)
+    private List<ChatRoomMember> chatRoomMemberList = new ArrayList<>();
+
     // 양방향 연관관계 설정 메서드
     public void addMemberMission(MemberMission memberMission) {
         this.memberMissions.add(memberMission);
@@ -66,6 +77,11 @@ public class Member {
         } else {
             this.point.increasePoint(point);
         }
+    }
+
+    public void addChatRoomUserList(ChatRoomMember chatRoomMember) {
+        chatRoomMemberList.add(chatRoomMember);
+        chatRoomMember.setMember(this);
     }
 
     @PrePersist
