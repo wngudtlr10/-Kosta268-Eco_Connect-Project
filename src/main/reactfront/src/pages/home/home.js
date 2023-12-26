@@ -6,6 +6,7 @@ import "./home.css";
 import MissionComponent2 from "../../components/Card/MainPageCards/missionComponent2";
 import GatheringComponent from "../../components/Card/MainPageCards/gatheringComponent";
 import FundingComponent from "../../components/Card/MainPageCards//fundingComponent";
+import Layout from "../../components/Layout/Layout";
 
  const Home = () => {
   const scrollRef = useRef(null);
@@ -74,6 +75,7 @@ import FundingComponent from "../../components/Card/MainPageCards//fundingCompon
 
 
   return (
+    <Layout>
     <div className="home">
       <img
         className="main-banner"
@@ -209,6 +211,7 @@ import FundingComponent from "../../components/Card/MainPageCards//fundingCompon
       {selectedCategory === '활동형' && <PundingComponent category={2}/>} */}
       </div>
     </div>
+    </Layout>
   );
 };
 

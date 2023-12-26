@@ -5,7 +5,7 @@ import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 
-import { Link, useSearchParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import AuthAxios from '../../../utils/axios/AuthAxios';
 import './missionComponent2.css';
 
@@ -38,9 +38,8 @@ const MissionComponent2 = () => {
   // }, [category]);
   const [lists, setLists] = useState([]);
   const [page, setPage] = useState(0);
-  const [totalPages, setTotalPages] = useState(0);
-  const [searchParams, setSearchParams] = useSearchParams();
-  const [category, setCategory] = useState('전체');
+
+
 
   
   const fetchMission = () => {
@@ -48,63 +47,25 @@ const MissionComponent2 = () => {
           .then((response) => {
               console.log(response);
               setLists(response.data.content);
-              setTotalPages(response.data.totalPages);
           })
   }
 
-  function createPageNumberArray(startPage, endPage) {
-      let pages = []
-      for (let i = startPage; i <= endPage; i ++) {
-          pages.push(i);
-      }
-      return pages;
-  }
-
-  const handleCategory = (category) => {
-      setCategory(category);
-  }
-
-  const filteredMissions = lists.filter(list => {
-      if (category === '전체') {
-          return true;
-      } else {
-          return list.category === category;
-      }
-  });
-
-
-
   useEffect(() => {
-      const pageFromUrl = searchParams.get('page');
-      if (pageFromUrl !== null) {
-          setPage(parseInt(pageFromUrl))
-      }
-
-  }, [])
-
-  useEffect(() => {
-      searchParams.set('page', page.toString());
-      setSearchParams(searchParams);
       fetchMission();
-  }, [page])
-
-
-  useEffect(() => {
-      console.log(lists);
-  }, [lists])
+  }, [])
 
 
   return (
     <Row xs={1} md={4} className="g-5" style={{maxWidth:'1100px'}}>
-      {filteredMissions.map((item, index) => (
+      {lists.map((item, index) => (
          <Col key={index}>
         <Card style={{ width: '15rem',borderRadius:'25px'}}>
-      <Card.Img variant="top" src= {item.image} />
+      <Card.Img variant="top" src= {`url(${item.image})`} />
       <Card.Body>
         <div className='mission-info-wrap'>
         <Card.Title className='mission-name-text'>{item ? item.title : "Loading..."} </Card.Title>
         <Card.Text className='mission-point-text'>{item ? item.point : "Loading..."}P</Card.Text></div>
-        <Link to={`/missions/${item.missionId}`} style={{ textDecoration: 'none' }}>
+        <Link to={`/mission/${item.missionId}`} style={{ textDecoration: 'none' }}>
         <Button variant="success" style={{color:'white',margin:"0 auto",width:'200px'}}>참여하기</Button></Link>
       </Card.Body>
     </Card>

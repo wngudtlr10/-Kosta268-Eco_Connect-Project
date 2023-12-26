@@ -44,3 +44,15 @@
     flex-direction: row-reverse;
     z-index: 1;
 }
+
+.gathering .image {
+    height: 127px;
+    left: 10px;
+    object-fit: cover;
+    position: absolute;
+    top: 16px;
+    width: 164px;
+    z-index: 2;
+    background-size: cover;
+    border-radius: 15px;
+  }

@@ -199,12 +199,12 @@ function GatheringList() {
                 {lists.map((item, index) => (
                     <div className="gathering-list">
                         <div className="gathering-list-2">
-                            <Link to={`/gathering/${item.gatheringId}`}><div className="gathering-list-image" style={{ backgroundImage: `url(${item.image})` }} /></Link>
+                            <Link to={`/gathering/${item.gatheringId}`} ><div className="gathering-list-image" style={{ backgroundImage: `url(${item.image})` }} /></Link>
                             <div className="gathering-list-info">
                                 <div className="gathering-list-title">
-                                    <Link to={`/gathering/${item.gatheringId}`}><div className="gathering-list-title-2">{item.title}</div></Link>
+                                    <Link to={`/gathering/${item.gatheringId}`} style={{textDecoration: 'none'}}><div className="gathering-list-title-2">{item.title}</div></Link>
                                 </div>
-                                <div className="gathering-list-sum"><Link to={`/gathering/${item.gatheringId}`}>{item.intro}</Link></div>
+                                <div className="gathering-list-sum"><Link to={`/gathering/${item.gatheringId}`} style={{textDecoration: 'none', color:'black'}}>{item.intro}</Link></div>
                                 <div className="gathering-list-3">
                                     <img
                                         className="gathering-list-4"

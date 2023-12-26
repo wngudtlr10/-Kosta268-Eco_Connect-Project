@@ -34,15 +34,7 @@ const GatheringComponent = ({category}) => {
 
     const [lists, setLists] = useState([]);
     const [page, setPage] = useState(0);
-    const [totalPages, setTotalPages] = useState(0);
-    const [status, setStatus] = useState("OPEN");
-    const [title, setTitle] = useState("");
-    const [timer, setTimer] = useState(null);
-
-    const [searchParams, setSearchParams] = useSearchParams();
-    const loaction = useLocation();
-
-    const [memberId, setMemberId] = useState();
+  
 
 
 
@@ -50,113 +42,17 @@ const GatheringComponent = ({category}) => {
         AuthAxios.get(`/api/gathering?page=${page}`)
             .then((response) => {
                 setLists(response.data.content);
-                setTotalPages(response.data.totalPages);
+                
             })
             .catch((error) => {
                 console.log('Error fetching data from API: ' , error);
             });
     };
 
-    const fetchDataByStatus = () => {
-        if (status !== "") {
-
-
-            AuthAxios.get(`/api/gathering/status?status=${status}&page=${page}`)
-                .then((response) => {
-                    setLists(response.data.content);
-                    setTotalPages(response.data.totalPages);
-                })
-                .catch((error) => {
-                    console.log('Error fetching data from API: ', error);
-                })
-        }
-    }
-
-    const fetchDataByTitle = () => {
-        const encodedTitle = encodeURIComponent(title);
-        AuthAxios.get(`/api/gathering/title?title=${encodedTitle}&page=${page}`)
-            .then((response) => {
-                setLists(response.data.content);
-                setTotalPages(response.data.totalPages);
-            })
-            .catch((error) => {
-                console.log('Error fetching data from API: ', error);
-            })
-    }
-
-    const fetchDataByStatusAndTitle = () => {
-        if (status !== "" && title !== "") {
-            AuthAxios(`/api/gathering?status=${status}&title=${encodeURIComponent(title)}&page=${page}`)
-                .then((response) => {
-                    setLists(response.data.content);
-                    setTotalPages(response.data.totalPages);
-                })
-                .catch((error) => {
-                    console.log('Error fetching data from API: ', error);
-                })
-        }
-    }
-
-
-    function createPageNumberArray(startPage, endPage) {
-        let pages = []
-        for (let i = startPage; i <= endPage; i++) {
-            pages.push(i);
-        }
-        return pages;
-    }
 
     useEffect(() => {
-        const pageFromUrl = searchParams.get('page');
-        const statusFromUrl = searchParams.get('status');
-        const titleFromUrl = searchParams.get('title');
-
-        if (pageFromUrl !== null) {
-            setPage(parseInt(pageFromUrl));
-        }
-        if (statusFromUrl !== null) {
-            setStatus(statusFromUrl);
-        }
-        if (titleFromUrl !== null) {
-            setTimer(decodeURIComponent(titleFromUrl));
-        }
-
-    }, [])
-
-    useEffect(() => {
-        setPage(0);
-    }, [status])
-
-    useEffect(() => {
-        setPage(0);
-    }, [title])
-
-
-    useEffect(() => {
-        searchParams.set('page', page.toString());
-        if (status !== null) {
-            searchParams.set('status', status);
-        }
-        if (title !== null) {
-            searchParams.set('title', encodeURIComponent(title));
-        }
-        setSearchParams(searchParams);
-
-        if (status !== "" && title !== "") {
-            fetchDataByStatusAndTitle();
-        }
-
-        else if (status !== "") {
-            fetchDataByStatus();
-        }
-        else if (title !== "") {
-            fetchDataByTitle()
-        }
-        else {
             fetchData();
-        }
-
-    }, [page, status, title])
+    }, [page])
     return (
         <div className="gathering">
             {lists.map((item, index) =>(

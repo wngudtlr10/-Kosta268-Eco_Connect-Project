@@ -16,8 +16,8 @@ function MissionDetail() {
 
         const options = { year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit'};
 
-        const prettyStartDate = startDate.toLocaleDateString('ko-KR', options) + ' ' + startDate.toLocaleTimeString('ko-KR');
-        const prettyEndDate = endDate.toLocaleDateString('ko-KR', options) +  ' ' + endDate.toLocaleTimeString('ko-KR');
+        const prettyStartDate = startDate.toLocaleDateString('ko-KR', options);
+        const prettyEndDate = endDate.toLocaleDateString('ko-KR', options);
         const result = `${prettyStartDate} ~ ${prettyEndDate}`;
         return result;
     }
