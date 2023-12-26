@@ -1,0 +1,17 @@
+
+.nav-text {
+    color: #000000;
+    font-weight: 600;
+    border-radius: 25px;
+  }
+.nav-text.active {
+    color: #ffffff;
+    background-color: #03c75a;
+    border-radius: 25px;
+    width: 150px;
+    text-align: center;
+  }
+ .nav-wrap {
+    gap: 30px;
+    
+  }

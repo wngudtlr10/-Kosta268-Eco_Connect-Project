@@ -7,13 +7,14 @@ import MissionComponent2 from "../../components/Card/MainPageCards/missionCompon
 import GatheringComponent from "../../components/Card/MainPageCards/gatheringComponent";
 import FundingComponent from "../../components/Card/MainPageCards//fundingComponent";
 import Layout from "../../components/Layout/Layout";
+import FundingNav from "../../components/Nav/FundingNav";
 
  const Home = () => {
   const scrollRef = useRef(null);
   const [isDrag, setIsDrag] = useState(false);
   const [startX, setStartX] = useState();
   const [selectedCategory, setSelectedCategory] = useState('전체');
-  const [selectedCategory2, setSelectedCategory2] = useState('전체');
+  const [selectedCategory2, setSelectedCategory2] = useState(1);
   const [selectedCategory1, setSelectedCategory1] = useState('전체');
 
   const handleNavItemClick = (category) => {
@@ -22,7 +23,8 @@ import Layout from "../../components/Layout/Layout";
   const handleNavItemClick1 = (category) => {
     setSelectedCategory1(category);
   };
-  const handleNavItemClick2 = (category) => {
+  const handleCategorySelect = (category) => {
+    console.log(category)
     setSelectedCategory2(category);
   };
 
@@ -166,32 +168,7 @@ import Layout from "../../components/Layout/Layout";
         <div className="banner-cover-3" />
       </div>
       <div className="text-wrapper-10">인기 펀딩 상품</div>
-      <Nav variant="phills" defaultActiveKey="#" className="nav-wrap">
-           <Nav.Item className="nav-box" >
-             <Nav.Link href="#" className="nav-text" onClick={() => handleNavItemClick2('전체')}>전체</Nav.Link>
-           </Nav.Item>
-           <Nav.Item className="nav-box">
-         
-             <Nav.Link eventKey="link-1" href="#"className="nav-text"  onClick={() => handleNavItemClick2('베스트')}>베스트</Nav.Link>
-           </Nav.Item>
-           <Nav.Item className="nav-box">
-           <Nav.Link eventKey="link-2" href="#"className="nav-text" onClick={() => handleNavItemClick2('패션잡화')}>패션잡화</Nav.Link>
-           </Nav.Item>
-           <Nav.Item className="nav-box">
-           <Nav.Link eventKey="link-3" href="#"className="nav-text" onClick={() => handleNavItemClick2('테크가전')}>테크가전</Nav.Link>
-           </Nav.Item>
-           <Nav.Item className="nav-box">
-           <Nav.Link eventKey="link-4" href="#"className="nav-text" onClick={() => handleNavItemClick2('푸드')}>푸드</Nav.Link>
-           </Nav.Item>
-           <Nav.Item className="nav-box">
-           <Nav.Link eventKey="link-5" href="#"className="nav-text" onClick={() => handleNavItemClick2('기타')}>기타</Nav.Link>
-           </Nav.Item>
-           <Nav.Item className="nav-box">
-           <Nav.Link eventKey="link-6" href="#"className="nav-text" onClick={() => handleNavItemClick2('뷰티')}>뷰티</Nav.Link>
-           </Nav.Item>
-           
-
-         </Nav>
+       <FundingNav onSelectCategory={handleCategorySelect}/>
       <img
         className="line-2"
         alt="Line"
@@ -203,12 +180,8 @@ import Layout from "../../components/Layout/Layout";
       onMouseUp={onDragEnd}
       onMouseLeave={onDragEnd}
       ref={scrollRef}>
-          <FundingComponent />
-          {/* 내용 컴포넌트를 선택된 카테고리에 따라 렌더링 추후 백과 연결후 활성화 */}
-    {/* {selectedCategory === '전체' && <PundingComponent />}
-      {selectedCategory === '참여형' && <PundingComponent category={0}/>}
-      {selectedCategory === '도전형' && <PundingComponent category={1}/>}
-      {selectedCategory === '활동형' && <PundingComponent category={2}/>} */}
+         <FundingComponent selectedCategory={selectedCategory2} />
+        
       </div>
     </div>
     </Layout>
