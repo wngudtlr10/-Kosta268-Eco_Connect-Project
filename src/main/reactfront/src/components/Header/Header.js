@@ -35,11 +35,11 @@ function Header() {
                                 </Link>
                             </div>
                             <div className="menu-wrap">
-                                <div className="menu-cccc">봉사미션</div>
-                                <div className="menu-cccc">봉사모임</div>
-                                <div className="menu-cc">펀딩</div>
-                                <div className="menu-ccc">리워드</div>
-                                <div className="menu-cc">지원</div>
+                                <div className="menu-cccc"><Link to={"/mission"}>봉사미션</Link></div>
+                                <div className="menu-cccc"><Link to={"/gathering"}>봉사모임</Link></div>
+                                <div className="menu-cc"><Link to={"/funding/view"}>펀딩</Link></div>
+                                <div className="menu-ccc"><Link to={"/#"}>리워드</Link></div>
+                                <div className="menu-cc"><Link to={"/#"}>지원</Link></div>
                             </div>
                             {!login && <div className="login-wrap">
                                 <div className="login-menu"><Link to={"/login"}>로그인</Link></div>

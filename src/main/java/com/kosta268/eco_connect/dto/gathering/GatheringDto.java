@@ -18,6 +18,7 @@ public class GatheringDto {
 
     private Long gatheringId;
     private Long creatorId;
+    private String chatRoomId;
     private String title;
     private String intro;
     private Category category;
@@ -71,6 +72,7 @@ public class GatheringDto {
                 .startAt(gathering.getStartAt())
                 .count(gathering.getCount())
                 .capacity(gathering.getCapacity())
+                .chatRoomId(gathering.getChatRoomId())
                 .build();
     }
 }

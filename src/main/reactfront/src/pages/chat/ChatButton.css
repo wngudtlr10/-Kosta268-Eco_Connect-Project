@@ -5,6 +5,8 @@
     text-align: center;
     width: 60px;
     height: 60px;
+
+    z-index: 1;
 }
 
 .msg-btn {
@@ -14,6 +16,8 @@
     border: 0;
     background-color:transparent;
     cursor: pointer;
+
+    z-index: 1;
 }
 
 .msg-btn, .cxl-btn {

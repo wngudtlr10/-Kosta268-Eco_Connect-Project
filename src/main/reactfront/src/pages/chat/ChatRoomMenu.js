@@ -1,13 +1,18 @@
 import './ChatRoomMenu.css';
 import AuthAxios from "../../utils/axios/AuthAxios";
+import {useRecoilState} from "recoil";
+import {leaveRoom} from "../../store/recoilState";
 
 function ChatRoomMenu({ onMenuBtnClick, chatMemberList, chatRoomId, currentMemberId, onPrevBtnClick }) {
+    const [leave, setLeave] = useRecoilState(leaveRoom);
+
     const handleLeaveChat = (chatRoomId, onPrevBtnClick) => {
         let result = window.confirm("채팅방에서 나가시겠습니까?");
 
         if (result) {
             AuthAxios.delete(`http://localhost:8080/api/chat-room/${chatRoomId}/member`)
                 .then(function (res) {
+                    setLeave(true);
                     onPrevBtnClick();
                     console.log(res.data);
                 })
