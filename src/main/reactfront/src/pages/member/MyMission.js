@@ -226,8 +226,8 @@ function MyMission() {
                                             <div className="div-6">
                                                 <div className="text-wrapper-4">{point ? point.holding : "Loading..."}</div>
                                                 <p className="p">
-                                                    <span className="span">누적 포인트&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                                                    <span className="text-wrapper-7">상세보기</span>
+                                                    <span className="span">누적 포인트</span>
+                                                   
                                                 </p>
                                             </div>
                                         </div>
