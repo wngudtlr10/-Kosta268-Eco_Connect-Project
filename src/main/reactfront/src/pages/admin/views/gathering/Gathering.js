@@ -5,6 +5,7 @@ import { CSmartTable } from "@coreui/react-pro";
 import { CAvatar, CBadge, CButton,CCollapse, CCardBody } from "@coreui/react-pro";
 import GatheringModify from "./GatheringModify";
 import axios from "axios";
+import AuthAxios from "../../../../utils/axios/AuthAxios";
 
 
 const Gathering = () => {
@@ -12,34 +13,33 @@ const Gathering = () => {
     const [gatherings, setGatherings] = useState([]);
     const columns = [
       {
-        key: 'image',
-        label: '',
-        filter: false,
-        sorter: false,
-      },
-      {
         key: 'title',
         _style: { width: '20%' },
       },
       {
-        key: 'content',
-        label: 'content',
+        key: 'intro',
+        label: 'intro',
         _style: { width: '20%' },
+      }, 
+      {
+        key : 'count',
+        _style: { width: '20%' }
       },
       {
         key : 'capacity',
         _style: { width: '20%' }
       },
       { 
-        key: 'created_at',
-        label:'create at',
+        key: 'deadline',
+        label:'deadline',
         _style: { width: '20%' }
       },
       {
-        key: 'leader',
-        label: 'Leader',
+        key: 'fullAddress',
+        label:'Address',
         _style: { width: '20%' },
       },
+     
       {
         key: 'show_details',
         label: '',
@@ -76,7 +76,7 @@ const Gathering = () => {
       // DELETE 요청: 사용자 삭제
       await axios.delete(`http://localhost:8080/api/gathering/${gatheringId}`);
       // 삭제된 사용자를 제외한 나머지 사용자를 users 상태 업데이트
-      setGatherings(gatherings.filter(gathering => gathering.gathering_id !== gatheringId));
+      setGatherings(gatherings.filter(gathering => gathering.gatheringId !== gatheringId));
     } catch (error) {
       console.error('사용자 삭제 중 오류 발생:', error);
     }
@@ -137,9 +137,9 @@ const Gathering = () => {
           console.log(items)
         }}
         scopedColumns={{
-          content : (item) => (
+          intro : (item) => (
             <td>
-              {item.content.length > 7 ? `${item.content.substring(0, 7)}...` : item.content}
+              {item.intro.length > 7 ? `${item.intro.substring(0, 7)}...` : item.intro}
             </td>
           ),
           image: (item) => (
@@ -156,23 +156,23 @@ const Gathering = () => {
                   shape="square"
                   size="sm"
                   onClick={() => {
-                    toggleDetails(item.gathering_id)
+                    toggleDetails(item.gatheringId)
                   }}
                 >
-                  {details.includes(item.gathering_id) ? 'Hide' : 'Show'}
+                  {details.includes(item.gatheringId) ? 'Hide' : 'Show'}
                 </CButton>
               </td>
             )
           },
           details: (item) => {
             return (
-              <CCollapse visible={details.includes(item.gathering_id)}>
+              <CCollapse visible={details.includes(item.gatheringId)}>
                 <CCardBody className="p-3">
                   <h4>{item.title}</h4>
-                  <p className="text-muted">내용 : {item.content}</p>
-                   <GatheringModify gatheringId={item.gathering_id} onUpdate={handleUpdateGathering}/>
+                  <p className="text-muted">내용 : {item.intro}</p>
+                   <GatheringModify gatheringId={item.gatheringId} onUpdate={handleUpdateGathering}/>
                   <CButton size="sm" color="danger" className="ml-1" style={{color:'white'}}
-                  onClick={() => handleDeleteClick(item.gathering_id)}
+                  onClick={() => handleDeleteClick(item.gatheringId)}
                   >
                     삭제
                   </CButton>
