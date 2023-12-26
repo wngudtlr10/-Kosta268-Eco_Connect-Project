@@ -22,12 +22,9 @@ const Gathering = () => {
         _style: { width: '20%' },
       }, 
       {
-        key : 'count',
-        _style: { width: '20%' }
-      },
-      {
-        key : 'capacity',
-        _style: { width: '20%' }
+        key: 'fullAddress',
+        label:'Address',
+        _style: { width: '20%' },
       },
       { 
         key: 'deadline',
@@ -35,11 +32,13 @@ const Gathering = () => {
         _style: { width: '20%' }
       },
       {
-        key: 'fullAddress',
-        label:'Address',
-        _style: { width: '20%' },
+        key : 'count',
+        _style: { width: '20%' }
       },
-     
+      {
+        key : 'capacity',
+        _style: { width: '20%' }
+      },
       {
         key: 'show_details',
         label: '',
@@ -59,8 +58,8 @@ const Gathering = () => {
     const fetchGathering = async () => {
       try {
         // 서버에서 공지사항 데이터를 가져옴
-        const response = await axios.get('http://localhost:8080/api/gathering');
-        setGatherings(response.data);
+        const response = await AuthAxios.get('/api/gathering');
+        setGatherings(response.data.content);
       } catch (error) {
         console.error('공지사항 데이터를 가져오는 중 오류 발생:', error);
       }
@@ -142,6 +141,11 @@ const Gathering = () => {
               {item.intro.length > 7 ? `${item.intro.substring(0, 7)}...` : item.intro}
             </td>
           ),
+          fullAddress : (item) => (
+            <td>
+              {item.fullAddress.length > 7 ? `${item.fullAddress.substring(0, 7)}...` : item.fullAddress}
+            </td>
+          ),
           image: (item) => (
             <td>
               <CAvatar src={item.image}></CAvatar>
@@ -167,9 +171,13 @@ const Gathering = () => {
           details: (item) => {
             return (
               <CCollapse visible={details.includes(item.gatheringId)}>
+                <img src={item.image} />
                 <CCardBody className="p-3">
                   <h4>{item.title}</h4>
                   <p className="text-muted">내용 : {item.intro}</p>
+                  <p className="text-muted">주소 : {item.fullAddress + item.subAddress}</p>
+                  <p className="text-muted">마감일 : {item.deadline}</p>
+                  <p className="text-muted">시작일 : {item.startAt}</p>
                    <GatheringModify gatheringId={item.gatheringId} onUpdate={handleUpdateGathering}/>
                   <CButton size="sm" color="danger" className="ml-1" style={{color:'white'}}
                   onClick={() => handleDeleteClick(item.gatheringId)}
