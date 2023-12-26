@@ -5,6 +5,7 @@ import { CSmartTable } from "@coreui/react-pro";
 import { CAvatar, CBadge, CButton,CCollapse, CCardBody} from "@coreui/react-pro";
 import UserModify from "./UserModify";
 import axios from "axios";
+import AuthAxios from "../../../../utils/axios/AuthAxios";
 
 
 const Users = () => {
@@ -56,8 +57,9 @@ const Users = () => {
     const fetchUser = async () => {
       try {
         // 서버에서 공지사항 데이터를 가져옴
-        const response = await axios.get('http://localhost:8080/api/users');
-        setUsers(response.data);
+        const response = await AuthAxios.get('/api/member');
+        setUsers(response.data.content);
+        console.log(users);
       } catch (error) {
         console.error('공지사항 데이터를 가져오는 중 오류 발생:', error);
       }
@@ -72,9 +74,9 @@ const Users = () => {
     const deleteUser = async (userId) => {
       try {
         // DELETE 요청: 사용자 삭제
-        await axios.delete(`http://localhost:8080/api/users/${userId}`);
+        await axios.delete(`http://localhost:8080/api/member/${userId}`);
         // 삭제된 사용자를 제외한 나머지 사용자를 users 상태 업데이트
-        setUsers(users.filter(user => user.user_id !== userId));
+        setUsers(users.filter(user => user.memberId !== userId));
       } catch (error) {
         console.error('사용자 삭제 중 오류 발생:', error);
       }
