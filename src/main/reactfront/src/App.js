@@ -29,6 +29,10 @@ import Error500 from './pages/errorpage/ErrorPage500'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './assets/css/admin/style.scss';
 import Home from "./pages/home/home";
+import MypageMain from "./pages/mypage/MypageMain";
+import PasswordCheck from "./pages/mypage/PasswordCheck";
+import MyinfoEdit from "./pages/mypage/MyinfoEdit";
+import MypageGathering from "./pages/mypage/MypageGathering";
 
 function App() {
     return (
@@ -61,6 +65,11 @@ function App() {
                     {/* mission */}
                     <Route path={"/mission"} element={<MissionList />} />
                     <Route path={"/mission/:missionId"} element={<MissionDetail />} />
+                    {/* mypage */}
+                    <Route path="/mypage-main" element={<MypageMain />} />
+                    <Route path="/password-check" element={<PasswordCheck />} />
+                    <Route path="/myinfo-edit" element={<MyinfoEdit />} />
+                    <Route path="/mypage-gathering" element={<MypageGathering/>} />
                 </Route>
                 {/*error 400, 500*/}
                 <Route path={"/error400"} element={<Error400/>}/>

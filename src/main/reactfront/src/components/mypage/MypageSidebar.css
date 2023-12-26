@@ -1,0 +1,176 @@
+.mypage-sidebar-wrap {
+    height: 943px;
+    width: 80px;
+}
+
+.mypage-sidebar-wrap .sidebar-frame {
+    height: 943px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 80px;
+}
+
+.mypage-sidebar-wrap .sidebar {
+    background-color: #03c75a;
+    height: 945px;
+    position: relative;
+    top: -2px;
+}
+
+.mypage-sidebar-wrap .sidebar-shortcut {
+    height: 708px;
+    left: 16px;
+    position: absolute;
+    top: 30px;
+    width: 48px;
+}
+
+.mypage-sidebar-wrap .favicon-logo {
+    background-color: #13954c;
+    border-radius: 24.14px/25.5px;
+    height: 51px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 48px;
+}
+
+.mypage-sidebar-wrap .icon-leaf {
+    height: 27px;
+    left: 11px;
+    position: absolute;
+    top: 13px;
+    width: 25px;
+}
+
+.mypage-sidebar-wrap .shortcut-mission {
+    align-items: center;
+    display: inline-flex;
+    flex-direction: column;
+    gap: 2px;
+    left: 6px;
+    position: absolute;
+    top: 188px;
+}
+
+.mypage-sidebar-wrap .favicon-mission {
+    height: 32px;
+    position: relative;
+    width: 36px;
+}
+
+.mypage-sidebar-wrap .menu-name {
+    color: #ffffff;
+    font-family: "Poppins", Helvetica;
+    font-size: 12px;
+    font-weight: 400;
+    height: 18px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: relative;
+    width: 24px;
+    padding-top: 0.5em;
+    left: -2px;
+}
+
+.mypage-sidebar-wrap .shortcut-volunteer {
+    align-items: center;
+    display: inline-flex;
+    flex-direction: column;
+    gap: 1px;
+    left: 4px;
+    position: absolute;
+    top: 286px;
+}
+
+.mypage-sidebar-wrap .favicon-volunteer {
+    height: 27px;
+    position: relative;
+    width: 38px;
+}
+
+.mypage-sidebar-wrap .shortcut-funding {
+    align-items: center;
+    display: inline-flex;
+    flex-direction: column;
+    left: 11px;
+    position: absolute;
+    top: 378px;
+}
+
+.mypage-sidebar-wrap .favicon-funding {
+    height: 29.71px;
+    margin-left: -0.75px;
+    margin-right: -0.75px;
+    margin-top: -0.75px;
+    position: relative;
+    width: 28.5px;
+}
+
+.mypage-sidebar-wrap .shoftcut-rank {
+    align-items: center;
+    display: inline-flex;
+    flex-direction: column;
+    left: 9px;
+    position: absolute;
+    top: 470px;
+}
+
+.mypage-sidebar-wrap .favicon-rank {
+    height: 22px;
+    position: relative;
+    width: 28px;
+}
+
+.mypage-sidebar-wrap .shortcut-qna {
+    align-items: center;
+    display: inline-flex;
+    flex-direction: column;
+    left: 9px;
+    position: absolute;
+    top: 556px;
+}
+
+.mypage-sidebar-wrap .favicon-qna {
+    height: 23px;
+    position: relative;
+    width: 30px;
+}
+
+.mypage-sidebar-wrap .shoftcut-logout {
+    align-items: center;
+    display: inline-flex;
+    flex-direction: column;
+    height: 20px;
+    left: 1px;
+    position: absolute;
+    top: 643px;
+}
+
+.mypage-sidebar-wrap .favicon-logout {
+    height: 41px;
+    margin-bottom: -21px;
+    position: relative;
+    width: 45px;
+}
+
+.mypage-sidebar-wrap .favicon-logout {
+    height: 21px;
+    position: relative;
+    width: 26px;
+}
+
+.mypage-sidebar-wrap .menu-name-2 {
+    color: #ffffff;
+    font-family: "Poppins", Helvetica;
+    font-size: 12px;
+    font-weight: 400;
+    height: 18px;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-bottom: -16.32px;
+    position: relative;
+    width: 50px;
+    padding-top: 2.3em;
+}

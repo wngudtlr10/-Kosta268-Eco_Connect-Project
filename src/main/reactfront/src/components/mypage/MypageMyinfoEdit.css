@@ -1,0 +1,652 @@
+.mypage-my-info-edit {
+    align-items: center;
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    gap: 57px;
+    justify-content: center;
+    width: 50%;
+}
+
+.mypage-my-info-edit .div-2 {
+    background-color: #ffffff;
+    height: 1076px;
+    position: relative;
+    width: 1440px;
+}
+
+.mypage-my-info-edit .mypage-sidebar-wrap-instance {
+    left: 0 !important;
+    position: absolute !important;
+    top: 0 !important;
+}
+
+.mypage-my-info-edit .mypage-footer-wrap-instance {
+    left: 0 !important;
+    position: absolute !important;
+    top: 943px !important;
+}
+
+.mypage-my-info-edit .mypage-my-info-edit {
+    height: 943px;
+    left: 80px;
+    position: absolute;
+    top: 0;
+    width: 1360px;
+}
+
+.mypage-my-info-edit .edit-wrap {
+    height: 944px;
+}
+
+.mypage-my-info-edit .mypage-my-info-edit-2 {
+    height: 785px;
+    left: 372px;
+    position: relative;
+    top: 79px;
+    width: 615px;
+}
+
+.mypage-my-info-edit .button-area {
+    align-items: flex-start;
+    display: inline-flex;
+    gap: 20px;
+    left: 212px;
+    position: absolute;
+    top: 737px;
+}
+
+.mypage-my-info-edit .button-continue {
+    background-color: #03c75a;
+    border-radius: 9px;
+    height: 40px;
+    position: relative;
+    width: 91.05px;
+}
+
+.mypage-my-info-edit .continue {
+    color: #ffffff;
+    font-family: "Poppins", Helvetica;
+    font-size: 14px;
+    font-weight: 600;
+    left: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 10px;
+    width: 41px;
+}
+
+.mypage-my-info-edit .button-cancel {
+    background-color: #d9d9d9;
+    border-radius: 9px;
+    height: 40px;
+    position: relative;
+    width: 91.05px;
+}
+
+.mypage-my-info-edit .cancel {
+    color: #000000;
+    font-family: "Poppins", Helvetica;
+    font-size: 14px;
+    font-weight: 600;
+    left: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 10px;
+    width: 41px;
+}
+
+.mypage-my-info-edit .user-unregister {
+    align-items: flex-start;
+    display: inline-flex;
+    gap: 7px;
+    left: 300px;
+    position: absolute;
+    top: 688px;
+}
+
+.mypage-my-info-edit .guide {
+    color: #a8a8a8;
+    font-family: "Poppins", Helvetica;
+    font-size: 10px;
+    font-weight: 300;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    width: fit-content;
+}
+
+.mypage-my-info-edit .button-user {
+    height: 15px;
+    position: relative;
+    width: 54px;
+}
+
+.mypage-my-info-edit .overlap-group-2 {
+    height: 15px;
+    position: relative;
+    top: -1px;
+}
+
+.mypage-my-info-edit .button {
+    background-color: #d9d9d9;
+    height: 12px;
+    left: 0;
+    position: absolute;
+    top: 2px;
+    width: 50px;
+}
+
+.mypage-my-info-edit .user-unregister-2 {
+    color: #ffffff;
+    font-family: "Poppins", Helvetica;
+    font-size: 10px;
+    font-weight: 300;
+    left: 6px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 0;
+    width: 48px;
+}
+
+.mypage-my-info-edit .my-info-detail {
+    align-items: center;
+    display: inline-flex;
+    flex-direction: column;
+    gap: 10px;
+    left: 35px;
+    position: absolute;
+    top: 75px;
+}
+
+
+.mypage-my-info-edit .my-info-detail-2 {
+    align-items: center;
+    display: inline-flex;
+    left: 48px;
+    position: absolute;
+    top: 425px;
+}
+
+.mypage-my-info-edit .div-wrapper {
+    height: 24px;
+    position: relative;
+    width: 119px;
+}
+
+.mypage-my-info-edit .text-wrapper-2 {
+    color: #000000;
+    font-family: "Font Awesome 5 Free-Solid", Helvetica;
+    font-size: 14px;
+    font-weight: 400;
+    left: 0;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: -1px;
+    width: 119px;
+}
+
+.mypage-my-info-edit .table-data-receive {
+    align-items: flex-start;
+    display: inline-flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 14px;
+    position: relative;
+}
+
+.mypage-my-info-edit .receive-set-check {
+    height: 50px;
+    position: relative;
+    width: 362px;
+}
+
+.mypage-my-info-edit .mark-check {
+    background-color: #ffffff;
+    border: 0.5px solid;
+    border-color: #d9d9d9;
+    height: 20px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 20px;
+}
+
+.mypage-my-info-edit .vector {
+    height: 13px;
+    left: 1px;
+    position: absolute;
+    top: 4px;
+    width: 17px;
+}
+
+.mypage-my-info-edit .flexcontainer {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    height: 48px;
+    left: 30px;
+    position: absolute;
+    top: 2px;
+    width: 330px;
+}
+
+.mypage-my-info-edit .text {
+    align-self: stretch;
+    color: #000000;
+    font-family: "Font Awesome 5 Brands-Regular", Helvetica;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    position: relative;
+}
+
+.mypage-my-info-edit .span {
+    color: #000000;
+    font-family: "Font Awesome 5 Brands-Regular", Helvetica;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0;
+}
+
+.mypage-my-info-edit .receive-set-check-2 {
+    height: 114px;
+    margin-right: -4px;
+    position: relative;
+    width: 370px;
+}
+
+.mypage-my-info-edit .mark-check-2 {
+    height: 20px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 20px;
+}
+
+.mypage-my-info-edit .gide {
+    color: #000000;
+    font-family: "Font Awesome 5 Brands-Regular", Helvetica;
+    font-size: 14px;
+    font-weight: 400;
+    left: 12px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 66px;
+    width: 354px;
+}
+
+.mypage-my-info-edit .flexcontainer-2 {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    height: 46px;
+    left: 30px;
+    position: absolute;
+    top: 1px;
+    width: 333px;
+}
+
+.mypage-my-info-edit .my-info-detail-3 {
+    align-items: center;
+    display: inline-flex;
+    gap: 31px;
+    left: 40px;
+    position: absolute;
+    top: 262px;
+}
+
+.mypage-my-info-edit .table-data-password {
+    align-items: flex-start;
+    display: inline-flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 25px;
+    position: relative;
+}
+
+.mypage-my-info-edit .my-info-detail-4 {
+    height: 25px;
+    position: relative;
+    width: 312px;
+}
+
+.mypage-my-info-edit .input {
+    background-color: #ffffff;
+    border: 1px solid;
+    border-color: #d9d9d9;
+    border-radius: 12px;
+    height: 24px;
+    left: 145px;
+    position: absolute;
+    top: 0;
+    width: 167px;
+}
+
+.mypage-my-info-edit .password-as-is {
+    color: #000000;
+    font-family: "Poppins", Helvetica;
+    font-size: 14px;
+    font-weight: 400;
+    left: 0;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 3px;
+}
+
+.mypage-my-info-edit .my-info-detail-5 {
+    height: 24px;
+    position: relative;
+    width: 312px;
+}
+
+.mypage-my-info-edit .text-wrapper-3 {
+    color: #000000;
+    font-family: "Poppins", Helvetica;
+    font-size: 14px;
+    font-weight: 400;
+    left: 0;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: -1px;
+    width: 200px;
+}
+
+.mypage-my-info-edit .password-to-be-check {
+    color: #000000;
+    font-family: "Poppins", Helvetica;
+    font-size: 14px;
+    font-weight: 400;
+    left: 0;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 1px;
+}
+
+.mypage-my-info-edit .my-info-detail-6 {
+    align-items: flex-start;
+    display: inline-flex;
+    gap: 35px;
+    left: 42px;
+    position: absolute;
+    top: 230px;
+}
+
+.mypage-my-info-edit .div-wrapper-2 {
+    height: 24px;
+    position: relative;
+    width: 109px;
+}
+
+.mypage-my-info-edit .mobile-number {
+    color: #000000;
+    font-family: "Font Awesome 5 Free-Solid", Helvetica;
+    font-size: 14px;
+    font-weight: 400;
+    left: 0;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 3px;
+    white-space: nowrap;
+    width: 71px;
+}
+
+.mypage-my-info-edit .table-data-mobile {
+    height: 21px;
+    position: relative;
+    width: 123px;
+}
+
+.mypage-my-info-edit .my-info-detail-7 {
+    align-items: center;
+    display: inline-flex;
+    gap: 30px;
+    justify-content: center;
+    left: 42px;
+    position: absolute;
+    top: 140px;
+}
+
+.mypage-my-info-edit .my-info-detail-9 {
+    align-items: center;
+    display: inline-flex;
+    gap: 90px;
+    justify-content: center;
+    left: 42px;
+    position: absolute;
+    top: 185px;
+}
+
+.mypage-my-info-edit .profile-image {
+    color: #000000;
+    font-family: "Font Awesome 5 Free-Solid", Helvetica;
+    font-size: 14px;
+    font-weight: 400;
+    left: 0;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 3px;
+    white-space: nowrap;
+    width: 77px;
+}
+
+.mypage-my-info-edit .table-data-profile {
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 83px;
+    position: relative;
+}
+
+
+.myinfo-profileImg-label {
+   margin: 5px 0 0 50px;
+   font-weight: bold;
+   font-size: 12px;
+    color: #ffffff;
+    text-align: center;
+    width: 40px;
+    background-color: #d9d9d9;
+    border-radius: 2px;
+
+   display: inline-block;
+   cursor: pointer;
+}
+
+
+.table-data-profile .myinfo-profileImg-input[type="file"] {
+    display: none;
+}
+
+.mypage-my-info-edit .my-info-detail-8 {
+    background-position: 50% 50%;
+    background-size: cover;
+    height: 40px;
+    position: relative;
+    width: 55px;
+}
+
+.mypage-my-info-edit .overlap-group-wrapper {
+    height: 21px;
+    position: relative;
+    width: 55px;
+}
+
+.mypage-my-info-edit .overlap-group-4 {
+    height: 21px;
+    position: relative;
+    top: -1px;
+}
+
+.mypage-my-info-edit .button-2 {
+    background-color: #d9d9d9;
+    border-radius: 9px;
+    height: 18px;
+    left: 0;
+    position: absolute;
+    top: 1px;
+    width: 55px;
+}
+
+.mypage-my-info-edit .edit {
+    color: #000000;
+    font-family: "Poppins", Helvetica;
+    font-size: 14px;
+    font-weight: 400;
+    left: 14px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 0;
+}
+
+.mypage-my-info-edit .my-info-detail-email {
+    align-items: center;
+    display: inline-flex;
+    gap: 100px;
+    left: 58px;
+    position: absolute;
+    top: 80px;
+}
+
+.mypage-my-info-edit .table-header-email {
+    height: 13px;
+    position: relative;
+    width: 41px;
+}
+
+.mypage-my-info-edit .email {
+    color: #000000;
+    font-family: "Font Awesome 5 Free-Solid", Helvetica;
+    font-size: 14px;
+    font-weight: 400;
+    left: 0;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: -1px;
+    width: 109px;
+}
+
+.mypage-my-info-edit .table-data-email {
+    background: none;
+    border: none;
+    color: #000000;
+    font-family: "Poppins", Helvetica;
+    font-size: 14px;
+    font-weight: 400;
+    height: 21px;
+    letter-spacing: 0;
+    line-height: normal;
+    padding: 0;
+    padding-left: 0;
+    position: relative;
+    text-align: center;
+    text-decoration: underline;
+    width: 277px;
+}
+
+.mypage-my-info-edit .my-info-detail-name {
+    align-items: center;
+    display: inline-flex;
+    gap: 60px;
+    left: 62px;
+    position: absolute;
+    top: 19px;
+}
+
+.mypage-my-info-edit .table-header-name {
+    height: 16px;
+    position: relative;
+    width: 26px;
+}
+
+.mypage-my-info-edit .name {
+    color: #000000;
+    font-family: "Font Awesome 5 Free-Solid", Helvetica;
+    font-size: 14px;
+    font-weight: 400;
+    left: 0;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: -1px;
+    white-space: nowrap;
+}
+
+.mypage-my-info-edit .table-data-name {
+    height: 21px;
+    position: relative;
+    width: 277px;
+}
+
+.mypage-my-info-edit .name-2 {
+    color: #000000;
+    font-family: "Poppins", Helvetica;
+    font-size: 14px;
+    font-weight: 400;
+    left: 0;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: -1px;
+    width: 277px;
+}
+
+.mypage-my-info-edit .my-info-edit {
+    align-items: flex-start;
+    display: inline-flex;
+    flex-direction: column;
+    gap: 20px;
+    left: 0;
+    position: absolute;
+    top: 0;
+}
+
+.mypage-my-info-edit .title {
+    color: #000000;
+    font-family: "Poppins", Helvetica;
+    font-size: 18px;
+    font-weight: 600;
+    height: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    white-space: nowrap;
+    width: 104.9px;
+}
+
+.mypage-my-info-edit .description {
+    color: #000000;
+    font-family: "Poppins", Helvetica;
+    font-size: 14px;
+    font-weight: 400;
+    height: 15px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: relative;
+    white-space: nowrap;
+    width: 508px;
+}

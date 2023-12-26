@@ -1,0 +1,27 @@
+.myinfo-edit-index {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.myinfo-edit-index .div-2 {
+    background-color: #ffffff;
+    height: 1076px;
+    overflow: hidden;
+    position: relative;
+    width: 1440px;
+}
+
+.myinfo-edit-index .mypage-sidebar-wrap-instance {
+    left: 0 !important;
+    position: absolute !important;
+    top: 0 !important;
+}
+
+.myinfo-edit-index .mypage-footer-wrap-instance {
+    left: 14px !important;
+    position: absolute !important;
+    top: 960px !important;
+}

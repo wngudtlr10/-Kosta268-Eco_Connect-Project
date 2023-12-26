@@ -34,6 +34,7 @@ public class Member {
     private String profile;
     private String address;
     private LocalDateTime createdIn;
+    private String phone;
 
     @Builder.Default
     @Enumerated(EnumType.STRING)

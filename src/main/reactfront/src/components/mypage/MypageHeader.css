@@ -1,0 +1,73 @@
+.mypage-header-wrap {
+    align-items: center;
+    display: inline-flex;
+    gap: 679px;
+    justify-content: center;
+    left: 150px;
+    position: absolute;
+    top: 30px;
+}
+
+.mypage-header-wrap .header-search {
+    background-color: #ffffff;
+    border: 1px solid;
+    border-color: #000000;
+    border-radius: 12px;
+    height: 50px;
+    position: relative;
+    width: 380px;
+}
+
+.mypage-header-wrap .text-wrapper-3 {
+    color: #b0b0b0;
+    font-family: "Poppins", Helvetica;
+    font-size: 20px;
+    font-weight: 400;
+    left: 57px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 15px;
+    width: 113px;
+}
+
+.mypage-header-wrap .search {
+    height: 24px;
+    left: 17px;
+    object-fit: cover;
+    position: absolute;
+    top: 14px;
+    width: 24px;
+}
+
+.mypage-header-wrap .header-shortcut {
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 32px;
+    justify-content: center;
+    position: relative;
+}
+
+.mypage-header-wrap .vector {
+    height: 22.5px;
+    margin-left: -0.75px;
+    position: relative;
+    width: 24.5px;
+    left: -10px;
+    top: 2px;
+}
+
+.mypage-header-wrap .icon-bell {
+    height: 26.61px;
+    position: relative;
+    width: 24.1px;
+}
+
+.mypage-header-wrap .element {
+    height: 43px;
+    object-fit: cover;
+    position: relative;
+    width: 43px;
+}
