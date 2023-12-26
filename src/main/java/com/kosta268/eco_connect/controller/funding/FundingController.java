@@ -1,15 +1,14 @@
 package com.kosta268.eco_connect.controller.funding;
 
-import com.kosta268.eco_connect.dto.funding.FundingDto;
 import com.kosta268.eco_connect.entity.funding.Funding;
-import com.kosta268.eco_connect.entity.funding.FundingEntity;
-import com.kosta268.eco_connect.repository.funding.FundingRepository;
+import com.kosta268.eco_connect.dto.funding.FundingDto;
 import com.kosta268.eco_connect.service.funding.FundingService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
 
@@ -22,19 +21,9 @@ public class FundingController {
     private FundingService fundingService;
 
     @Autowired
-    public void FundingApiController(FundingService fundingService){
+    public void FundingApiController(FundingService fundingService) {
         this.fundingService = fundingService;
     }
-
-//    @GetMapping("/{id}")
-//    public Funding getFunding(@PathVariable Long id) {
-//        Funding funding = fundingService.getFundingById(id);
-//        System.out.println("funding System is not null");
-//        if (funding == null) {
-//            System.out.println("funding System is null");// 각 종류의 예외 처리 로직
-//        }
-//        return funding;
-//    }
 
     //펀딩 all 반환
     @GetMapping
@@ -61,41 +50,75 @@ public class FundingController {
         return ResponseEntity.ok(createdFunding);
     }
 
-    // id로 기존 펀딩 삭제
-    @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteFunding(@PathVariable Long id) {
+    //펀딩 값 전송
+    @PostMapping("/write")
+    public ResponseEntity<Funding> createFunding(@RequestPart("data") Funding funding,
+                                                 @RequestPart("image") MultipartFile[] images) {
+        Funding createdFunding = fundingService.createFundingWithImages(funding, images);
+        return ResponseEntity.ok(createdFunding);
+    }
+
+    // 기존 펀딩 업데이트
+    @PutMapping("/update/{fundingId}")
+    public ResponseEntity<Funding> updateFunding(@PathVariable Long fundingId, @RequestBody Funding fundingUpdates) {
         try {
-            fundingService.deleteFunding(id);
+            Funding existingFunding = fundingService.getFundingById(fundingId);
+
+            // 필요한 필드를 업데이트
+            existingFunding.setTitle(fundingUpdates.getTitle());
+            existingFunding.setAuthor(fundingUpdates.getAuthor());
+            // ... 다른 필드도 이와 같이 업데이트
+
+            Funding updatedFunding = fundingService.updateFunding(existingFunding);
+            return ResponseEntity.ok(updatedFunding);
+        } catch (RuntimeException e) {
+            return ResponseEntity.notFound().build();
+        }
+    }
+
+
+    // id로 기존 펀딩 삭제
+    @DeleteMapping("delete/{fundingId}")
+    public ResponseEntity<Void> deleteFunding(@PathVariable Long fundingId) {
+        try {
+            fundingService.deleteFunding(fundingId);
             return ResponseEntity.ok().build();
         } catch (RuntimeException e) {
             return ResponseEntity.notFound().build();
         }
     }
-    
-    //특정 펀딩 조회
-    @GetMapping("setting/{id}")
-    public FundingDto fundingDto (FundingEntity entity){
-        System.out.println("FundingApiController진입");
-        log.info("Received FundingDto: " + entity);
-        FundingDto dto = new FundingDto();
-        dto.setId(entity.getId());
-        dto.setTitle(entity.getTitle());
-        dto.setAuthor(entity.getAuthor());
-        dto.setContent(entity.getContent());
-        dto.setStartAt(entity.getStartAt());
-        dto.setEndAt(entity.getEndAt());
-        dto.setStatus(entity.getStatus());
-        dto.setLikes(entity.getLikes());
-        dto.setPrice(entity.getPrice());
-        dto.setCategory_id(entity.getCategoryId());
-        dto.setCreateAt(entity.getCreateAt());
-        dto.setModifyAt(entity.getModifyAt());
-        dto.setView_count(entity.getViewCount());
-        dto.setTotal_collected_amount(entity.getTotalCollectedAmount());
-        return dto;
-    }
 
-    //FundingWrite
-    
+    // id로 기존 펀딩 수정
+
+
+    //특정 펀딩 조회 -> null값 반환됨 (수정해야됨)
+//    @GetMapping("setting/{fundingId}")
+//    public FundingDto fundingDto(@PathVariable Long fundingId) {
+//
+//        System.out.println("FundingApiController진입");
+//        log.info("Received FundingDto: " + fundingId);
+//        Funding entity = fundingService.getFundingById(fundingId);
+//
+//        FundingDto dto = new FundingDto();
+//        dto.setFundingId(fundingId);
+//        dto.setTitle(entity.getTitle());
+//        dto.setAuthor(entity.getAuthor());
+//        dto.setContent(entity.getContent());
+//        dto.setStartAt(entity.getStartAt());
+//        dto.setEndAt(entity.getEndAt());
+//        dto.setFundingStatus(entity.getFundingStatus());
+//        dto.setLikes(entity.getLikes());
+//        dto.setPrice(entity.getPrice());
+//        dto.setFundingCategoryId(entity.getFundingCategoryId());
+//        dto.setCreateAt(entity.getCreateAt());
+//        dto.setModifyAt(entity.getModifyAt());
+//        dto.setViewCount(entity.getViewCount());
+//        dto.setTotalCollectedAmount(entity.getTotalCollectedAmount());
+//        dto.setFundingPeople(entity.getFundingPeople());
+//        return dto;
+//    }
 
 }
+
+
+

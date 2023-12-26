@@ -1,15 +1,27 @@
-package com.kosta268.eco_connect.dto.funding;
+package com.kosta268.eco_connect.entity.funding;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import com.kosta268.eco_connect.constant.PaymentStatus;
 import jakarta.persistence.*;
-import lombok.Data;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+import org.hibernate.annotations.DynamicInsert;
+import org.hibernate.annotations.DynamicUpdate;
 
 import java.time.LocalDateTime;
 
-@Data
-@JsonIgnoreProperties(ignoreUnknown = true)
-public class FundingPaymentDto {
+@Entity
+@Table(name="fundingPayment")
+@Getter
+@Setter
+@ToString
+@NoArgsConstructor
+@DynamicInsert
+@DynamicUpdate
+public class FundingPaymentEntity {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column

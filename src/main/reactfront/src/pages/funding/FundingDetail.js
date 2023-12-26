@@ -1,10 +1,8 @@
-
 import React, {useEffect, useState} from "react";
 import axios from "axios";
 import moment from 'moment';
 import Layout from "../../components/Layout/Layout";
 import "./FundingView.css";
-import {Margin} from "@mui/icons-material";
 
 
 const FundingDetail = () => {
@@ -48,23 +46,23 @@ const FundingDetail = () => {
                 </div>
             </div>
             <div className="funding-detail-image">
-                <imgae src="../"></imgae>
+                <img src="../"></img> {/* 수정: <img> 태그로 바꿨습니다 */}
             </div>
             <div>
                 <h1 style={{textAlign: "center"}}>Funding Detail</h1>
                 <ul>
                     {fundings.map(funding => (
                         <li key={funding.id} style={listItemStyle}>
-                            <div>1. Title: {funding.title}</div>
-                            <div>2. Author: {funding.autour}</div>
-                            <div>3. Category ID: {funding.category_id}</div>
-                            <div>4. Status: {funding.status}</div>
-                            <div>5. Content: {funding.content}</div>
-                            <div>6. Created At: {formatDate(funding.create_at).toLocaleString()}</div>
-                            <div>7. End At: {formatDate(funding.end_at).toLocaleString()}</div>
-                            <div>8. Likes: {funding.likes}</div>
-                            <div>9. Modified At: {formatDate(funding.modify_at).toLocaleString()}</div>
-                            <div>10. Start At: {formatDate(funding.start_at).toLocaleString()}</div>
+                            <div>1. 제목: {funding.title}</div>
+                            <div>2. 저자: {funding.author}</div>
+                            <div>3. 카테고리 ID: {funding.fundingCategoryId} </div>
+                            <div>4. 상태: {funding.status}</div>
+                            <div>5. 내용: {funding.content}</div>
+                            <div>6. 생성 날짜: {formatDate(funding.createdAt).toLocaleString()}</div>
+                            <div>7. 종료 날짜: {formatDate(funding.endAt).toLocaleString()}</div>
+                            <div>8. 좋아요: {funding.likes}</div>
+                            <div>9. 수정 날짜: {formatDate(funding.modify_at).toLocaleString()}</div>
+                            <div>10. 시작 날짜: {formatDate(funding.startAt).toLocaleString()}</div>
                             <br/>
                             <br/>
                         </li>
@@ -76,7 +74,3 @@ const FundingDetail = () => {
 }
 
 export default FundingDetail
-
-
-
-
