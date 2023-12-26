@@ -10,16 +10,17 @@ import com.kosta268.eco_connect.entity.mission.MissionLike;
 import com.kosta268.eco_connect.entity.point.Point;
 import jakarta.persistence.*;
 import lombok.*;
+import lombok.experimental.SuperBuilder;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
 
+@SuperBuilder
 @Entity
 @Getter
 @Setter
-@Builder
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString(exclude = {"chatMessageList", "chatRoomMemberList"})
