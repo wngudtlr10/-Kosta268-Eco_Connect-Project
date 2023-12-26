@@ -1,0 +1,58 @@
+.gathering .gathering-list-5 {
+    align-items: center;
+    display: flex;
+    gap: 5px;
+    height: 63px;
+    justify-content: center;
+    position: relative;
+    width: 101px;
+}
+
+.gathering .gathering-list-6 {
+    height: 28px;
+    position: relative;
+    width: 35px;
+}
+
+.gathering .gathering-list-7 {
+    height: 27px;
+    position: relative;
+    width: 50.98px;
+}
+
+.gathering .text-wrapper-7 {
+    color: #000000;
+    font-family: "Poppins", Helvetica;
+    font-size: 18px;
+    font-weight: 300;
+   
+    letter-spacing: 0;
+    line-height: normal;
+    position: relative;
+    text-align: center;
+    top: -1px;
+    width: 51px;
+}
+
+.gathering .gathering-list-3 {
+    align-items: center;
+    display: flex;
+    height: 250px;
+    margin-bottom: -4px;
+    position: relative;
+    width: 550px;
+    flex-direction: row-reverse;
+    z-index: 1;
+}
+
+.gathering .image {
+    height: 127px;
+    left: 10px;
+    object-fit: cover;
+    position: absolute;
+    top: 16px;
+    width: 164px;
+    z-index: 2;
+    background-size: cover;
+    border-radius: 15px;
+  }

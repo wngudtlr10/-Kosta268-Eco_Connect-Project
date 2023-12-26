@@ -363,15 +363,10 @@
 }
 
 .gathering-index .gathering-list-8 {
-    align-items: center;
-    align-self: stretch;
     display: flex;
-    flex: 0 0 auto;
-    gap: 222px;
-    justify-content: center;
-    padding: 0px 200px;
-    position: relative;
-    width: 100%;
+    gap: 200px;
+    justify-content: right;
+    width: 850px;
 }
 
 .gathering-index .pagination-button {

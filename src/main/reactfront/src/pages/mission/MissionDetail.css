@@ -546,4 +546,14 @@
     white-space: nowrap;
     width: 59px;
   }
+
+  .mission-detail-index .another-mission-wrap {
+    width: fit-content;
+    height: fit-content;
+    margin: 0 auto;
+    position: relative;
+    align-items: center;
+
+   
+  }
   
