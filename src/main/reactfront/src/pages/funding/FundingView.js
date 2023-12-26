@@ -11,10 +11,6 @@ import CardGrid from "../../components/Card/CardGrid";
 
 export const FundingView = () => {
     const BASE_IMAGE_PATH = "../../assets/images/funding/view/";
-
-
-
-
     return (
         <Layout>
             <Carousel></Carousel>

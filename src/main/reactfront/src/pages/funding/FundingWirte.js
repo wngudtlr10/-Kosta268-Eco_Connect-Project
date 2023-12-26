@@ -31,7 +31,7 @@ const errorMsg = {
 
 export const FundingWrite = () => {
     const BASE_IMAGE_PATH = "../../assets/images/funding/view/";
-    const BASE_FUNDING_API_URL = "http://localhost:8080/api/funding"
+    const BASE_FUNDING_API_URL = "http://localhost:8080/api/funding/"
     const { control, handleSubmit, setError, clearErrors, formState: { errors } } = useForm();
     const [user, setUser] = useState({name:'',email:'',password:''})
     const [startDate, setStartDate] = useState(new Date());
@@ -43,31 +43,6 @@ export const FundingWrite = () => {
     const { Formik } = formik;
     // 파일 데이터 비동기 전송
     const formData = new FormData();
-    // const contentsData = {
-    //     userNo: user.userInfo.no,
-    //     title,
-    //     content,
-    //     categoryCode,
-    //     dues,
-    //     personNumber
-    // }
-    // const fileData = inputRef.current.file.files;
-
-    // for(let i = 0; i < fileData.length; i++) {
-    //     formData.append("file", fileData[i]);
-    // }
-    //
-    // formData.append("contentsData", new Blob([JSON.stringify(contentsData)], { type: "application/json" }));
-
-    const schema = yup.object().shape({
-        title: yup.string().required(),
-        author: yup.string().required(),
-        inventory: yup.string().required(),
-        amount: yup.string().required(),
-        targetamount: yup.string().required(),
-        personnel: yup.string().required(),
-        terms: yup.bool().required().oneOf([true], 'Terms must be accepted'),
-    });
 
 
     const ExampleCustomInput = forwardRef(({value, onClick}, ref) => (
@@ -94,55 +69,30 @@ export const FundingWrite = () => {
     };
 
     const onSubmit = async data => {
+        const formData = new FormData();
+
+        formData.append('title', data.title);
+        formData.append('author', data.author);
+        formData.append('startDate', startDate);
+
+        // 'file' 필드에 대한 파일 업로드를 가정하고 있습니다.
+        // 다음과 같이 파일을 추가할 수 있습니다.
+        if (data.file) {
+            formData.append('file', data.file[0]);
+        }
+
         try {
-            // Update data object as per your API needs
-            data.startDate = startDate;
-            const response = await axios.post('http://localhost:8080/api/funding/write', data);
-            console.log(response.data);
-            // Handle successful submission here (e.g., redirect or show success message)
+            const response = await axios.post(' BASE_FUNDING_API_URL+/write', formData);
         } catch (error) {
             setSubmissionError('Error submitting form');
             console.error('Error sending data', error);
         }
     };
 
-
     return (
-        // <Formik
-        //     validationSchema={schema}
-        //     onSubmit={console.log}
-        //     initialValues={{
-        //         firstName: 'Mark',
-        //         lastName: 'Otto',
-        //         username: '',
-        //         city: '',
-        //         state: '',
-        //         zip: '',
-        //         terms: false,
-        //     }}
-        // >
 
         <Layout>
             <Carousel></Carousel>
-            {/* sidebar */}
-            {/*<Sidebar>*/}
-            {/*    <Menu*/}
-            {/*        menuItemStyles={{*/}
-            {/*            button: {*/}
-            {/*                // the active class will be added automatically by react router*/}
-            {/*                // so we can use it to style the active menu item*/}
-            {/*                [`&.active`]: {*/}
-            {/*                    backgroundColor: '#13395e',*/}
-            {/*                    color: '#b6c8d9',*/}
-            {/*                },*/}
-            {/*            },*/}
-            {/*        }}*/}
-            {/*    >*/}
-            {/*        <MenuItem component={<Link to="/documentation"/>}> Documentation</MenuItem>*/}
-            {/*        <MenuItem component={<Link to="/calendar"/>}> Calendar</MenuItem>*/}
-            {/*        <MenuItem component={<Link to="/e-commerce"/>}> E-commerce</MenuItem>*/}
-            {/*    </Menu>*/}
-            {/*</Sidebar>*/}
             <div className="screen">
                 <div className="div">
                     <div className="input-group">
