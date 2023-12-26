@@ -30,6 +30,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './assets/css/admin/style.scss';
 import Home from "./pages/home/home";
 
+
 function App() {
     return (
         <Router>
@@ -66,6 +67,7 @@ function App() {
                 <Route path={"/error400"} element={<Error400/>}/>
                 <Route path={"/error500"} element={<Error500/>}/>
                 <Route path={"/admin/*"} element={<AdminLayout/>}/>
+                
                 
             </Routes>
         </Router>
