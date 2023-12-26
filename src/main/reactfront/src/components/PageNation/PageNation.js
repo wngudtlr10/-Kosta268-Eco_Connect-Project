@@ -4,7 +4,7 @@ import Stack from '@mui/material/Stack';
 
 export default function BasicPagination() {
     return (
-        <div style={{ display:'flex', justifyContent: 'center', alignItems: 'center', maxHeight: '1500px' }}>
+        <div style={{ display:'flex', justifyContent: 'center', alignItems: 'center', marginTop: "120px", marginBottom: '80px' }}>
             <Stack spacing={2}>
                 <Pagination count={10} color="secondary" variant="outlined" size="large"/>
             </Stack>

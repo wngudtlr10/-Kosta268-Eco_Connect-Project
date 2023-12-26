@@ -15,6 +15,7 @@ function Header() {
                 localStorage.clear();
                 setLogin(false);
                 navigate("/");
+                alert("로그아웃이 성공했습니다.");
             })
             .catch(error => console.log(error));
     }
