@@ -13,6 +13,7 @@ public class MissionDto {
     private Long missionId;
     private String title;
     private String description;
+    private String image;
     private int point;
     private String host;
     private String zoneCode;
@@ -30,6 +31,7 @@ public class MissionDto {
         missionDto.setMissionId(mission.getMissionId());
         missionDto.setTitle(mission.getTitle());
         missionDto.setDescription(mission.getDescription());
+        missionDto.setImage(mission.getImage());
         missionDto.setPoint(mission.getPoint());
         missionDto.setHost(mission.getHost());
         missionDto.setZoneCode(mission.getAddress().getZoneCode());

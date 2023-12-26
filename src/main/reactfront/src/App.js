@@ -23,7 +23,8 @@ import GatheringAdd from "./pages/gathering/GatheringAdd";
 import GatheringUpdate from "./pages/gathering/GatheringUpdate";
 import MissionList from "./pages/mission/MissionList";
 import MissionDetail from "./pages/mission/MissionDetail";
-
+import MyMission from "./pages/member/MyMission";
+import MemberMissionPost from "./pages/mission/MemberMissionPost";
 import Error400 from './pages/errorpage/ErrorPage400'
 import Error500 from './pages/errorpage/ErrorPage500'
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -62,6 +63,9 @@ function App() {
                     {/* mission */}
                     <Route path={"/mission"} element={<MissionList />} />
                     <Route path={"/mission/:missionId"} element={<MissionDetail />} />
+                    {/* MyPage */}
+                    <Route path={"/mypage/mission"} element={<MyMission />} />
+                    <Route path={"/member/:memberId/mission/:missionId/membermission/:memberMissionId"} element={<MemberMissionPost />} />
                 </Route>
                 {/*error 400, 500*/}
                 <Route path={"/error400"} element={<Error400/>}/>

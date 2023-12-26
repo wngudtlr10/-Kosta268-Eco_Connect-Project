@@ -9,6 +9,7 @@ function GatheringAdd() {
 
     const [title, setTitle] = useState("");
     const [intro, setIntro] = useState("");
+    const [category, setCategory] = useState("");
     const [image, setImage] = useState(null);
     const [location, setLocation] = useState("");
     const [addressObj, setAddressObj] = useState({
@@ -40,6 +41,9 @@ function GatheringAdd() {
 
     const handleIntroChange = (e) => {
         setIntro(e.target.value);
+    }
+    const handleCategoryChange = (e) => {
+        setCategory(e.target.value);
     }
     const handleImgChange = (e) => {
         const file = e.target.files[0];
@@ -93,6 +97,7 @@ function GatheringAdd() {
         formData.append('creatorId', memberId);
         formData.append("title", title);
         formData.append("intro", intro);
+        formData.append("category", category)
         formData.append("image", image);
         formData.append("zoneCode", addressObj.zoneCode);
         formData.append("fullAddress", addressObj.fullAddress);
@@ -131,6 +136,13 @@ function GatheringAdd() {
                             <input type="text" className="title" onChange={handleTitleChange} />
                             <div className="text-wrapper-2">모임소개</div>
                             <input type="text" className="intro" onChange={handleIntroChange} />
+                            <div className="text-wrapper-2">카테고리</div>
+                            <select className="category" onChange={handleCategoryChange}>
+                                <option value="">선택하세요</option>
+                                <option value="CLEAN_UP">환경 미화</option>
+                                <option value="TALENT_DONATION">재능 기부</option>
+                                <option value="SPONSORSHIP">후원</option>                                <option value="CLEAN_UP">청소</option>
+                            </select>
                             <div className="text-wrapper-2">사진등록</div>
                             <input type="file" className="img" onChange={handleImgChange} ref={imageInputRef}/>
                             <img ref={imageRef} alt="preview" className="img-preview" />

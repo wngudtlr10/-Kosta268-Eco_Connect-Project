@@ -2,6 +2,7 @@ package com.kosta268.eco_connect.dto.gathering;
 
 import com.kosta268.eco_connect.entity.Address;
 import com.kosta268.eco_connect.entity.Status;
+import com.kosta268.eco_connect.entity.gathering.Category;
 import com.kosta268.eco_connect.entity.gathering.Gathering;
 import com.kosta268.eco_connect.entity.member.Member;
 import lombok.Builder;
@@ -19,6 +20,7 @@ public class GatheringDto {
     private Long creatorId;
     private String title;
     private String intro;
+    private Category category;
     private String etc;
     private String zoneCode;
     private String fullAddress;
@@ -37,6 +39,7 @@ public class GatheringDto {
                 .creator(creator)
                 .title(title)
                 .intro(intro)
+                .category(category)
                 .etc(etc)
                 .location(address)
                 .image(image)
@@ -57,6 +60,7 @@ public class GatheringDto {
                 .creatorId(gathering.getCreator() != null ? gathering.getCreator().getMemberId() : null)
                 .title(gathering.getTitle())
                 .intro(gathering.getIntro())
+                .category(gathering.getCategory())
                 .etc(gathering.getEtc())
                 .zoneCode(address.getZoneCode())
                 .fullAddress(address.getFullAddress())

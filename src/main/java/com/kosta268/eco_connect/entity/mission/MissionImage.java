@@ -1,8 +1,10 @@
 package com.kosta268.eco_connect.entity.mission;
 
 import jakarta.persistence.*;
+import lombok.Getter;
 
 @Entity
+@Getter
 public class MissionImage {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

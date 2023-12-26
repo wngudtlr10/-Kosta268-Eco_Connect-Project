@@ -32,6 +32,7 @@ public class MemberMission {
     private Mission mission;
 
     @OneToMany(mappedBy = "memberMission", cascade = CascadeType.ALL)
+    @Builder.Default
     private List<MissionImage> images = new ArrayList<>();
 
     @Enumerated(EnumType.STRING)
