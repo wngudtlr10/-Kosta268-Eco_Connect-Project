@@ -62,6 +62,8 @@ public class Gathering {
     @Enumerated(EnumType.STRING)
     private Category category;
 
+    private String chatRoomId;
+
     @Builder.Default
     @OneToMany(mappedBy = "gathering", cascade = CascadeType.REMOVE)
     private List<MemberGathering> memberGatherings = new ArrayList<>();

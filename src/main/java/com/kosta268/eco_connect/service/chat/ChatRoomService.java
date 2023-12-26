@@ -4,9 +4,11 @@ import com.kosta268.eco_connect.dto.chat.ChatRoomDto;
 import com.kosta268.eco_connect.dto.chat.ChatRoomListDto;
 import com.kosta268.eco_connect.entity.chat.ChatRoom;
 import com.kosta268.eco_connect.entity.chat.ChatRoomMember;
+import com.kosta268.eco_connect.entity.gathering.Gathering;
 import com.kosta268.eco_connect.entity.member.Member;
 import com.kosta268.eco_connect.repository.chat.ChatRoomMemberRepository;
 import com.kosta268.eco_connect.repository.chat.ChatRoomRepository;
+import com.kosta268.eco_connect.repository.gathering.GatheringRepository;
 import com.kosta268.eco_connect.repository.member.MemberRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -23,6 +25,7 @@ public class ChatRoomService {
     private final ChatRoomRepository chatRoomRepository;
     private final ChatRoomMemberRepository chatRoomMemberRepository;
     private final MemberRepository memberRepository;
+    private final GatheringRepository gatheringRepository;
 
     public ChatRoomListDto addChatRoom(Long memberId, String title) {
         // 채팅방 생성
@@ -43,6 +46,34 @@ public class ChatRoomService {
         // db에 저장
         chatRoomRepository.save(newChatRoom);
         chatRoomMemberRepository.save(newChatRoomMember);
+
+        // dto로 변환하고 반환
+        return ChatRoomListDto.fromEntity(newChatRoom);
+    }
+
+    public ChatRoomListDto addGatheringChatRoom(Long gatheringId, Long memberId, String title) {
+        // 채팅방 생성
+        ChatRoom newChatRoom = ChatRoom.create(title);
+        // 유저 정보 조회
+        Member addChatRoomMember = memberRepository.findById(memberId).orElseThrow(() -> new NoSuchElementException("Member Not Found."));
+        Gathering gathering = gatheringRepository.findById(gatheringId).orElseThrow(() -> new NoSuchElementException("Gathering Not Found."));
+
+        // 채팅방 유저에 추가할 정보 생성
+        ChatRoomMember newChatRoomMember = new ChatRoomMember();
+        newChatRoomMember.setMember(addChatRoomMember);
+        newChatRoomMember.setChatRoom(newChatRoom);
+
+        // 생성된 채팅방에 채팅방 유저 정보 추가
+        newChatRoom.addChatRoomUserList(newChatRoomMember);
+        // 유저에 채팅방 유저 정보 추가
+        addChatRoomMember.addChatRoomUserList(newChatRoomMember);
+        // 모임에 채팅방 정보 저장
+        gathering.setChatRoomId(newChatRoom.getChatRoomId());
+
+        // db에 저장
+        chatRoomRepository.save(newChatRoom);
+        chatRoomMemberRepository.save(newChatRoomMember);
+        gatheringRepository.save(gathering);
 
         // dto로 변환하고 반환
         return ChatRoomListDto.fromEntity(newChatRoom);

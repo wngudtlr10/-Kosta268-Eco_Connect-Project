@@ -11,6 +11,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.mail.MailException;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.io.UnsupportedEncodingException;
 import java.util.Random;
@@ -18,6 +19,7 @@ import java.util.Random;
 @Slf4j
 @Service
 @RequiredArgsConstructor
+@Transactional
 public class MailService {
     private final JavaMailSender javaMailSender;
 
