@@ -6,8 +6,9 @@
     padding: 10px; /* padding around the grid */
     margin: auto;
     max-width: 1440px;
-    max-height: 1440px;
-    margin-bottom: 100px;
+    max-height: 1840px;
+    margin-bottom: 200px;
+
 }
 
 .donate-button {

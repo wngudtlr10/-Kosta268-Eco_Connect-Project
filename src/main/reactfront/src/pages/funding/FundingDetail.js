@@ -4,6 +4,7 @@ import axios from "axios";
 import moment from 'moment';
 import Layout from "../../components/Layout/Layout";
 import "./FundingView.css";
+import {Margin} from "@mui/icons-material";
 
 
 const FundingDetail = () => {
@@ -30,6 +31,15 @@ const FundingDetail = () => {
         return moment(dateString).isValid() ? moment(dateString).format('YYYY-MM-DD HH:mm:ss') : 'Unavailable';
     };
 
+    let listItemStyle = {
+        margin: "50px",
+        backgroundColor: "#ec8989",
+        borderRadius: "10px",
+        padding: "10px",
+        textAlign: "center",
+        fontSize: "20px",
+        fontFamily: "bold",
+    };
 
     return (
         <Layout>
@@ -41,10 +51,10 @@ const FundingDetail = () => {
                 <imgae src="../"></imgae>
             </div>
             <div>
-                <h1>Funding Detail</h1>
+                <h1 style={{textAlign: "center"}}>Funding Detail</h1>
                 <ul>
                     {fundings.map(funding => (
-                        <li key={funding.id}>
+                        <li key={funding.id} style={listItemStyle}>
                             <div>1. Title: {funding.title}</div>
                             <div>2. Author: {funding.autour}</div>
                             <div>3. Category ID: {funding.category_id}</div>

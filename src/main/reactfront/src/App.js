@@ -41,7 +41,7 @@ function App() {
                 <Route path={"/login"} element={<Login />} />
                 <Route path={"/find-id"} element={<FindId />} />
                 <Route path={"/find-pw"} element={<FindPw />} />
-                <Route element={<Layout />}>
+
                     <Route path={"/membertest"} element={<MemberTest />} />
                     <Route path={"/"} element={<Home/>}/>
 
@@ -52,6 +52,7 @@ function App() {
                     <Route path={"/funding/update"} element={<FundingUpdate />} />
                     <Route path={"/funding/delete"} element={<FundingDelete />} />
                     <Route path={"/funding/payment"} element={<FundingPayment />} />
+                <Route element={<Layout />}>
                     {/* gathering */}
                     <Route path={"/gathering"} element={<GatheringList />} />
                     <Route path={"/gathering/:gatheringId"} element={<GatheringDetail />} />
