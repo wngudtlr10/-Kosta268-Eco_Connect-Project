@@ -1,19 +1,34 @@
 package com.kosta268.eco_connect.dto.member;
 
-import lombok.*;
+import com.kosta268.eco_connect.entity.member.Member;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.Setter;
 
-import java.time.LocalDateTime;
-
-@Data
-@RequiredArgsConstructor
+@Builder
+@Getter
+@Setter
 public class MemberDto {
-
-    private Long member_id;
+    private Long memberId;
     private String id;
-    private String name;
     private String email;
     private String profile;
-    private String address;
-    private LocalDateTime created_in;
 
+    public Member toEntity() {
+        return Member.builder()
+                .memberId(memberId)
+                .id(id)
+                .email(email)
+                .profile(profile)
+                .build();
+    }
+
+    public static MemberDto fromEntity(Member member) {
+        return MemberDto.builder()
+                .memberId(member.getMemberId())
+                .id(member.getId())
+                .email(member.getEmail())
+                .profile(member.getProfile())
+                .build();
+    }
 }

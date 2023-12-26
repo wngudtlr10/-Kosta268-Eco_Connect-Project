@@ -1,0 +1,18 @@
+.div-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   /* 수평 정렬 */
+    align-items: center;       /* 수직 정렬 */
+    height: 10vh;             /* div-container의 높이를 설정. 필요에 따라 변경 */
+}
+
+/* datepicker custom*/
+.example-custom-input {
+    background-color: #202020;
+    color: white;
+    cursor: pointer;
+    width: 175px;
+    padding: 1px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}

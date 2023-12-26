@@ -1,0 +1,696 @@
+* {
+    margin: 0;
+}
+.mypage-main-index {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.mypage-main-index .div {
+    background-color: #ffffff;
+    height: 1076px;
+    overflow: hidden;
+    position: relative;
+    width: 1440px;
+}
+
+.mypage-main-index .mypage-content {
+    align-items: flex-end;
+    display: inline-flex;
+    gap: 70px;
+    justify-content: center;
+    left: 140px;
+    position: absolute;
+    top: 254px;
+}
+
+.mypage-main-index .my-info {
+    align-items: flex-start;
+    display: inline-flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 24px;
+    position: relative;
+}
+
+.mypage-main-index .title {
+    color: #000000;
+    font-family: "Poppins", Helvetica;
+    font-size: 18px;
+    font-weight: 600;
+    height: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    white-space: nowrap;
+    width: 104.9px;
+}
+
+.mypage-main-index .card {
+    background-color: #ffffff;
+    border: 1px solid;
+    border-color: #000000;
+    border-radius: 18px;
+    height: 612px;
+    position: relative;
+    width: 590px;
+}
+
+.mypage-main-index .button-edit {
+    background-color: #03c75a;
+    border-radius: 9px;
+    height: 40px;
+    left: 478px;
+    position: absolute;
+    top: 600px;
+    width: 91px;
+}
+
+.mypage-main-index .edit {
+    color: #ffffff;
+    font-family: "Poppins", Helvetica;
+    font-size: 14px;
+    font-weight: 600;
+    left: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 10px;
+    width: 41px;
+}
+
+.mypage-main-index .my-info-user-status {
+    height: 40px;
+    left: 183px;
+    position: absolute;
+    top: 546px;
+    width: 280px;
+}
+
+.mypage-main-index .status {
+    color: #000000;
+    font-family: "Poppins", Helvetica;
+    font-size: 14px;
+    font-weight: 700;
+    left: -54px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 9px;
+    width: 54px;
+}
+
+.mypage-main-index .overlap-group {
+    background-image: url(https://cdn.animaapp.com/projects/656fc45c1d7b0bae0287709d/releases/65702bf70e1788ccd008ca5c/img/input.svg);
+    background-size: 100% 100%;
+    height: 40px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 280px;
+}
+
+.mypage-main-index .vector {
+    height: 14px;
+    left: 240px;
+    position: absolute;
+    top: 16px;
+    width: 20px;
+}
+
+.mypage-main-index .text-wrapper {
+    color: #000000;
+    font-family: "Poppins", Helvetica;
+    font-size: 14px;
+    font-weight: 400;
+    left: 127px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 9px;
+    width: 28px;
+}
+
+.mypage-main-index .my-info-grade {
+    height: 40px;
+    left: 127px;
+    position: absolute;
+    top: 486px;
+    width: 336px;
+}
+
+.mypage-main-index .overlap {
+    background-image: url(https://cdn.animaapp.com/projects/656fc45c1d7b0bae0287709d/releases/65702bf70e1788ccd008ca5c/img/input.svg);
+    background-size: 100% 100%;
+    height: 40px;
+    left: 56px;
+    position: absolute;
+    top: 0;
+    width: 280px;
+}
+
+.mypage-main-index .grade-seed {
+    height: 20px;
+    left: 130px;
+    object-fit: cover;
+    position: absolute;
+    top: 10px;
+    width: 20px;
+}
+
+.mypage-main-index .grade {
+    color: #000000;
+    font-family: "Poppins", Helvetica;
+    font-size: 14px;
+    font-weight: 700;
+    left: 0;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 11px;
+    width: 54px;
+}
+
+.mypage-main-index .my-info-point {
+    height: 40px;
+    left: 116px;
+    position: absolute;
+    top: 426px;
+    width: 347px;
+}
+
+.mypage-main-index .overlap-2 {
+    height: 40px;
+    position: relative;
+}
+
+.mypage-main-index .input {
+    height: 40px;
+    left: 67px;
+    position: absolute;
+    top: 0;
+    width: 280px;
+}
+
+.mypage-main-index .text-wrapper-2 {
+    color: #03c75a;
+    font-family: "Poppins", Helvetica;
+    font-size: 14px;
+    font-weight: 400;
+    left: 174px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 11px;
+    width: 65px;
+}
+
+.mypage-main-index .point {
+    color: #000000;
+    font-family: "Poppins", Helvetica;
+    font-size: 14px;
+    font-weight: 700;
+    left: 0;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 9px;
+    white-space: nowrap;
+    width: 79px;
+}
+
+.mypage-main-index .my-info-email {
+    height: 40px;
+    left: 116px;
+    position: absolute;
+    top: 366px;
+    width: 347px;
+}
+
+.mypage-main-index .email {
+    color: #000000;
+    font-family: "Poppins", Helvetica;
+    font-size: 14px;
+    font-weight: 600;
+    left: 0;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 11px;
+    width: 107px;
+}
+
+.mypage-main-index .email-2 {
+    background: transparent;
+    border: none;
+    color: #000000;
+    font-family: "Poppins", Helvetica;
+    font-size: 14px;
+    font-weight: 400;
+    left: 142px;
+    letter-spacing: 0;
+    line-height: normal;
+    padding: 0;
+    position: absolute;
+    text-decoration: underline;
+    top: 13px;
+    width: 149px;
+}
+
+.mypage-main-index .my-info-name {
+    height: 40px;
+    left: 128px;
+    position: absolute;
+    top: 308px;
+    width: 335px;
+}
+
+.mypage-main-index .img {
+    height: 40px;
+    left: 55px;
+    position: absolute;
+    top: 0;
+    width: 280px;
+}
+
+.mypage-main-index .name {
+    color: #000000;
+    font-family: "Poppins", Helvetica;
+    font-size: 14px;
+    font-weight: 600;
+    left: 0;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 10px;
+    width: 106px;
+}
+
+.mypage-main-index .name-2 {
+    color: #000000;
+    font-family: "Poppins", Helvetica;
+    font-size: 14px;
+    font-weight: 400;
+    left: 175px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 10px;
+    width: 50px;
+}
+
+.mypage-main-index .my-info-profile {
+    background-image: url(https://cdn.animaapp.com/projects/656fc45c1d7b0bae0287709d/releases/65702bf70e1788ccd008ca5c/img/----3@2x.png);
+    background-position: 50% 50%;
+    background-size: cover;
+    height: 187px;
+    left: 168px;
+    position: absolute;
+    top: 78px;
+    width: 249px;
+}
+
+.mypage-main-index .my-address {
+    align-items: flex-start;
+    display: inline-flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 21px;
+    justify-content: center;
+    position: relative;
+}
+
+.mypage-main-index .title-2 {
+    color: #000000;
+    font-family: "Poppins", Helvetica;
+    font-size: 18px;
+    font-weight: 600;
+    height: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    white-space: nowrap;
+    width: 199px;
+}
+
+.mypage-main-index .edit-wrapper {
+    background-color: #03c75a;
+    border-radius: 9px;
+    height: 40px;
+    left: 479px;
+    position: absolute;
+    top: 597px;
+    width: 91px;
+}
+
+.mypage-main-index .edit-2 {
+    color: #ffffff;
+    font-family: "Poppins", Helvetica;
+    font-size: 14px;
+    font-weight: 600;
+    left: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 9px;
+    width: 41px;
+}
+
+.mypage-main-index .my-address-delivery {
+    height: 68px;
+    left: 30px;
+    position: absolute;
+    top: 478px;
+    width: 530px;
+}
+
+.mypage-main-index .input-2 {
+    background-color: #ffffff;
+    border: 0.5px solid;
+    border-color: #d9d9d9;
+    border-radius: 12px;
+    height: 40px;
+    left: 0;
+    position: absolute;
+    top: 28px;
+    width: 530px;
+}
+
+.mypage-main-index .delivery-request {
+    color: #000000;
+    font-family: "Poppins", Helvetica;
+    font-size: 14px;
+    font-weight: 600;
+    left: 1px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: -1px;
+    width: 144px;
+}
+
+.mypage-main-index .my-adress-email {
+    height: 69px;
+    left: 30px;
+    position: absolute;
+    top: 386px;
+    width: 530px;
+}
+
+.mypage-main-index .placeholder-wrapper {
+    background-image: url(https://cdn.animaapp.com/projects/656fc45c1d7b0bae0287709d/releases/65702bf70e1788ccd008ca5c/img/input-5.svg);
+    background-size: 100% 100%;
+    height: 40px;
+    left: 0;
+    position: absolute;
+    top: 29px;
+    width: 530px;
+}
+
+.mypage-main-index .placeholder {
+    color: #b0b0b0;
+    font-family: "Poppins", Helvetica;
+    font-size: 14px;
+    font-weight: 600;
+    left: 15px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 10px;
+    width: 413px;
+}
+
+.mypage-main-index .email-3 {
+    color: #000000;
+    font-family: "Poppins", Helvetica;
+    font-size: 14px;
+    font-weight: 600;
+    left: 0;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: -1px;
+    width: 81px;
+}
+
+.mypage-main-index .my-address-contact {
+    height: 69px;
+    left: 30px;
+    position: absolute;
+    top: 296px;
+    width: 530px;
+}
+
+.mypage-main-index .input-3 {
+    height: 40px;
+    left: 0;
+    position: absolute;
+    top: 29px;
+    width: 530px;
+}
+
+.mypage-main-index .contact-number {
+    color: #000000;
+    font-family: "Poppins", Helvetica;
+    font-size: 14px;
+    font-weight: 600;
+    left: 1px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: -1px;
+    width: 43px;
+}
+
+.mypage-main-index .overlap-wrapper {
+    height: 118px;
+    left: 30px;
+    position: absolute;
+    top: 155px;
+    width: 530px;
+}
+
+.mypage-main-index .overlap-3 {
+    height: 118px;
+    position: relative;
+}
+
+.mypage-main-index .my-address-2 {
+    height: 118px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 530px;
+}
+
+.mypage-main-index .input-4 {
+    height: 40px;
+    left: 0;
+    position: absolute;
+    top: 78px;
+    width: 530px;
+}
+
+.mypage-main-index .input-5 {
+    border-color: #d9d9d9;
+    height: 40px;
+    left: 0;
+    position: absolute;
+    top: 28px;
+    width: 430px;
+}
+
+.mypage-main-index .text-wrapper-3 {
+    color: #000000;
+    font-family: "Poppins", Helvetica;
+    font-size: 14px;
+    font-weight: 600;
+    left: 0;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: -1px;
+    width: 28px;
+}
+
+.mypage-main-index .button-my-address {
+    background-color: #d9d9d9;
+    border-radius: 9px;
+    height: 40px;
+    left: 439px;
+    position: absolute;
+    top: 28px;
+    width: 91px;
+}
+
+.mypage-main-index .text-wrapper-4 {
+    color: #000000;
+    font-family: "Poppins", Helvetica;
+    font-size: 14px;
+    font-weight: 600;
+    left: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 10px;
+    width: 61px;
+}
+
+.mypage-main-index .my-address-receiver {
+    height: 68px;
+    left: 30px;
+    position: absolute;
+    top: 65px;
+    width: 530px;
+}
+
+.mypage-main-index .receiver {
+    color: #000000;
+    font-family: "Poppins", Helvetica;
+    font-size: 14px;
+    font-weight: 600;
+    left: 1px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: -1px;
+    width: 56px;
+}
+
+.mypage-main-index .mypage-navigation {
+    align-items: flex-start;
+    display: inline-flex;
+    flex-direction: column;
+    gap: 27px;
+    left: 140px;
+    position: absolute;
+    top: 125px;
+}
+
+.mypage-main-index .navigation-status {
+    align-items: flex-end;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 939px;
+    position: relative;
+}
+
+.mypage-main-index .navigation {
+    align-items: flex-start;
+    display: inline-flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    position: relative;
+}
+
+.mypage-main-index .title-3 {
+    color: #000000;
+    font-family: "Poppins", Helvetica;
+    font-size: 18px;
+    font-weight: 600;
+    height: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    white-space: nowrap;
+    width: 102px;
+}
+
+.mypage-main-index .description {
+    color: #b0b0b0;
+    font-family: "Poppins", Helvetica;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: normal;
+    position: relative;
+    text-align: center;
+    width: 300px;
+    left: -11px;
+}
+
+.mypage-main-index .navigation-directory {
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 8px;
+    justify-content: center;
+    position: relative;
+}
+
+.mypage-main-index .step {
+    color: #b0b0b0;
+    font-family: "Poppins", Helvetica;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    text-align: center;
+    width: fit-content;
+    left: -100px;
+}
+
+.mypage-main-index .text-wrapper-5 {
+    color: #b0b0b0;
+    font-family: "Font Awesome 5 Free-Solid", Helvetica;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+    width: fit-content;
+    left: -100px;
+}
+
+.mypage-main-index .navbar {
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 26px;
+    justify-content: center;
+    position: relative;
+}
+
+.mypage-main-index .my-information {
+    color: #03c75a;
+    font-family: "Poppins", Helvetica;
+    font-size: 14px;
+    font-weight: 600;
+    height: 18px;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    text-align: center;
+    width: 78px;
+}
+
+.mypage-main-index .text-wrapper-6 {
+    color: #000000;
+    font-family: "Poppins", Helvetica;
+    font-size: 14px;
+    font-weight: 600;
+    height: 18px;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    text-align: center;
+    width: 78px;
+}

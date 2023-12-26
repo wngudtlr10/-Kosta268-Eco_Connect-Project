@@ -1,0 +1,549 @@
+.mission-detail-index {
+    background-color: #ffffff;
+    margin: 0 auto;
+    width: fit-content;
+    align-items: center;
+    display: contents;
+   
+  }
+  
+  .mission-detail-index .mission-detail-start {
+    align-items: center;
+    margin: 0 auto;
+    flex: 0 0 auto;
+    gap: 42px;
+    position: relative;
+    width: fit-content;
+  }
+  
+
+  
+  .mission-detail-index .mission-detail-start-2 {
+    height: 150px;
+    width: 1100px;
+    margin: auto;
+   
+  }
+  
+  .mission-detail-index .mission-detail-start-wrapper {
+    align-items: flex-start;
+    display: flex;
+    gap: 10px;
+    left: 39px;
+    position: absolute;
+    top: 46px;
+  }
+  
+  .mission-detail-index .mission-detail-start-3 {
+    color: #ffffff;
+    font-family: "Poppins", Helvetica;
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    text-align: center;
+    width: fit-content;
+  }
+  
+  .mission-detail-index .div-wrapper {
+    align-items: flex-start;
+    display: inline-flex;
+    gap: 10px;
+    left: 39px;
+    position: absolute;
+    top: 110px;
+  }
+  
+  .mission-detail-index .p {
+    color: #ffffff;
+    font-family: "Poppins", Helvetica;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    text-align: center;
+    width: fit-content;
+  }
+  
+  .mission-detail-index .mission-detail-title {
+    background-color: #ffffff;
+    width: fit-content;
+    gap: 10px;
+    padding: 50px;
+    margin: 0 auto;
+    position: relative;
+  }
+  
+ 
+  
+  .mission-detail-index .mission-detail-title-3 {
+    color: #000000;
+    font-family: "Poppins", Helvetica;
+    font-size: 18px;
+    font-weight: 400;
+    height: 41px;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    text-align: center;
+    width: 200px;
+  }
+  
+  .mission-detail-index .mission-detail-title-4 {
+    height: 5px;
+    object-fit: cover;
+    position: relative;
+    width: fit-content;
+  }
+  
+  .mission-detail-index .mission-detail-main {
+    background-color: #ffffff;
+    border: 1px solid;
+    border-color: #c0c0c0;
+    border-radius: 25px;
+    gap: 10px;
+    padding: 15px 25px;
+    position: relative;
+    width: fit-content;
+    margin: auto;
+    margin-bottom: 40px;
+  }
+  
+  .mission-detail-index .mission-detail-main-2 {
+    align-items: center;
+    display: flex;
+    position: relative;
+  }
+  
+  .mission-detail-index .mission-detail-image {
+    align-items: flex-start;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    position: relative;
+  }
+  
+  .mission-detail-index .mission-detail-image-2 {
+    height: 400px;
+    object-fit: fit ;
+    position: relative;
+    width: 500px;
+  }
+  
+  .mission-detail-index .mission-detail-info {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 300px;
+    padding: 20px 0px;
+    position: relative;
+    width: 580px;
+  }
+  
+  .mission-detail-index .div-wrapper-2 {
+    align-items: center;
+    display: flex;
+    flex: 0 0 auto;
+    gap: 10px;
+    position: relative;
+  }
+  
+  .mission-detail-index .mission-detail {
+    color: #000000;
+    font-family: "Poppins", Helvetica;
+    font-size: 18px;
+    font-weight: 400;
+    height: 50px;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    text-align: center;
+    width: 480px;
+    margin: 0 auto;
+  }
+  
+  .mission-detail-index .mission-detail-get {
+    color: #000000;
+    font-family: "Poppins", Helvetica;
+    font-size: 18px;
+    font-weight: 400;
+    height: 27px;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    text-align: center;
+    width: 241px;
+  }
+  
+  .mission-detail-index .mission-detail-host {
+    color: #000000;
+    font-family: "Poppins", Helvetica;
+    font-size: 18px;
+    font-weight: 400;
+    height: 25px;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    text-align: center;
+    width: 304px;
+    margin-bottom: 10px;
+  }
+  
+  .mission-detail-index .mission-detail-2 {
+    color: #000000;
+    font-family: "Poppins", Helvetica;
+    font-size: 18px;
+    font-weight: 400;
+    height: 30px;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    text-align: center;
+    width: 384px;
+    margin-bottom: 50px;
+  }
+  
+  .mission-detail-index .mission-detail-wrapper {
+    align-items: center;
+    background-color: #03c75a;
+    border-radius: 15px;
+    position: relative;
+  }
+  
+  .mission-detail-index .mission-detail-3 {
+    color: #ffffff;
+    font-family: "Inter", Helvetica;
+    font-size: 18px;
+    font-weight: 400;
+    height: 40px;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    text-align: center;
+    width: 242px;
+    margin-top: 8px;
+    background: none;
+    border: none;
+  }
+  
+  .mission-detail-index .mission-detail-4 {
+    color: #a1a1a1;
+    font-family: "Poppins", Helvetica;
+    font-size: 14px;
+    font-weight: 400;
+    height: 28px;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    text-align: center;
+    width: 432px;
+  }
+  
+  .mission-detail-index .mission-detail-more {
+    background-color: #ffffff;
+    gap: 10px;
+    padding: 10px;
+    position: relative;
+    margin: auto;
+    width : fit-content;
+    margin-bottom: 20px;
+  }
+  
+  .mission-detail-index .mission-detail-more-2 {
+    position: relative;
+    margin: auto;
+  }
+  
+  .mission-detail-index .div-wrapper-3 {
+    display: flex;
+    gap: 10px;
+    position: relative;
+    margin: auto;
+  }
+  
+  .mission-detail-index .text-wrapper-2 {
+    color: #000000;
+    font-family: "Poppins", Helvetica;
+    font-size: 18px;
+    font-weight: 400;
+    height: 41px;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    text-align: center;
+    width: 249px;
+  }
+  
+  .mission-detail-index .more-hr {
+    height: 5px;
+    margin-top: -1px;
+    object-fit: cover;
+    position: relative;
+    margin: auto;   
+    width: 1240px;
+  }
+  
+  .mission-detail-index .more-mission {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    position: relative;
+    margin: auto;
+    margin-bottom: 30px;
+  }
+  
+  .mission-detail-index .mission-list-another {
+    align-items: flex-start;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 30px;
+    position: relative;
+  }
+  
+  .mission-detail-index .mission-list-wrap {
+    align-items: center;
+    background-color: #ffffff;
+    border: 1px solid;
+    border-color: #000000;
+    border-radius: 25px;
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    position: relative;
+    margin: auto;
+  }
+  
+  .mission-detail-index .mission-frame {
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 10px;
+    height: 271px;
+    position: relative;
+  }
+  
+  .mission-detail-index .mission-image-wrap {
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 0px;
+    position: relative;
+  }
+  
+  .mission-detail-index .mission-image {
+    height: 152px;
+    position: relative;
+    width: 249px;
+  }
+  
+  .mission-detail-index .mission-info {
+    align-items: center;
+    background-color: #ffffff;
+    display: inline-flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+  }
+  
+  .mission-detail-index .mission-info-wrap {
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 59px;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .mission-detail-index .mission-name-text {
+    color: #000000;
+    font-family: "Poppins", Helvetica;
+    font-size: 18px;
+    font-weight: 600;
+    height: 29px;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    text-align: center;
+    width: 121px;
+  }
+  
+  .mission-detail-index .mission-point {
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 10px;
+    height: 29px;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .mission-detail-index .mission-point-text {
+    color: #03c75a;
+    font-family: "Poppins", Helvetica;
+    font-size: 14px;
+    font-weight: 400;
+    height: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: relative;
+    text-align: center;
+    width: 51px;
+  }
+  
+  .mission-detail-index .challenge-button {
+    align-items: center;
+    background-color: #03c75a;
+    border-radius: 9px;
+    display: flex;
+    gap: 10px;
+    height: 42px;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    width: 242px;
+  }
+  
+  .mission-detail-index .challenge {
+    color: #ffffff;
+    font-family: "Inter", Helvetica;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: normal;
+    position: relative;
+    text-align: center;
+    width: fit-content;
+  }
+  
+  .mission-detail-index .footer {
+    align-items: flex-start;
+    background-color: #ffffff;
+    border-bottom-style: none;
+    border-color: #8d8d8d;
+    border-left-style: none;
+    border-right-style: none;
+    border-top-style: solid;
+    border-top-width: 1px;
+    display: inline-flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+  }
+  
+  
+  .mission-detail-index .text-wrapper-3 {
+    color: #000000;
+    font-family: "Roboto", Helvetica;
+    font-size: 16px;
+    font-weight: 400;
+    height: 19px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+    width: 59px;
+  }
+  
+  .mission-detail-index .q-a {
+    color: #000000;
+    font-family: "Roboto", Helvetica;
+    font-size: 16px;
+    font-weight: 400;
+    height: 19px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+    width: 32px;
+  }
+  
+  .mission-detail-index .text-wrapper-4 {
+    color: #000000;
+    font-family: "Roboto", Helvetica;
+    font-size: 16px;
+    font-weight: 400;
+    height: 19px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+    width: 178px;
+  }
+  
+  .mission-detail-index .inquiry-button-wrap {
+    align-items: center;
+    display: flex;
+    gap: 30px;
+    height: 279px;
+    justify-content: center;
+    padding: 111px 43px;
+    position: relative;
+    width: 400px;
+  }
+  
+  .mission-detail-index .inquiry {
+    color: #000000;
+    font-family: "Roboto", Helvetica;
+    font-size: 22px;
+    font-weight: 400;
+    height: 26px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+    width: 81px;
+  }
+  
+  .mission-detail-index .direct-button {
+    align-items: center;
+    background-color: var(--colorsbluedark);
+    border-radius: 15px;
+    display: flex;
+    gap: 10px;
+    height: 50px;
+    justify-content: center;
+    padding: 5px 26px;
+    position: relative;
+    width: 160px;
+  }
+  
+  .mission-detail-index .direct {
+    color: #ffffff;
+    font-family: "Roboto", Helvetica;
+    font-size: 16px;
+    font-weight: 400;
+    height: 19px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+    width: 59px;
+  }
+  

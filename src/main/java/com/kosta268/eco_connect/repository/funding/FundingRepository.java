@@ -1,4 +1,10 @@
 package com.kosta268.eco_connect.repository.funding;
 
-public class FundingRepository {
+import com.kosta268.eco_connect.entity.funding.Funding;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface FundingRepository extends JpaRepository<Funding, Long> {
+
 }

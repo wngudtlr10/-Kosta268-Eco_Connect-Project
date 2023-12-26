@@ -1,0 +1,367 @@
+.find-id-index {
+    background-color: rgba(255, 255, 255, 1);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.find-id-index .find-id-wrap-wrapper {
+    background: linear-gradient(180deg, rgb(3, 199, 90) 50%, rgba(3, 199, 90, 0) 50.01%);
+    background-color: rgba(255, 255, 255, 1);
+    height: 1100px;
+    width: 1440px;
+}
+
+.find-id-index .find-id-wrap {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 1100px;
+    position: relative;
+    width: 1440px;
+}
+
+.find-id-index .find-id-header-wrap {
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    height: 100px;
+    padding: 7.5px 10px;
+    position: relative;
+    width: 1440px;
+}
+
+.find-id-index .logo {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 85px;
+    padding: 10px;
+    position: relative;
+    width: 235px;
+}
+
+.find-id-index .element {
+    height: 65px;
+    margin-right: -2px;
+    position: relative;
+    width: 217px;
+}
+
+.find-id-index .overlap-group {
+    background-color: #13954c;
+    border-radius: 31.91px/32.01px;
+    height: 64px;
+    left: 0;
+    position: absolute;
+    top: 1px;
+    width: 64px;
+}
+
+.find-id-index .icon-leaf {
+    height: 43px;
+    left: 15px;
+    position: absolute;
+    top: 11px;
+    width: 33px;
+}
+
+.find-id-index .ECO-CONNECT {
+    color: #ffffff;
+    font-family: "Alata", Helvetica;
+    font-size: 30px;
+    font-weight: 400;
+    left: 68px;
+    letter-spacing: 0;
+    line-height: 30px;
+    position: absolute;
+    top: 0;
+    width: 147px;
+}
+
+.find-id-index .find-id-content-wrap {
+    align-items: flex-start-;
+    display: flex;
+    gap: 10px;
+    /*height: 1000px;*/
+    justify-content: center;
+    padding: 10px;
+    position: relative;
+    width: 1440px;
+}
+
+.find-id-index .main-wrap {
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 40px;
+    box-shadow: 0 4px 35px #00000040;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /*height: 670px;*/
+    overflow: hidden;
+    padding: 30px 10px;
+    position: relative;
+    width: 540px;
+}
+
+.find-id-index .find-menu-wrap {
+    align-items: flex-end;
+    display: flex;
+    gap: 10px;
+    height: 40px;
+    position: relative;
+    width: 440px;
+}
+
+.find-id-index .find-id-btn {
+    color: #000000;
+    font-family: "Poppins", Helvetica;
+    font-size: 20px;
+    font-weight: 500;
+    height: 40px;
+    letter-spacing: 0;
+    line-height: 40px;
+    position: relative;
+    text-align: center;
+    width: 120px;
+    cursor: pointer;
+}
+
+.find-id-index .find-pw-btn {
+    color: #a0a0a0;
+    font-family: "Poppins", Helvetica;
+    font-size: 20px;
+    font-weight: 500;
+    height: 40px;
+    letter-spacing: 0;
+    line-height: 40px;
+    position: relative;
+    text-align: center;
+    width: 130px;
+    cursor: pointer;
+}
+
+.find-id-index .find-id-info-wrap {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    /*height: 246px;*/
+    /*padding: 10px 0;*/
+    position: relative;
+    width: 440px;
+}
+
+.find-id-index .name-wrap {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    height: 86px;
+    justify-content: center;
+    /*padding: 10px;*/
+    position: relative;
+    width: 400px;
+}
+
+.find-id-index .text-wrapper {
+    color: #000000;
+    font-family: "Poppins", Helvetica;
+    font-size: 15px;
+    font-weight: 400;
+    height: 20px;
+    letter-spacing: 0;
+    line-height: 20px;
+    /*margin-top: -1px;*/
+    position: relative;
+    width: 380px;
+    text-align: center;
+}
+
+.find-id-index .name-email-input {
+    border: 1px solid;
+    border-color: #a0a0a0;
+    border-radius: 5px;
+    height: 40px;
+    position: relative;
+    width: 378px;
+    padding: 0 10px;
+    text-align: center;
+}
+
+.find-id-index .email-wrap {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 140px;
+    justify-content: center;
+    padding: 10px 0;
+    position: relative;
+    width: 400px;
+}
+
+.find-id-index .check-wrap {
+    align-items: center;
+    display: flex;
+    gap: 20px;
+    height: 40px;
+    position: relative;
+    width: 400px;
+}
+
+.find-id-index .email-input {
+    border: 1px solid;
+    border-color: #a0a0a0;
+    border-radius: 5px;
+    height: 40px;
+    position: relative;
+    width: 260px;
+    padding: 0 10px;
+}
+
+.find-id-index .form-email-btn {
+    border: 1px solid;
+    border-color: #03c75a;
+    border-radius: 10px;
+    height: 40px;
+    overflow: hidden;
+    position: relative;
+    width: 100px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 400;
+    background-color: #FFFFFF;
+    color: #03c75a;
+    cursor: pointer;
+}
+
+.find-id-index .form-email-btn:hover {
+    color: #FFFFFF;
+    background-color: #03c75a;
+}
+
+.find-id-index .find-id-btn-wrap {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    /*gap: 10px;*/
+    height: 60px;
+    justify-content: center;
+    /*padding: 10px;*/
+    position: relative;
+    width: 440px;
+}
+
+.find-id-index .find-id-btn-2 {
+    align-items: center;
+    background-color: #03c75a;
+    border-radius: 10px;
+    box-shadow: 0 4px 19px #7793414c;
+    display: flex;
+    gap: 10px;
+    height: 40px;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    width: 380px;
+    color: #ffffff;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    border: 1px solid #03c75a;
+    cursor: pointer;
+}
+
+.find-id-index .find-id-result {
+    align-items: flex-start;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    padding: 10px;
+    position: relative;
+    width: 400px;
+    height: 220px;
+}
+
+.find-id-index .title-text-wrapper {
+    color: #000000;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    height: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    width: 380px;
+}
+
+.find-id-index .input-btn-wrap {
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    height: 40px;
+    position: relative;
+    width: 380px;
+}
+
+.find-id-index .form-input-sm {
+    align-items: center;
+    border: 1px solid #a0a0a0;
+    border-radius: 5px;
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    overflow: hidden;
+    padding: 0 10px;
+    position: relative;
+    width: 280px;
+}
+
+.find-id-index .form-id-validation {
+    color: #ff0000;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    height: 16px;
+    letter-spacing: 0;
+    line-height: 7px;
+    position: relative;
+    width: 400px;
+    padding: 0 3px;
+}
+
+.find-id-index .form-id-success {
+    color: #0000ff;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    height: 16px;
+    letter-spacing: 0;
+    line-height: 7px;
+    position: relative;
+    width: 400px;
+    padding: 0 3px;
+}
+
+.find-id-index .form-input {
+    align-items: center;
+    border: 1px solid #a0a0a0;
+    border-radius: 5px;
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    overflow: hidden;
+    padding: 0 10px;
+    position: relative;
+    width: 380px;
+}
+
+.find-id-index .submit-form {
+    margin-bottom: 30px;
+}

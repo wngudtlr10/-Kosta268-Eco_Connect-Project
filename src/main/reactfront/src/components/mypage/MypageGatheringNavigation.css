@@ -1,0 +1,78 @@
+.mypage-gathering {
+    align-items: flex-start;
+    display: inline-flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+}
+
+.mypage-gathering .navigation {
+    height: 30px;
+    position: relative;
+    width: 135px;
+}
+
+.mypage-gathering .title {
+    color: #000000;
+    font-family: "Poppins", Helvetica;
+    font-size: 24px;
+    font-weight: 600;
+    left: 0;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: -1px;
+    width: 135px;
+}
+
+.mypage-gathering .navigation-tab {
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 26px;
+    justify-content: center;
+    position: relative;
+}
+
+.mypage-gathering .text-wrapper-6 {
+    color: #000000;
+    font-family: "Poppins", Helvetica;
+    font-size: 14px;
+    font-weight: 700;
+    height: 18px;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    text-align: center;
+    width: 78px;
+}
+
+.mypage-gathering .my-volunteer {
+    color: #03c75a;
+    font-family: "Poppins", Helvetica;
+    font-size: 14px;
+    font-weight: 700;
+    height: 18px;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    text-align: center;
+    width: 78px;
+}
+
+.mypage-gathering .my-like {
+    color: #000000;
+    font-family: "Poppins", Helvetica;
+    font-size: 14px;
+    font-weight: 700;
+    height: 18px;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    text-align: center;
+    width: 97px;
+}

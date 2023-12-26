@@ -1,0 +1,80 @@
+.mypage-footer-wrap {
+    align-items: center;
+    display: inline-flex;
+    gap: 170px;
+    justify-content: center;
+    padding: 22px 97px;
+    position: relative;
+}
+
+.mypage-footer-wrap .footer-logo-image {
+    height: 72px;
+    position: relative;
+    width: 191px;
+}
+
+.mypage-footer-wrap .logo-image {
+    height: 69px;
+    left: 1px;
+    object-fit: cover;
+    position: absolute;
+    top: 2px;
+    width: 189px;
+}
+
+.mypage-footer-wrap .footer-shortcut {
+    align-items: flex-start;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 40px;
+    position: relative;
+}
+
+.mypage-footer-wrap .text-wrapper-8 {
+    color: #000000;
+    font-family: "Roboto", Helvetica;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+}
+
+.mypage-footer-wrap .privacy-notice {
+    color: #000000;
+    font-family: "Roboto", Helvetica;
+    font-size: 16px;
+    font-weight: 400;
+    height: 19px;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    white-space: nowrap;
+    width: 178px;
+}
+
+.mypage-footer-wrap .button-contact-us {
+    background-color: #0a84ff;
+    border-radius: 15px;
+    height: 50px;
+    position: relative;
+    width: 160px;
+}
+
+.mypage-footer-wrap .contact-us {
+    color: #ffffff;
+    font-family: "Roboto", Helvetica;
+    font-size: 16px;
+    font-weight: 400;
+    left: 51px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 15px;
+    white-space: nowrap;
+}
