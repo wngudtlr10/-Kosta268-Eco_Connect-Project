@@ -1,10 +1,11 @@
-import React from "react";
-import { useEffect, useState} from "react";
+import React, {useEffect, useState} from "react";
 import AuthAxios from "../../utils/axios/AuthAxios";
 import { useParams, useNavigate } from "react-router-dom";
 import "./GatheringDetails.css";
 import Button from "react-bootstrap/esm/Button";
-
+import {useRecoilState} from "recoil";
+import {addMemberCount, createRoom, leaveRoom} from "../../store/recoilState";
+import axios from "axios";
 
 function GatheringDetail() {
 
@@ -16,7 +17,12 @@ function GatheringDetail() {
     const [participants, setParticipants] = useState([]);
     const [memberId, setMemberId] = useState();
     const [memberName, setMemberName] = useState("");
-
+    const [create, setCreate] = useRecoilState(createRoom);
+    const [count, setCount] = useRecoilState(addMemberCount);
+    const [leave, setLeave] = useRecoilState(leaveRoom);
+    const [chatRoomParticipant, setChatRoomParticipant] = useState([]);
+    const isParticipant = participants.some(participants => participants.memberId === memberId);
+    const isChatRoomParticipant = chatRoomParticipant.some(chatRoomParticipants => chatRoomParticipants.memberId === memberId);
 
     const fetchData = () => {
         AuthAxios.get(`/api/gathering/${gatheringId}`)
@@ -52,25 +58,30 @@ function GatheringDetail() {
             })
     }
 
+    useEffect(() => {
+        // fetchMember();
+        // fetchData();
+        console.log("gatheringId : ", gatheringId);
+        axios.all([AuthAxios.get(`/api/member/me`),
+                          AuthAxios.get(`/api/gathering/${gatheringId}`)])
+            .then(
+                axios.spread((res1, res2) => {
+                    setMemberId(res1.data.memberId);
+                    setMemberName(res1.data.username);
+                    setGathering(res2.data);
+                })
+            )
+            .catch((error) => {
+                console.log(error);
+            })
+        fetchGatheringMembers();
+    }, []);
 
     useEffect(() => {
-        console.log(participants)
-    },[participants])
-
-    useEffect(() => {
-        fetchMember();
-    }, [])
-
-    useEffect(() => {
-        fetchData();
-    }, [gatheringId])
-
-    useEffect(() => {
-
-    },[gathering])
-    useEffect(() => {
-        console.log(memberId, memberName)
-    }, [memberId, memberName])
+        if (gathering) {
+            fetchGatheringChatMembers();
+        }
+    }, [gathering, leave]);
 
     const deleteButton = async () => {
         await AuthAxios.delete(`/api/gathering/${gatheringId}`)
@@ -84,19 +95,52 @@ function GatheringDetail() {
             })
 
     };
+
     const joinGathering = async () => {
         await AuthAxios.get(`/api/gathering/${gatheringId}/join`)
             .then((response) => {
                 console.log("join success")
                 alert('모임 참여에 성공했습니다');
+                fetchGatheringMembers();
             })
             .catch((error) => {
                 console.log("join fail")
                 console.log(error);
             })
-    }
+    };
 
+    const createGatheringChatRoom = async () => {
+        console.log('createGatheringChatRoom');
+        const title = gathering.title;
 
+        AuthAxios.post(`/api/chat-room/gathering/${gatheringId}/title/${title}`)
+            .then(function (res) {
+                console.log(res.data);
+                setCreate(true);
+            })
+            .catch(error => console.log(error))
+    };
+
+    const enterGatheringChatRoom = async () => {
+        const chatRoomId = gathering.chatRoomId;
+        AuthAxios.post(`/api/chat-room/${chatRoomId}/member`)
+            .then(function (res) {
+                console.log(res.data);
+                setCount(true);
+                fetchGatheringChatMembers();
+            })
+            .catch(error => console.log(error))
+    };
+
+    const fetchGatheringChatMembers = () => {
+        const chatRoomId = gathering.chatRoomId;
+        AuthAxios.get(`api/chat-room/chatRoomId/${chatRoomId}`)
+            .then(function (res) {
+                console.log(res.data);
+                setChatRoomParticipant(res.data);
+            })
+            .catch(error => console.log(error))
+    };
 
     return (
         <div className="detail-index">
@@ -185,22 +229,28 @@ function GatheringDetail() {
                                     <div className="detail-location-text">{gathering ? (`${gathering.fullAddress}  ${gathering.subAddress}`)  : "Loading..."}</div>
 
                                     <div className="detail-blank" />
-                                    <div className="detail-buttons">
+                                    {(gathering && gathering.creatorId === memberId) && <div className="detail-buttons">
                                         <div className="detail-update-button">
-                                            <button className="text-wrapper-update" disabled={!gathering || (gathering.creatorId != memberId)} onClick={() => navigate(`/gathering/update/${gatheringId}`)}>수정</button>
+                                            <button className="text-wrapper-update" disabled={!gathering || (gathering.creatorId !== memberId)} onClick={() => navigate(`/gathering/update/${gatheringId}`)}>수정</button>
                                         </div>
                                         <div className="detail-delete-button">
-                                            <button className="text-wrapper-delete" disabled={!gathering || (gathering.creatorId != memberId)} onClick={deleteButton}>삭제</button>
+                                            <button className="text-wrapper-delete" disabled={!gathering || (gathering.creatorId !== memberId)} onClick={deleteButton}>삭제</button>
                                         </div>
-                                    </div>
+                                    </div>}
                                 </div>
                                 <div className="detail-gathering-wrap">
                                     <div className="detail-gathering-text">모임 시각: {gathering ? gathering.startAt : "Loading..."}</div>
                                 </div>
                             </div>
-                            <div className="detail-join-button">
+                            {(gathering && gathering.creatorId !== memberId && !isParticipant) && <div className="detail-join-button">
                                 <button className="detail-join-text" onClick={joinGathering}>바로 참여 하기</button>
-                            </div>
+                            </div>}
+                            {(gathering && gathering.creatorId === memberId) && <div className="detail-join-button">
+                                <button className="detail-join-text" disabled={!gathering || (gathering.chatRoomId !== null)} onClick={createGatheringChatRoom}>채팅 생성 하기</button>
+                            </div>}
+                            {(isParticipant) && <div className="detail-join-button">
+                                <button className="detail-join-text" onClick={enterGatheringChatRoom} disabled={isChatRoomParticipant}>채팅 참여 하기</button>
+                            </div>}
                         </div>
                     </div>
                 </div>

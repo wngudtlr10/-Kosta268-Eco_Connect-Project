@@ -37,8 +37,11 @@ function Login() {
         if (accessToken) {
             axios.defaults.headers.common["Authorization"] = `Bearer ${accessToken}`;
             localStorage.setItem('accessToken', accessToken);
+            console.log("4");
             setLogin(true);
+            console.log("5");
             navigate("/");
+            console.log("6");
         } else {
             setLogin(false);
         }
@@ -53,19 +56,7 @@ function Login() {
 
             axios.post(`http://localhost:8080/api/member/login`, loginInfo, {withCredentials: true})
                 .then(function (res) {
-                    // console.log("retuen data : {}", res.data);
-                    // console.log("retuen data : {}", res.data.accessToken);
                     setAccessToken(res.data.accessToken);
-                    // console.log("accessToken : {}", accessToken);
-                    // axios.defaults.headers.common["Authorization"] = `Bearer ${accessToken}`;
-
-                    // if (accessToken) {
-                    //     localStorage.setItem('accessToken', accessToken);
-                    //     setLogin(true);
-                    // } else {
-                    //     setLogin(false);
-                    // }
-                    // navigate("/");
                 })
                 .catch(error => {
                     if (error.response && error.response.status === 401) {
@@ -78,13 +69,6 @@ function Login() {
             console.log("아이디 또는 비밀번호가 입력되지 않았습니다.");
             alert("아이디 또는 비밀번호를 입력해주세요.");
         }
-    }
-
-    const handleKakaoLogin =  () => {
-        // const REST_API_KEY = `${process.env.REACT_APP_KAKAO_REST_API_KEY}`;
-        // const REDIRECT_URI = `${process.env.REACT_APP_KAKAO_REDIRECT_URI}`;
-        // window.location.href = `https://kauth.kakao.com/oauth/authorize?client_id=${REST_API_KEY}&redirect_uri=${REDIRECT_URI}&response_type=code`;
-        window.location.href = `http://localhost:8080/oauth2/authorization/kakao`;
     }
 
     return (
@@ -152,7 +136,7 @@ function Login() {
                                         className="img"
                                         alt="Kakao login button"
                                         src="https://cdn.animaapp.com/projects/6560b21274de9042f7d947f4/releases/656ec7d24d3fe40c0b1f9e8b/img/kakao-login-button-1.png"
-                                        onClick={ handleKakaoLogin }
+                                        // onClick={ handleKakaoLogin }
                                         // style={{visibility: 'hidden'}}
                                         style={{display: 'none'}}
                                     />

@@ -156,12 +156,13 @@ const MissionsUser = () => {
             scopedColumns={{
                 content : (item) => (
                     <td>
-                        {item.content.length > 7 ? `${item.content.substring(0, 7)}...` : item.content}
+                        {/*{item.content.length > 7 ? `${item.content.substring(0, 7)}...` : item.content}*/}
+                        {item.content}
                     </td>
                 ),
                 image: (item) => (
                     <td>
-                        <CAvatar src={item.image}></CAvatar>
+
                     </td>
                 ),
                 status: (item) => (
@@ -196,7 +197,10 @@ const MissionsUser = () => {
                     return (
                         <CCollapse visible={details.includes(item.memberMissionId)}>
                             <CCardBody className="p-3">
-                                <image>{item.image}</image>
+                                {item.images.map((image, index) => {
+                                    return <img src={image.imageUrl}></img>
+                                })}
+                                {/*<image>{item.image}</image>*/}
                                 <h4>{item.title}</h4>
                                 <p className="text-muted">내용 : {item.content}</p>
                                 <MissionUserSubmit muId={item.memberMissionId} onUpdate={handleUpdateMissionUser} />

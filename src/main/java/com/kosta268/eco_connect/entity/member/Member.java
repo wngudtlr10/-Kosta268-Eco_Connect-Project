@@ -39,28 +39,34 @@ public class Member {
     @Enumerated(EnumType.STRING)
     private Role role = Role.ROLE_USER;
 
-    @OneToOne(cascade = CascadeType.REMOVE)
+    @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "point_id")
     private Point point;
 
     @OneToMany(mappedBy = "member", fetch = FetchType.LAZY, cascade = CascadeType.REMOVE)
+    @Builder.Default
     private List<MemberGathering> memberGatherings = new ArrayList<>();
 
     @OneToMany(mappedBy = "creator", fetch = FetchType.LAZY, cascade = CascadeType.REMOVE)
+    @Builder.Default
     private List<Gathering> createGatherings = new ArrayList<>();
 
     @OneToMany(mappedBy = "member", fetch = FetchType.LAZY, cascade = CascadeType.REMOVE)
+    @Builder.Default
     private List<MemberMission> memberMissions = new ArrayList<>();
 
     @OneToMany(mappedBy = "member", fetch = FetchType.LAZY, cascade = CascadeType.REMOVE)
+    @Builder.Default
     private List<MissionLike> likeMissions = new ArrayList<>();
 
     @JsonManagedReference
     @OneToMany(mappedBy = "member", fetch = FetchType.LAZY)
+    @Builder.Default
     private List<ChatMessage> chatMessageList = new ArrayList<>();
 
     @JsonManagedReference
     @OneToMany(mappedBy = "member", fetch = FetchType.LAZY)
+    @Builder.Default
     private List<ChatRoomMember> chatRoomMemberList = new ArrayList<>();
 
     // 양방향 연관관계 설정 메서드

@@ -1,9 +1,12 @@
 package com.kosta268.eco_connect.service.member;
 
 import com.kosta268.eco_connect.dto.member.*;
+import com.kosta268.eco_connect.dto.mission.MemberMissionDto;
+import com.kosta268.eco_connect.dto.mission.MissionDto;
 import com.kosta268.eco_connect.entity.member.Member;
 import com.kosta268.eco_connect.entity.member.RefreshToken;
 import com.kosta268.eco_connect.entity.mission.MemberMission;
+import com.kosta268.eco_connect.entity.mission.Mission;
 import com.kosta268.eco_connect.entity.point.Point;
 import com.kosta268.eco_connect.jwt.TokenProvider;
 import com.kosta268.eco_connect.repository.member.MemberRepository;
@@ -22,12 +25,12 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.NoSuchElementException;
+import java.util.stream.Collectors;
 
 @Slf4j
 @Service
 @RequiredArgsConstructor
 @Transactional
-
 public class MemberService {
     private final AuthenticationManagerBuilder authenticationManagerBuilder;
     private final MemberRepository memberRepository;
@@ -42,6 +45,8 @@ public class MemberService {
 //        }
         Member member = memberRequestDto.applyPasswordEncoder(passwordEncoder);
 
+        Point point = new Point(0, 0);
+        member.setPoint(point);
         return MemberResponseDto.fromEntity(memberRepository.save(member));
     }
 

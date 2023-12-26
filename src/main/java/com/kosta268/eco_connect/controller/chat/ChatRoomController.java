@@ -16,11 +16,12 @@ import java.util.List;
 public class ChatRoomController {
     private final ChatRoomService chatRoomService;
 
-    @PostMapping("/title/{title}")
-    public ChatRoomListDto chatRoomAdd(@PathVariable("title") String title,
-                                       @AuthenticationPrincipal CustomUserDetails userDetails) {
+    @PostMapping("/gathering/{gatheringId}/title/{title}")
+    public ChatRoomListDto gatheringChatRoomAdd(@PathVariable("gatheringId") Long gatheringId,
+                                                @PathVariable("title") String title,
+                                                @AuthenticationPrincipal CustomUserDetails userDetails) {
         Long memberId = userDetails.getMemberId();
-        return chatRoomService.addChatRoom(memberId, title);
+        return chatRoomService.addGatheringChatRoom(gatheringId, memberId, title);
     }
 
     @GetMapping("/member")

@@ -12,6 +12,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -31,11 +32,16 @@ public class MemberMissionController {
     }
 
 
-
     @PostMapping("/missions/{missionId}/post")
-    public ResponseEntity<?> writeMissionPost(@ModelAttribute MemberMissionPostDto memberMissionPostDto) {
+    public ResponseEntity<?> writeMissionPost(@RequestParam("memberId") Long memberId,
+                                              @RequestParam("missionId") Long missionId,
+                                              @RequestParam("memberMissionId") Long memberMissionId,
+                                              @RequestParam("title") String title,
+                                              @RequestParam("content") String content,
+                                              @RequestParam("images") List<MultipartFile> images) {
+//        memberMissionService.addMemberMissionPost(memberMissionPostDto);
+        MemberMissionPostDto memberMissionPostDto = new MemberMissionPostDto(memberMissionId, memberId, missionId, title, content, images);
         memberMissionService.addMemberMissionPost(memberMissionPostDto);
-
         return ResponseEntity.ok(HttpStatus.CREATED);
     }
 
@@ -55,12 +61,22 @@ public class MemberMissionController {
         return ResponseEntity.ok().build();
     }
 
-    @GetMapping("/missions/members")
-    public ResponseEntity<List<MemberMissionDto>> memberMissionList() {
+    @GetMapping("/members/{memberId}/missions")
+    public ResponseEntity<List<MemberMissionDto>> memberMissionList(@AuthenticationPrincipal CustomUserDetails userDetails) {
         List<MemberMission> memberMissions = memberMissionService.findAll();
         List<MemberMissionDto> memberMissionDtos = memberMissions.stream()
                 .map(MemberMissionDto::fromEntity)
                 .collect(Collectors.toList());
         return ResponseEntity.ok(memberMissionDtos);
+    }
+
+    @GetMapping("/missions/members")
+    public ResponseEntity<List<MemberMissionDto>> allMemberMissionList() {
+        List<MemberMission> memberMissions = memberMissionService.findAll();
+        List<MemberMissionDto> memberMissionDtos = memberMissions.stream()
+                .map(MemberMissionDto::fromEntity)
+                .collect(Collectors.toList());
+        return ResponseEntity.ok(memberMissionDtos);
+
     }
 }

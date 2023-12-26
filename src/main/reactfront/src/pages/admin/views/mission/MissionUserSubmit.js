@@ -15,8 +15,21 @@ import { useState, useEffect } from 'react'
 
 const handleUpdate = async () => {
   try {
+      if (formData.status === "REJECTED") {
+          await AuthAxios.put(`/api/missions/${muId}/reject`,  {"memberMissionId": muId}, {
+              headers: {
+                  'Content-Type': 'application/json'
+              }
+          })
+      } else {
+          await AuthAxios.put(`/api/missions/${muId}/approval`, {"memberMissionId": muId}, {
+              headers: {
+                  'Content-Type': 'application/json'
+              }
+          });
+      }
     // 수정된 데이터를 서버에 전송
-    await AuthAxios.put(`http://localhost:8080/api/mission/user/${muId}`, formData);
+    // await AuthAxios.put(`http://localhost:8080/api/mission/user/${muId}`, formData);
     console.log('Updating with formData:', formData);
     onUpdate();
   } catch (error) {
@@ -31,6 +44,7 @@ useEffect(() => {
 
 const fetchMissionUserData = async () => {
   try {
+
     // 서버에서 공지사항 데이터 가져오기
     const response = await AuthAxios.get(`http://localhost:8080/api/mission/user/${muId}`);
     // 이전 값으로 초기화

@@ -22,3 +22,8 @@ export const addMemberCount = atom({
     key: "addMemberCount",
     default: false,
 });
+
+export const leaveRoom = atom({
+    key: "leaveRoom",
+    default: false,
+});

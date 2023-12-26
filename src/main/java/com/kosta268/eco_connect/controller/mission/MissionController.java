@@ -12,6 +12,8 @@ import org.springframework.data.web.PageableDefault;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/api/missions")
@@ -25,6 +27,11 @@ public class MissionController {
         missionService.addMission(missionCreateDto);
         return ResponseEntity.ok(missionDto);
 
+    }
+
+    @GetMapping("/all")
+    public List<MissionDto> missionListAll() {
+        return missionService.findAll();
     }
 
     @GetMapping

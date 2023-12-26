@@ -28,11 +28,13 @@ public class Mission {
     private String image;
     private int point; // 미션 완료시 획득 포인트
 
+    @Builder.Default
     private LocalDateTime createAt = LocalDateTime.now();
     private LocalDateTime modifyAt;
 
 
     @Enumerated(EnumType.STRING)
+    @Builder.Default
     private Status status = Status.OPEN; // 참여가능, 참여마감, 종료
 
     @Embedded
@@ -42,14 +44,16 @@ public class Mission {
     private LocalDateTime endAt;
     private LocalDateTime deadline;
 
-    private String category; // 카테고리 (3개밖에 없어서 따로 테이블을 두지 않으려고 생각중임)
+    private String category; // 카테고리
 
     private String host; // 주최자
 
     @OneToMany(mappedBy = "mission")
+    @Builder.Default
     private List<MemberMission> memberMissions = new ArrayList<>();
 
     @OneToMany(mappedBy = "mission")
+    @Builder.Default
     private List<MissionLike> likes = new ArrayList<>();
 
     @PrePersist

@@ -15,7 +15,7 @@ import java.util.UUID;
 @Data
 @Entity
 @Table(name = "chat_room")
-@ToString(exclude = {"chatRoomUserList", "chatMessageList"})
+@ToString(exclude = {"chatRoomMemberList", "chatMessageList"})
 @DynamicInsert
 public class ChatRoom {
     @Id

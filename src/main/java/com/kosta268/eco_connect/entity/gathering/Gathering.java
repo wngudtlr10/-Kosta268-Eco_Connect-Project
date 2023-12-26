@@ -53,12 +53,16 @@ public class Gathering {
     private int capacity;
 
 
-    //    @Column(columnDefinition = "DATETIME default LocalDateTime.now()")
     @Column
     private LocalDateTime createAt;
 
     private LocalDateTime deadline;
     private LocalDateTime startAt;
+
+    @Enumerated(EnumType.STRING)
+    private Category category;
+
+    private String chatRoomId;
 
     @Builder.Default
     @OneToMany(mappedBy = "gathering", cascade = CascadeType.REMOVE)
