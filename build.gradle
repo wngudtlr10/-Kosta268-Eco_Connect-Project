@@ -68,17 +68,19 @@ dependencies {
 }
 
 // QueryDSL
-sourceSets {
-    main {
-        java {
-            srcDir file('src/main/java')
-            srcDir file('build/generated')
-        }
-    }
-}
-clean.doLast {
-    delete fileTree('build/generated')
-}
+
+//sourceSets {
+//    main {
+//        java {
+//            srcDir file('src/main/java')
+//            srcDir file('build/generated')
+//        }
+//    }
+//}
+//
+//clean.doLast {
+//    delete fileTree('build/generated')
+//}
 
 
 tasks.named('test') {
