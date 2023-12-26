@@ -1,6 +1,7 @@
 package com.kosta268.eco_connect.dto.gathering;
 
 import com.kosta268.eco_connect.entity.Address;
+import com.kosta268.eco_connect.entity.gathering.Category;
 import com.kosta268.eco_connect.entity.gathering.Gathering;
 import lombok.Getter;
 import lombok.Setter;
@@ -13,6 +14,7 @@ import java.time.LocalDateTime;
 public class GatheringUpdateDto {
     private String title;
     private String intro;
+    private Category category;
     private String etc;
     private String zoneCode;
     private String fullAddress;
@@ -28,6 +30,7 @@ public class GatheringUpdateDto {
         return Gathering.builder()
                 .title(title)
                 .intro(intro)
+                .category(category)
                 .etc(etc)
                 .location(address)
                 .image(image.getOriginalFilename())
@@ -42,6 +45,7 @@ public class GatheringUpdateDto {
 
         gathering.setTitle(this.title);
         gathering.setIntro(this.intro);
+        gathering.setCategory(this.category);
         gathering.setEtc(this.etc);
         gathering.setLocation(address);
         gathering.setDeadline(this.deadline);

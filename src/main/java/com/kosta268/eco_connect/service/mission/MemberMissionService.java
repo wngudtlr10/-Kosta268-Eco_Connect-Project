@@ -33,11 +33,11 @@ public class MemberMissionService {
         Member member = memberRepository.findById(memberId).orElseThrow(() -> new IllegalArgumentException("no such member"));
         Mission mission = missionRepository.findById(missionId).orElseThrow(() -> new IllegalArgumentException("no such mission"));
 
-        boolean isAlreadyJoin = memberMissionRepository.existsByMemberMemberIdAndMissionMissionId(memberId, missionId);
-
-        if (isAlreadyJoin) {
-            throw new IllegalArgumentException("이미 참여하고 있는 미션입니다.");
-        }
+//        boolean isAlreadyJoin = memberMissionRepository.existsByMemberMemberIdAndMissionMissionId(memberId, missionId);
+//
+//        if (isAlreadyJoin) {
+//            throw new IllegalArgumentException("이미 참여하고 있는 미션입니다.");
+//        }
 
         MemberMission memberMission = new MemberMission();
 
@@ -52,6 +52,7 @@ public class MemberMissionService {
 
 
     public void addMemberMissionPost(MemberMissionPostDto memberMissionPostDto) {
+        log.info("images = {}", memberMissionPostDto.getImages());
         MemberMission memberMission = memberMissionRepository.findById(memberMissionPostDto.getMemberMissionId()).orElseThrow(() -> new IllegalArgumentException("no such member mission"));
 
         String filePath = "images/mission_post";
@@ -59,11 +60,12 @@ public class MemberMissionService {
         memberMission.setContent(memberMissionPostDto.getContent());
         memberMission.setStatus(MissionStatus.SUBMITTED);
 
-        List<String> imageUrls = new ArrayList<>();
-        for (MultipartFile image : memberMissionPostDto.getImages()) {
-            String imageUrl = s3FileUploader.uploadFileToS3(image, filePath);
-            MissionImage missionImage = new MissionImage(imageUrl, memberMission);
-            memberMission.getImages().add(missionImage);
+        if (memberMissionPostDto.getImages() != null) {
+            for (MultipartFile image : memberMissionPostDto.getImages()) {
+                String imageUrl = s3FileUploader.uploadFileToS3(image, filePath);
+                MissionImage missionImage = new MissionImage(imageUrl, memberMission);
+                memberMission.getImages().add(missionImage);
+            }
         }
 
         memberMissionRepository.save(memberMission);

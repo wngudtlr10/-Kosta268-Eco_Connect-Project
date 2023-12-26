@@ -1,0 +1,223 @@
+.member-mission-post-index {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.member-mission-post-index .add-wrap-wrapper {
+    background-color: #ffffff;
+    height: 1800px;
+    width: 1473px;
+}
+
+.member-mission-post-index .add-wrap {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    left: 10px;
+    position: relative;
+    top: 20px;
+}
+
+.member-mission-post-index .div-wrapper {
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 10px;
+    justify-content: center;
+    padding: 10px;
+    position: relative;
+}
+
+
+.member-mission-post-index .member-mission-post-form-wrap {
+    align-items: flex-start;
+    display: inline-flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 30px;
+    padding: 58px 43px;
+    position: relative;
+}
+
+.member-mission-post-index .member-mission-post-text {
+    color: #000000;
+    font-family: "Noto Sans KR", Helvetica;
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 16px;
+    margin-top: -1px;
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+}
+
+.member-mission-post-index .member-mission-post-form {
+    align-items: flex-start;
+    display: inline-flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 10px;
+    padding: 50px 0px;
+    position: relative;
+}
+
+.member-mission-post-index .form-title {
+    color: #000000;
+    font-family: "Noto Sans KR", Helvetica;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 16px;
+    margin-top: -1px;
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+}
+
+.member-mission-post-index .title {
+    background-color: #ffffff;
+    border: 1px solid;
+    border-color: #777777;
+    border-radius: 25px;
+    height: 41px;
+    position: relative;
+    width: 403px;
+}
+
+.member-mission-post-index .text-wrapper-2 {
+    color: #000000;
+    font-family: "Noto Sans KR", Helvetica;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 16px;
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+}
+
+.member-mission-post-index .intro {
+    background-color: #ffffff;
+    border: 1px solid;
+    border-color: #777777;
+    border-radius: 25px;
+    height: 217px;
+    position: relative;
+    width: 831px;
+}
+
+.member-mission-post-index .img {
+    position: relative;
+}
+.member-mission-post-index .deadline {
+    width: 200px;
+    height: 40px;
+    border-radius: 25px;
+    text-align: center;
+    border-color: #777777;
+    border: 1px solid;
+}
+.member-mission-post-index .startAt {
+    width: 200px;
+    height: 40px;
+    border-radius: 25px;
+    text-align: center;
+    border-color: #777777;
+    border: 1px solid;
+}
+
+.member-mission-post-index .img-preview {
+    background-color: #ffffff;
+    border: 1px solid;
+    border-color: #777777;
+    border-radius: 25px;
+    height: 223px;
+    position: relative;
+    width: 388px;
+}
+
+.member-mission-post-index .zonecode {
+    background-color: #ffffff;
+    border: 1px solid;
+    border-color: #777777;
+    border-radius: 10px;
+    height: 40px;
+    position: relative;
+    width: 200px;
+    margin-right: 10px;
+}
+
+.member-mission-post-index .full-address {
+    height: 40px;
+    width: 500px;
+    border-radius: 10px;
+    border: 1px solid;
+    border-color: #777777;
+
+}
+.member-mission-post-index .sub-address {
+    height: 40px;
+    width: 500px;
+    border-radius: 10px;
+    border: 1px solid;
+    border-color: #777777;
+}
+
+.member-mission-post-index .location {
+    background-color: #ffffff;
+    border: 1px solid;
+    border-color: #000000;
+    border-radius: 25px;
+    height: 44px;
+    position: relative;
+    width: 502px;
+}
+
+.member-mission-post-index .capacity {
+    background-color: #ffffff;
+    border: 1px solid;
+    border-color: #777777;
+    border-radius: 25px;
+    height: 44px;
+    position: relative;
+    width: 259px;
+}
+
+.member-mission-post-index .etc {
+    background-color: #ffffff;
+    border: 1px solid;
+    border-color: #777777;
+    border-radius: 25px;
+    height: 214px;
+    position: relative;
+    width: 687px;
+}
+
+.member-mission-post-index .add-button-wrap {
+    align-items: center;
+    display: flex;
+    position: relative;
+}
+
+
+.member-mission-post-index .add-button-text {
+    color: #ffffff;
+    font-family: "Inter", Helvetica;
+    font-size: 18px;
+    font-weight: 700;
+    height: 54px;
+    position: relative;
+    text-align: center;
+    width: 209px;
+    background-color: #03c75a;
+    border-radius: 20px;
+    border : none
+}
+.member-mission-post-index button:active {
+    background-color: #009e47;
+}
+

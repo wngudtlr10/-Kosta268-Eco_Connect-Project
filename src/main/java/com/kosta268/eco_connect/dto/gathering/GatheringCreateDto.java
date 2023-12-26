@@ -2,6 +2,7 @@ package com.kosta268.eco_connect.dto.gathering;
 
 import com.kosta268.eco_connect.entity.Address;
 import com.kosta268.eco_connect.entity.Status;
+import com.kosta268.eco_connect.entity.gathering.Category;
 import com.kosta268.eco_connect.entity.gathering.Gathering;
 import com.kosta268.eco_connect.entity.member.Member;
 import lombok.*;
@@ -21,6 +22,7 @@ public class GatheringCreateDto {
     private String title;
 
     private String intro;
+    private Category category;
 
     private String etc;
 
@@ -45,6 +47,7 @@ public class GatheringCreateDto {
                 .creator(creator)
                 .title(title)
                 .intro(intro)
+                .category(category)
                 .status(Status.OPEN)
                 .etc(etc)
                 .location(address)

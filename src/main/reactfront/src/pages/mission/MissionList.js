@@ -239,7 +239,7 @@ function MissionList() {
                                                         <img
                                                             className="mission-image-2"
                                                             alt="Mission image"
-                                                            src="https://cdn.animaapp.com/projects/6560b21274de9042f7d947f4/releases/6570992a80abe6b84bdfe96b/img/mission-image-1.svg"
+                                                            src={item.image}
                                                         />
                                                     
                                                 </div>
