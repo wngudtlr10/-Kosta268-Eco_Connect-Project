@@ -41,6 +41,23 @@ export const FundingWrite = () => {
     const [isValid,setIsValid] = useState(false);
     const [errorMail,setErrorMail] = useState(errorMsg.empty);
     const { Formik } = formik;
+    // 파일 데이터 비동기 전송
+    const formData = new FormData();
+    // const contentsData = {
+    //     userNo: user.userInfo.no,
+    //     title,
+    //     content,
+    //     categoryCode,
+    //     dues,
+    //     personNumber
+    // }
+    // const fileData = inputRef.current.file.files;
+
+    // for(let i = 0; i < fileData.length; i++) {
+    //     formData.append("file", fileData[i]);
+    // }
+    //
+    // formData.append("contentsData", new Blob([JSON.stringify(contentsData)], { type: "application/json" }));
 
     const schema = yup.object().shape({
         title: yup.string().required(),
@@ -275,7 +292,7 @@ export const FundingWrite = () => {
 
 
                     {/* 다중 파일 업로드 */}
-                    <Form.Group controlId="formFileMultiple" className="mb-3">
+                    <Form.Group controlId="formFileMultiple" className="mb-3" onEncrypted="multipart/form-data">
                         <Form.Label>📑Multiple files input example📑</Form.Label>
                         <Form.Control
                             type="file"

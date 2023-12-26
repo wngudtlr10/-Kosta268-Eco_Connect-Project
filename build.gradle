@@ -43,6 +43,13 @@ dependencies {
     annotationProcessor "jakarta.persistence:jakarta.persistence-api"
 
 
+    //AKIAZBUM6HMJPIQ4B25R  -> ACCESKEY
+    //zy8QTMHd7c08Oc/iigwW8IzUPCM26dUKbLo0kVLo -> SECRETKEY
+
+
+//    spring.servlet.multipart.max-file-size=10MB
+//    spring.servlet.multipart.max-request-size=10MB
+
     // 개발용 경량화 데이터베이스
     runtimeOnly 'com.h2database:h2'
     // 소스 코드 내용 변경시 서버 재시작 없이 서버가 자동으로 재시작해주는 라이브러리
