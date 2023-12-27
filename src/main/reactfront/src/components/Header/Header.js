@@ -57,11 +57,13 @@ function Header() {
                                     alt="Icon bell"
                                     src="https://cdn.animaapp.com/projects/6560b21274de9042f7d947f4/releases/6575c11d965b11a5aed5aa9d/img/---icon--bell-@2x.png"
                                 />
+                                <Link to={"/mypage/mission"}>
                                 <img
                                     className="icon-profile-circled"
                                     alt="Icon profile circled"
                                     src="https://cdn.animaapp.com/projects/6560b21274de9042f7d947f4/releases/6575c11d965b11a5aed5aa9d/img/---icon--profile-circled-@2x.png"
                                 />
+                                </Link>
                                 <img
                                     className="icon-logout"
                                     alt="Icon logout"

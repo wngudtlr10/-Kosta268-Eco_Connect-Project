@@ -47,6 +47,16 @@ function MissionDetail() {
     }, [])
 
     useEffect(() => {
+        AuthAxios.get(`/api/missions/${missionId}`)
+            .then((response) => {
+                setMission(response.data);
+            })
+            .catch((error) => {
+                console.log(error);
+            })
+    },[missionId])
+
+    useEffect(() => {
         console.log(mission)
     }, [mission])
 
@@ -83,7 +93,7 @@ function MissionDetail() {
                         <img
                             className="mission-detail-image-2"
                             alt="Mission detail image"
-                            src="https://cdn.animaapp.com/projects/6560b21274de9042f7d947f4/releases/65715e6bc2e3a066593b0581/img/mission-detail-image.png"
+                            src={mission ? mission.image : "Loading.."}
                         />
                     </div>
                     <div className="mission-detail-info">

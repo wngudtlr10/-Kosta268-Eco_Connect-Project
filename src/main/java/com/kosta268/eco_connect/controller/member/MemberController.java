@@ -116,7 +116,8 @@ public class MemberController {
         return ResponseEntity.ok(pointDto);
     }
     @GetMapping("/all")
-    public List<Member> listAllMembers() {
-        return memberService.listAllMembers();
+    public List<MemberDto> listAllMembers() {
+        List<Member> members = memberService.listAllMembers();
+        return members.stream().map(MemberDto::fromEntity).collect(Collectors.toList());
     }
 }
