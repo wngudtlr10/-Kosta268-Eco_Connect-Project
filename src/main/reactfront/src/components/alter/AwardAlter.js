@@ -59,7 +59,7 @@ const AwardAlter = () => {
                 </CModalHeader>
                 <CModalBody>
                     <img src="https://i.postimg.cc/FFn4TGDn/1hDxo.jpg" />
-                    <p>  교환이 완료되었습니다! 교환하신 고객님께 빠른시일내에 발송 <br/>될 예정이며 발송이 되지 않았다면 고객센터에 문의하시기 바랍니다!</p>
+                    <p>  교환이 완료되었습니다! 교환하신 기프티콘은 고객님의 번호로 발송또한 될 예정이며 발송이 되지 않았다면 고객센터에 문의하시기 바랍니다!</p>
                 </CModalBody>
                 <CModalFooter>
                     <CButton
