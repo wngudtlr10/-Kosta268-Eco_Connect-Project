@@ -1,0 +1,1190 @@
+.reward-index-index {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .reward-index-index .mission-list-wrap-wrapper {
+    background-color: #ffffff;
+    height: 2000px;
+    width: 1440px;
+  }
+  
+  .reward-index-index .mission-list-wrap {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 2000px;
+    left: 2px;
+    position: relative;
+    top: 10px;
+    width: 1440px;
+  }
+  
+  .reward-index-index .header-login {
+    align-items: flex-start;
+    background-color: #ffffff;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+    width: 1440px;
+  }
+  
+  .reward-index-index .header-wrap {
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+    justify-content: center;
+    position: relative;
+    height: 100px;
+    width: 1440px;
+  }
+  
+  .reward-index-index .eco-connect-logo {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 63px;
+    justify-content: center;
+    padding: 42px 2px;
+    position: relative;
+    width: 290px;
+  }
+  
+  .reward-index-index .img {
+    height: 69.37px;
+    object-fit: cover;
+    position: relative;
+    width: 190px;
+  }
+  
+  .reward-index-index .header-menu-wrap {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 163px;
+    justify-content: center;
+    padding: 25px 49px;
+    position: relative;
+    width: 880px;
+  }
+  
+  .reward-index-index .header-menu {
+    align-items: center;
+    display: flex;
+    gap: 80px;
+    height: 31px;
+    justify-content: center;
+    position: relative;
+    width: 700px;
+  }
+  
+  .reward-index-index .text-wrapper {
+    color: #000000;
+    font-family: "Do Hyeon", Helvetica;
+    font-size: 20px;
+    font-weight: 400;
+    height: 40px;
+    letter-spacing:0;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    width: 77px;
+    white-space: nowrap;
+  }
+
+  .reward-index-index .header-icons {
+    height: 163px;
+    position: relative;
+    width: 300px;
+    transform: scale(1.2);
+  }
+  
+
+  
+  .reward-index-index .mission-image {
+    height: 350px;
+    object-fit: cover;
+    position: relative;
+    width: 1440px;
+  }
+  
+  .reward-index-index .mission-middle-menu {
+    align-items: center;
+    display: flex;
+    flex: 0 0 auto;
+    gap: 250px;
+    justify-content: center;
+    position: relative;
+    border-bottom: 1px solid black;
+    width: 1200px;
+    margin: 10px 0 30px 0;
+  }
+  .reward-index-index .search-box {
+    background-color: #03c75a;
+    border: #03c75a;
+    border-radius: 25px;
+    flex: 0 0 auto;
+    position: relative;
+    width: 200px;
+    height: 35px;
+    z-index: -1;
+    text-align: center;
+    color: #ffffff;
+    margin: auto;
+}
+.reward-index-index .middle-menu-search {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 50px;
+  justify-content: center;
+  position: relative;
+  width: 380px;
+  z-index: 1;
+  opacity: 1;
+}
+
+.reward-index-index input::placeholder {
+  color: #ffffff;
+  text-align: center;
+}
+
+.reward-index-index .search-box:focus {
+  outline: none;
+  width: 200px;
+  text-align: center;
+}
+
+.reward-index-index .search-icon {
+  height: 24px;
+  left: 100px;
+  object-fit: cover;
+  position: absolute;
+  top: 14px;
+  width: 24px;
+}
+
+.reward-index-index select {
+  border-radius: 20px;
+  height: 35px;
+  width: 200px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+}
+  
+  .reward-index-index .menu-select {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    flex-grow: 1;
+    gap: 47px;
+    justify-content: flex-end;
+    position: relative;
+  }
+  
+  .reward-index-index .menu-total {
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 10px;
+    justify-content: center;
+    padding: 10px;
+    position: relative;
+  }
+  
+  .reward-index-index .div {
+    color: #000000;
+    font-family: "Poppins", Helvetica;
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    text-align: center;
+    width: fit-content;
+  }
+  
+  .reward-index-index .menu-activity {
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 22px;
+    position: relative;
+  }
+  
+  .reward-index-index .div-2 {
+    align-items: flex-start;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 10px;
+    position: relative;
+  }
+  
+  .reward-index-index .img-2 {
+    height: 35px;
+    object-fit: cover;
+    position: relative;
+    width: 35px;
+  }
+  
+  .reward-index-index .div-3 {
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 22px;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .reward-index-index .div-4 {
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 10px;
+    position: relative;
+  }
+  
+  .reward-index-index .div-5 {
+    align-items: flex-start;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 10px;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .reward-index-index .middle-menu-blank {
+    height: 65px;
+    position: relative;
+    width: 299px;
+  }
+  
+  .reward-index-index .menu-search {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    position: relative;
+    width: 413px;
+  }
+  
+  .reward-index-index .menu-search-wrap {
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .reward-index-index .menu-search-input {
+    background-color: #ffffff;
+    border: 1px solid;
+    border-color: #000000;
+    border-radius: 12px;
+    height: 40px;
+    position: relative;
+    width: 300px;
+    align-items: center;
+  }
+  
+  .reward-index-index .placeholder {
+    color: #68676e;
+    font-family: "Poppins", Helvetica;
+    font-size: 20px;
+    font-weight: 400;
+    left: 58px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 10px;
+  }
+  
+  .reward-index-index .menu-search-icon {
+    align-items: center;
+    display: inline-flex;
+    gap: 10px;
+    justify-content: center;
+    left: 18px;
+    position: absolute;
+    
+  }
+  
+  .reward-index-index .menu-search-icon-2 {
+    height: 24px;
+    object-fit: cover;
+    position: relative;
+    width: 24px;
+  }
+  
+  .reward-index-index .hr-wrap {
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    margin-left: -15px;
+    margin-right: -15px;
+    padding: 25px 10px;
+    position: relative;
+  }
+  
+  .reward-index-index .hr {
+    height: 1px;
+    margin-top: -1px;
+    object-fit: cover;
+    position: relative;
+    width: 1438px;
+  }
+  
+  .reward-index-index .main-wrap {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 1600px;
+    position: relative;
+    
+  }
+  
+  .reward-index-index .main-info {
+    align-items: flex-start;
+    display: flex;
+    flex: 0 0 auto;
+    gap: 32px;
+    justify-content: center;
+    position: relative;
+    width: 1250px;
+  }
+  
+  .reward-index-index .div-6 {
+    align-items: flex-start;
+    display: inline-flex;
+    flex: 0 0 auto;
+    position: relative;
+  }
+  
+  .reward-index-index .my-profile-wrap {
+    align-items: center;
+    border: 1px solid;
+    border-color: hsl(0, 0%, 0%);
+    border-radius: 25px;
+    display: inline-flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 10px;
+    height: 245px;
+    justify-content: space-around;
+    overflow: hidden;
+    padding: 20px 0px;
+    position: relative;
+    width: 575px;
+    transform: scale(0.90);
+  }
+  
+  .reward-index-index .my-profile {
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 25px;
+    display: flex;
+    flex: 0 0 auto;
+    justify-content: space-between;
+    margin-bottom: -38.5px;
+    margin-top: -38.5px;
+    padding: 11px 21px;
+    position: relative;
+    width: 500px;
+  }
+  
+  .reward-index-index .my-profile-image {
+    align-items: flex-start;
+    display: inline-flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 10px;
+    padding: 5px 0px;
+    position: relative;
+  }
+  
+  .reward-index-index .profile-image {
+    align-items: flex-start;
+    display: inline-flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+  }
+  
+  .reward-index-index .profile-image-2 {
+    height: 150px;
+    object-fit: cover;
+    position: relative;
+    width: 150px;
+    border-radius: 50%;
+
+  }
+  
+  .reward-index-index .my-profile-info-wrap {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    height: 225px;
+    justify-content: space-between;
+    padding: 10px;
+    position: relative;
+    width: 295px;
+  }
+  
+  .reward-index-index .username-info-wrap {
+    align-items: flex-start;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 10px;
+    padding: 10px;
+    position: relative;
+  }
+  
+  .reward-index-index .main-account {
+    height: 43px;
+    position: relative;
+    width: 43px;
+  }
+  
+  .reward-index-index .username-info {
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 10px;
+    padding: 10px;
+    position: relative;
+  }
+  
+  .reward-index-index .username {
+    color: #000000;
+    font-family: "Poppins", Helvetica;
+    font-size: 14px;
+    font-weight: 600;
+    height: 17px;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    width: 107px;
+  }
+  
+  .reward-index-index .status-wrap {
+    flex: 0 0 auto;
+    position: relative;
+  }
+  
+  .reward-index-index .profile-detail {
+    align-items: flex-start;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 10px;
+    margin-right: -5px;
+    padding: 5px 0px;
+    position: relative;
+    width: 280px;
+  }
+  
+  .reward-index-index .profile-nickname {
+    align-items: flex-start;
+    display: inline-flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .reward-index-index .nickname {
+    color: #000000;
+    font-family: "Poppins", Helvetica;
+    font-size: 18px;
+    font-weight: 600;
+    height: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    white-space: nowrap;
+    width: 108px;
+  }
+  
+  .reward-index-index .profile-info-wrap {
+    align-items: flex-start;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 38px;
+    position: relative;
+  }
+  
+  .reward-index-index .profile-info {
+    align-items: flex-start;
+    display: flex;
+    gap: 10px;
+    position: relative;
+    width: 50px;
+  }
+  
+  .reward-index-index .profile-grade {
+    color: #000000;
+    font-family: "Poppins", Helvetica;
+    font-size: 14px;
+    font-weight: 400;
+    height: 18px;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-right: -43px;
+    margin-top: -1px;
+    position: relative;
+    width: 93px;
+  }
+  
+  .reward-index-index .profile-hold {
+    align-items: flex-start;
+    display: flex;
+    gap: 10px;
+    position: relative;
+    width: 80px;
+  }
+  
+  .reward-index-index .text-wrapper-2 {
+    color: #000000;
+    font-family: "Poppins", Helvetica;
+    font-size: 14px;
+    font-weight: 400;
+    height: 15px;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    white-space: nowrap;
+    width: 80px;
+  }
+  
+  .reward-index-index .my-holding-wrap {
+    align-items: flex-start;
+    display: flex;
+    gap: 10px;
+    position: relative;
+    width: 66px;
+  }
+  
+  .reward-index-index .my-holding {
+    color: #03c75a;
+    font-family: "Poppins", Helvetica;
+    font-size: 14px;
+    font-weight: 400;
+    height: 19px;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    text-align: center;
+    width: 66px;
+  }
+  
+  .reward-index-index .my-point-blank {
+    height: 18px;
+    position: relative;
+    width: 80px;
+  }
+  
+  .reward-index-index .my-point-text-wrap {
+    align-items: flex-start;
+    display: flex;
+    gap: 10px;
+    position: relative;
+    width: 101px;
+  }
+  
+  .reward-index-index .my-point-hold {
+    color: #03c75a;
+    font-family: "Poppins", Helvetica;
+    font-size: 16px;
+    font-weight: 400;
+    height: 19px;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+    width: 66px;
+  }
+  
+  .reward-index-index .my-profile-button {
+    align-items: flex-start;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 15px;
+    margin-right: -6px;
+    position: relative;
+  }
+  
+  .reward-index-index .donation-list-button {
+    align-items: center;
+    background-color: #03c75a;
+    border-radius: 9px;
+    display: flex;
+    gap: 10px;
+    height: 40px;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    width: 133px;
+  }
+  
+  .reward-index-index .text-wrapper-3 {
+    color: #ffffff;
+    font-family: "Inter", Helvetica;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    position: relative;
+    text-align: center;
+    width: fit-content;
+  }
+  
+  .reward-index-index .mypage-button {
+    align-items: center;
+    background-color: #019744;
+    border-radius: 9px;
+    display: flex;
+    gap: 10px;
+    height: 40px;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    width: 133px;
+  }
+  
+  .reward-index-index .main-new-challenge {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transform: scale(0.9);
+    position: relative;
+    width: 575px;
+    border-radius: 25px;
+  }
+  
+  .reward-index-index .sub-banner-wrap {
+    align-items: flex-start;
+    display: flex;
+    gap: 10px;
+    position: relative;
+    width: 575px;
+    border-radius: 25px;
+    height: 245px;
+    
+  }
+  
+  .reward-index-index .sub-banner {
+    align-self: stretch;
+    flex: 1;
+    flex-grow: 1;
+    object-fit: cover;
+    position: relative;
+    width: 100%;
+    border-radius: 25px;
+    
+  }
+  
+  .reward-index-index .image-info-wrap {
+    align-items: flex-start;
+    display: inline-flex;
+    flex-direction: column;
+    gap: 35px;
+    
+    justify-content: flex-end;
+    left: 33px;
+    position: absolute;
+    top: 60px;
+  }
+  
+  .reward-index-index .image-info-text-big {
+    color: #ffffff;
+    font-family: "Inter", Helvetica;
+    font-size: 26px;
+    font-weight: 600;
+    height: 30px;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    white-space: nowrap;
+    width: 400px;
+  }
+  
+  .reward-index-index .image-info-text {
+    color: #ffffff;
+    font-family: "Poppins", Helvetica;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    text-align: center;
+    width: fit-content;
+  }
+  
+  .reward-index-index .image-button-wrap {
+    align-items: flex-start;
+    display: flex;
+    gap: 10px;
+    position: relative;
+    width: 276px;
+  }
+  
+  .reward-index-index .explore-button {
+    align-items: center;
+    align-self: stretch;
+    background-color: #03c75a;
+    border-radius: 9px;
+    display: flex;
+    flex: 1;
+    flex-grow: 1;
+    gap: 10px;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .reward-index-index .text-wrapper-4 {
+    color: #000000;
+    font-family: "Inter", Helvetica;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: normal;
+    position: relative;
+    text-align: center;
+    width: fit-content;
+    border: none;
+    background: none;
+  }
+  
+  .reward-index-index .create-button {
+    all: unset;
+    align-items: center;
+    background-color: #019744;
+    border-radius: 9px;
+    box-sizing: border-box;
+    display: flex;
+    flex: 1;
+    flex-grow: 1;
+    gap: 10px;
+    height: 40px;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .reward-index-index .mission-list-wrap-2 {
+    align-items: center;
+    display: grid;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 40px;
+    justify-content: center;
+    
+    position: relative;
+    width: 1200px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    transform: scale(0.9);
+    margin: 0 auto;
+  }
+  
+  .reward-index-index .mission-list {
+    align-items: flex-start;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 30px;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  
+  .reward-index-index .mission-frame-wrapper {
+    align-items: flex-start;
+    background-color: #ffffff;
+    border: 1px solid;
+    border-color: #5e5e5e;
+    border-radius: 25px;
+    display: inline-flex;
+    flex: 0 0 auto;
+    padding: 10px;
+    position: relative;
+  }
+  
+  .reward-index-index .mission-frame {
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 10px;
+    height: 270px;
+    position: relative;
+  }
+  
+  .reward-index-index .mission-image-wrapper {
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 0px;
+    position: relative;
+  }
+  
+  .reward-index-index .mission-image-2 {
+    height: 152px;
+    position: relative;
+    width: 249px;
+  }
+  
+  .reward-index-index .mission-info {
+    align-items: center;
+    background-color: #ffffff;
+    display: inline-flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+  }
+  
+  .reward-index-index .mission-info-wrap {
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 30px;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .reward-index-index .mission-name-text {
+    color: #000000;
+    font-family: "Poppins", Helvetica;
+    font-size: 18px;
+    font-weight: 600;
+    height: 29px;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    text-align: center;
+    width: 121px;
+  }
+  
+  .reward-index-index .mission-point {
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 10px;
+    height: 29px;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .reward-index-index .mission-point-text {
+    color: #03c75a;
+    font-family: "Poppins", Helvetica;
+    font-size: 14px;
+    font-weight: 400;
+    height: 35px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: relative;
+    text-align: center;
+    width: 51px;
+  }
+  
+  .reward-index-index .challenge-button {
+    align-items: center;
+    background-color: #03c75a;
+    border-radius: 9px;
+    display: flex;
+    gap: 10px;
+    height: 42px;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    width: 242px;
+    color: white;
+    font-weight: 500;
+  }
+  
+  .reward-index-index .pagination-button {
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    height: 35px;
+    justify-content: center;
+    position: relative;
+    width: 500px;
+  }
+  
+  .reward-index-index .pagination-left-wrap {
+    align-items: center;
+    display: flex;
+    height: 35px;
+    justify-content: center;
+    opacity: 0.4;
+    padding: 4px;
+    position: relative;
+    width: 25px;
+  }
+  
+  .reward-index-index .pagination-left {
+    align-items: center;
+    display: flex;
+    height: 35px;
+    justify-content: center;
+    margin-bottom: -4px;
+    margin-left: -4px;
+    margin-right: -4px;
+    margin-top: -4px;
+    position: relative;
+    width: 25px;
+  }
+  
+  .reward-index-index .img-3 {
+    height: 35px;
+    position: relative;
+    width: 25px;
+  }
+  
+  .reward-index-index .pagination {
+    align-items: center;
+    border: 1px solid;
+    border-color: var(--neutral-400);
+    border-radius: 5px;
+    display: flex;
+    gap: 5px;
+    height: 35px;
+    justify-content: center;
+    position: relative;
+    width: 35px;
+  }
+  
+  .reward-index-index .text-wrapper-5 {
+    color: var(--neutral-800);
+    font-family: "Poppins", Helvetica;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: normal;
+    position: relative;
+    width: fit-content;
+  }
+  
+  .reward-index-index .pagination-num {
+    align-items: center;
+    background-color: #03c75a;
+    border-radius: 5px;
+    display: flex;
+    gap: 5px;
+    height: 35px;
+    justify-content: center;
+    position: relative;
+    width: 35px;
+  }
+  
+  .reward-index-index .element {
+    color: var(--white);
+    font-family: "Poppins", Helvetica;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: normal;
+    position: relative;
+    width: fit-content;
+  }
+  
+  .reward-index-index .pagination-right {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 35px;
+    justify-content: center;
+    position: relative;
+    width: 25px;
+  }
+  
+  .reward-index-index .double-right-wrapper {
+    align-items: center;
+    display: flex;
+    height: 35px;
+    justify-content: center;
+    position: relative;
+    width: 25px;
+  }
+  
+  .reward-index-index .footer {
+    align-items: flex-start;
+    background-color: #ffffff;
+    border-bottom-style: none;
+    border-color: #8d8d8d;
+    border-left-style: none;
+    border-right-style: none;
+    border-top-style: solid;
+    border-top-width: 1px;
+    display: inline-flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+  }
+  
+  .reward-index-index .footer-wrap {
+    align-items: center;
+    display: flex;
+    height: 279px;
+    justify-content: center;
+    position: relative;
+    width: 1440px;
+  }
+  
+  .reward-index-index .logo-wrap {
+    align-items: center;
+    display: flex;
+    height: 279px;
+    justify-content: center;
+    position: relative;
+    width: 390px;
+  }
+  
+  .reward-index-index .menu-wrap {
+    align-items: center;
+    display: flex;
+    gap: 40px;
+    height: 279px;
+    justify-content: center;
+    padding: 126px 0px;
+    position: relative;
+    width: 650px;
+  }
+  
+  .reward-index-index .text-wrapper-6 {
+    color: #000000;
+    font-family: "Roboto", Helvetica;
+    font-size: 16px;
+    font-weight: 400;
+    height: 19px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+    width: 59px;
+  }
+  
+  .reward-index-index .q-a {
+    color: #000000;
+    font-family: "Roboto", Helvetica;
+    font-size: 16px;
+    font-weight: 400;
+    height: 19px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+    width: 32px;
+  }
+  
+  .reward-index-index .p {
+    color: #000000;
+    font-family: "Roboto", Helvetica;
+    font-size: 16px;
+    font-weight: 400;
+    height: 19px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+    width: 178px;
+  }
+  
+  .reward-index-index .inquiry-button-wrap {
+    align-items: center;
+    display: flex;
+    gap: 30px;
+    height: 279px;
+    justify-content: center;
+    padding: 111px 43px;
+    position: relative;
+    width: 400px;
+  }
+  
+  .reward-index-index .inquiry {
+    color: #000000;
+    font-family: "Roboto", Helvetica;
+    font-size: 22px;
+    font-weight: 400;
+    height: 26px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+    width: 81px;
+  }
+  
+  .reward-index-index .direct-button {
+    align-items: center;
+    background-color: var(--colorsbluedark);
+    border-radius: 15px;
+    display: flex;
+    gap: 10px;
+    height: 50px;
+    justify-content: center;
+    padding: 5px 26px;
+    position: relative;
+    width: 160px;
+  }
+  
+  .reward-index-index .direct {
+    color: #ffffff;
+    font-family: "Roboto", Helvetica;
+    font-size: 16px;
+    font-weight: 400;
+    height: 19px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+    width: 59px;
+  }
+  
+  .reward-index-index .nav-text {
+    color: white ;
+    font-weight: 600;
+}
+.reward-index-index .nav-text.active {
+    color: #ffffff;
+    background-color: #03c75a;
+}
+
+

@@ -31,6 +31,7 @@ import Home from "./pages/home/home";
 import AdminRoute from "./components/Layout/AdminRoute";
 import {useRecoilState} from "recoil";
 import {loginState} from "./store/recoilState";
+import Reward from "./pages/reward/Reward";
 
 function PrivateRoute({ children }) {
     const [login, setLogin] = useRecoilState(loginState);
@@ -90,8 +91,11 @@ function App() {
                     {/* MyPage */}
                     
                     <Route path={"/member/:memberId/mission/:missionId/membermission/:memberMissionId"} element={<MemberMissionPost />} />
+                    {/* Reward */}
+                    <Route path={"/reward"} element={<Reward />} />
                 </Route>
                 <Route path={"/mypage/mission"} element={<MyMission />} />
+               
                 {/*error 400, 500*/}
                 <Route path={"/error400"} element={<Error400/>}/>
                 <Route path={"/error500"} element={<Error500/>}/>
