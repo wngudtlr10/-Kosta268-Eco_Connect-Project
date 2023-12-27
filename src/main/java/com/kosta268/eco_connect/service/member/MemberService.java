@@ -3,6 +3,7 @@ package com.kosta268.eco_connect.service.member;
 import com.kosta268.eco_connect.dto.member.*;
 import com.kosta268.eco_connect.dto.mission.MemberMissionDto;
 import com.kosta268.eco_connect.dto.mission.MissionDto;
+import com.kosta268.eco_connect.entity.admin.Faq;
 import com.kosta268.eco_connect.entity.member.Member;
 import com.kosta268.eco_connect.entity.member.RefreshToken;
 import com.kosta268.eco_connect.entity.mission.MemberMission;
@@ -164,6 +165,10 @@ public class MemberService {
     public Member getMemberById(Long memberId) {
         return memberRepository.findById(memberId).orElseThrow(() -> new IllegalArgumentException("no such data"));
     }
+    @Transactional(readOnly = true)
+    public List<Member> listAllMembers() {
+        return memberRepository.findAll();
+    }
 
     @Transactional(readOnly = true)
     public List<MemberMission> findMemberMissions(Long memberId) {
@@ -176,4 +181,6 @@ public class MemberService {
         Member member = memberRepository.findById(memberId).orElseThrow(() -> new IllegalArgumentException("no such member"));
         return member.getPoint();
     }
+
+
 }

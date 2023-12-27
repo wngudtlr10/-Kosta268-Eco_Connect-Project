@@ -14,9 +14,10 @@
 
 .my-mission-index .my-mission-wrap {
     align-items: center;
-    display: inline-flex;
+    display: flex;
     gap: 55px;
     position: relative;
+
 }
 
 .my-mission-index .mypage-sidebar-wrap {
@@ -24,19 +25,22 @@
     display: inline-flex;
     flex: 0 0 auto;
     gap: 10px;
-    height: 1076px;
+    height: 1000px;
     position: relative;
+    margin-left: -235px;
 }
 
 .my-mission-index .sidebar-frame {
-    height: 943px;
-    position: relative;
+    height: 950px;
+    position: fixed;
     width: 80px;
+    
 }
 
 .my-mission-index .sidebar {
     background-color: #03c75a;
     height: 945px;
+    width: 80px;
     position: relative;
     top: -2px;
 }
@@ -93,6 +97,7 @@
     line-height: normal;
     position: relative;
     width: 23px;
+    white-space: nowrap;
 }
 
 .my-mission-index .shortcut-volunteer {
@@ -195,15 +200,18 @@
     position: absolute;
     top: 22px;
     width: 45px;
+    white-space: nowrap;
 }
 
 .my-mission-index .my-mission-right {
     align-items: flex-start;
-    display: inline-flex;
+    display: flex;
     flex: 0 0 auto;
     flex-direction: column;
     gap: 33px;
     position: relative;
+    margin-top: -400px;
+    margin-left: 300px;
 }
 
 .my-mission-index .div {
@@ -417,6 +425,7 @@
     gap: 10px;
     margin-bottom: -1px;
     position: relative;
+    white-space: nowrap;
 }
 
 .my-mission-index .text-wrapper-4 {
@@ -919,4 +928,5 @@
     text-align: center;
     top: 8px;
     width: 54px;
+    white-space: nowrap;
 }

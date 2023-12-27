@@ -88,10 +88,10 @@ function App() {
                     <Route path={"/mission"} element={<MissionList />} />
                     <Route path={"/mission/:missionId"} element={<MissionDetail />} />
                     {/* MyPage */}
-                    <Route path={"/mypage/mission"} element={<MyMission />} />
+                    
                     <Route path={"/member/:memberId/mission/:missionId/membermission/:memberMissionId"} element={<MemberMissionPost />} />
                 </Route>
-
+                <Route path={"/mypage/mission"} element={<MyMission />} />
                 {/*error 400, 500*/}
                 <Route path={"/error400"} element={<Error400/>}/>
                 <Route path={"/error500"} element={<Error500/>}/>

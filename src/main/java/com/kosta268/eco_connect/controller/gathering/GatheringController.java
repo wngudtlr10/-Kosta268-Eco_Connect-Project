@@ -26,6 +26,7 @@ import java.util.stream.Collectors;
 @RequiredArgsConstructor
 @RequestMapping("/api/gathering")
 @Slf4j
+@CrossOrigin(origins = "http://localhost:3000")
 public class GatheringController {
     private final GatheringService gatheringService;
 

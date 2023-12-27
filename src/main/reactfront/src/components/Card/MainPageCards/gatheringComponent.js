@@ -3,7 +3,7 @@ import { useLocation, useSearchParams, Link } from "react-router-dom";
 import AuthAxios from '../../../utils/axios/AuthAxios';
 import './gatheringComponent.css'
 
-const GatheringComponent = ({category}) => {
+const GatheringComponent = ({ selectedCategory }) => {
     // const [gatherings, setGathering] = useState([]);
   
 
@@ -33,13 +33,14 @@ const GatheringComponent = ({category}) => {
     // }, [category]);
 
     const [lists, setLists] = useState([]);
-    const [page, setPage] = useState(0);
+    const [filteredLists, setFilteredLists] = useState([]);
+   
   
 
 
 
     const fetchData = () => {
-        AuthAxios.get(`/api/gathering?page=${page}`)
+        AuthAxios.get(`/api/gathering`)
             .then((response) => {
                 setLists(response.data.content);
                 
@@ -52,10 +53,22 @@ const GatheringComponent = ({category}) => {
 
     useEffect(() => {
             fetchData();
-    }, [page])
+    }, [selectedCategory])
+
+    useEffect(() => {
+      // selectedCategory가 변경될 때마다 fundings를 필터링하여 filteredFundings에 저장
+      if (selectedCategory) {
+        // 만약 selectedCategory가 정의되어 있다면, 해당 카테고리를 기반으로 fundings 필터링
+        setFilteredLists(lists.filter(funding => funding.category === selectedCategory));
+      } else {
+        // 만약 selectedCategory가 정의되지 않았다면, missions 배열에서 상위 10개 항목을 가져오기
+        setFilteredLists(lists.slice(0, 8));
+      }
+    }, [selectedCategory, lists]);
+
     return (
         <div className="gathering">
-            {lists.map((item, index) =>(
+            {filteredLists.map((item, index) =>(
       <div className="gathering-box" key={index}>
         {/* <div className="gathering-users">
           <img className="group" alt="Group" src={item.userProfile[0]} />
