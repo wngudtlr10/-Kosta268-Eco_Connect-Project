@@ -19,26 +19,16 @@ const Users = () => {
         sorter: false,
       },
       {
-        key: 'name',
+        key : 'email',
         _style: { width: '20%' },
       },
       {
-        key: 'address',
-        label: 'Address',
+        key : 'id',
         _style: { width: '20%' },
-      },
-      {
-        key : 'email'
       },
       { 
-        key: 'isadmin',
-        label : 'role',
+        key : 'role',
         _style: { width: '20%' }
-      },
-      {
-        key: 'point',
-        label: 'Point',
-        _style: { width: '20%' },
       },
       {
         key: 'show_details',
@@ -57,9 +47,9 @@ const Users = () => {
     const fetchUser = async () => {
       try {
         // 서버에서 공지사항 데이터를 가져옴
-        const response = await AuthAxios.get('/api/member');
-        setUsers(response.data.content);
-        console.log(users);
+        const response = await axios.get('http://localhost:8080/api/member/all');
+        setUsers(response.data);
+        console.log(response.data);
       } catch (error) {
         console.error('공지사항 데이터를 가져오는 중 오류 발생:', error);
       }
@@ -92,22 +82,22 @@ const Users = () => {
       }
     };
 
-    const getBadge = (isadmin) => {
-      switch (isadmin) {
-        case false:
+    const getBadge = (role) => {
+      switch (role) {
+        case 'ROLE_USER':
           return 'primary'; // 대기중 - 회색
-        case true:
+        case 'ROLE_ADMIN':
           return 'success';   // 수락완료 - 초록색
         default:
           return 'secondary';    // 기본값 설정 (필요에 따라 변경 가능)
       }
     };
 
-    const getBadgeText = (isadmin) => {
-      switch (isadmin) {
-        case false:
+    const getBadgeText = (role) => {
+      switch (role) {
+        case 'ROLE_USER':
           return '유저';
-        case true:
+        case 'ROLE_ADMIN':
           return '관리자';
         default:
           return '알 수 없음';
@@ -149,14 +139,14 @@ const Users = () => {
               {item.address.length > 7 ? `${item.address.substring(0, 7)}...` : item.address}
             </td>
           ),
-          avatar: (item) => (
+          profile: (item) => (
             <td>
-              <CAvatar src={item.avatar}></CAvatar>
+              <CAvatar src={item.profile}></CAvatar>
             </td>
           ),
-          isadmin: (item) => (
+          role: (item) => (
             <td>
-               <CBadge color={getBadge(item.isadmin)}>{getBadgeText(item.isadmin)}</CBadge>
+               <CBadge color={getBadge(item.role)}>{getBadgeText(item.role)}</CBadge>
             </td>
           ),
           show_details: (item) => {
@@ -168,23 +158,23 @@ const Users = () => {
                   shape="square"
                   size="sm"
                   onClick={() => {
-                    toggleDetails(item.user_id)
+                    toggleDetails(item.memberId)
                   }}
                 >
-                  {details.includes(item.user_id) ? 'Hide' : 'Show'}
+                  {details.includes(item.memberId) ? 'Hide' : 'Show'}
                 </CButton>
               </td>
             )
           },
           details: (item) => {
             return (
-              <CCollapse visible={details.includes(item.user_id)}>
+              <CCollapse visible={details.includes(item.memberId)}>
                 <CCardBody className="p-3">
                   <h4>{item.name}</h4>
                   <p className="text-muted">주소 : {item.address}</p>
-                  <UserModify userId={item.user_id} onUpdate={handleUpdateUser}/>
+                  {/* <UserModify userId={item.memberId} onUpdate={handleUpdateUser}/> */}
                   <CButton size="sm" color="danger" className="ml-1" style={{color:'white'}}
-                   onClick={() => handleDeleteClick(item.user_id)}>
+                   onClick={() => handleDeleteClick(item.memberId)}>
                     삭제
                   </CButton>
                 </CCardBody>
