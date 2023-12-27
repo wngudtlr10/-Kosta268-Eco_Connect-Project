@@ -88,7 +88,7 @@ public class MissionService {
 
     @Transactional(readOnly = true)
     public Page<MissionDto> findAllByTitleLike(String title, Pageable pageable) {
-        Page<Mission> byTitleLike = missionRepository.findAllByTitleLike(title, pageable);
+        Page<Mission> byTitleLike = missionRepository.findAllByTitleLike("%" + title + "%", pageable);
         return byTitleLike.map(MissionDto::fromEntity);
     }
 
@@ -100,6 +100,32 @@ public class MissionService {
 
     }
 
+    @Transactional(readOnly = true)
+    public Page<MissionDto> findByStatusAndTitle(String status, String title, Pageable pageable) {
+        Status statusEnum = Status.valueOf(status);
+        Page<Mission> byStatusAndTitleLike = missionRepository.findAllByStatusAndTitleLike(statusEnum, "%" + title + "%", pageable);
+        return byStatusAndTitleLike.map(MissionDto::fromEntity);
+    }
+
+    @Transactional(readOnly = true)
+    public Page<MissionDto> findByStatusAndCategory(String status, String category, Pageable pageable) {
+        Status statusEnum = Status.valueOf(status);
+        Page<Mission> byStatusAndCategoryLike = missionRepository.findAllByStatusAndCategoryLike(statusEnum, category, pageable);
+        return byStatusAndCategoryLike.map(MissionDto::fromEntity);
+    }
+
+    @Transactional(readOnly = true)
+    public Page<MissionDto> findByCategoryAndTitle(String category, String title, Pageable pageable) {
+        Page<Mission> byCategoryLikeAndTitleLike = missionRepository.findAllByCategoryLikeAndTitleLike(category, "%" +  title + "%", pageable);
+        return byCategoryLikeAndTitleLike.map(MissionDto::fromEntity);
+    }
+
+    @Transactional(readOnly = true)
+    public Page<MissionDto> findByStatusAndTitleAndCategory(String status, String title, String category, Pageable pageable) {
+        Status statusEnum = Status.valueOf(status);
+        Page<Mission> byStatusAndTitleLikeAndCategoryLike = missionRepository.findAllByStatusAndTitleLikeAndCategoryLike(statusEnum, "%" + title + "%", category, pageable);
+        return byStatusAndTitleLikeAndCategoryLike.map(MissionDto::fromEntity);
+    }
 
 
     @Scheduled(cron = "0 0 0 * * *")

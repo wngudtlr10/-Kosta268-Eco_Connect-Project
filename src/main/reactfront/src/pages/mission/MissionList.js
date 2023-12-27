@@ -14,15 +14,107 @@ function MissionList() {
     const [totalPages, setTotalPages] = useState(0);
     const [searchParams, setSearchParams] = useSearchParams();
     const [category, setCategory] = useState('전체');
-
+    const [status, setStatus] = useState("OPEN");
+    const [title, setTitle] = useState("");
     
     const fetchMission = () => {
         AuthAxios.get(`/api/missions?page=${page}`)
+            .then((response) => {
+                setLists(response.data.content);
+                setTotalPages(response.data.totalPages);
+            })
+            .catch((error) => {
+                console.log('Error fetching data from API: ', error);
+            })
+    }
+
+    const fetchMissionByCategory = () => {
+        AuthAxios.get(`/api/missions?page=${page}&category=${category}`)
             .then((response) => {
                 console.log(response);
                 setLists(response.data.content);
                 setTotalPages(response.data.totalPages);
             })
+            .catch((error) => {
+                console.log('Error fetching data from API: ', error);
+            })
+    }
+
+    const fetchMissionByStatus = () => {
+        AuthAxios.get(`/api/missions?page=${page}&status=${status}`)
+            .then((response) => {
+                console.log(response);
+                setLists(response.data.content);
+                setTotalPages(response.data.totalPages);
+            })
+            .catch((error) => {
+                console.log('Error fetching data from API: ', error);
+            })
+    }
+
+    const fetchMissionByTitle = () => {
+        // const encodedTitle = encodeURIComponent(title);
+        AuthAxios.get(`/api/missions?page=${page}&title=${encodeURIComponent(title)}`)
+            .then((response) => {
+                setLists(response.data.content);
+                setTotalPages(response.data.totalPages);
+            })
+            .catch((error) => {
+                console.log('Error fetching data from API: ', error);
+            })
+    }
+
+    const fetchMissionByStatusAndTitle = () => {
+        if (status !== "" && title !== "") {
+            AuthAxios.get(`/api/missions?page=${page}&status=${status}&title=${encodeURIComponent(title)}`)
+                .then((response) => {
+                    setLists(response.data.content);
+                    setTotalPages(response.data.totalPages);
+                })
+                .catch((error) => {
+                    console.log('Error fetching data from API: ', error);
+                })
+        }
+    }
+
+    const fetchMissionByStatusAndCategory = () => {
+        if (status !== "" && category !== "") {
+            AuthAxios.get(`/api/missions?page=${page}&status=${status}&category=${category}`)
+            .then((response) => {
+                setLists(response.data.content);
+                setTotalPages(response.data.totalPages);
+            })
+                .catch((error) => {
+                    console.log('Error fetching data from API: ', error);
+            })
+        }
+    }
+
+
+    const fetchMissionByCategoryAndTitle = () => {
+        if (category !== "" && title !== "") {
+            AuthAxios.get(`/api/missions?page=${page}&category=${category}&title=${encodeURIComponent(title)}`)
+            .then((response) => {
+                setLists(response.data.content);
+                setTotalPages(response.data.totalPages);
+            })
+            .catch((error) => {
+                console.log('Error fetching data from API: ', error);
+            })
+        }
+    }
+
+    const fetchMissionByCategoryAndTitleAndStatus = () => {
+        if (category !== "" && title !== "" && status !== "") {
+            AuthAxios.get(`/api/missions?page=${page}&category=${category}&title=${encodeURIComponent(title)}&status=${status}`)
+                .then((response) => {
+                    setLists(response.data.content);
+                    setTotalPages(response.data.totalPages);
+                })
+                .catch((error) => {
+                    console.log('Error fetching data from API: ', error);
+                })
+        }
     }
 
     const joinMission = async (missionId) => {
@@ -52,6 +144,13 @@ function MissionList() {
         setCategory(category);
     }
 
+    const handleStatus = (e) => {
+        setStatus(e.target.value);
+    }
+    const handleTitle = (e) => {
+        setTitle(e.target.value)
+    }
+
     const filteredMissions = lists.filter(list => {
         if (category === '전체') {
             return true;
@@ -72,9 +171,42 @@ function MissionList() {
 
     useEffect(() => {
         searchParams.set('page', page.toString());
+        if (status !== null) {
+            searchParams.set('status', status.toString());
+        }
+        if (title !== null) {
+            searchParams.set('title', title);
+        }
+        if (category !== null) {
+            searchParams.set('category', category);
+        }
         setSearchParams(searchParams);
-        fetchMission();
-    }, [page])
+
+        if (status !== "" && title !== "" && category !== "") {
+            fetchMissionByCategoryAndTitleAndStatus()
+        }
+        else if (status !== "" && category !== "") {
+            fetchMissionByStatusAndCategory()
+        }
+        else if (status !== "" && title != "") {
+            fetchMissionByStatusAndTitle()
+        }
+        else if (category !== "" && title !== "") {
+            fetchMissionByCategoryAndTitle()
+        }
+        else if (status !== "") {
+            fetchMissionByStatus();
+        }
+        else if (category !== "") {
+            fetchMissionByCategory()
+        }
+        else if (title !== "") {
+            fetchMissionByTitle()
+        }
+        else {
+            fetchMission()
+        }
+    }, [page, status, title, category])
 
 
     useEffect(() => {
@@ -115,14 +247,13 @@ function MissionList() {
                             alt="Search icon"
                             src="https://ifh.cc/g/mWbmjO.png"
                         />
-                    <input className="search-box" type="text" placeholder="검색">
+                    <input className="search-box" value={title} onChange={handleTitle} type="text" placeholder="검색">
                         
                     </input>
                  </div>
                  <div className="select-wrap">
-                    <select 
-                    >
-                        <option value="">-- 선택하세요 --</option>
+                    <select value={status} onChange={handleStatus}>
+                        <option>-- 선택하세요 --</option>
                         <option value="OPEN">진행중 미션</option>
                         <option value="CLOSED">종료된 미션</option> 
                     </select>
@@ -253,7 +384,7 @@ function MissionList() {
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <Link to={`/missions/${item.missionId}`} style={{ textDecoration: 'none' }}>
+                                                <Link to={`/mission/${item.missionId}`} style={{ textDecoration: 'none' }}>
                                                 <Button className="challenge-button" variant="success" to={`/missions/${item.missionId}`}>
                                                    도전하기
                                                 </Button></Link>

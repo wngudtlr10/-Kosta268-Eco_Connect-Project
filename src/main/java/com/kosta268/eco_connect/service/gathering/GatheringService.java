@@ -56,7 +56,6 @@ public class GatheringService {
 
     @Transactional(readOnly = true)
     public Page<Gathering> findGatheringByStatusAndTitle(String status, String title, Pageable pageable) {
-        log.info("findGatheringByStatusAndTitle called");
         Status statusEnum = Status.valueOf(status);
         return gatheringRepository.findByStatusEqualsAndTitleLike(statusEnum, "%" + title + "%", pageable);
     }
