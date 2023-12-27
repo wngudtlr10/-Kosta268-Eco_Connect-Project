@@ -228,7 +228,7 @@ function MissionList() {
                     <div className="mission-middle-menu">
                         <Nav variant="phills" defaultActiveKey="#">
                               <Nav.Item >
-                                <Nav.Link href="#" className="nav-text" onClick={() => handleCategory("전체")}>전체</Nav.Link>
+                                <Nav.Link href="#" className="nav-text" onClick={() => handleCategory('전체')}>전체</Nav.Link>
                               </Nav.Item>
                               <Nav.Item>
                                 <Nav.Link eventKey="link-1" href="#"className="nav-text" onClick={() => handleCategory("참여형")}>참여형</Nav.Link>

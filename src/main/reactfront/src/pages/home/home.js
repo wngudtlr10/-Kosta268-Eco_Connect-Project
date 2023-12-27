@@ -16,7 +16,7 @@ import GatheringNav from "../../components/Nav/GatheringNav";
   const [isDrag, setIsDrag] = useState(false);
   const [startX, setStartX] = useState();
   const [selectedCategory, setSelectedCategory] = useState('');
-  const [selectedCategory2, setSelectedCategory2] = useState(1);
+  const [selectedCategory2, setSelectedCategory2] = useState('');
   const [selectedCategory1, setSelectedCategory1] = useState('');
 
   const handleNavItemClick = (category) => {
