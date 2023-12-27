@@ -10,6 +10,7 @@ function GatheringUpdate() {
     const localDateTime = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')}T${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}`;
     const [title, setTitle] = useState("");
     const [intro, setIntro] = useState("");
+    const [category, setCategory] = useState("");
     const [image, setImage] = useState(null);
     const [imageUrl, setImageUrl] = useState(null);
     const [location, setLocation] = useState("");
@@ -53,11 +54,10 @@ function GatheringUpdate() {
     };
 
 
-
     useEffect(() => {
         fetchGathering();
+    }, [])
 
-    },[gatheringId])
 
     const config = {
         headers:
@@ -73,6 +73,11 @@ function GatheringUpdate() {
     const handleIntroChange = (e) => {
         setIntro(e.target.value);
     }
+
+    const handleCategoryChange = (e) => {
+        setCategory(e.target.value);
+    }
+
     const handleImgChange = (e) => {
 
         const file = e.target.files[0];
@@ -112,6 +117,7 @@ function GatheringUpdate() {
         const formData = new FormData();
         formData.append("title", title);
         formData.append("intro", intro);
+        formData.append("category", category);
         formData.append("image", image);
         formData.append("zoneCode", addressObj.zoneCode);
         formData.append("fullAddress", addressObj.fullAddress);
@@ -146,6 +152,13 @@ function GatheringUpdate() {
                             <input type="text" className="title" onChange={handleTitleChange} value={title}/>
                             <div className="text-wrapper-2">모임소개</div>
                             <input type="text" className="intro" onChange={handleIntroChange} value={intro} />
+                            <div className="text-wrapper-2">카테고리</div>
+                            <select className="category" onChange={handleCategoryChange}>
+                                <option value="">선택하세요</option>
+                                <option value="CLEAN_UP">환경 미화</option>
+                                <option value="TALENT_DONATION">재능 기부</option>
+                                <option value="SPONSORSHIP">후원</option>                                <option value="CLEAN_UP">청소</option>
+                            </select>
                             <div className="text-wrapper-2">사진등록</div>
                             <input type="file" className="img" onChange={handleImgChange} ref={imageInputRef}/>
                             <img ref={imageRef} alt="preview" className="img-preview" src={imageUrl} />

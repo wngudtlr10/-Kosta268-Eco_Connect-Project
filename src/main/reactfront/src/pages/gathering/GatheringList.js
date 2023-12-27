@@ -14,7 +14,7 @@ function GatheringList() {
     const [status, setStatus] = useState("OPEN");
     const [title, setTitle] = useState("");
     const [timer, setTimer] = useState(null);
-
+    const [category, setCategory] = useState("");
     const [searchParams, setSearchParams] = useSearchParams();
     const loaction = useLocation();
 

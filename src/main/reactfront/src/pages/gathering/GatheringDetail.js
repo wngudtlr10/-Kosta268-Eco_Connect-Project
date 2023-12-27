@@ -154,7 +154,8 @@ function GatheringDetail() {
                             <img
                                 className="nature"
                                 alt="Nature"
-                                src="https://cdn.animaapp.com/projects/6560b21274de9042f7d947f4/releases/656794b954eecaa3161d736b/img/nature-3289812-1920-2.png"
+                                src={gathering ? gathering.image : "Loading..."}
+                                // src="https://cdn.animaapp.com/projects/6560b21274de9042f7d947f4/releases/656794b954eecaa3161d736b/img/nature-3289812-1920-2.png"
                             />
                             <div className="detail-main-writer">
                                 <div className="detail-writer">{memberName ? memberName : "Loading..."}</div>
