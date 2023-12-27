@@ -43,6 +43,21 @@ export const FundingWrite = () => {
     const [endAt, setEndAt] = useState(new Date());
     // 파일 데이터 비동기 전송
     const formData = new FormData();
+    // const contentsData = {
+    //     userNo: user.userInfo.no,
+    //     title,
+    //     content,
+    //     categoryCode,
+    //     dues,
+    //     personNumber
+    // }
+    // const fileData = inputRef.current.file.files;
+
+    // for(let i = 0; i < fileData.length; i++) {
+    //     formData.append("file", fileData[i]);
+    // }
+    //
+    // formData.append("contentsData", new Blob([JSON.stringify(contentsData)], { type: "application/json" }));
 
 
     const ExampleCustomInput = forwardRef(({value, onClick}, ref) => (
@@ -88,7 +103,7 @@ export const FundingWrite = () => {
             if (response.status == 200) {
                 console.log("펀딩 생성에 성공했습니다.");
                 alert("펀딩 생성 성공");
-                navigate('/funding/view');//
+                navigate('/funding/details');//
             }
         } catch (error) {
             setSubmissionError('Error submitting form');
@@ -96,9 +111,43 @@ export const FundingWrite = () => {
         }
     };
 
+
     return (
+        // <Formik
+        //     validationSchema={schema}
+        //     onSubmit={console.log}
+        //     initialValues={{
+        //         firstName: 'Mark',
+        //         lastName: 'Otto',
+        //         username: '',
+        //         city: '',
+        //         state: '',
+        //         zip: '',
+        //         terms: false,
+        //     }}
+        // >
+
         <Layout>
             <Carousel></Carousel>
+            {/* sidebar */}
+            {/*<Sidebar>*/}
+            {/*    <Menu*/}
+            {/*        menuItemStyles={{*/}
+            {/*            button: {*/}
+            {/*                // the active class will be added automatically by react router*/}
+            {/*                // so we can use it to style the active menu item*/}
+            {/*                [`&.active`]: {*/}
+            {/*                    backgroundColor: '#13395e',*/}
+            {/*                    color: '#b6c8d9',*/}
+            {/*                },*/}
+            {/*            },*/}
+            {/*        }}*/}
+            {/*    >*/}
+            {/*        <MenuItem component={<Link to="/documentation"/>}> Documentation</MenuItem>*/}
+            {/*        <MenuItem component={<Link to="/calendar"/>}> Calendar</MenuItem>*/}
+            {/*        <MenuItem component={<Link to="/e-commerce"/>}> E-commerce</MenuItem>*/}
+            {/*    </Menu>*/}
+            {/*</Sidebar>*/}
             <div className="screen">
                 <div className="div">
                     <div className="input-group">

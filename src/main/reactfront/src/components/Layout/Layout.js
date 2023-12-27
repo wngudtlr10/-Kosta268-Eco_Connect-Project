@@ -6,15 +6,19 @@ import ChatButton from "../../pages/chat/ChatButton";
 
 function Layout({children}) {
     return (
-        <div>
+        <main>
             {<Header/>}
             {children}
 
             <Outlet/>
             <ChatButton/>
             {<Footer/>}
-        </div>
+        </main>
     )
 }
 
 export default Layout;
+
+<Layout>
+
+</Layout>

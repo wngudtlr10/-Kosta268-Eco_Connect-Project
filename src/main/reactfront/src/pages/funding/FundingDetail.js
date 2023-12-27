@@ -1,8 +1,12 @@
+
 import React, {useEffect, useState} from "react";
 import axios from "axios";
 import moment from 'moment';
 import Layout from "../../components/Layout/Layout";
 import "./FundingView.css";
+import {Margin} from "@mui/icons-material";
+import Card from 'react-bootstrap/Card';
+import {Link} from "react-router-dom";
 
 
 const FundingDetail = () => {
@@ -41,12 +45,28 @@ const FundingDetail = () => {
 
     return (
         <Layout>
+            <Card>
+                <Card.Header>Quote</Card.Header>
+                <Card.Body>
+                    <blockquote className="blockquote mb-0">
+                        <p>
+                            {' '}
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+                            posuere erat a ante.{' '}
+                        </p>
+                        <footer className="blockquote-footer">
+                            Someone famous in <cite title="Source Title">Source Title</cite>
+                        </footer>
+                    </blockquote>
+                </Card.Body>
+            </Card>
+
             <div className="screen">
                 <div className="div">
                 </div>
             </div>
             <div className="funding-detail-image">
-                <img src="../"></img> {/* 수정: <img> 태그로 바꿨습니다 */}
+                <imgae src="../"></imgae>
             </div>
             <div>
                 <h1 style={{textAlign: "center"}}>Funding Detail</h1>
@@ -69,6 +89,20 @@ const FundingDetail = () => {
                     ))}
                 </ul>
             </div>
+                <button className="donate-button"
+                        style={{
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                            marginInline: '25%',
+                            marginBottom: '25px',
+                            marginLeft: '1600px',
+                            maxWidth: '400px',
+                            fontWeight: 'bold',
+                            width: '150px',
+                            backgroundColor: 'blue'
+                        }}>
+                    결제하기
+                </button>
         </Layout>
     );
 }
