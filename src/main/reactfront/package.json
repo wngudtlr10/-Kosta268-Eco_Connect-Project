@@ -26,6 +26,7 @@
     "date-fns": "^3.0.6",
     "formik": "^2.4.5",
     "http-proxy-middleware": "^2.0.6",
+    "iamport": "^0.3.4",
     "js-cookie": "^3.0.5",
     "jwt-decode": "^4.0.0",
     "moment": "^2.29.4",

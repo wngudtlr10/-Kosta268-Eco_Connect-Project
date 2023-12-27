@@ -48,4 +48,6 @@ public class FundingEntity {
     private int totalCollectedAmount; // 펀딩 총 모금액
     @Column
     private int fundingPeople; //펀딩 인원 수
+    @Column
+    private int stockCount; //펀딩 상품 재고수
 }

@@ -53,5 +53,7 @@ public class FundingDto {
     private int fundingPeople;
     @Column
     private int collecting;
+    @Column
+    private int stockCount;
 }
 
