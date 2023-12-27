@@ -8,9 +8,9 @@ const FundingDetailIntro = () => {
     setIsExpanded(!isExpanded);
   };
     return (
-        <div className="Story_story" style={{ height: "auto", overflow: "hidden" }}>
-            <div style={{ height: isExpanded ? 'auto' : '2300px', overflow: 'hidden', transition: 'height 0.3s' }}>
-                <div className="inner-contents fr-view">
+        <div className="Story_story">
+            <div style={{  height: isExpanded ? 'auto' : '2300px', overflow: 'hidden', transition: 'height 0.3s' }}>
+                <div className="inner-contents fr-view" >
                     <p>
                         <img
                             alt="제목을 입력해주세요_-001 (22).jpg"
@@ -18,7 +18,7 @@ const FundingDetailIntro = () => {
                             data-height={311}
                             data-natural-width={1080}
                             data-natural-height={500}
-                            style={{
+                            style={{ 
                                 textAlign: "center",
                                 display: "block",
                                 float: "none",
@@ -38,7 +38,7 @@ const FundingDetailIntro = () => {
                             data-height={377}
                             data-natural-width={800}
                             data-natural-height={450}
-                            style={{
+                            style={{ 
                                 textAlign: "center",
                                 display: "block",
                                 float: "none",
@@ -58,7 +58,7 @@ const FundingDetailIntro = () => {
                             data-height={377}
                             data-natural-width={800}
                             data-natural-height={450}
-                            style={{
+                            style={{ 
                                 textAlign: "center",
                                 display: "block",
                                 float: "none",
@@ -76,7 +76,7 @@ const FundingDetailIntro = () => {
                             data-height={503}
                             data-natural-width={800}
                             data-natural-height={600}
-                            style={{
+                            style={{ 
                                 textAlign: "center",
                                 display: "block",
                                 float: "none",
@@ -94,7 +94,7 @@ const FundingDetailIntro = () => {
                             data-height={377}
                             data-natural-width={800}
                             data-natural-height={450}
-                            style={{
+                            style={{ 
                                 textAlign: "center",
                                 display: "block",
                                 float: "none",
@@ -110,7 +110,7 @@ const FundingDetailIntro = () => {
 
                     <p>
                         <img
-                            style={{
+                            style={{ 
                                 display: "block",
                                 verticalAlign: "top",
                                 margin: "5px auto",
@@ -129,7 +129,7 @@ const FundingDetailIntro = () => {
                     </p>
                     <p>
                         <img
-                            style={{
+                            style={{ 
                                 display: "block",
                                 verticalAlign: "top",
                                 margin: "5px auto",
@@ -148,7 +148,7 @@ const FundingDetailIntro = () => {
                     </p>
                     <p>
                         <img
-                            style={{
+                            style={{ 
                                 display: "block",
                                 verticalAlign: "top",
                                 margin: "5px auto",
@@ -165,7 +165,7 @@ const FundingDetailIntro = () => {
                             src="https://cdn.wadiz.kr/ft/images/green001/2023/0922/20230922113614958_67.gif"
                         />
                         <img
-                            style={{
+                            style={{ 
                                 display: "block",
                                 verticalAlign: "top",
                                 margin: "5px auto",
@@ -184,7 +184,7 @@ const FundingDetailIntro = () => {
                     </p>
                     <p>
                         <img
-                            style={{
+                            style={{ 
                                 display: "block",
                                 verticalAlign: "top",
                                 margin: "5px auto",
@@ -203,7 +203,7 @@ const FundingDetailIntro = () => {
                     </p>
                     <p>
                         <img
-                            style={{
+                            style={{ 
                                 display: "block",
                                 verticalAlign: "top",
                                 margin: "5px auto",
@@ -222,7 +222,7 @@ const FundingDetailIntro = () => {
                     </p>
                     <p>
                         <img
-                            style={{
+                            style={{ 
                                 display: "block",
                                 verticalAlign: "top",
                                 margin: "5px auto",
@@ -241,7 +241,7 @@ const FundingDetailIntro = () => {
                     </p>
                     <p>
                         <img
-                            style={{
+                            style={{ 
                                 display: "block",
                                 verticalAlign: "top",
                                 margin: "5px auto",
@@ -260,7 +260,7 @@ const FundingDetailIntro = () => {
                     </p>
                     <p>
                         <img
-                            style={{
+                            style={{ 
                                 display: "block",
                                 verticalAlign: "top",
                                 margin: "5px auto",
@@ -282,7 +282,7 @@ const FundingDetailIntro = () => {
                     </p>
                     <p>
                         <img
-                            style={{
+                            style={{ 
                                 display: "block",
                                 verticalAlign: "top",
                                 margin: "5px auto",
@@ -302,7 +302,7 @@ const FundingDetailIntro = () => {
 
                     <p>
                         <img
-                            style={{
+                            style={{ 
                                 display: "block",
                                 verticalAlign: "top",
                                 margin: "5px auto",
@@ -321,7 +321,7 @@ const FundingDetailIntro = () => {
                     </p>
                     <p>
                         <img
-                            style={{
+                            style={{ 
                                 display: "block",
                                 verticalAlign: "top",
                                 margin: "5px auto",
@@ -340,7 +340,7 @@ const FundingDetailIntro = () => {
                     </p>
                     <p>
                         <img
-                            style={{
+                            style={{ 
                                 display: "block",
                                 verticalAlign: "top",
                                 margin: "5px auto",
@@ -356,7 +356,7 @@ const FundingDetailIntro = () => {
                     </p>
                     <p>
                         <img
-                            style={{
+                            style={{ 
                                 display: "block",
                                 verticalAlign: "top",
                                 margin: "5px auto",
@@ -375,7 +375,7 @@ const FundingDetailIntro = () => {
                     </p>
                     <p>
                         <img
-                            style={{
+                            style={{ 
                                 display: "block",
                                 verticalAlign: "top",
                                 margin: "5px auto",
@@ -394,7 +394,7 @@ const FundingDetailIntro = () => {
                     </p>
                     <p>
                         <img
-                            style={{
+                            style={{ 
                                 display: "block",
                                 verticalAlign: "top",
                                 margin: "5px auto",
@@ -413,7 +413,7 @@ const FundingDetailIntro = () => {
                     </p>
                     <p>
                         <img
-                            style={{
+                            style={{ 
                                 display: "block",
                                 verticalAlign: "top",
                                 margin: "5px auto",
@@ -434,7 +434,7 @@ const FundingDetailIntro = () => {
                     <p>
                         <strong>
                             <img
-                                style={{
+                                style={{ 
                                     display: "block",
                                     verticalAlign: "top",
                                     margin: "5px auto",
@@ -454,7 +454,7 @@ const FundingDetailIntro = () => {
                     </p>
                     <p>
                         <img
-                            style={{
+                            style={{ 
                                 display: "block",
                                 verticalAlign: "top",
                                 margin: "5px auto",
@@ -473,7 +473,7 @@ const FundingDetailIntro = () => {
                     </p>
                     <p>
                         <img
-                            style={{
+                            style={{ 
                                 display: "block",
                                 verticalAlign: "top",
                                 margin: "5px auto",
@@ -492,7 +492,7 @@ const FundingDetailIntro = () => {
                     </p>
                     <p>
                         <img
-                            style={{
+                            style={{ 
                                 display: "block",
                                 verticalAlign: "top",
                                 margin: "5px auto",
@@ -511,7 +511,7 @@ const FundingDetailIntro = () => {
                     </p>
                     <p>
                         <img
-                            style={{
+                            style={{ 
                                 display: "block",
                                 verticalAlign: "top",
                                 margin: "5px auto",
@@ -531,7 +531,7 @@ const FundingDetailIntro = () => {
 
                     <p>
                         <img
-                            style={{
+                            style={{ 
                                 display: "block",
                                 verticalAlign: "top",
                                 margin: "5px auto",
@@ -550,7 +550,7 @@ const FundingDetailIntro = () => {
                     </p>
                     <p>
                         <img
-                            style={{
+                            style={{ 
                                 display: "block",
                                 verticalAlign: "top",
                                 margin: "5px auto",
@@ -569,7 +569,7 @@ const FundingDetailIntro = () => {
                     </p>
                     <p>
                         <img
-                            style={{
+                            style={{ 
                                 display: "block",
                                 verticalAlign: "top",
                                 margin: "5px auto",
@@ -588,7 +588,7 @@ const FundingDetailIntro = () => {
                     </p>
                     <p>
                         <img
-                            style={{
+                            style={{ 
                                 display: "block",
                                 verticalAlign: "top",
                                 margin: "5px auto",
@@ -607,7 +607,7 @@ const FundingDetailIntro = () => {
                     </p>
                     <p>
                         <img
-                            style={{
+                            style={{ 
                                 display: "block",
                                 verticalAlign: "top",
                                 margin: "5px auto",
@@ -626,7 +626,7 @@ const FundingDetailIntro = () => {
                     </p>
                     <p>
                         <img
-                            style={{
+                            style={{ 
                                 display: "block",
                                 verticalAlign: "top",
                                 margin: "5px auto",
@@ -645,7 +645,7 @@ const FundingDetailIntro = () => {
                     </p>
                     <p>
                         <img
-                            style={{
+                            style={{ 
                                 display: "block",
                                 verticalAlign: "top",
                                 margin: "5px auto",
@@ -664,7 +664,7 @@ const FundingDetailIntro = () => {
                     </p>
                     <p>
                         <img
-                            style={{
+                            style={{ 
                                 display: "block",
                                 verticalAlign: "top",
                                 margin: "5px auto",
@@ -684,7 +684,7 @@ const FundingDetailIntro = () => {
 
                     <p>
                         <img
-                            style={{
+                            style={{ 
                                 display: "block",
                                 verticalAlign: "top",
                                 margin: "5px auto",
@@ -703,7 +703,7 @@ const FundingDetailIntro = () => {
                     </p>
                     <p>
                         <img
-                            style={{
+                            style={{ 
                                 display: "block",
                                 verticalAlign: "top",
                                 margin: "5px auto",
@@ -722,7 +722,7 @@ const FundingDetailIntro = () => {
                     </p>
                     <p>
                         <img
-                            style={{
+                            style={{ 
                                 display: "block",
                                 verticalAlign: "top",
                                 margin: "5px auto",
@@ -741,7 +741,7 @@ const FundingDetailIntro = () => {
                     </p>
                     <p>
                         <img
-                            style={{
+                            style={{ 
                                 display: "block",
                                 verticalAlign: "top",
                                 margin: "5px auto",
@@ -761,7 +761,7 @@ const FundingDetailIntro = () => {
 
                     <p>
                         <img
-                            style={{
+                            style={{ 
                                 display: "block",
                                 verticalAlign: "top",
                                 margin: "5px auto",
@@ -780,7 +780,7 @@ const FundingDetailIntro = () => {
                     </p>
                     <p>
                         <img
-                            style={{
+                            style={{ 
                                 display: "block",
                                 verticalAlign: "top",
                                 margin: "5px auto",
@@ -802,7 +802,7 @@ const FundingDetailIntro = () => {
                     </p>
                     <p>
                         <img
-                            style={{
+                            style={{ 
                                 display: "block",
                                 verticalAlign: "top",
                                 margin: "5px auto",
@@ -821,7 +821,7 @@ const FundingDetailIntro = () => {
                     </p>
                     <p>
                         <img
-                            style={{
+                            style={{ 
                                 display: "block",
                                 verticalAlign: "top",
                                 margin: "5px auto",
@@ -840,7 +840,7 @@ const FundingDetailIntro = () => {
                     </p>
                     <p>
                         <img
-                            style={{
+                            style={{ 
                                 display: "block",
                                 verticalAlign: "top",
                                 margin: "5px auto",
@@ -861,7 +861,7 @@ const FundingDetailIntro = () => {
                     <p>
                         <strong>
                             <img
-                                style={{
+                                style={{ 
                                     display: "block",
                                     verticalAlign: "top",
                                     margin: "5px auto",
@@ -879,7 +879,7 @@ const FundingDetailIntro = () => {
                             />
                         </strong>
                         <img
-                            style={{
+                            style={{ 
                                 display: "block",
                                 verticalAlign: "top",
                                 margin: "5px auto",
@@ -899,7 +899,7 @@ const FundingDetailIntro = () => {
 
                     <p>
                         <img
-                            style={{
+                            style={{ 
                                 display: "block",
                                 verticalAlign: "top",
                                 margin: "5px auto",
@@ -918,7 +918,7 @@ const FundingDetailIntro = () => {
                     </p>
                     <p>
                         <img
-                            style={{
+                            style={{ 
                                 display: "block",
                                 verticalAlign: "top",
                                 margin: "5px auto",
@@ -934,7 +934,7 @@ const FundingDetailIntro = () => {
                     </p>
                     <p>
                         <img
-                            style={{
+                            style={{ 
                                 display: "block",
                                 verticalAlign: "top",
                                 margin: "5px auto",
@@ -953,7 +953,7 @@ const FundingDetailIntro = () => {
                     </p>
                     <p>
                         <img
-                            style={{
+                            style={{ 
                                 display: "block",
                                 verticalAlign: "top",
                                 margin: "5px auto",
@@ -969,7 +969,7 @@ const FundingDetailIntro = () => {
                     </p>
                     <p>
                         <img
-                            style={{
+                            style={{ 
                                 display: "block",
                                 verticalAlign: "top",
                                 margin: "5px auto",
@@ -985,7 +985,7 @@ const FundingDetailIntro = () => {
                     </p>
                     <p>
                         <img
-                            style={{
+                            style={{ 
                                 display: "block",
                                 verticalAlign: "top",
                                 margin: "5px auto",
@@ -1005,7 +1005,7 @@ const FundingDetailIntro = () => {
 
                     <p>
                         <img
-                            style={{
+                            style={{ 
                                 display: "block",
                                 verticalAlign: "top",
                                 margin: "5px auto",
@@ -1024,7 +1024,7 @@ const FundingDetailIntro = () => {
                     </p>
                     <p>
                         <img
-                            style={{
+                            style={{ 
                                 display: "block",
                                 verticalAlign: "top",
                                 margin: "5px auto",
@@ -1043,7 +1043,7 @@ const FundingDetailIntro = () => {
                     </p>
                     <p>
                         <img
-                            style={{
+                            style={{ 
                                 display: "block",
                                 verticalAlign: "top",
                                 margin: "5px auto",
@@ -1063,7 +1063,7 @@ const FundingDetailIntro = () => {
 
                     <p>
                         <img
-                            style={{
+                            style={{ 
                                 display: "block",
                                 verticalAlign: "top",
                                 margin: "5px auto",
@@ -1083,7 +1083,7 @@ const FundingDetailIntro = () => {
 
                     <p>
                         <img
-                            style={{
+                            style={{ 
                                 display: "block",
                                 verticalAlign: "top",
                                 margin: "5px auto",
@@ -1105,7 +1105,7 @@ const FundingDetailIntro = () => {
                     </p>
                     <p>
                         <img
-                            style={{
+                            style={{ 
                                 display: "block",
                                 verticalAlign: "top",
                                 margin: "5px auto",
@@ -1124,7 +1124,7 @@ const FundingDetailIntro = () => {
                     </p>
                     <p>
                         <img
-                            style={{
+                            style={{ 
                                 display: "block",
                                 verticalAlign: "top",
                                 margin: "5px auto",
@@ -1145,7 +1145,7 @@ const FundingDetailIntro = () => {
                     </p>
                     <p>
                         <img
-                            style={{
+                            style={{ 
                                 display: "block",
                                 verticalAlign: "top",
                                 margin: "5px auto",
@@ -1167,7 +1167,7 @@ const FundingDetailIntro = () => {
 
                     <p>
                         <img
-                            style={{
+                            style={{ 
                                 display: "block",
                                 verticalAlign: "top",
                                 margin: "5px auto",
@@ -1188,7 +1188,7 @@ const FundingDetailIntro = () => {
                     </p>
                     <p>
                         <img
-                            style={{
+                            style={{ 
                                 display: "block",
                                 verticalAlign: "top",
                                 margin: "5px auto",
@@ -1209,7 +1209,7 @@ const FundingDetailIntro = () => {
                     </p>
                     <p>
                         <img
-                            style={{
+                            style={{ 
                                 display: "block",
                                 verticalAlign: "top",
                                 margin: "5px auto",
@@ -1231,7 +1231,7 @@ const FundingDetailIntro = () => {
 
                     <p>
                         <img
-                            style={{
+                            style={{ 
                                 display: "block",
                                 verticalAlign: "top",
                                 margin: "5px auto",
@@ -1252,7 +1252,7 @@ const FundingDetailIntro = () => {
                     </p>
                     <p>
                         <img
-                            style={{
+                            style={{ 
                                 display: "block",
                                 verticalAlign: "top",
                                 margin: "5px auto",
@@ -1275,7 +1275,7 @@ const FundingDetailIntro = () => {
                     <p>
                         <strong>
                             <img
-                                style={{
+                                style={{ 
                                     display: "block",
                                     verticalAlign: "top",
                                     margin: "5px auto",
@@ -1297,7 +1297,7 @@ const FundingDetailIntro = () => {
                     </p>
                     <p>
                         <img
-                            style={{
+                            style={{ 
                                 display: "block",
                                 verticalAlign: "top",
                                 margin: "5px auto",
@@ -1318,7 +1318,7 @@ const FundingDetailIntro = () => {
                     </p>
                     <p>
                         <img
-                            style={{
+                            style={{ 
                                 display: "block",
                                 verticalAlign: "top",
                                 margin: "5px auto",
@@ -1339,7 +1339,7 @@ const FundingDetailIntro = () => {
                     </p>
                     <p>
                         <img
-                            style={{
+                            style={{ 
                                 display: "block",
                                 verticalAlign: "top",
                                 margin: "5px auto",
@@ -1361,7 +1361,7 @@ const FundingDetailIntro = () => {
 
                     <p>
                         <img
-                            style={{
+                            style={{ 
                                 display: "block",
                                 verticalAlign: "top",
                                 margin: "5px auto",
@@ -1381,7 +1381,7 @@ const FundingDetailIntro = () => {
                     </p>
                     <p>
                         <img
-                            style={{
+                            style={{ 
                                 display: "block",
                                 verticalAlign: "top",
                                 margin: "5px auto",
@@ -1402,7 +1402,7 @@ const FundingDetailIntro = () => {
                     </p>
                     <p>
                         <img
-                            style={{
+                            style={{ 
                                 display: "block",
                                 verticalAlign: "top",
                                 margin: "5px auto",
@@ -1423,7 +1423,7 @@ const FundingDetailIntro = () => {
 
                     <p>
                         <img
-                            style={{
+                            style={{ 
                                 display: "block",
                                 verticalAlign: "top",
                                 margin: "5px auto",
@@ -1442,7 +1442,7 @@ const FundingDetailIntro = () => {
                             src="https://cdn.wadiz.kr/ft/images/green001/2023/0922/20230922134407369_19.png/wadiz/resize/800/format/jpg/quality/80/"
                         />
                         <img
-                            style={{
+                            style={{ 
                                 display: "block",
                                 verticalAlign: "top",
                                 margin: "5px auto",
@@ -1464,7 +1464,7 @@ const FundingDetailIntro = () => {
                     <p />
                     <p>
                         <img
-                            style={{
+                            style={{ 
                                 display: "block",
                                 verticalAlign: "top",
                                 margin: "5px auto",
@@ -1486,7 +1486,7 @@ const FundingDetailIntro = () => {
                         
                 </div>
             </div>
-            <Button variant="success" style={{color:'white'}} onClick={toggleExpand}>
+            <Button variant="success" style={{ color:'white'}} onClick={toggleExpand}>
             {isExpanded ? '접기' : '펼치기'}
             </Button>
         </div>

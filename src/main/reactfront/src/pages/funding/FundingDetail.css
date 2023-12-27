@@ -36,5 +36,8 @@
     width: 450px;
 }
 .intro-warp {
-    width: 500px;
+    height: fit-content;
+    width: fit-content;
 }
+
+

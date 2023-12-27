@@ -4,7 +4,7 @@ import moment from 'moment';
 import Layout from "../../components/Layout/Layout";
 import "./FundingView.css";
 import './FundingDetail.css'
-import FundingDetailIntro from "./FundingDetailIntro";
+import FundingDetailIntro from "../../components/Card/FundingDetailIntro";
 
 
 const FundingDetail = () => {
@@ -55,7 +55,7 @@ const FundingDetail = () => {
                 <div className="funding-intro-image-wrap"><img className="funding-intro-image" src="https://i.postimg.cc/5Nnzzjvy/Funding-intro.png"></img></div>
              </div> */}
               <div className="intro-warp">
-              <FundingDetailIntro style={{}}/>
+              <FundingDetailIntro  />
               </div>
                             <div>
                                 <h1 style={{ textAlign: "center" }}>Funding Detail</h1>
