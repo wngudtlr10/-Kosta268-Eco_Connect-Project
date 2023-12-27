@@ -13,4 +13,12 @@ public interface MissionRepository extends JpaRepository<Mission, Long> {
 
     Page<Mission> findByStatus(Status status, Pageable pageable);
 
+    Page<Mission> findAllByStatusAndTitleLike(Status status, String title, Pageable pageable);
+    Page<Mission> findAllByStatusAndCategoryLike(Status status, String category, Pageable pageable);
+
+    Page<Mission> findAllByCategoryLikeAndTitleLike(String category, String title, Pageable pageable);
+
+    Page<Mission> findAllByStatusAndTitleLikeAndCategoryLike(Status status, String title, String category, Pageable pageable);
+
+
 }

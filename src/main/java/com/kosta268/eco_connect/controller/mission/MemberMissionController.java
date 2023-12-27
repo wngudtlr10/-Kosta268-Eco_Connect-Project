@@ -1,5 +1,6 @@
 package com.kosta268.eco_connect.controller.mission;
 
+import com.amazonaws.Response;
 import com.kosta268.eco_connect.dto.mission.MemberMissionDto;
 import com.kosta268.eco_connect.dto.mission.MemberMissionPostDto;
 import com.kosta268.eco_connect.dto.mission.MemberMissionRequestDto;
@@ -78,5 +79,11 @@ public class MemberMissionController {
                 .collect(Collectors.toList());
         return ResponseEntity.ok(memberMissionDtos);
 
+    }
+
+    @DeleteMapping("/membermission/{memberMissionId}")
+    public ResponseEntity<?> deleteMemberMission(@PathVariable Long memberMissionId) {
+        memberMissionService.deleteMissionPost(memberMissionId);
+        return ResponseEntity.ok().build();
     }
 }
