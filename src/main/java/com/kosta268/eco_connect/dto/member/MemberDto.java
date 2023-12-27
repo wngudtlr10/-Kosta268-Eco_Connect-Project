@@ -1,6 +1,7 @@
 package com.kosta268.eco_connect.dto.member;
 
 import com.kosta268.eco_connect.entity.member.Member;
+import com.kosta268.eco_connect.entity.member.Role;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
@@ -13,6 +14,7 @@ public class MemberDto {
     private String id;
     private String email;
     private String profile;
+    private String role;
 
     public Member toEntity() {
         return Member.builder()
@@ -20,6 +22,7 @@ public class MemberDto {
                 .id(id)
                 .email(email)
                 .profile(profile)
+                .role(Role.valueOf(role))
                 .build();
     }
 
@@ -29,6 +32,7 @@ public class MemberDto {
                 .id(member.getId())
                 .email(member.getEmail())
                 .profile(member.getProfile())
+                .role(member.getRole().name())
                 .build();
     }
 }

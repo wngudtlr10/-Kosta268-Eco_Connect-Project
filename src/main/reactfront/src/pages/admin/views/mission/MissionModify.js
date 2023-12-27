@@ -74,7 +74,7 @@ const MissionModify = ({ missionId, onUpdate }) => {
 
     const fetchMissionData = async () => {
         try {
-            const response = await AuthAxios.get(`/missions/${missionId}`)
+            const response = await AuthAxios.get(`/api/missions/${missionId}`)
                 .then((response) => {
                     console.log(response);
 
@@ -140,7 +140,7 @@ const MissionModify = ({ missionId, onUpdate }) => {
             formData.append("fullAddress", addressObj.fullAddress);
             formData.append("subAddress", addressObj.subAddress);
             console.log("patch 전 missionId: ", missionId)
-            await AuthAxios.patch(`/missions/${missionId}`, formData)
+            await AuthAxios.patch(`/api/missions/${missionId}`, formData)
                 .then((response) => {
                     console.log(response);
                     console.log("수정성공");

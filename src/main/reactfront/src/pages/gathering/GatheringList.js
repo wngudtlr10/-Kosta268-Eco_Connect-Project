@@ -131,7 +131,6 @@ function GatheringList() {
         else {
             fetchData();
         }
-
     }, [page, status, title])
 
     return (
