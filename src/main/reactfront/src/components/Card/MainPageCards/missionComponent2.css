@@ -9,19 +9,21 @@
     text-align: center;
     width: fit-content;
     float: inline-end;
+
   }
   .mission-name-text {
     color: #000000;
     font-family: "Poppins", Helvetica;
-    font-size: 18px;
-    font-weight: 600;
-    height: 29px;
+    font-size: 14px;
+    font-weight: 500;
+    height: 18px;
     letter-spacing: 0;
     line-height: normal;
     margin-top: -1px;
     position: relative;
     text-align: center;
     width: fit-content;
+    overflow: hidden;
   }
    .mission-info-wrap {
     align-items: center;
@@ -30,4 +32,11 @@
     gap: 59px;
     justify-content: center;
     position: relative;
+  }
+  .mission-image-main{
+    height: 150px;
+    width: 200px;
+  }
+  .g-5{
+    gap: 0px;
   }

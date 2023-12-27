@@ -8,14 +8,16 @@ import GatheringComponent from "../../components/Card/MainPageCards/gatheringCom
 import FundingComponent from "../../components/Card/MainPageCards//fundingComponent";
 import Layout from "../../components/Layout/Layout";
 import FundingNav from "../../components/Nav/FundingNav";
+import MissionNav from "../../components/Nav/MissionNav";
+import GatheringNav from "../../components/Nav/GatheringNav";
 
  const Home = () => {
   const scrollRef = useRef(null);
   const [isDrag, setIsDrag] = useState(false);
   const [startX, setStartX] = useState();
-  const [selectedCategory, setSelectedCategory] = useState('전체');
+  const [selectedCategory, setSelectedCategory] = useState('');
   const [selectedCategory2, setSelectedCategory2] = useState(1);
-  const [selectedCategory1, setSelectedCategory1] = useState('전체');
+  const [selectedCategory1, setSelectedCategory1] = useState('');
 
   const handleNavItemClick = (category) => {
     setSelectedCategory(category);
@@ -107,63 +109,28 @@ import FundingNav from "../../components/Nav/FundingNav";
         <div className="banner_text">미션에 참여하시면 포인트를 흭득하여 리워드와 교환이 가능합니다</div>
       </div>
       <div className="misson-title">진행중인 미션</div>
-      <Nav variant="phills" defaultActiveKey="#" className="nav-wrap">
-        <Nav.Item className="nav-box">
-          <Nav.Link href="#" className="nav-text" onClick={() => handleNavItemClick('전체')}>전체</Nav.Link>
-        </Nav.Item>
-        <Nav.Item className="nav-box">
-          <Nav.Link eventKey="link-1" href="#" className="nav-text" onClick={() => handleNavItemClick('참여형')}>참여형</Nav.Link>
-        </Nav.Item>
-        <Nav.Item className="nav-box">
-          <Nav.Link eventKey="link-2" href="#" className="nav-text" onClick={() => handleNavItemClick('도전형')}>도전형</Nav.Link>
-        </Nav.Item>
-        <Nav.Item className="nav-box">
-          <Nav.Link eventKey="link-3" href="#" className="nav-text" onClick={() => handleNavItemClick('활동형')}>활동형</Nav.Link>
-        </Nav.Item>
-      </Nav>
+    <MissionNav onSelectCategory={handleNavItemClick}/>
  <img
         className="img"
         alt="Line"
         src="https://cdn.animaapp.com/projects/6566e67221a5f8ac6355e523/releases/657012a3157386e1edbc12b0/img/line-18.png"
       />
-      {/* 내용 컴포넌트를 선택된 카테고리에 따라 렌더링 */}
-      {selectedCategory === '전체' && <MissionComponent2 />}
-      {selectedCategory === '참여형' && <MissionComponent2 category={0}/>}
-      {selectedCategory === '도전형' && <MissionComponent2 category={1}/>}
-      {selectedCategory === '활동형' && <MissionComponent2 category={2}/>}
+     <MissionComponent2 selectedCategory={selectedCategory}/>
      
    
       <div className="banner-2">
       <div className="banner_text">마음이 맞는사람들과 함께 봉사모임을 진행해보세요</div>
       </div>
       <div className="gathering-title">봉사모임</div>
-           <Nav variant="phills" defaultActiveKey="#" className="nav-wrap">
-           <Nav.Item className="nav-box" >
-             <Nav.Link href="#" className="nav-text" onClick={() => handleNavItemClick1('전체')}>전체</Nav.Link>
-           </Nav.Item>
-           <Nav.Item className="nav-box">
-             <Nav.Link eventKey="link-1" href="#"className="nav-text" onClick={() => handleNavItemClick1('환경미화')}>환경미화</Nav.Link>
-           </Nav.Item>
-           <Nav.Item className="nav-box">
-           <Nav.Link eventKey="link-2" href="#"className="nav-text" onClick={() => handleNavItemClick1('재능기부')}>재능기부</Nav.Link>
-           </Nav.Item>
-           <Nav.Item className="nav-box">
-           <Nav.Link eventKey="link-3" href="#"className="nav-text" onClick={() => handleNavItemClick1('후원')}>후원</Nav.Link>
-           </Nav.Item>
-         </Nav>
+      <GatheringNav onSelectCategory={handleNavItemClick1}/>
       <img
         className="img"
         alt="Line"
         src="https://cdn.animaapp.com/projects/6566e67221a5f8ac6355e523/releases/657012a3157386e1edbc12b0/img/line-18.png"
       />
   
-    <GatheringComponent />
-    {/* 내용 컴포넌트를 선택된 카테고리에 따라 렌더링 추후 백과 연결후 활성화 */}
-    {/* {selectedCategory === '전체' && <GatheringComponent />}
-      {selectedCategory === '참여형' && <GatheringComponent category={0}/>}
-      {selectedCategory === '도전형' && <GatheringComponent category={1}/>}
-      {selectedCategory === '활동형' && <GatheringComponent category={2}/>} */}
-
+    <GatheringComponent selectedCategory={selectedCategory1}/>
+   
       <div className="banner-3">
         <div className="banner-cover-3" />
       </div>

@@ -1,12 +1,10 @@
 package com.kosta268.eco_connect.controller.member;
 
 import com.kosta268.eco_connect.dto.gathering.GatheringDto;
-import com.kosta268.eco_connect.dto.member.MemberRequestDto;
-import com.kosta268.eco_connect.dto.member.MemberResponseDto;
-import com.kosta268.eco_connect.dto.member.TokenReissueRequestDto;
-import com.kosta268.eco_connect.dto.member.TokenResponseDto;
+import com.kosta268.eco_connect.dto.member.*;
 import com.kosta268.eco_connect.dto.mission.MemberMissionDto;
 import com.kosta268.eco_connect.dto.point.PointDto;
+import com.kosta268.eco_connect.entity.admin.Faq;
 import com.kosta268.eco_connect.entity.gathering.MemberGathering;
 import com.kosta268.eco_connect.entity.member.Member;
 import com.kosta268.eco_connect.entity.mission.MemberMission;
@@ -116,5 +114,9 @@ public class MemberController {
         Point memberPoint = memberService.findMemberPoint(userDetails.getMemberId());
         PointDto pointDto = PointDto.fromEntity(memberPoint);
         return ResponseEntity.ok(pointDto);
+    }
+    @GetMapping("/all")
+    public List<Member> listAllMembers() {
+        return memberService.listAllMembers();
     }
 }
