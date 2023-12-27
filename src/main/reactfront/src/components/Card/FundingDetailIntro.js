@@ -289,26 +289,6 @@ const FundingDetailIntro = () => {
                                 textAlign: "center",
                                 visibility: "visible"
                             }}
-                            alt="킥스타터달성.gif"
-                            data-width={670}
-                            data-height={867}
-                            data-natural-width={1000}
-                            data-natural-height={1294}
-                            data-src="https://www.wadiz.kr/ft/images/green001/2023/0922/20230922114059247_53.gif"
-                            data-src-width={523}
-                            src="https://cdn.wadiz.kr/ft/images/green001/2023/0922/20230922114059247_53.gif"
-                        />
-                    </p>
-
-                    <p>
-                        <img
-                            style={{ 
-                                display: "block",
-                                verticalAlign: "top",
-                                margin: "5px auto",
-                                textAlign: "center",
-                                visibility: "visible"
-                            }}
                             alt="07.png"
                             data-width={670}
                             data-height={363}
@@ -916,73 +896,7 @@ const FundingDetailIntro = () => {
                             src="https://cdn.wadiz.kr/ft/images/green001/2023/0922/20230922114739893_41.png/wadiz/resize/800/format/jpg/quality/80/"
                         />
                     </p>
-                    <p>
-                        <img
-                            style={{ 
-                                display: "block",
-                                verticalAlign: "top",
-                                margin: "5px auto",
-                                textAlign: "center",
-                                visibility: "visible"
-                            }}
-                            alt="모스랩파크1.gif"
-                            data-height={377}
-                            data-natural-height={450}
-                            data-src="https://www.wadiz.kr/ft/images/green001/2023/0922/20230922115531001_4.gif"
-                            src="https://cdn.wadiz.kr/ft/images/green001/2023/0922/20230922115531001_4.gif"
-                        />
-                    </p>
-                    <p>
-                        <img
-                            style={{ 
-                                display: "block",
-                                verticalAlign: "top",
-                                margin: "5px auto",
-                                textAlign: "center",
-                                visibility: "visible"
-                            }}
-                            alt="27.png"
-                            data-width={670}
-                            data-height={154}
-                            data-natural-width={1001}
-                            data-natural-height={230}
-                            data-src="https://www.wadiz.kr/ft/images/green001/2023/0922/20230922114741193_61.png"
-                            data-src-width={523}
-                            src="https://cdn.wadiz.kr/ft/images/green001/2023/0922/20230922114741193_61.png/wadiz/resize/800/format/jpg/quality/80/"
-                        />
-                    </p>
-                    <p>
-                        <img
-                            style={{ 
-                                display: "block",
-                                verticalAlign: "top",
-                                margin: "5px auto",
-                                textAlign: "center",
-                                visibility: "visible"
-                            }}
-                            alt="모스랩파크2.gif"
-                            data-height={377}
-                            data-natural-height={450}
-                            data-src="https://www.wadiz.kr/ft/images/green001/2023/0922/20230922115531713_35.gif"
-                            src="https://cdn.wadiz.kr/ft/images/green001/2023/0922/20230922115531713_35.gif"
-                        />
-                    </p>
-                    <p>
-                        <img
-                            style={{ 
-                                display: "block",
-                                verticalAlign: "top",
-                                margin: "5px auto",
-                                textAlign: "center",
-                                visibility: "visible"
-                            }}
-                            alt="모스랩파크3.gif"
-                            data-height={377}
-                            data-natural-height={450}
-                            data-src="https://www.wadiz.kr/ft/images/green001/2023/0922/20230922115532487_77.gif"
-                            src="https://cdn.wadiz.kr/ft/images/green001/2023/0922/20230922115532487_77.gif"
-                        />
-                    </p>
+                    
                     <p>
                         <img
                             style={{ 

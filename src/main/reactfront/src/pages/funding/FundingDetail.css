@@ -36,8 +36,12 @@
     width: 450px;
 }
 .intro-warp {
-    height: fit-content;
+    padding: 15px 0;
+    border: 1px solid black;
+    border-radius: 25px;
+    margin: 30px;
     width: fit-content;
+    height: fit-content;
 }
 
 
