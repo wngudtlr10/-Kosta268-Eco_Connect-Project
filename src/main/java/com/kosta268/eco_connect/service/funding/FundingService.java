@@ -38,7 +38,10 @@ public class FundingService {
         return funding;
     }
 
+    //펀딜 글 작성
     public Funding createFunding(Funding funding) {
+        funding.setFundingId(Long.valueOf("1"));
+        // FundingEntity를 DB에 저장하는 로직
         return fundingRepository.save(funding);
     }
 

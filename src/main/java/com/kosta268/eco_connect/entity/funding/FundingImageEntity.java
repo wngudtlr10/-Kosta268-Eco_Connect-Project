@@ -14,7 +14,6 @@ import org.springframework.security.access.prepost.PreInvocationAuthorizationAdv
 public class FundingImageEntity {
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "funding_id")
     private FundingEntity funding;
 
     @Id

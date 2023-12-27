@@ -1,7 +1,7 @@
 package com.kosta268.eco_connect.controller.funding;
 
 import com.kosta268.eco_connect.entity.funding.Funding;
-import com.kosta268.eco_connect.dto.funding.FundingDto;
+import com.kosta268.eco_connect.entity.funding.FundingEntity;
 import com.kosta268.eco_connect.service.funding.FundingService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -44,19 +44,26 @@ public class FundingController {
     }
 
     //새 펀딩 생성
-    @PostMapping
+    @PostMapping("/write")
     public ResponseEntity<Funding> createFunding(@RequestBody Funding funding) {
         Funding createdFunding = fundingService.createFunding(funding);
         return ResponseEntity.ok(createdFunding);
     }
 
-    //펀딩 값 전송
-    @PostMapping("/write")
-    public ResponseEntity<Funding> createFunding(@RequestPart("data") Funding funding,
-                                                 @RequestPart("image") MultipartFile[] images) {
-        Funding createdFunding = fundingService.createFundingWithImages(funding, images);
-        return ResponseEntity.ok(createdFunding);
-    }
+    //펀딩 값 전송(이미지 미포함)
+//    @PostMapping("/write")
+//    public String createFunding (Funding funding){
+//            fundingService.createFunding(funding);
+//        return "redirect:http://localhost:3000/funding/veiw/";
+//    }
+
+    //펀딩 값 전송(이미지 포함)
+//    @PostMapping("/write")
+//    public ResponseEntity<Funding> createFundingImage (@RequestPart("data") Funding funding,
+//                                                 @RequestPart("image") MultipartFile[] images) {
+//        Funding createdFunding = fundingService.createFundingWithImages(funding, images);
+//        return ResponseEntity.ok(createdFunding);
+//    }
 
     // 기존 펀딩 업데이트
     @PutMapping("/update/{fundingId}")
