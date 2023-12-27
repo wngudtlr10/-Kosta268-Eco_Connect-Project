@@ -7,6 +7,7 @@ import './FundingDetail.css'
 import FundingDetailIntro from "../../components/Card/FundingDetailIntro";
 
 
+
 const FundingDetail = () => {
     const BASE_IMAGE_PATH = "../../assets/images/funding/view/";
 
@@ -43,7 +44,7 @@ const FundingDetail = () => {
 
     return (
         <Layout>
-            <Card>
+            {/* <Card>
                 <Card.Header>Quote</Card.Header>
                 <Card.Body>
                     <blockquote className="blockquote mb-0">
@@ -57,7 +58,7 @@ const FundingDetail = () => {
                         </footer>
                     </blockquote>
                 </Card.Body>
-            </Card>
+            </Card> */}
 
             <div className="screen">
                 <div className="div">

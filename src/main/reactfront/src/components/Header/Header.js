@@ -39,7 +39,7 @@ function Header() {
                                 <div className="menu-cccc"><Link to={"/mission"} style={{color:'black', textDecoration:'none' }}>봉사미션</Link></div>
                                 <div className="menu-cccc"><Link to={"/gathering"} style={{color:'black', textDecoration:'none' }}>봉사모임</Link></div>
                                 <div className="menu-cc"><Link to={"/funding/view"} style={{color:'black', textDecoration:'none' }}>펀딩</Link></div>
-                                <div className="menu-ccc"><Link to={"/#"} style={{color:'black', textDecoration:'none' }}>리워드</Link></div>
+                                <div className="menu-ccc"><Link to={"/reward"} style={{color:'black', textDecoration:'none' }}>리워드</Link></div>
                                 <div className="menu-cc"><Link to={"/#"} style={{color:'black', textDecoration:'none' }}>지원</Link></div>
                             </div>
                             {!login && <div className="login-wrap">

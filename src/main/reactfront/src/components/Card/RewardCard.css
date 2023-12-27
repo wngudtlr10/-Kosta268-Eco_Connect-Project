@@ -1,17 +1,17 @@
- .mission-point-text {
+.reward-card-wrap  .mission-point-text {
     color: #03c75a;
     font-family: "Poppins", Helvetica;
     font-size: 14px;
+    height: 18px;
     font-weight: 400;
-    
     letter-spacing: 0;
     position: relative;
     text-align: center;
     width: fit-content;
-    float: inline-end;
-
+    
   }
-  .mission-name-text {
+
+.reward-card-wrap .mission-name-text {
     color: #000000;
     font-family: "Poppins", Helvetica;
     font-size: 14px;
@@ -19,24 +19,22 @@
     height: 18px;
     letter-spacing: 0;
     line-height: normal;
-    margin-top: -1px;
     position: relative;
     text-align: center;
     width: fit-content;
     overflow: hidden;
+    white-space: nowrap;
+    flex: 1;
   }
-   .mission-info-wrap {
+  .reward-card-wrap  .mission-info-wrap {
     align-items: center;
-    display: inline-flex;
+    display: flex;
     flex: 0 0 auto;
     gap: 30px;
     justify-content: center;
     position: relative;
   }
-  .mission-image-main{
-    height: 150px;
-    width: 200px;
-  }
-  .g-5{
-    gap: 0px;
-  }
+.reward-card-wrap .mission-image-main {
+ height: fit-content;
+}
+ 
