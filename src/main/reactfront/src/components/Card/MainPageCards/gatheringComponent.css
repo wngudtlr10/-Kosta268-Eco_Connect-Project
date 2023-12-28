@@ -56,3 +56,8 @@
     background-size: cover;
     border-radius: 15px;
   }
+
+.gathering .text-wrapper-3 {
+    height: 20px;
+    overflow: hidden;
+}

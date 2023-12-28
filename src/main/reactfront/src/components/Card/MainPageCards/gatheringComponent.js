@@ -77,7 +77,7 @@ const GatheringComponent = ({ selectedCategory }) => {
           <img className="group-3" alt="Group" src={item.userProfile[3]} />
           <img className="group-4" alt="Group" src={item.userProfile[4]} />
         </div> */}
-
+        
         <Link to={`/gathering/${item.gatheringId}`}><div className="text-wrapper-2">{item.title}</div></Link>
         
         <Link to={`/gathering/${item.gatheringId}`}><div className="text-wrapper-3">{item.intro}</div></Link>

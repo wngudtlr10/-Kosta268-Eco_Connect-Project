@@ -27,7 +27,7 @@
   }
    .mission-info-wrap {
     align-items: center;
-    display: inline-flex;
+    display: flex;
     flex: 0 0 auto;
     gap: 30px;
     justify-content: center;
