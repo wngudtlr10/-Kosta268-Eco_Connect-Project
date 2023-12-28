@@ -7,7 +7,7 @@
     border: black;
     border: 1px solid;
     background-color: white;
-    margin: 0 100px;
+    margin: 0 auto;
     padding: auto;
     
 }
@@ -39,9 +39,24 @@
     padding: 15px 0;
     border: 1px solid black;
     border-radius: 25px;
-    margin: 30px;
+    margin: auto;
     width: fit-content;
     height: fit-content;
+    margin-bottom: 30px;
+}
+.join-button {
+    height: 50px;
+    width: 300px;
+    color: white;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+.button-wrap{
+    align-items: center;
+    
+    margin: auto;
+    height: fit-content;
+    width: fit-content;
 }
 
 
