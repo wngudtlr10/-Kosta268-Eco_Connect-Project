@@ -808,6 +808,9 @@
     height: 164px;
     position: relative;
     width: 597.35px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
   
   .gathering .gathering-users {
@@ -898,6 +901,8 @@
     top: 64px;
     width: 277px;
     z-index: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   
   .gathering .overlap {

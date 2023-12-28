@@ -142,6 +142,11 @@ function GatheringDetail() {
             .catch(error => console.log(error))
     };
 
+    function formatDate(dateString) {
+        const options = { year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true };
+        return new Date(dateString).toLocaleString('ko-KR', options);
+    }
+
     return (
         <div className="detail-index">
              <div className="gathering-title">
@@ -163,29 +168,29 @@ function GatheringDetail() {
                             </div>
                             <div className="detail-main-content">
                                 <p className="p">
-                                    🙋호스트를 소개해요!
-                                    <br /> -안녕하세요, 책을 통해 발전하고싶은 성장에 미쳐있는 옐리입니다. {gathering ? gathering.intro : "Loading..."}
-                                    <br /> <br />
-                                    👟이런 활동을 할 거예요! <br />
+                                    {/*🙋호스트를 소개해요!*/}
+                                    {/*<br /> -안녕하세요, 책을 통해 발전하고싶은 성장에 미쳐있는 옐리입니다. {gathering ? gathering.intro : "Loading..."}*/}
+                                    {/*<br /> <br />*/}
+                                    {/*👟이런 활동을 할 거예요! <br />*/}
                                     {gathering ? gathering.etc : "Loading..."}
-                                    <br /> - 혼자 읽을땐 눈치가 보여 선행을 선뜻하지 못했지만 함께라면 가능해요.
-                                    <br /> - 선정한 봉사 소개와 선정이유-&gt;봉사-&gt;깨달은 것 나누기"
-                                    <br /> - 선행를 통해 모두가 1cm라도 성장하길 바랍니다.
-                                    <br /> - 각자 먹을 소소한 간식도 챙겨오셔도됩니다. <br />
-                                    <br />
-                                    🙆이런 멤버와 함께하고 싶어요!
-                                    <br /> - 서로를 배려하고 모임에 활발하게 참여하실 수 있는 멤버를 원해요!
-                                    <br />
-                                    <br /> 📢공지사항도 확인해주세요!
-                                    <br /> - 참가비는 장소대관비, 모임운영비로 사용됩니다
+                                    {/*<br /> - 혼자 읽을땐 눈치가 보여 선행을 선뜻하지 못했지만 함께라면 가능해요.*/}
+                                    {/*<br /> - 선정한 봉사 소개와 선정이유-&gt;봉사-&gt;깨달은 것 나누기"*/}
+                                    {/*<br /> - 선행를 통해 모두가 1cm라도 성장하길 바랍니다.*/}
+                                    {/*<br /> - 각자 먹을 소소한 간식도 챙겨오셔도됩니다. <br />*/}
+                                    {/*<br />*/}
+                                    {/*🙆이런 멤버와 함께하고 싶어요!*/}
+                                    {/*<br /> - 서로를 배려하고 모임에 활발하게 참여하실 수 있는 멤버를 원해요!*/}
+                                    {/*<br />*/}
+                                    {/*<br /> 📢공지사항도 확인해주세요!*/}
+                                    {/*<br /> - 참가비는 장소대관비, 모임운영비로 사용됩니다*/}
                                 </p>
                             </div>
-                            <div className="detail-main-sum-wrap">
-                                <div className="text-wrapper-2">멤버소개</div>
-                                <div className="detail-main-hello">우리 반갑게 만나요</div>
-                                <div className="detail-main-gather">익명의 모임장</div>
-                                <p className="detail-main-gather-2">선한영향력을 가진 사람이 되고 싶어요.</p>
-                            </div>
+                            {/*<div className="detail-main-sum-wrap">*/}
+                            {/*    <div className="text-wrapper-2">멤버소개</div>*/}
+                            {/*    <div className="detail-main-hello">우리 반갑게 만나요</div>*/}
+                            {/*    <div className="detail-main-gather">익명의 모임장</div>*/}
+                            {/*    <p className="detail-main-gather-2">선한영향력을 가진 사람이 되고 싶어요.</p>*/}
+                            {/*</div>*/}
                             <div className="detail-main-check">
                                 <img
                                     className="img"
@@ -240,7 +245,7 @@ function GatheringDetail() {
                                     </div>}
                                 </div>
                                 <div className="detail-gathering-wrap">
-                                    <div className="detail-gathering-text">모임 시각: {gathering ? gathering.startAt : "Loading..."}</div>
+                                    <div className="detail-gathering-text">모임 시각: {gathering ? formatDate(gathering.startAt) : "Loading..."}</div>
                                 </div>
                             </div>
                             {(gathering && gathering.creatorId !== memberId && !isParticipant) && <div className="detail-join-button">

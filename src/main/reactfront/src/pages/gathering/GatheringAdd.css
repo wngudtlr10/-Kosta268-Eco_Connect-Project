@@ -102,9 +102,9 @@
 
 .gathering-add-index .intro {
     background-color: #ffffff;
-    border: 1px solid;
+    /*border: 1px solid;*/
     border-color: #777777;
-    border-radius: 25px;
+    /*border-radius: 25px;*/
     height: 217px;
     position: relative;
     width: 831px;
@@ -189,9 +189,9 @@
 
 .gathering-add-index .etc {
     background-color: #ffffff;
-    border: 1px solid;
+    /*border: 1px solid;*/
     border-color: #777777;
-    border-radius: 25px;
+    /*border-radius: 25px;*/
     height: 214px;
     position: relative;
     width: 687px;
