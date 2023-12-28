@@ -2,9 +2,11 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import moment from 'moment';
 import Layout from "../../components/Layout/Layout";
-import "./FundingView.css";
+// import "./FundingView.css";
 import './FundingDetail.css'
 import FundingDetailIntro from "../../components/Card/FundingDetailIntro";
+import Button from "react-bootstrap/esm/Button";
+import { Link } from "react-router-dom";
 
 
 
@@ -73,10 +75,11 @@ const FundingDetail = () => {
              </div> */}
               <div className="intro-warp">
               <FundingDetailIntro  />
+              
               </div>
-                            <div>
-                                <h1 style={{ textAlign: "center" }}>Funding Detail</h1>
-                                <ul>
+                            <div className="button-wrap">
+                                {/* <h1 style={{ textAlign: "center" }}>Funding Detail</h1> */}
+                                {/* <ul>
                                     {fundings.map(funding => (
                                         <li key={funding.id} style={listItemStyle}>
                                             <div>1. 제목: {funding.title}</div>
@@ -93,7 +96,8 @@ const FundingDetail = () => {
                                             <br />
                                         </li>
                                     ))}
-                                </ul>
+                                </ul> */}
+                                <Link to='/funding/view'><Button variant="success" style={{color:'white'}} className="join-button">참여하기</Button></Link>
                             </div>
                         </Layout>
                         );
