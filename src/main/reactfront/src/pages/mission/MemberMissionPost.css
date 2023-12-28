@@ -1,0 +1,65 @@
+.member-mission-post-index {
+    align-items: center;
+    margin: auto;
+    width: fit-content;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+}
+.member-mission-post-index .add-wrap-wrapper {
+    padding: 30px;
+    border: 1px solid rgb(102, 102, 102);
+    border-radius: 25px;
+    width: fit-content;
+    margin-bottom: 100px;
+    
+}
+
+.member-mission-post-index .title {
+    width: 450px;
+    height: 35px;
+    border-radius: 15px;
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+.member-mission-post-index .content {
+    width: 450px;
+    height: 250px;
+    border-radius: 15px;
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+.member-mission-post-index .form-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+.member-mission-post-index .text-wrapper-2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+.member-mission-post-index .img {
+    border: 1px solid  rgb(102, 102, 102);
+    width: 300px;
+    height: 200px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    padding: 80px 40px;
+    
+}
+.member-mission-post-index .add-button-text {
+    width: 300px;
+    margin-left: 70px;
+    color: white;
+
+}
+.member-mission-post-index .member-mission-post-text {
+    border-bottom: 1px solid black;
+    width: 500px;
+    margin-bottom: 30px;
+    padding: 10px;
+    text-align: center;
+}
