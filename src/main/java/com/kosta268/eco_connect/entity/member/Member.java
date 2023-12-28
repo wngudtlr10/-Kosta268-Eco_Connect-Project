@@ -5,6 +5,7 @@ import com.kosta268.eco_connect.entity.chat.ChatMessage;
 import com.kosta268.eco_connect.entity.chat.ChatRoomMember;
 import com.kosta268.eco_connect.entity.gathering.Gathering;
 import com.kosta268.eco_connect.entity.gathering.MemberGathering;
+import com.kosta268.eco_connect.entity.gifticon.MemberGifticon;
 import com.kosta268.eco_connect.entity.mission.MemberMission;
 import com.kosta268.eco_connect.entity.mission.MissionLike;
 import com.kosta268.eco_connect.entity.point.Point;
@@ -69,6 +70,11 @@ public class Member {
     @OneToMany(mappedBy = "member", fetch = FetchType.LAZY)
     @Builder.Default
     private List<ChatRoomMember> chatRoomMemberList = new ArrayList<>();
+
+    @OneToMany(mappedBy = "member", fetch = FetchType.LAZY)
+    @Builder.Default
+    private List<MemberGifticon> memberGifticons = new ArrayList<>();
+
 
     // 양방향 연관관계 설정 메서드
     public void addMemberMission(MemberMission memberMission) {

@@ -1,5 +1,5 @@
 import React from 'react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { CButton,
     CModal,
     CModalHeader,
@@ -7,13 +7,23 @@ import { CButton,
     CModalFooter,
     CModalTitle   
 } from '@coreui/react';
-const AwardAlter = () => {
+import AuthAxios from "../../utils/axios/AuthAxios";
+const AwardAlter = (gifticonId) => {
     const [visible, setVisible] = useState(false)
     const [visible2, setVisible2] = useState(false)
-
+    const id = gifticonId.gifticonId;
+    const buyGifticon = (gifticonId) => {
+        AuthAxios.post(`/api/member/gifticon/${id}?quantity=1`)
+            .then((response) => {
+                console.log(response);
+            })
+            .catch((error) => {
+                console.log(error);
+            })
+    }
     return (
         <>
-            <CButton onClick={() => setVisible(!visible)} color='success' style={{color:'white',margin:"0 auto",width:'200px'}}>교환하기</CButton>
+            <CButton onClick={() => {setVisible(!visible); buyGifticon(gifticonId)} } color='success' style={{color:'white',margin:"0 auto",width:'200px'}}>교환하기</CButton>
             <CModal
                 visible={visible}
                 onClose={() => setVisible(false)}
