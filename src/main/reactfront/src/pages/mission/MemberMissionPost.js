@@ -1,6 +1,8 @@
 import React, {useEffect, useState} from "react";
 import AuthAxios from "../../utils/axios/AuthAxios";
 import {useNavigate, useParams} from "react-router-dom";
+import { Button } from "react-bootstrap";
+import './MemberMissionPost.css';
 
 function MemberMissionPost () {
 
@@ -70,10 +72,10 @@ function MemberMissionPost () {
 
     return (
         <div className="member-mission-post-index">
+            <h4 className="member-mission-post-text">미션 인증글 작성</h4>
             <div className="add-wrap-wrapper">
                 <div className="add-wrap">
                     <div className="member-mission-post-form-wrap">
-                        <div className="member-mission-post-text">미션 인증글 작성</div>
                         <form className="member-mission-post-form" method="post">
                             <div className="form-title">제목</div>
                             <input type="text" className="title" onChange={handleTitleChange} />
@@ -83,11 +85,9 @@ function MemberMissionPost () {
                             <input type="file" className="img" onChange={handleImgChange} multiple="true"/>
                         </form>
                     </div>
-                    <div className="add-button-wrap">
-                        <div className="add-button">
-                            <button className="add-button-text" onClick={handleSubmit}>작성</button>
-                        </div>
-                    </div>
+                            <Button variant="success" className="add-button-text" onClick={handleSubmit}>
+                                작성
+                            </Button>
                 </div>
             </div>
         </div>
