@@ -135,13 +135,13 @@ function GatheringAdd() {
                             <div className="form-title">모임제목</div>
                             <input type="text" className="title" onChange={handleTitleChange} />
                             <div className="text-wrapper-2">모임소개</div>
-                            <input type="text" className="intro" onChange={handleIntroChange} />
+                            <textarea type="text" className="intro" onChange={handleIntroChange} />
                             <div className="text-wrapper-2">카테고리</div>
                             <select className="category" onChange={handleCategoryChange}>
                                 <option value="">선택하세요</option>
                                 <option value="CLEAN_UP">환경 미화</option>
                                 <option value="TALENT_DONATION">재능 기부</option>
-                                <option value="SPONSORSHIP">후원</option>                                <option value="CLEAN_UP">청소</option>
+                                <option value="SPONSORSHIP">후원</option>
                             </select>
                             <div className="text-wrapper-2">사진등록</div>
                             <input type="file" className="img" onChange={handleImgChange} ref={imageInputRef}/>
@@ -160,7 +160,7 @@ function GatheringAdd() {
                             <div className="text-wrapper-2">모임 일시</div>
                             <input type="datetime-local" className="startAt" value={startAt} onChange={handleStartAtChange} />
                             <div className="text-wrapper-2">기타안내사항</div>
-                            <input type="text" className="etc" onChange={handleEtcChange}/>
+                            <textarea type="text" className="etc" onChange={handleEtcChange}/>
                         </form>
                     </div>
                     <div className="add-button-wrap">

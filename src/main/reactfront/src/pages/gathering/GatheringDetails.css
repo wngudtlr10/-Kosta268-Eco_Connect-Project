@@ -67,7 +67,7 @@
     position: relative;
     text-align: center;
     white-space: nowrap;
-    width: 187px;
+    /*width: 187px;*/
 }
 
 .detail-index .detail-main-content {

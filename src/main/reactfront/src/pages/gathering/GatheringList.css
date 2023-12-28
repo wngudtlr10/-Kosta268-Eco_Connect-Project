@@ -360,6 +360,9 @@
     text-align: center;
     top: -1px;
     width: 51px;
+    /*overflow: hidden;*/
+    /*text-overflow: ellipsis;*/
+    /*min-width: 0;*/
 }
 
 .gathering-index .gathering-list-8 {

@@ -253,7 +253,7 @@ function MissionList() {
                  </div>
                  <div className="select-wrap">
                     <select value={status} onChange={handleStatus}>
-                        <option>-- 선택하세요 --</option>
+                        <option value="">-- 선택하세요 --</option>
                         <option value="OPEN">진행중 미션</option>
                         <option value="CLOSED">종료된 미션</option> 
                     </select>

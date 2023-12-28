@@ -45,7 +45,7 @@ public class MissionController {
     public ResponseEntity<Page<MissionDto>> getMissions(@RequestParam(required = false) String category,
                                                         @RequestParam(required = false) String title,
                                                         @RequestParam(required = false) String status,
-                                                        Pageable pageable) {
+                                                        @PageableDefault(size = 8) Pageable pageable) {
         Page<MissionDto> missions;
         log.info("category = {}, title = {}, status = {}", category, title, status);
         if ("전체".equals(category)) category = null;
