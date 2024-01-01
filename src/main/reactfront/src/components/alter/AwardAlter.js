@@ -26,6 +26,8 @@ const AwardAlter = (gifticonId) => {
         AuthAxios.post(`/api/member/gifticon/${id}?quantity=1`)
             .then((response) => {
                 console.log(response);
+                setVisible(false);
+                setVisible2(true);
             })
             .catch((error) => {
                 console.log(error);

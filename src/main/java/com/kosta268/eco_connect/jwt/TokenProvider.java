@@ -29,7 +29,8 @@ import java.util.stream.Collectors;
 public class TokenProvider { // token의 생성, 유효성 검증을 담당
     private static final String AUTHORITIES_KEY = "auth";
     private static final String BEARER_TYPE = "Bearer";
-    private static final long ACCESS_TOKEN_EXPIRE_TIME = 1000L * 60L * 30L;    // 30분
+    private static final long ACCESS_TOKEN_EXPIRE_TIME = 1000L * 60L * 60L;
+//    private static final long ACCESS_TOKEN_EXPIRE_TIME = 1000L * 60L * 30L;    // 30분
     private static final long REFRESH_TOKEN_EXPIRE_TIME = 1000L * 60L * 60L * 24L * 7L;  // 7일
     private final Key key;
     private final CustomUserDetailsService customUserDetailsService;

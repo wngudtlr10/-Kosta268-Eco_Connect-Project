@@ -16,8 +16,11 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.time.LocalDateTime;
+import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 @Slf4j
@@ -34,16 +37,30 @@ public class MemberMissionService {
         Mission mission = missionRepository.findById(missionId).orElseThrow(() -> new IllegalArgumentException("no such mission"));
 
         boolean isAlreadyJoin = memberMissionRepository.existsByMemberMemberIdAndMissionMissionId(memberId, missionId);
-
+        
         if (isAlreadyJoin) {
             throw new IllegalArgumentException("이미 참여하고 있는 미션입니다.");
         }
+//
+//        Optional<MemberMission> existingMemberMissionOpt = memberMissionRepository.findByMemberMemberIdAndMissionMissionId(memberId, missionId);
+//
+//        if (existingMemberMissionOpt.isPresent()) {
+//            MemberMission existingMemberMission = existingMemberMissionOpt.get();
+//
+//            if (existingMemberMission.getStatus() == MissionStatus.ONGOING || existingMemberMission.getStatus() == MissionStatus.SUBMITTED) {
+//                throw new IllegalArgumentException("이미 참여하고 있는 미션입니다.");
+//            } else if (ChronoUnit.DAYS.between(existingMemberMission.getParticipateAt(), LocalDateTime.now()) < 7) {
+//
+//            }
+//        }
+
 
         MemberMission memberMission = new MemberMission();
 
         member.addMemberMission(memberMission);
         mission.addMemberMission(memberMission);
         memberMission.setStatus(MissionStatus.ONGOING);
+//        memberMission.setParticipateAt(LocalDateTime.now());
         memberMissionRepository.save(memberMission);
 
     }
@@ -78,6 +95,20 @@ public class MemberMissionService {
         Member member = memberRepository.findById(memberMission.getMember().getMemberId()).orElseThrow(() -> new IllegalArgumentException("no such member"));
         Mission mission = missionRepository.findById(memberMission.getMission().getMissionId()).orElseThrow(() -> new IllegalArgumentException("no such mission"));
 
+//        List<String> approvedHashes = new ArrayList<>();
+//        List<MemberMission> approvedMissions = memberMissionRepository.findByStatus(MissionStatus.COMPLETED);
+//        for (MemberMission approvedMission : approvedMissions) {
+//            for (MissionImage image : approvedMissions.getImages()) {
+//                approvedHashes.add(image.getFileHash());
+//            }
+//        }
+//
+//        for (MissionImage image : memberMission.getImages()) {
+//            String submittedFileHash = image.getFileHash();
+//            if (approvedHashes.contains(submittedFileHash)) {
+//                throw new IllegalArgumentException("Duplicate image not allowd");
+//            }
+//        }
         memberMission.approve();
         member.increasePoint(mission.getPoint());
 
