@@ -11,4 +11,5 @@ public interface GatheringRepository extends JpaRepository<Gathering, Long> {
     Page<Gathering> findByTitleLike(String title, Pageable pageable);
     Page<Gathering> findByStatusEqualsAndTitleLike(Status status, String title, Pageable pageable);
 
+    Page<Gathering> findByCreator_MemberId(Long memberId, Pageable pageable);
 }

@@ -37,11 +37,8 @@ function Login() {
         if (accessToken) {
             axios.defaults.headers.common["Authorization"] = `Bearer ${accessToken}`;
             localStorage.setItem('accessToken', accessToken);
-            console.log("4");
             setLogin(true);
-            console.log("5");
             navigate("/");
-            console.log("6");
         } else {
             setLogin(false);
         }
