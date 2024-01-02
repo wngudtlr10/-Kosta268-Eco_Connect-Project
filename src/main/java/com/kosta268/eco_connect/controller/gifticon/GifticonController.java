@@ -6,6 +6,9 @@ import com.kosta268.eco_connect.entity.gifticon.Gifticon;
 import com.kosta268.eco_connect.service.gifticon.GifticonService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -30,7 +33,6 @@ public class GifticonController {
                 .map(GifticonDetailDto::fromEntity)
                 .collect(Collectors.toList());
     }
-
     @GetMapping("/{gifticonId}")
     public GifticonDetailDto getGifticon(@PathVariable Long gifticonId) {
         Gifticon gifticon = gifticonService.findById(gifticonId);

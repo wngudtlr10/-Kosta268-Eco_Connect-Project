@@ -917,7 +917,7 @@
 }
 
 .my-mission-index .text-wrapper-23 {
-    color: #ffffff;
+    /*color: #ffffff;*/
     font-family: "Poppins", Helvetica;
     font-size: 14px;
     font-weight: 600;
@@ -929,4 +929,6 @@
     top: 8px;
     width: 54px;
     white-space: nowrap;
+    border: none;
+    background: none;
 }

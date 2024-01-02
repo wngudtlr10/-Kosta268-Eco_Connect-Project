@@ -16,10 +16,17 @@ public class MissionImage {
 
     private String imageUrl;
 
+    private String fileHash;
+
     public MissionImage() {}
 
     public MissionImage(String imageUrl, MemberMission memberMission) {
         this.imageUrl = imageUrl;
+        this.memberMission = memberMission;
+    }
+    public MissionImage(String imageUrl, String fileHash, MemberMission memberMission) {
+        this.imageUrl = imageUrl;
+        this.fileHash = fileHash;
         this.memberMission = memberMission;
     }
 }

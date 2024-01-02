@@ -138,4 +138,11 @@ public class MissionService {
             // 종료된 미션에 대한 처리 필요
         }
     }
+
+//    @Scheduled(cron = "0 0 0 * * *")
+//    public void modifyFinishMissions() {
+//        List<Mission> missions = missionRepository.findAll();
+//        for (Mission mission : missions) {
+//        }
+//    }
 }
