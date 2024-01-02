@@ -1,0 +1,479 @@
+.mypage-gathering-index {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.mypage-gathering-index .my-gathering-wrap-wrapper {
+    background-color: #ffffff;
+    height: 1076px;
+    width: 1440px;
+}
+
+.mypage-gathering-index .my-gathering-wrap {
+    align-items: center;
+    display: flex;
+    position: relative;
+    width: 1440px;
+}
+
+.mypage-gathering-index .my-gathering-content {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    height: 1071px;
+    padding: 80px 0px;
+    position: relative;
+    width: 1340px;
+}
+
+.mypage-gathering-index .my-gathering-info {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 29px;
+    height: 53px;
+    position: relative;
+    width: 1240px;
+    margin-bottom: 20px;
+}
+
+.mypage-gathering-index .status-row {
+    align-items: flex-start;
+    display: inline-flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 2px;
+    position: relative;
+}
+
+.mypage-gathering-index .status {
+    align-items: flex-start;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 9px;
+    position: relative;
+}
+
+.mypage-gathering-index .status-blank {
+    background-color: #ffffff;
+    height: 15px;
+    position: relative;
+    width: 1093px;
+}
+
+.mypage-gathering-index .my-mission-url {
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 9px;
+    justify-content: flex-end;
+    position: relative;
+}
+
+.mypage-gathering-index .text-wrapper {
+    color: #6c7aa0;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    text-align: center;
+    width: fit-content;
+}
+
+.mypage-gathering-index .direction {
+    color: #65646a;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+    width: fit-content;
+}
+
+.mypage-gathering-index .my-gathering-text {
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 11px;
+    position: relative;
+}
+
+.mypage-gathering-index .text-wrapper-2 {
+    color: #808080;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    height: 30px;
+    /*letter-spacing: 0;*/
+    line-height: 30px;
+    /*margin-top: -1px;*/
+    position: relative;
+    text-align: center;
+    width: 107px;
+    cursor: pointer;
+}
+
+.mypage-gathering-index .text-wrapper-2.selected {
+    color: #000000;
+}
+
+.mypage-gathering-index .rectangle {
+    height: 24px;
+    position: relative;
+    width: 1122px;
+}
+
+.mypage-gathering-index .my-gathering-table {
+    align-items: flex-start;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 2px;
+    position: relative;
+    width: 1240px;
+}
+
+.mypage-gathering-index .th {
+    /*align-items: flex-start;*/
+    align-items: center;
+    display: flex;
+    gap: 94px;
+    height: 40px;
+    position: relative;
+    width: 1240px;
+}
+
+.mypage-gathering-index .frame-6 {
+    align-items: center;
+    display: flex;
+    gap: 92px;
+    justify-content: flex-start;
+    padding: 0px 7px;
+    position: relative;
+    width: 1240px;
+}
+
+.mypage-gathering-index .checkbox-none {
+    align-items: flex-start;
+    display: flex;
+    gap: 10px;
+    height: 40px;
+    padding: 10px;
+    position: relative;
+    width: 40px;
+}
+
+.mypage-gathering-index .checkbox {
+    border: 2px solid;
+    border-color: #000000;
+    border-radius: 3px;
+    height: 20px;
+    position: relative;
+    width: 20px;
+
+    margin: 10px 10px;
+}
+
+.mypage-gathering-index .text-wrapper-3 {
+    color: #000000;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: normal;
+    position: relative;
+    text-align: center;
+    width: 265px;
+}
+
+.mypage-gathering-index .text-wrapper-4 {
+    color: #000000;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: normal;
+    position: relative;
+    text-align: center;
+    width: 78px;
+}
+
+.mypage-gathering-index .text-wrapper-5 {
+    color: #000000;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: normal;
+    position: relative;
+    text-align: center;
+    width: 135px;
+}
+
+.mypage-gathering-index .text-wrapper-6 {
+    color: #000000;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: normal;
+    position: relative;
+    text-align: center;
+    width: 148px;
+}
+
+.mypage-gathering-index .bar {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 20px;
+    padding: 10px;
+    position: relative;
+    width: 1240px;
+}
+
+.mypage-gathering-index .split {
+    height: 1px;
+    margin-bottom: -0.7px;
+    margin-top: -0.3px;
+    position: relative;
+    width: 1219px;
+}
+
+.mypage-gathering-index .my-gathering-list-wrapper {
+    align-items: center;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    position: relative;
+    width: 1240px;
+}
+
+.mypage-gathering-index .my-gathering-list {
+    align-items: center;
+    border: 1px solid;
+    border-color: #000000;
+    border-radius: 15px;
+    display: flex;
+    gap: 92px;
+    height: 85px;
+    padding: 0 7px;
+    position: relative;
+    width: 1240px;
+}
+
+.mypage-gathering-index .my-gathering-no-list {
+    height: 610px;
+    position: relative;
+    width: 1240px;
+}
+
+.mypage-gathering-index .my-gathering-info-2 {
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    padding: 10px;
+    position: relative;
+    width: 265px;
+}
+
+.mypage-gathering-index .my-gathering-image {
+    background-image: url(https://cdn.animaapp.com/projects/6560b21274de9042f7d947f4/releases/659015546c2db389163db8ba/img/my-mission-image@2x.png);
+    background-position: 50% 50%;
+    background-size: cover;
+    border-radius: 19px;
+    height: 65px;
+    position: relative;
+    width: 80px;
+}
+
+.mypage-gathering-index .my-gathering-title {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 57px;
+    position: relative;
+    width: 140px;
+}
+
+.mypage-gathering-index .text-wrapper-7 {
+    color: #000000;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    height: 37px;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    text-align: center;
+    width: 128px;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.mypage-gathering-index .text-wrapper-8 {
+    color: #000000;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    position: relative;
+    text-align: center;
+    width: 128px;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.mypage-gathering-index .my-gathering-count {
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    height: 18px;
+    position: relative;
+    width: 78px;
+}
+
+.mypage-gathering-index .text-wrapper-9 {
+    color: #000000;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    height: 18px;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    text-align: center;
+    width: 78px;
+}
+
+.mypage-gathering-index .my-gathering-role {
+    align-items: center;
+    display: flex;
+    gap: 14px;
+    height: 31px;
+    position: relative;
+    width: 78px;
+}
+
+.mypage-gathering-index .text-wrapper-10 {
+    color: #000000;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    height: 18px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: relative;
+    text-align: center;
+    width: 78px;
+}
+
+.mypage-gathering-index .my-gathering-host {
+    align-items: center;
+    display: flex;
+    gap: 14px;
+    height: 31px;
+    position: relative;
+    width: 135px;
+}
+
+.mypage-gathering-index .img {
+    flex: 0 0 auto;
+    margin-bottom: -6.59px;
+    margin-left: -0.59px;
+    margin-top: -6.59px;
+    position: relative;
+}
+
+.mypage-gathering-index .div-wrapper {
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 10px;
+    position: relative;
+}
+
+.mypage-gathering-index .my-gathering-time {
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    padding: 10px;
+    position: relative;
+    width: 148px;
+}
+
+.mypage-gathering-index .text-wrapper-11 {
+    color: #000000;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    /*height: 18px;*/
+    /*letter-spacing: 0;*/
+    /*line-height: normal;*/
+    margin-top: -1px;
+    position: relative;
+    text-align: center;
+    width: 87px;
+}
+
+.mypage-gathering-index .my-gathering-delete {
+    align-items: center;
+    display: flex;
+    gap: 20px;
+    height: 50px;
+    justify-content: flex-end;
+    position: relative;
+    width: 60px;
+}
+
+.mypage-gathering-index .my-gathering-delete-btn {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 40px;
+    position: relative;
+    width: 60px;
+
+    cursor: pointer;
+
+    color: #ffffff;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 40px;
+    text-align: center;
+
+    background-color: #DC3546;
+    border-radius: 10px;
+    justify-content: center;
+    /*padding: 0 48px;*/
+    border: 1px solid #DC3546;
+}
+
+.mypage-gathering-index .my-gathering-delete-btn:hover {
+    background-color: #FFFFFF;
+    color: #DC3546;
+}

@@ -1,0 +1,771 @@
+.mypage-mission-index {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.mypage-mission-index .my-mission-wrap-wrapper {
+    background-color: #ffffff;
+    height: 1076px;
+    width: 1440px;
+}
+
+.mypage-mission-index .my-mission-wrap {
+    align-items: center;
+    display: flex;
+    gap: 55px;
+    position: relative;
+    width: 1440px;
+}
+
+.mypage-mission-index .my-mission-right {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 33px;
+    height: 900px;
+    position: relative;
+    width: 1240px;
+}
+
+.mypage-mission-index .my-mission-main-wrap {
+    align-items: flex-start;
+    display: inline-flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 41px;
+    position: relative;
+}
+
+.mypage-mission-index .my-mission-info-wrap {
+    align-items: flex-start;
+    display: inline-flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+}
+
+.mypage-mission-index .my-mission-info {
+    align-items: flex-start;
+    display: inline-flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 29px;
+    position: relative;
+}
+
+.mypage-mission-index .status-row {
+    align-items: flex-start;
+    display: inline-flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 2px;
+    position: relative;
+}
+
+.mypage-mission-index .status {
+    align-items: flex-start;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 9px;
+    position: relative;
+}
+
+.mypage-mission-index .status-blank {
+    background-color: #ffffff;
+    height: 15px;
+    position: relative;
+    width: 1103px;
+}
+
+.mypage-mission-index .my-mission-url {
+    align-items: center;
+    display: flex;
+    gap: 9px;
+    justify-content: flex-end;
+    position: relative;
+    width: 128px;
+}
+
+.mypage-mission-index .text-wrapper {
+    color: #6c7aa0;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    text-align: center;
+    width: fit-content;
+}
+
+.mypage-mission-index .direction {
+    color: #65646a;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+    width: fit-content;
+}
+
+.mypage-mission-index .my-mission-text {
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 11px;
+    position: relative;
+}
+
+.mypage-mission-index .div {
+    color: #000000;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    height: 30px;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    text-align: center;
+    width: 107px;
+}
+
+.mypage-mission-index .rectangle {
+    height: 24px;
+    position: relative;
+    width: 1122px;
+}
+
+.mypage-mission-index .my-mission-card-wrap {
+    align-items: flex-start;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 26px;
+    position: relative;
+}
+
+.mypage-mission-index .div-2 {
+    align-items: flex-start;
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 18px;
+    box-shadow: 0px 4px 4px #00000040, 0px 4px 4px #00000040;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px 10px;
+    height: 96px;
+    padding: 20px;
+    position: relative;
+    width: 290px;
+}
+
+.mypage-mission-index .div-3 {
+    align-items: flex-start;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 10px;
+    position: relative;
+}
+
+.mypage-mission-index .bg {
+    background-color: #6f4ff2;
+    border-radius: 27.5px;
+    height: 55px;
+    position: relative;
+    width: 55px;
+}
+
+.mypage-mission-index .artwork {
+    height: 20px;
+    left: 19px;
+    object-fit: cover;
+    position: absolute;
+    top: 19px;
+    width: 23px;
+}
+
+.mypage-mission-index .div-4 {
+    align-items: flex-start;
+    display: inline-flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: -1px;
+    position: relative;
+}
+
+.mypage-mission-index .text-wrapper-2 {
+    color: #000000;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    height: 30px;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -5px;
+    position: relative;
+    text-align: center;
+    width: 52px;
+}
+
+.mypage-mission-index .text-wrapper-3 {
+    color: #68676e;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    height: 17px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: relative;
+    text-align: center;
+    width: 95px;
+}
+
+.mypage-mission-index .bg-2 {
+    background-color: #50bb25;
+    border-radius: 27.5px;
+    height: 55px;
+    position: relative;
+    width: 55px;
+}
+
+.mypage-mission-index .text-wrapper-4 {
+    color: #68676e;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    height: 17px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: relative;
+    text-align: center;
+    width: 85px;
+}
+
+.mypage-mission-index .bg-3 {
+    background-color: #f9d62c;
+    border-radius: 27.5px;
+    height: 55px;
+    position: relative;
+    width: 55px;
+}
+
+.mypage-mission-index .p {
+    color: #68676e;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    height: 17px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: relative;
+    text-align: center;
+    width: 138px;
+}
+
+.mypage-mission-index .span {
+    color: #68676e;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0;
+}
+
+.mypage-mission-index .text-wrapper-5 {
+    text-decoration: underline;
+}
+
+.mypage-mission-index .bg-4 {
+    background-color: #dc3546;
+    border-radius: 27.5px;
+    height: 55px;
+    position: relative;
+    width: 55px;
+}
+
+.mypage-mission-index .text-wrapper-6 {
+    color: #000000;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    height: 30px;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    text-align: center;
+    width: 36px;
+}
+
+.mypage-mission-index .text-wrapper-7 {
+    color: #68676e;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    height: 17px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: relative;
+    text-align: center;
+    width: 82px;
+}
+
+.mypage-mission-index .status-row-2 {
+    align-items: flex-start;
+    display: inline-flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+}
+
+.mypage-mission-index .my-mission-ongoing {
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 10px;
+    justify-content: center;
+    padding: 10px;
+    position: relative;
+}
+
+.mypage-mission-index .text-wrapper-8 {
+    color: #000000;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    text-align: center;
+    width: fit-content;
+}
+
+.mypage-mission-index .my-mission-table {
+    align-items: flex-start;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 2px;
+    position: relative;
+    width: 1240px;
+}
+
+.mypage-mission-index .th {
+    align-items: flex-start;
+    display: flex;
+    flex: 0 0 auto;
+    position: relative;
+    width: 1240px;
+}
+
+.mypage-mission-index .frame {
+    align-items: center;
+    display: flex;
+    gap: 84.5px;
+    height: 40px;
+    justify-content: center;
+    position: relative;
+    width: 1240px;
+}
+
+.mypage-mission-index .checkbox-none {
+    align-items: flex-start;
+    display: flex;
+    gap: 10px;
+    height: 40px;
+    padding: 10px;
+    position: relative;
+    width: 40px;
+}
+
+.mypage-mission-index .checkbox {
+    border: 2px solid #000000;
+    border-radius: 3px;
+    height: 20px;
+    position: relative;
+    width: 20px;
+}
+
+.mypage-mission-index .text-wrapper-9 {
+    color: #000000;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    height: 21px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: relative;
+    text-align: center;
+    width: 265px;
+}
+
+.mypage-mission-index .text-wrapper-10 {
+    color: #000000;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: normal;
+    position: relative;
+    text-align: center;
+    width: 128px;
+}
+
+.mypage-mission-index .text-wrapper-11 {
+    color: #000000;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: normal;
+    position: relative;
+    text-align: center;
+    width: 135px;
+}
+
+.mypage-mission-index .text-wrapper-12 {
+    color: #000000;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: normal;
+    position: relative;
+    text-align: center;
+    width: 143px;
+}
+
+.mypage-mission-index .text-wrapper-13 {
+    color: #000000;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: normal;
+    position: relative;
+    text-align: center;
+    width: 90px;
+}
+
+.mypage-mission-index .split-wrapper {
+    align-items: flex-start;
+    display: inline-flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    position: relative;
+}
+
+.mypage-mission-index .split {
+    height: 1px;
+    margin-bottom: -0.7px;
+    margin-top: -0.3px;
+    position: relative;
+    width: 1219px;
+}
+
+.mypage-mission-index .my-mission-list-wrapper {
+    align-items: center;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    position: relative;
+    width: 1240px;
+}
+
+.mypage-mission-index .my-mission-list {
+    align-items: center;
+    border: 1px solid #000000;
+    border-radius: 15px;
+    display: flex;
+    gap: 86px;
+    height: 85px;
+    padding: 0px 7px;
+    position: relative;
+    width: 1240px;
+}
+
+.mypage-mission-index .my-mission-info-2 {
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    padding: 10px;
+    position: relative;
+    width: 265px;
+}
+
+.mypage-mission-index .my-mission-image {
+    background-image: url(https://cdn.animaapp.com/projects/6560b21274de9042f7d947f4/releases/659015546c2db389163db8ba/img/my-mission-image@2x.png);
+    background-position: 50% 50%;
+    background-size: cover;
+    border-radius: 19px;
+    height: 65px;
+    position: relative;
+    width: 80px;
+}
+
+.mypage-mission-index .my-mission-title-and {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 57px;
+    position: relative;
+    width: 140px;
+}
+
+.mypage-mission-index .text-wrapper-14 {
+    color: #000000;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    height: 37px;
+    letter-spacing: 0;
+    line-height: 37px;
+    /*margin-top: -1px;*/
+    position: relative;
+    text-align: center;
+    width: 128px;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.mypage-mission-index .text-wrapper-15 {
+    color: #000000;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    position: relative;
+    text-align: center;
+    width: 86px;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.mypage-mission-index .my-mission-point {
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    height: 18px;
+    position: relative;
+    width: 128px;
+}
+
+.mypage-mission-index .element-p {
+    color: transparent;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    height: 18px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: relative;
+    text-align: center;
+    width: 128px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.mypage-mission-index .text-wrapper-16 {
+    color: #000000;
+}
+
+.mypage-mission-index .text-wrapper-17 {
+    color: #03c75a;
+}
+
+.mypage-mission-index .my-mission-host {
+    align-items: center;
+    display: flex;
+    gap: 14px;
+    height: 31px;
+    position: relative;
+    width: 135px;
+}
+
+.mypage-mission-index .img {
+    flex: 0 0 auto;
+    margin-bottom: -6.59px;
+    margin-left: -0.59px;
+    margin-top: -6.59px;
+    position: relative;
+}
+
+.mypage-mission-index .my-mission-host-name {
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 10px;
+    position: relative;
+}
+
+.mypage-mission-index .text-wrapper-18 {
+    color: #000000;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    height: 18px;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    text-align: center;
+    width: 78px;
+}
+
+.mypage-mission-index .my-mission-remain {
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    padding: 10px;
+    position: relative;
+    width: 143px;
+}
+
+.mypage-mission-index .text-wrapper-19 {
+    color: #000000;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    /*margin-top: -1px;*/
+    position: relative;
+    text-align: center;
+    width: fit-content;
+    margin-bottom: 0;
+;
+}
+
+.mypage-mission-index .my-mission-button {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-right: -5px;
+    position: relative;
+    width: 90px;
+}
+
+.mypage-mission-index .my-mission-post {
+    align-items: center;
+    background-color: #03c75a;
+    border: 1px solid #03c75a;
+    /*display: inline-flex;*/
+    flex: 0 0 auto;
+    gap: 10px;
+    position: relative;
+
+    color: #ffffff;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    height: 30px;
+    letter-spacing: 0;
+    /*line-height: normal;*/
+    /*margin-top: -1px;*/
+    /*position: relative;*/
+    text-align: center;
+    width: 40px;
+    border-radius: 10px;
+}
+
+.mypage-mission-index .my-mission-post:hover {
+    background-color: #FFFFFF;
+    color: #03c75a;
+}
+
+.mypage-mission-index .my-mission-delete {
+    align-items: flex-start;
+    display: flex;
+    flex: 0 0 auto;
+    gap: 20px;
+    position: relative;
+    width: 1240px;
+    justify-content: flex-end;
+}
+
+.mypage-mission-index .my-mission-delete-btn {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 40px;
+    position: relative;
+    width: 140px;
+
+    cursor: pointer;
+
+    color: #ffffff;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 40px;
+    text-align: center;
+
+    background-color: #DC3546;
+    border-radius: 10px;
+    justify-content: center;
+    /*padding: 0 48px;*/
+    border: 1px solid #DC3546;
+}
+
+.mypage-mission-index .my-mission-delete-btn:hover {
+    background-color: #FFFFFF;
+    color: #DC3546;
+}
+
+/*.mypage-mission-index .my-mission-delete-2 {*/
+/*    height: 31px;*/
+/*    position: relative;*/
+/*    width: 1070px;*/
+/*}*/
+
+/*.mypage-mission-index .my-mission-delele {*/
+/*    align-items: flex-start;*/
+/*    display: inline-flex;*/
+/*    flex: 0 0 auto;*/
+/*    flex-direction: column;*/
+/*    gap: 10px;*/
+/*    margin-right: -0.89px;*/
+/*    position: relative;*/
+/*}*/
+
+/*.mypage-mission-index .my-mission-delete-3 {*/
+/*    height: 40px;*/
+/*    position: relative;*/
+/*    width: 150.89px;*/
+/*}*/
+
+/*.mypage-mission-index .text-wrapper-21 {*/
+/*    color: #ffffff;*/
+/*    font-family: "Poppins", Helvetica;*/
+/*    font-size: 14px;*/
+/*    font-weight: 600;*/
+/*    left: 48px;*/
+/*    letter-spacing: 0;*/
+/*    line-height: normal;*/
+/*    position: absolute;*/
+/*    text-align: center;*/
+/*    top: 8px;*/
+/*    width: 54px;*/
+/*}*/

@@ -1,0 +1,88 @@
+.mypage-sidebar-index .side-bar-wrap {
+    align-items: center;
+    background-color: #03c75a;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 1076px;
+    justify-content: center;
+    padding: 10px;
+    position: relative;
+    width: 100px;
+}
+
+.mypage-sidebar-index .side-bar-content {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 700px;
+    margin-left: -10px;
+    margin-right: -10px;
+    padding: 10px;
+    position: relative;
+    width: 100px;
+}
+
+.mypage-sidebar-index .img-div {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+    justify-content: center;
+    margin-left: -10px;
+    margin-right: -10px;
+    overflow: hidden;
+    position: relative;
+    width: 100px;
+
+    cursor: pointer;
+}
+
+.mypage-sidebar-index .img-div:hover {
+    background-color: #13954C;
+    border: 1px solid #03c75a;
+    color: #03c75a;
+}
+
+.mypage-sidebar-index .hover-div {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+
+    display: flex;
+    justify-content: center;
+    height: 10px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.mypage-sidebar-index .icon-user {
+    height: 30px;
+    position: relative;
+    width: 30px;
+}
+
+.mypage-sidebar-index .icon-trophy {
+    height: 30px;
+    position: relative;
+    width: 35px;
+}
+
+.mypage-sidebar-index .icon-vegan-rounded {
+    height: 35px;
+    position: relative;
+    width: 35px;
+}
+
+.mypage-sidebar-index .group {
+    height: 30px;
+    position: relative;
+    width: 30px;
+}
+
+.mypage-sidebar-index .icon-headset-help {
+    height: 30px;
+    position: relative;
+    width: 30px;
+}

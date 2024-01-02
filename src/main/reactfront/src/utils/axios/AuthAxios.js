@@ -27,9 +27,10 @@ AuthAxios.interceptors.response.use((response) => {
 }, (error) => {
     const originalRequest = error.config;
     if (error.response) {
-        if (error.response.status === 401 && !originalRequest._retry) {
+        // if (error.response.status === 401 && !originalRequest._retry) {
+        if (!originalRequest._retry) {
             originalRequest._retry = true;
-            return axios.post('http://localhost:8080/api/member/reissue', {accessToken : localStorage.getItem("accessToken")}, {headers: {'Authorization': `Bearer ${localStorage.getItem("accessToken")}`}})
+            return axios.post(`http://localhost:8080/api/member/reissue`, {accessToken : localStorage.getItem("accessToken")}, {headers: {'Authorization': `Bearer ${localStorage.getItem("accessToken")}`}})
                         .then(res => {
                             if (res.status === 200) {
                                 const access_token = res.data.accessToken;

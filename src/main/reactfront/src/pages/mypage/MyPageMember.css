@@ -1,0 +1,338 @@
+.mypage-index {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.mypage-index .mypage-wrap-wrapper {
+    background-color: #ffffff;
+    height: 1076px;
+    width: 1440px;
+}
+
+.mypage-index .mypage-wrap {
+    align-items: center;
+    background-color: #ffffff;
+    display: flex;
+    height: 1076px;
+    position: relative;
+    width: 1440px;
+}
+
+/*.mypage-index .side-bar-wrap {*/
+/*    align-items: center;*/
+/*    background-color: #03c75a;*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    gap: 10px;*/
+/*    height: 1076px;*/
+/*    justify-content: center;*/
+/*    padding: 10px;*/
+/*    position: relative;*/
+/*    width: 100px;*/
+/*}*/
+
+/*.mypage-index .side-bar-content {*/
+/*    align-items: center;*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    gap: 10px;*/
+/*    height: 700px;*/
+/*    margin-left: -10px;*/
+/*    margin-right: -10px;*/
+/*    padding: 10px;*/
+/*    position: relative;*/
+/*    width: 100px;*/
+/*}*/
+
+/*.mypage-index .div-2 {*/
+/*    align-items: center;*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    height: 100px;*/
+/*    justify-content: center;*/
+/*    margin-left: -10px;*/
+/*    margin-right: -10px;*/
+/*    overflow: hidden;*/
+/*    position: relative;*/
+/*    width: 100px;*/
+/*}*/
+
+/*.mypage-index .icon-user {*/
+/*    height: 30px;*/
+/*    position: relative;*/
+/*    width: 30px;*/
+/*}*/
+
+/*.mypage-index .icon-trophy {*/
+/*    height: 30px;*/
+/*    position: relative;*/
+/*    width: 35px;*/
+/*}*/
+
+/*.mypage-index .icon-vegan-rounded {*/
+/*    height: 35px;*/
+/*    position: relative;*/
+/*    width: 35px;*/
+/*}*/
+
+/*.mypage-index .group {*/
+/*    height: 30px;*/
+/*    position: relative;*/
+/*    width: 30px;*/
+/*}*/
+
+/*.mypage-index .icon-headset-help {*/
+/*    height: 30px;*/
+/*    position: relative;*/
+/*    width: 30px;*/
+/*}*/
+
+.mypage-index .content-wrap {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 1076px;
+    padding: 40px 50px;
+    position: relative;
+    width: 1340px;
+}
+
+.mypage-index .page-info-wrap {
+    align-items: flex-start;
+    display: flex;
+    height: 125px;
+    position: relative;
+    width: 1225px;
+}
+
+.mypage-index .page-info {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 125px;
+    justify-content: center;
+    position: relative;
+    width: 160px;
+}
+
+.mypage-index .text-wrapper {
+    color: #000000;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    height: 21.66px;
+    letter-spacing: 0;
+    line-height: 21.66px;
+    position: relative;
+    width: 102px;
+}
+
+.mypage-index .div {
+    color: #000000;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    height: 19.49px;
+    letter-spacing: 0;
+    line-height: 19.49px;
+    position: relative;
+    text-align: center;
+    width: 160px;
+}
+
+.mypage-index .profile-wrap {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    height: 400px;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    width: 1225px;
+}
+
+.mypage-index .profile-title {
+    align-items: flex-start;
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    margin-right: -15px;
+    margin-top: -7.5px;
+    position: relative;
+    width: 1240px;
+}
+
+.mypage-index .profile-title-2 {
+    color: #000000;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    height: 40px;
+    letter-spacing: 0;
+    line-height: 40px;
+    /*margin-top: -1px;*/
+    position: relative;
+    width: 1240px;
+}
+
+.mypage-index .profile-content {
+    align-items: flex-start;
+    display: flex;
+    gap: 10px;
+    height: 360px;
+    margin-right: -15px;
+    position: relative;
+    width: 1240px;
+}
+
+.mypage-index .profile-card {
+    align-items: center;
+    border: 1px solid #000000;
+    border-radius: 20px;
+    display: flex;
+    gap: 20px;
+    height: 250px;
+    justify-content: center;
+    overflow: hidden;
+    padding: 15px;
+    position: relative;
+    width: 600px;
+}
+
+.mypage-index .profile-img-wrap {
+    align-items: center;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 220px;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    width: 220px;
+}
+
+.mypage-index .profile-img {
+    height: 220px;
+    margin-left: -1.44px;
+    margin-right: -1.44px;
+    object-fit: cover;
+    position: relative;
+    width: 222.88px;
+}
+
+.mypage-index .profile-info-wrap {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 220px;
+    justify-content: center;
+    position: relative;
+    width: 330px;
+}
+
+.mypage-index .profile-info-id {
+    align-items: flex-start;
+    display: flex;
+    height: 40px;
+    position: relative;
+    width: 330px;
+}
+
+.mypage-index .text-wrapper-2 {
+    color: #000000;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    height: 40px;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    width: 330px;
+}
+
+.mypage-index .profile-info-point {
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    height: 40px;
+    position: relative;
+    width: 330px;
+}
+
+.mypage-index .text-wrapper-3 {
+    color: #000000;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    height: 40px;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    width: 70px;
+}
+
+.mypage-index .text-wrapper-4 {
+    color: #03c75a;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    height: 40px;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    width: 70px;
+}
+
+.mypage-index .profile-info-blank {
+    height: 40px;
+    position: relative;
+    width: 330px;
+}
+
+.mypage-index .profile-info-edit {
+    align-items: center;
+    display: flex;
+    height: 50px;
+    justify-content: center;
+    position: relative;
+    width: 330px;
+}
+
+.mypage-index .member-edit-btn {
+    align-items: center;
+    background-color: #03c75a;
+    border-radius: 15px;
+    display: flex;
+    gap: 10px;
+    height: 50px;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    width: 330px;
+
+    color: #ffffff;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 18px;
+    border: 1px solid #FFFFFF;
+
+    cursor: pointer;
+}
+
+.mypage-index .member-edit-btn:hover {
+    background-color: #FFFFFF;
+    border: 1px solid #03c75a;
+    color: #03c75a;
+}
