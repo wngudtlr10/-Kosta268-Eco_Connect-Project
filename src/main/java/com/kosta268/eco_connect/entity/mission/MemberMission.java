@@ -40,7 +40,7 @@ public class MemberMission {
     private String title;
     private String content;
 
-//    private LocalDateTime participateAt; // 미션 참여 시간
+    private LocalDateTime participateAt; // 미션 참여 시간
     private LocalDateTime finishedAt;
 
     public MemberMission() {}
@@ -54,8 +54,8 @@ public class MemberMission {
         this.finishedAt = LocalDateTime.now();
     }
 
-//    @PrePersist
-//    public void setParticipateTime() {
-//        this.participateAt = LocalDateTime.now();
-//    }
+    @PrePersist
+    public void setParticipateTime() {
+        this.participateAt = LocalDateTime.now();
+    }
 }

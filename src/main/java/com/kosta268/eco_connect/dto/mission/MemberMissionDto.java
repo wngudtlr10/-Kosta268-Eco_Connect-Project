@@ -4,6 +4,7 @@ import com.kosta268.eco_connect.entity.mission.MemberMission;
 import com.kosta268.eco_connect.entity.mission.MissionStatus;
 import lombok.*;
 
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -20,6 +21,7 @@ public class MemberMissionDto {
     private String status;
     private String title;
     private String content;
+    private LocalDateTime participateAt; // 미션 참여 시간
     private List<MissionImageDto> images;
 
 
@@ -46,6 +48,7 @@ public class MemberMissionDto {
                 .status(memberMission.getStatus().name())
                 .title(memberMission.getTitle())
                 .content(memberMission.getContent())
+                .participateAt(memberMission.getParticipateAt())
                 .images(images)
                 .build();
     }

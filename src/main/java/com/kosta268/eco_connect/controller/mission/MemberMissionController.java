@@ -4,8 +4,10 @@ import com.amazonaws.Response;
 import com.kosta268.eco_connect.dto.mission.MemberMissionDto;
 import com.kosta268.eco_connect.dto.mission.MemberMissionPostDto;
 import com.kosta268.eco_connect.dto.mission.MemberMissionRequestDto;
+import com.kosta268.eco_connect.entity.member.Member;
 import com.kosta268.eco_connect.entity.mission.MemberMission;
 import com.kosta268.eco_connect.security.CustomUserDetails;
+import com.kosta268.eco_connect.service.member.MemberService;
 import com.kosta268.eco_connect.service.mission.MemberMissionService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -85,5 +87,11 @@ public class MemberMissionController {
     public ResponseEntity<?> deleteMemberMission(@PathVariable Long memberMissionId) {
         memberMissionService.deleteMissionPost(memberMissionId);
         return ResponseEntity.ok().build();
+    }
+
+    @DeleteMapping("/members/{memberId}/missions")
+    public void deleteMemberMissions(@AuthenticationPrincipal CustomUserDetails userDetails, @RequestBody List<Long> memberMissionIds) {
+        memberMissionService.deleteMemberMissions(userDetails.getMemberId(), memberMissionIds);
+
     }
 }

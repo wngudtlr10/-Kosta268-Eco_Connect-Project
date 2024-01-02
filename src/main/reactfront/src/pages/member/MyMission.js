@@ -62,6 +62,45 @@ function MyMission() {
                 console.log(error);
             })
     }
+    const [selectedItems, setSelectedItems] = useState([]);
+    const [allChecked, setAllChecked] = useState(false);
+
+    const handleAllChecked = e => {
+        setAllChecked(e.target.checked);
+        if (e.target.checked) {
+            const allItems = myMissions.filter(item => item.status === 'ONGOING').map(item => item.memberMissionId);
+            setSelectedItems(allItems)
+        } else {
+            setSelectedItems([]);
+        }
+    }
+
+
+    const handleCheckboxChange = (e, memberMissionId) => {
+        if (e.target.checked) {
+            setSelectedItems(prevItems => [...prevItems, memberMissionId])
+        } else {
+            setSelectedItems(prevItems => prevItems.filter(item => item !== memberMissionId));
+        }
+
+        if (selectedItems.length === myMissions.filter(item => item.status === 'ONGOING').length) {
+            setAllChecked(true);
+        } else {
+            setAllChecked(false)
+        }
+    }
+
+    const deleteSelected = () => {
+        AuthAxios.delete(`/api/members/${memberId}/missions`, { data: selectedItems} )
+            .then((response) => {
+                console.log(response);
+                setSelectedItems([]);
+                fetchMyMissions()
+            })
+            .catch((error) => {
+                console.log(error);
+            })
+    }
 
     useEffect(() => {
         fetchMember();
@@ -71,6 +110,10 @@ function MyMission() {
     useEffect(() => {
         fetchMyMissions();
     }, [memberId])
+
+    useEffect(() => {
+        console.log(selectedItems)
+    }, [selectedItems]);
 
 
     useEffect(() => {
@@ -227,7 +270,7 @@ function MyMission() {
                                                 <div className="text-wrapper-4">{point ? point.holding : "Loading..."}</div>
                                                 <p className="p">
                                                     <span className="span">누적 포인트</span>
-                                                   
+
                                                 </p>
                                             </div>
                                         </div>
@@ -252,7 +295,7 @@ function MyMission() {
                                     <div className="th">
                                         <div className="frame">
                                             <div className="checkbox-none">
-                                                <div className="checkbox" />
+                                                <input type="checkbox" className="checkbox" onChange={handleAllChecked} checked={allChecked} />
                                             </div>
                                             <div className="text-wrapper-11">미션 리스트</div>
                                             <div className="text-wrapper-12">흭득가능 포인트</div>
@@ -276,7 +319,7 @@ function MyMission() {
                                             <div className="my-mission-list-wrap">
                                                 <div className="my-mission-list">
                                                     <div className="checkbox-wrapper">
-                                                        <div className="checkbox" />
+                                                        <input type="checkbox" className="checkbox" checked={selectedItems.includes(item.memberMissionId)} onChange={(e) => handleCheckboxChange(e, item.memberMissionId)}/>
                                                     </div>
                                                     <img className="my-mission-image" src={item.images.imageUrl} />
                                                     <div className="my-mission-title-and">
@@ -322,7 +365,7 @@ function MyMission() {
                                             alt="My mission delete"
                                             src="https://cdn.animaapp.com/projects/6560b21274de9042f7d947f4/releases/6581291fac10584c0429bbee/img/my-mission-delete.svg"
                                         />
-                                        <div className="text-wrapper-23">미션삭제</div>
+                                        <button className="text-wrapper-23" onClick={deleteSelected}>미션삭제</button>
                                     </div>
                                 </div>
                             </div>
