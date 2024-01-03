@@ -5,8 +5,11 @@ import com.kosta268.eco_connect.dto.mission.MissionDto;
 import com.kosta268.eco_connect.dto.mission.MissionUpdateDto;
 import com.kosta268.eco_connect.entity.Status;
 import com.kosta268.eco_connect.entity.mission.Mission;
+import com.kosta268.eco_connect.entity.mission.QMission;
 import com.kosta268.eco_connect.repository.mission.MissionRepository;
 import com.kosta268.eco_connect.service.S3FileUploader;
+import com.querydsl.core.BooleanBuilder;
+import com.querydsl.core.types.Predicate;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
@@ -81,50 +84,25 @@ public class MissionService {
     }
 
     @Transactional(readOnly = true)
-    public Page<MissionDto> findByCategoryLike(String category, Pageable pageable) {
-        Page<Mission> categoryLike = missionRepository.findByCategoryLike(category, pageable);
-        return categoryLike.map(MissionDto::fromEntity);
-    }
+    public Page<MissionDto> getMissions(String category, String title, String status, Pageable pageable) {
+        BooleanBuilder builder = new BooleanBuilder();
 
-    @Transactional(readOnly = true)
-    public Page<MissionDto> findAllByTitleLike(String title, Pageable pageable) {
-        Page<Mission> byTitleLike = missionRepository.findAllByTitleLike("%" + title + "%", pageable);
-        return byTitleLike.map(MissionDto::fromEntity);
-    }
+        if (category != null && !category.equals("전체")) {
+            builder.and(QMission.mission.category.like(category));
+        }
 
-    @Transactional(readOnly = true)
-    public Page<MissionDto> findByStatus(String status, Pageable pageable) {
-        Status statusEnum = Status.valueOf(status);
-        Page<Mission> byStatus = missionRepository.findByStatus(statusEnum, pageable);
-        return byStatus.map(MissionDto::fromEntity);
+        if (title != null) {
+            builder.and(QMission.mission.title.like("%" + title + "%"));
+        }
 
-    }
+        if (status != null) {
+            builder.and(QMission.mission.status.eq(Status.valueOf(status)));
+        }
 
-    @Transactional(readOnly = true)
-    public Page<MissionDto> findByStatusAndTitle(String status, String title, Pageable pageable) {
-        Status statusEnum = Status.valueOf(status);
-        Page<Mission> byStatusAndTitleLike = missionRepository.findAllByStatusAndTitleLike(statusEnum, "%" + title + "%", pageable);
-        return byStatusAndTitleLike.map(MissionDto::fromEntity);
-    }
+        Predicate predicate = builder.getValue() == null ? QMission.mission.isNotNull() : builder.getValue();
 
-    @Transactional(readOnly = true)
-    public Page<MissionDto> findByStatusAndCategory(String status, String category, Pageable pageable) {
-        Status statusEnum = Status.valueOf(status);
-        Page<Mission> byStatusAndCategoryLike = missionRepository.findAllByStatusAndCategoryLike(statusEnum, category, pageable);
-        return byStatusAndCategoryLike.map(MissionDto::fromEntity);
-    }
-
-    @Transactional(readOnly = true)
-    public Page<MissionDto> findByCategoryAndTitle(String category, String title, Pageable pageable) {
-        Page<Mission> byCategoryLikeAndTitleLike = missionRepository.findAllByCategoryLikeAndTitleLike(category, "%" +  title + "%", pageable);
-        return byCategoryLikeAndTitleLike.map(MissionDto::fromEntity);
-    }
-
-    @Transactional(readOnly = true)
-    public Page<MissionDto> findByStatusAndTitleAndCategory(String status, String title, String category, Pageable pageable) {
-        Status statusEnum = Status.valueOf(status);
-        Page<Mission> byStatusAndTitleLikeAndCategoryLike = missionRepository.findAllByStatusAndTitleLikeAndCategoryLike(statusEnum, "%" + title + "%", category, pageable);
-        return byStatusAndTitleLikeAndCategoryLike.map(MissionDto::fromEntity);
+        Page<Mission> missions = missionRepository.findAll(predicate, pageable);
+        return missions.map(MissionDto::fromEntity);
     }
 
 
@@ -139,10 +117,4 @@ public class MissionService {
         }
     }
 
-//    @Scheduled(cron = "0 0 0 * * *")
-//    public void modifyFinishMissions() {
-//        List<Mission> missions = missionRepository.findAll();
-//        for (Mission mission : missions) {
-//        }
-//    }
 }

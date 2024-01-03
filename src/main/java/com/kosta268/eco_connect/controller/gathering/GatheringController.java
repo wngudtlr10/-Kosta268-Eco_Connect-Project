@@ -4,6 +4,7 @@ import com.kosta268.eco_connect.dto.gathering.GatheringCreateDto;
 import com.kosta268.eco_connect.dto.gathering.GatheringDto;
 import com.kosta268.eco_connect.dto.gathering.GatheringUpdateDto;
 import com.kosta268.eco_connect.dto.member.MemberDto;
+import com.kosta268.eco_connect.entity.gathering.Category;
 import com.kosta268.eco_connect.entity.gathering.Gathering;
 import com.kosta268.eco_connect.entity.gathering.MemberGathering;
 import com.kosta268.eco_connect.service.gathering.GatheringService;
@@ -29,53 +30,24 @@ import java.util.stream.Collectors;
 @CrossOrigin(origins = "http://localhost:3000")
 public class GatheringController {
     private final GatheringService gatheringService;
-
     @GetMapping
-    public Page<GatheringDto> gatheringList(@RequestParam(required = false) String status, @RequestParam(required = false) String title,
-                                            @PageableDefault(size = 8) Pageable pageable) {
-        Page<Gathering> gatherings;
-        if (status != null && title != null) {
-            gatherings = gatheringService.findGatheringByStatusAndTitle(status, title, pageable);
-        } else if (status != null) {
-            gatherings = gatheringService.findGatheringByStatus(status, pageable);
-        } else if (title != null) {
-            gatherings = gatheringService.findGatheringByTitle(title, pageable);
-        } else {
-            gatherings = gatheringService.findAllGatherings(pageable);
-        }
-        Page<GatheringDto> gatheringDtos = gatherings.map(GatheringDto::fromEntity);
-        return gatheringDtos;
+    public ResponseEntity<Page<GatheringDto>> findGatherings(@RequestParam(required = false) String status,
+                                                             @RequestParam(required = false) String title,
+                                                             @RequestParam(required = false) Category category,
+                                                             @PageableDefault(size = 8) Pageable pageable) {
+
+        String categoryName = category != null ? category.name() : null;
+        log.info("status = {}, title = {}, category = {}", status, title, categoryName);
+        Page<Gathering> gatherings = gatheringService.findGatherings(status, title, categoryName, pageable);
+        return ResponseEntity.ok(gatherings.map(GatheringDto::fromEntity));
     }
+
     @GetMapping("/{gatheringId}")
     public ResponseEntity<GatheringDto> gatheringDetails(@PathVariable Long gatheringId) {
         Gathering gathering = gatheringService.findGatheringById(gatheringId);
         GatheringDto gatheringDto = GatheringDto.fromEntity(gathering);
         return new ResponseEntity<>(gatheringDto, HttpStatus.OK);
     }
-
-    @GetMapping("/status")
-    public Page<GatheringDto> gatheringListByStatus(@RequestParam String status, @PageableDefault(size = 8) Pageable pageable) {
-        Page<Gathering> gatherings = gatheringService.findGatheringByStatus(status, pageable);
-        Page<GatheringDto> gatheringDtos = gatherings.map(GatheringDto::fromEntity);
-        return gatheringDtos;
-
-    }
-
-    @GetMapping("/title")
-    public Page<GatheringDto> gatheringListByTitle(@RequestParam String title, @PageableDefault(size = 8) Pageable pageable) {
-        Page<Gathering> gatherings = gatheringService.findGatheringByTitle(title, pageable);
-        Page<GatheringDto> gatheringDtos = gatherings.map(GatheringDto::fromEntity);
-        return gatheringDtos;
-    }
-
-    @GetMapping("/statusAndTitle")
-    public Page<GatheringDto> gatheringListsByStatusAndTitle(@RequestParam(required = false) String status, @RequestParam(required = false) String title,
-                                                             @PageableDefault(size = 8) Pageable pageable) {
-        Page<Gathering> gatherings = gatheringService.findGatheringByStatusAndTitle(status, title, pageable);
-        Page<GatheringDto> gatheringDtos = gatherings.map(GatheringDto::fromEntity);
-        return gatheringDtos;
-    }
-
 
     @PostMapping
     public ResponseEntity<Resource> gatheringAdd(@ModelAttribute GatheringCreateDto gatheringCreateDto) throws IOException {

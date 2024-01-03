@@ -16,106 +16,39 @@ function MissionList() {
     const [category, setCategory] = useState('전체');
     const [status, setStatus] = useState("OPEN");
     const [title, setTitle] = useState("");
-    
+
     const fetchMission = () => {
-        AuthAxios.get(`/api/missions?page=${page}`)
-            .then((response) => {
-                setLists(response.data.content);
-                setTotalPages(response.data.totalPages);
-            })
-            .catch((error) => {
-                console.log('Error fetching data from API: ', error);
-            })
-    }
+        let url = `/api/missions?page=${page}`;
 
-    const fetchMissionByCategory = () => {
-        AuthAxios.get(`/api/missions?page=${page}&category=${category}`)
-            .then((response) => {
-                console.log(response);
-                setLists(response.data.content);
-                setTotalPages(response.data.totalPages);
-            })
-            .catch((error) => {
-                console.log('Error fetching data from API: ', error);
-            })
-    }
-
-    const fetchMissionByStatus = () => {
-        AuthAxios.get(`/api/missions?page=${page}&status=${status}`)
-            .then((response) => {
-                console.log(response);
-                setLists(response.data.content);
-                setTotalPages(response.data.totalPages);
-            })
-            .catch((error) => {
-                console.log('Error fetching data from API: ', error);
-            })
-    }
-
-    const fetchMissionByTitle = () => {
-        // const encodedTitle = encodeURIComponent(title);
-        AuthAxios.get(`/api/missions?page=${page}&title=${encodeURIComponent(title)}`)
-            .then((response) => {
-                setLists(response.data.content);
-                setTotalPages(response.data.totalPages);
-            })
-            .catch((error) => {
-                console.log('Error fetching data from API: ', error);
-            })
-    }
-
-    const fetchMissionByStatusAndTitle = () => {
-        if (status !== "" && title !== "") {
-            AuthAxios.get(`/api/missions?page=${page}&status=${status}&title=${encodeURIComponent(title)}`)
-                .then((response) => {
-                    setLists(response.data.content);
-                    setTotalPages(response.data.totalPages);
-                })
-                .catch((error) => {
-                    console.log('Error fetching data from API: ', error);
-                })
+        if (category && category !== '전체') {
+            url += `&category=${category}`;
         }
-    }
 
-    const fetchMissionByStatusAndCategory = () => {
-        if (status !== "" && category !== "") {
-            AuthAxios.get(`/api/missions?page=${page}&status=${status}&category=${category}`)
-            .then((response) => {
-                setLists(response.data.content);
-                setTotalPages(response.data.totalPages);
-            })
-                .catch((error) => {
-                    console.log('Error fetching data from API: ', error);
-            })
+        if (status && status !== 'OPEN') {
+            url += `&status=${status}`;
         }
-    }
 
+        if (title && title !== '') {
+            url += `&title=${encodeURIComponent(title)}`;
+        }
 
-    const fetchMissionByCategoryAndTitle = () => {
-        if (category !== "" && title !== "") {
-            AuthAxios.get(`/api/missions?page=${page}&category=${category}&title=${encodeURIComponent(title)}`)
+        AuthAxios.get(url)
             .then((response) => {
                 setLists(response.data.content);
                 setTotalPages(response.data.totalPages);
             })
             .catch((error) => {
-                console.log('Error fetching data from API: ', error);
+                console.log('Error fetching data from API', error);
             })
-        }
     }
 
-    const fetchMissionByCategoryAndTitleAndStatus = () => {
-        if (category !== "" && title !== "" && status !== "") {
-            AuthAxios.get(`/api/missions?page=${page}&category=${category}&title=${encodeURIComponent(title)}&status=${status}`)
-                .then((response) => {
-                    setLists(response.data.content);
-                    setTotalPages(response.data.totalPages);
-                })
-                .catch((error) => {
-                    console.log('Error fetching data from API: ', error);
-                })
-        }
-    }
+    useEffect(() => {
+        fetchMission()
+    }, [page, category, status, title])
+
+    useEffect(() => {
+        setPage(0);
+    }, [category, status, title])
 
     const joinMission = async (missionId) => {
         try {
@@ -160,55 +93,6 @@ function MissionList() {
     });
 
 
-
-    useEffect(() => {
-        const pageFromUrl = searchParams.get('page');
-        if (pageFromUrl !== null) {
-            setPage(parseInt(pageFromUrl))
-        }
-
-    }, [])
-
-    useEffect(() => {
-        searchParams.set('page', page.toString());
-        if (status !== null) {
-            searchParams.set('status', status.toString());
-        }
-        if (title !== null) {
-            searchParams.set('title', title);
-        }
-        if (category !== null) {
-            searchParams.set('category', category);
-        }
-        setSearchParams(searchParams);
-
-        if (status !== "" && title !== "" && category !== "") {
-            fetchMissionByCategoryAndTitleAndStatus()
-        }
-        else if (status !== "" && category !== "") {
-            fetchMissionByStatusAndCategory()
-        }
-        else if (status !== "" && title != "") {
-            fetchMissionByStatusAndTitle()
-        }
-        else if (category !== "" && title !== "") {
-            fetchMissionByCategoryAndTitle()
-        }
-        else if (status !== "") {
-            fetchMissionByStatus();
-        }
-        else if (category !== "") {
-            fetchMissionByCategory()
-        }
-        else if (title !== "") {
-            fetchMissionByTitle()
-        }
-        else {
-            fetchMission()
-        }
-    }, [page, status, title, category])
-
-
     useEffect(() => {
         console.log(lists);
     }, [lists])
@@ -224,7 +108,6 @@ function MissionList() {
                             src="https://cdn.animaapp.com/projects/6560b21274de9042f7d947f4/releases/6570992a80abe6b84bdfe96b/img/mission-image.png"
                         />
                     </div>
-                    {/* <div className="div" onClick={() => handleCategory("전체")}>전체&nbsp;&nbsp;&nbsp;&nbsp; |</div> */}
                     <div className="mission-middle-menu">
                         <Nav variant="phills" defaultActiveKey="#">
                               <Nav.Item >
@@ -394,35 +277,6 @@ function MissionList() {
                                 )
                             })}
                         </div>
-                        {/* <div className="pagination-button">
-                            <div className="pagination-left-wrap">
-                                <button className="pagination-left" onClick={() => {
-                                    console.log("Left button clicked")
-                                    setPage(oldPage => Math.max(oldPage -1, 0))}} disabled={page === 0}>
-                                    &lt;&lt;
-                                </button>
-                            </div>
-                            <div className="pagination">
-                                {createPageNumberArray(0, totalPages - 1).map(pageNumber => (
-                                    <button className={`text-wrapper-5 ${pageNumber === page ? "active" : ""}`}
-                                            key={pageNumber}
-                                            onClick={() => {
-                                                console.log('page clicked')
-                                                setPage(pageNumber)}}
-                                            disabled={pageNumber === page}>
-                                        {pageNumber + 1}
-                                    </button>
-                                ))}
-                            </div>
-
-                            <div className="pagination-right">
-                                <button className="double-right-wrapper" onClick={() => {
-                                    console.log("Right button clicked")
-                                    setPage(oldPage => Math.min(oldPage + 1, totalPages - 1))}} disabled={page === totalPages - 1}>
-                                    &gt;&gt;
-                                </button>
-                            </div>
-                        </div> */}
                         <MissionPageNation page={page} totalPages={totalPages} setPage={setPage} />
                     </div>
                 </div>
