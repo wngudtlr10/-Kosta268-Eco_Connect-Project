@@ -13,45 +13,26 @@ function GatheringList() {
     const [totalPages, setTotalPages] = useState(0);
     const [status, setStatus] = useState("OPEN");
     const [title, setTitle] = useState("");
-    const [timer, setTimer] = useState(null);
     const [category, setCategory] = useState("");
-    const [searchParams, setSearchParams] = useSearchParams();
-    const loaction = useLocation();
 
     const [memberId, setMemberId] = useState();
 
-
-
     const fetchData = () => {
-        AuthAxios.get(`/api/gathering?page=${page}`)
-            .then((response) => {
-                setLists(response.data.content);
-                setTotalPages(response.data.totalPages);
-            })
-            .catch((error) => {
-                console.log('Error fetching data from API: ' , error);
-            });
-    };
-
-    const fetchDataByStatus = () => {
+        let url = `/api/gathering?page=${page}`;
         if (status !== "") {
-
-
-            AuthAxios.get(`/api/gathering/status?status=${status}&page=${page}`)
-                .then((response) => {
-                    setLists(response.data.content);
-                    setTotalPages(response.data.totalPages);
-                })
-                .catch((error) => {
-                    console.log('Error fetching data from API: ', error);
-                })
+            url += `&status=${status}`;
         }
-    }
+        if (title !== "") {
+            url += `&title=${encodeURIComponent(title)}`
+        }
 
-    const fetchDataByTitle = () => {
-        const encodedTitle = encodeURIComponent(title);
-        AuthAxios.get(`/api/gathering/title?title=${encodedTitle}&page=${page}`)
+        if (category !== "") {
+            url += `&category=${encodeURIComponent(category)}`
+        }
+
+        AuthAxios.get(url)
             .then((response) => {
+                console.log(response.data)
                 setLists(response.data.content);
                 setTotalPages(response.data.totalPages);
             })
@@ -60,18 +41,14 @@ function GatheringList() {
             })
     }
 
-    const fetchDataByStatusAndTitle = () => {
-        if (status !== "" && title !== "") {
-            AuthAxios(`/api/gathering?status=${status}&title=${encodeURIComponent(title)}&page=${page}`)
-                .then((response) => {
-                    setLists(response.data.content);
-                    setTotalPages(response.data.totalPages);
-                })
-                .catch((error) => {
-                    console.log('Error fetching data from API: ', error);
-                })
-        }
+    const handleCategory = (category) => {
+        setCategory(category);
     }
+
+    useEffect(() => {
+        fetchData();
+    }, [page, status, title, category])
+
 
 
     function createPageNumberArray(startPage, endPage) {
@@ -82,56 +59,12 @@ function GatheringList() {
         return pages;
     }
 
-    useEffect(() => {
-        const pageFromUrl = searchParams.get('page');
-        const statusFromUrl = searchParams.get('status');
-        const titleFromUrl = searchParams.get('title');
 
-        if (pageFromUrl !== null) {
-            setPage(parseInt(pageFromUrl));
-        }
-        if (statusFromUrl !== null) {
-            setStatus(statusFromUrl);
-        }
-        if (titleFromUrl !== null) {
-            setTimer(decodeURIComponent(titleFromUrl));
-        }
-
-    }, [])
 
     useEffect(() => {
         setPage(0);
-    }, [status])
+    }, [status, title, category])
 
-    useEffect(() => {
-        setPage(0);
-    }, [title])
-
-
-    useEffect(() => {
-        searchParams.set('page', page.toString());
-        if (status !== null) {
-            searchParams.set('status', status);
-        }
-        if (title !== null) {
-            searchParams.set('title', encodeURIComponent(title));
-        }
-        setSearchParams(searchParams);
-
-        if (status !== "" && title !== "") {
-            fetchDataByStatusAndTitle();
-        }
-
-        else if (status !== "") {
-            fetchDataByStatus();
-        }
-        else if (title !== "") {
-            fetchDataByTitle()
-        }
-        else {
-            fetchData();
-        }
-    }, [page, status, title])
 
     return (
         <div className="gathering-index">
@@ -156,21 +89,20 @@ function GatheringList() {
                
             <Nav variant="phills" defaultActiveKey="#">
       <Nav.Item >
-        <Nav.Link href="#" className="nav-text">전체</Nav.Link>
+        <Nav.Link href="#" className="nav-text" onClick={() => handleCategory("")}>전체</Nav.Link>
       </Nav.Item>
       <Nav.Item>
-        <Nav.Link eventKey="link-1" href="#"className="nav-text">환경미화</Nav.Link>
+        <Nav.Link eventKey="link-1" href="#"className="nav-text" onClick={() => handleCategory("CLEAN_UP")}>환경미화</Nav.Link>
       </Nav.Item>
       <Nav.Item>
-      <Nav.Link eventKey="link-2" href="#"className="nav-text">재능기부</Nav.Link>
+      <Nav.Link eventKey="link-2" href="#"className="nav-text" onClick={() => handleCategory("TALENT_DONATION")}>재능기부</Nav.Link>
       </Nav.Item>
       <Nav.Item>
-      <Nav.Link eventKey="link-3" href="#"className="nav-text">재능기부</Nav.Link>
+      <Nav.Link eventKey="link-3" href="#"className="nav-text" onClick={() => handleCategory("SPONSORSHIP")}>후원</Nav.Link>
       </Nav.Item>
     </Nav>
 
 
-                {/* <div className="middle-menu-blank" /> */}
                 <div className="middle-menu-search">
                     <img
                         className="search-icon"
@@ -227,29 +159,6 @@ function GatheringList() {
                 ))}
             </div>
             <div className="gathering-list-8">
-                {/* <div className="pagination-button">
-                    <div className="pagination-left-wrap">
-                        <button className="pagination-left" onClick={() => setPage(oldPage => Math.max(oldPage - 1, 0))} disabled={page === 0}>
-                            &lt;&lt;
-                        </button>
-                    </div>
-
-                    <div className="pagination">
-                        {createPageNumberArray(0, totalPages - 1).map(pageNumber => (
-                            <button className={`text-wrapper-4 ${pageNumber === page ? "active" : ""}`}
-                                    key={pageNumber}
-                                    onClick={() => setPage(pageNumber)}
-                                    disabled={pageNumber === page}>
-                                {pageNumber + 1}
-                            </button>
-                        ))}
-                    </div>
-                    <div className="pagination-right"  onClick={() => setPage(oldPage => Math.min(oldPage + 1, totalPages - 1))} disabled={page === totalPages - 1}>
-                        <button className="double-right-wrapper">
-                            &gt;&gt;
-                        </button>
-                    </div>
-                </div> */}
                  <MGPageNation page={page} totalPages={totalPages} setPage={setPage} />
                 <div className="register-button-wrap">
                     <div className="register-button">

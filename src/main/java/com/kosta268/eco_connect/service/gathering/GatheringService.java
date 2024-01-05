@@ -4,13 +4,17 @@ import com.kosta268.eco_connect.dto.gathering.GatheringCreateDto;
 import com.kosta268.eco_connect.dto.gathering.GatheringUpdateDto;
 import com.kosta268.eco_connect.entity.Address;
 import com.kosta268.eco_connect.entity.Status;
+import com.kosta268.eco_connect.entity.gathering.Category;
 import com.kosta268.eco_connect.entity.gathering.Gathering;
 import com.kosta268.eco_connect.entity.gathering.MemberGathering;
+import com.kosta268.eco_connect.entity.gathering.QGathering;
 import com.kosta268.eco_connect.entity.member.Member;
 import com.kosta268.eco_connect.repository.gathering.GatheringRepository;
 import com.kosta268.eco_connect.repository.gathering.MemberGatheringRepository;
 import com.kosta268.eco_connect.repository.member.MemberRepository;
 import com.kosta268.eco_connect.service.S3FileUploader;
+import com.querydsl.core.BooleanBuilder;
+import com.querydsl.core.types.Predicate;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
@@ -43,21 +47,24 @@ public class GatheringService {
         return gatheringRepository.findById(gatheringId).orElseThrow(() -> new IllegalArgumentException("no such data"));
 
     }
-    @Transactional(readOnly = true)
-    public Page<Gathering> findGatheringByStatus(String status, Pageable pageable) {
-        Status statusEnum = Status.valueOf(status);
-        return gatheringRepository.findAllByStatusEquals(statusEnum, pageable);
-    }
+    @Transactional
+    public Page<Gathering> findGatherings(String status, String title, String category, Pageable pageable) {
+        BooleanBuilder builder = new BooleanBuilder();
 
-    @Transactional(readOnly = true)
-    public Page<Gathering> findGatheringByTitle(String title, Pageable pageable) {
-        return gatheringRepository.findByTitleLike("%" + title + "%", pageable);
-    }
+        if (status != null) {
+            builder.and(QGathering.gathering.status.eq(Status.valueOf(status)));
+        }
 
-    @Transactional(readOnly = true)
-    public Page<Gathering> findGatheringByStatusAndTitle(String status, String title, Pageable pageable) {
-        Status statusEnum = Status.valueOf(status);
-        return gatheringRepository.findByStatusEqualsAndTitleLike(statusEnum, "%" + title + "%", pageable);
+        if (title != null) {
+            builder.and(QGathering.gathering.title.like("%" + title + "%"));
+        }
+
+        if (category != null) {
+            builder.and(QGathering.gathering.category.eq(Category.valueOf(category)));
+        }
+
+        Predicate predicate = builder.getValue() == null ? QGathering.gathering.isNotNull() : builder.getValue();
+        return gatheringRepository.findAll(predicate, pageable);
     }
 
     public void addGathering(GatheringCreateDto gatheringCreateDto) {

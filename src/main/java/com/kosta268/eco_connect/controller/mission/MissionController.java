@@ -36,38 +36,15 @@ public class MissionController {
         return missionService.findAll();
     }
 
-//    @GetMapping
-//    public Page<MissionDto> missionList(@PageableDefault(size = 8) Pageable pageable) {
-//        return missionService.findAllMissions(pageable);
-//    }
-
     @GetMapping
     public ResponseEntity<Page<MissionDto>> getMissions(@RequestParam(required = false) String category,
                                                         @RequestParam(required = false) String title,
                                                         @RequestParam(required = false) String status,
                                                         @PageableDefault(size = 8) Pageable pageable) {
-        Page<MissionDto> missions;
+
         log.info("category = {}, title = {}, status = {}", category, title, status);
-        if ("전체".equals(category)) category = null;
 
-        if (status != null && title != null && category != null) {
-            missions = missionService.findByStatusAndTitleAndCategory(status, title, category, pageable);
-        } else if (status != null && title != null) {
-            missions = missionService.findByStatusAndTitle(status, title, pageable);
-        } else if (status != null && category != null) {
-            missions = missionService.findByStatusAndCategory(status, category, pageable);
-        } else if (category != null && title != null) {
-            missions = missionService.findByCategoryAndTitle(category, title, pageable);
-        } else if (status != null) {
-            missions = missionService.findByStatus(status, pageable);
-        } else if (title != null) {
-            missions = missionService.findAllByTitleLike(title, pageable);
-        } else if (category != null) {
-            missions = missionService.findByCategoryLike(category, pageable);
-        } else {
-            missions = missionService.findAllMissions(pageable);
-        }
-
+        Page<MissionDto> missions = missionService.getMissions(category, title, status, pageable);
         return ResponseEntity.ok(missions);
     }
 
@@ -76,20 +53,6 @@ public class MissionController {
         return missionService.findById(missionId);
     }
 
-    @GetMapping("/status")
-    public Page<MissionDto> missionListByStatus(@RequestParam("status") String status, @PageableDefault(size = 8) Pageable pageable) {
-        return missionService.findByStatus(status, pageable);
-    }
-
-    @GetMapping("/title")
-    public Page<MissionDto> missionListByTitle(@RequestParam String title, @PageableDefault(size = 8) Pageable pageable) {
-        return missionService.findAllByTitleLike("%" + title + "%" , pageable);
-    }
-
-    @GetMapping("/category")
-    public Page<MissionDto> missionListByCategory(@RequestParam String category, @PageableDefault(size = 8) Pageable pageable) {
-        return missionService.findByCategoryLike("%" + category + "%", pageable);
-    }
     @DeleteMapping("/{missionId}")
     public void missionRemove(@PathVariable Long missionId) {
         missionService.removeById(missionId);
