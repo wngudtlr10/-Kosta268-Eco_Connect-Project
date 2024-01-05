@@ -509,7 +509,7 @@
 }
 
 .mypage-mission-index .my-mission-image {
-    background-image: url(https://cdn.animaapp.com/projects/6560b21274de9042f7d947f4/releases/659015546c2db389163db8ba/img/my-mission-image@2x.png);
+    /*background-image: url(https://cdn.animaapp.com/projects/6560b21274de9042f7d947f4/releases/659015546c2db389163db8ba/img/my-mission-image@2x.png);*/
     background-position: 50% 50%;
     background-size: cover;
     border-radius: 19px;

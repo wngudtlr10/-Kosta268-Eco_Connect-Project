@@ -66,7 +66,12 @@ public class MemberMissionController {
 
     @GetMapping("/members/{memberId}/missions")
     public ResponseEntity<List<MemberMissionDto>> memberMissionList(@AuthenticationPrincipal CustomUserDetails userDetails) {
-        List<MemberMission> memberMissions = memberMissionService.findAll();
+//        List<MemberMission> memberMissions = memberMissionService.findAll();
+//        List<MemberMissionDto> memberMissionDtos = memberMissions.stream()
+//                .map(MemberMissionDto::fromEntity)
+//                .collect(Collectors.toList());
+//        return ResponseEntity.ok(memberMissionDtos);
+        List<MemberMission> memberMissions = memberMissionService.findById(userDetails.getMemberId());
         List<MemberMissionDto> memberMissionDtos = memberMissions.stream()
                 .map(MemberMissionDto::fromEntity)
                 .collect(Collectors.toList());

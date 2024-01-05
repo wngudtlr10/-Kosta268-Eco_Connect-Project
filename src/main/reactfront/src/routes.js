@@ -10,6 +10,7 @@ const Fna = React.lazy(() => import('./pages/admin/views/notice/Fna'))
 const Notice = React.lazy(() => import('./pages/admin/views/notice/Notice'))
 const Qna = React.lazy(() => import('./pages/admin/views/notice/Qna'))
 const MissionUser = React.lazy(() => import('./pages/admin/views/mission/MissionsUser'))
+const Gifticon = React.lazy(() => import('./pages/admin/views/gifticon/Gifticon'));
 
 const routes = [
   { path: '/admin', exact: true, name: 'Home' },
@@ -21,7 +22,7 @@ const routes = [
   { path: '/notice/fna', name: 'Fna', element: Fna },
   { path: '/notice/qna', name: 'Qna', element: Qna },
   { path: '/mission/user', name: 'MissionUser', element: MissionUser },
-
+  { path: '/gifticon', name: 'Gifticon', element: Gifticon },
 
 ]
 

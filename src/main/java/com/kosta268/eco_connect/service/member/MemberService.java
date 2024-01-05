@@ -94,18 +94,15 @@ public class MemberService {
 //            throw new IllegalArgumentException("Refresh Token이 유효하지 않습니다.");
 //        }
         String cookieRefreshToken = tokenProvider.getCookie(request);
-
         if (!tokenProvider.validateToken(cookieRefreshToken)) {
             throw new IllegalArgumentException("Refresh Token이 유효하지 않습니다.");
         }
 
         // 2. Access Token 에서 User ID 가져오기
         Authentication authentication = tokenProvider.getAuthentication(tokenReissueRequestDto.getAccessToken());
-
         // 3. 저장소에서 User ID를 기반으로 Refresh Token 값 가져오기
         RefreshToken refreshToken = refreshTokenRepository.findById(authentication.getName())
                 .orElseThrow(() -> new RuntimeException("로그아웃 된 사용자입니다."));
-
         // 4. Refresh Token 일치하는지 검사
         if (!refreshToken.getValue().equals(cookieRefreshToken)) {
             throw new IllegalArgumentException("토큰의 유저 정보가 일치하지 않습니다.");

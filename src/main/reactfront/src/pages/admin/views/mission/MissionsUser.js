@@ -28,14 +28,10 @@ const MissionsUser = () => {
             _style: { width: '20%' },
         },
         {
-            key : 'submit_at',
+            key : 'status',
             _style: { width: '20%' }
         },
-        {
-            key: 'status',
-            _style: { width: '20%' }
-        },
-        {
+       {
             key: 'user',
             label: 'user',
             _style: { width: '20%' },
@@ -168,6 +164,11 @@ const MissionsUser = () => {
                 status: (item) => (
                     <td>
                         <CBadge color={getBadge(item.status)}>{getBadgeText(item.status)}</CBadge>
+                    </td>
+                ),
+                user: (item) =>  (
+                    <td>
+                        {item.memberId}
                     </td>
                 ),
                 show_details: (item) => {

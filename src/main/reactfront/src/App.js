@@ -21,7 +21,6 @@ import GatheringAdd from "./pages/gathering/GatheringAdd";
 import GatheringUpdate from "./pages/gathering/GatheringUpdate";
 import MissionList from "./pages/mission/MissionList";
 import MissionDetail from "./pages/mission/MissionDetail";
-import MyMission from "./pages/member/MyMission";
 import MemberMissionPost from "./pages/mission/MemberMissionPost";
 import Error400 from './pages/errorpage/ErrorPage400'
 import Error500 from './pages/errorpage/ErrorPage500'
@@ -98,7 +97,6 @@ function App() {
                     {/* MyPage */}
                     <Route path={"/mypage/member"} element={<MyPageMember/>}/>
                     <Route path={"/mypage/mission"} element={<MyPageMission />} />
-                    <Route path={"/mypage/mission/test"} element={<MyMission />} />
                     <Route path={"/mypage/gathering"} element={<MyPageGathering/>}/>
 
                 </Route>
