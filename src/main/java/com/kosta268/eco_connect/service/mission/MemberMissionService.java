@@ -1,6 +1,12 @@
 package com.kosta268.eco_connect.service.mission;
 
+import com.drew.imaging.ImageMetadataReader;
+import com.drew.imaging.ImageProcessingException;
+import com.drew.metadata.Metadata;
+import com.drew.metadata.exif.ExifIFD0Directory;
+import com.drew.metadata.exif.GpsDirectory;
 import com.kosta268.eco_connect.dto.mission.MemberMissionPostDto;
+import com.kosta268.eco_connect.entity.Status;
 import com.kosta268.eco_connect.entity.member.Member;
 import com.kosta268.eco_connect.entity.mission.MemberMission;
 import com.kosta268.eco_connect.entity.mission.Mission;
@@ -17,8 +23,10 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.io.IOException;
 import java.security.MessageDigest;
 import java.time.LocalDateTime;
+import java.time.ZoneId;
 import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -42,6 +50,9 @@ public class MemberMissionService {
 
         List<MemberMission> existingMemberMission = memberMissionRepository.findByMemberMemberIdAndMissionMissionId(memberId, missionId);
 
+        if (mission.getStatus() != Status.OPEN) {
+            throw new IllegalArgumentException("현재 참여 가능한 미션이 아닙니다.");
+        }
 
         if (!existingMemberMission.isEmpty()) {
             MemberMission mostRecentMemberMission = existingMemberMission.stream()
@@ -80,11 +91,26 @@ public class MemberMissionService {
 
         if (memberMissionPostDto.getImages() != null) {
             for (MultipartFile image : memberMissionPostDto.getImages()) {
-                String imageUrl = s3FileUploader.uploadFileToS3(image, filePath);
-                String fileHash = calculateFileHash(image);
-                MissionImage missionImage = new MissionImage(imageUrl, fileHash, memberMission);
+                try {
+                    String imageUrl = s3FileUploader.uploadFileToS3(image, filePath);
+                    String fileHash = calculateFileHash(image);
 
-                memberMission.getImages().add(missionImage);
+                    Metadata metadata = ImageMetadataReader.readMetadata(image.getInputStream());
+                    ExifIFD0Directory directory = metadata.getFirstDirectoryOfType(ExifIFD0Directory.class);
+                    GpsDirectory gpsDirectory = metadata.getFirstDirectoryOfType(GpsDirectory.class);
+
+                    String cameraModel = directory!= null ? directory.getString(ExifIFD0Directory.TAG_MODEL) : null;
+                    LocalDateTime dateTimeOriginal = directory != null ? directory.getDate(ExifIFD0Directory.TAG_DATETIME).toInstant().atZone(ZoneId.systemDefault()).toLocalDateTime() : null;
+                    Double latitude = gpsDirectory != null ?  gpsDirectory.getGeoLocation().getLatitude() : null;
+                    Double longitude = gpsDirectory != null ? gpsDirectory.getGeoLocation().getLongitude() : null;
+                    Double altitude = gpsDirectory != null && gpsDirectory.containsTag(GpsDirectory.TAG_ALTITUDE) ? gpsDirectory.getDoubleObject(GpsDirectory.TAG_ALTITUDE) : null;
+
+                    MissionImage missionImage = new MissionImage(imageUrl, fileHash, cameraModel, dateTimeOriginal, latitude, longitude, altitude,  memberMission);
+
+                    memberMission.getImages().add(missionImage);
+                } catch (ImageProcessingException | IOException e) {
+                    log.error("Error processing image metadata", e);
+                }
             }
         }
 
@@ -98,21 +124,38 @@ public class MemberMissionService {
         Member member = memberRepository.findById(memberMission.getMember().getMemberId()).orElseThrow(() -> new IllegalArgumentException("no such member"));
         Mission mission = missionRepository.findById(memberMission.getMission().getMissionId()).orElseThrow(() -> new IllegalArgumentException("no such mission"));
 
-        List<String> approvedHashes = new ArrayList<>();
+//        List<String> approvedHashes = new ArrayList<>();
+        List<MissionImage> approvedImages = new ArrayList<>();
         List<MemberMission> approvedMissions = memberMissionRepository.findByStatus(MissionStatus.COMPLETED);
         for (MemberMission approvedMission : approvedMissions) {
-            for (MissionImage image : approvedMission.getImages()) {
-                approvedHashes.add(image.getFileHash());
-            }
+//            for (MissionImage image : approvedMission.getImages()) {
+//                approvedHashes.add(image.getFileHash());
+//
+//            }
+            approvedImages.addAll(approvedMission.getImages());
         }
 
         for (MissionImage image : memberMission.getImages()) {
-            String submittedFileHash = image.getFileHash();
-            if (approvedHashes.contains(submittedFileHash)) {
-                memberMission.reject();
-                return;
+            for (MissionImage approvedImage : approvedImages) {
+                if (image.getFileHash().equals(approvedImage.getFileHash()) &&
+                    image.getCameraModel().equals(approvedImage.getCameraModel()) &&
+                    image.getDateTimeOriginal().equals(approvedImage.getDateTimeOriginal()) &&
+                    image.getLatitude().equals(approvedImage.getLatitude()) &&
+                    image.getLongitude().equals(approvedImage.getLongitude()) &&
+                    image.getAltitude().equals(approvedImage.getAltitude())) {
+                    memberMission.reject();
+                    return;
+                }
             }
         }
+
+//        for (MissionImage image : memberMission.getImages()) {
+//            String submittedFileHash = image.getFileHash();
+//            if (approvedHashes.contains(submittedFileHash)) {
+//                memberMission.reject();
+//                return;
+//            }
+//        }
         memberMission.approve();
         member.increasePoint(mission.getPoint());
 
@@ -130,6 +173,11 @@ public class MemberMissionService {
     @Transactional(readOnly = true)
     public List<MemberMission> findAll() {
         return memberMissionRepository.findAll();
+    }
+
+    @Transactional(readOnly = true)
+    public List<MemberMission> findById(Long memberId) {
+        return memberMissionRepository.findByMemberMemberId(memberId);
     }
 
     public void deleteMissionPost(Long memberMissionId) {

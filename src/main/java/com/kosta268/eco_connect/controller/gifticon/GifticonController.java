@@ -1,7 +1,9 @@
 package com.kosta268.eco_connect.controller.gifticon;
 
+import com.kosta268.eco_connect.dto.gifticon.GifticonCreateDto;
 import com.kosta268.eco_connect.dto.gifticon.GifticonDetailDto;
 import com.kosta268.eco_connect.dto.gifticon.GifticonDto;
+import com.kosta268.eco_connect.dto.gifticon.GifticonUpdateDto;
 import com.kosta268.eco_connect.entity.gifticon.Gifticon;
 import com.kosta268.eco_connect.service.gifticon.GifticonService;
 import lombok.RequiredArgsConstructor;
@@ -10,10 +12,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -37,6 +36,21 @@ public class GifticonController {
     public GifticonDetailDto getGifticon(@PathVariable Long gifticonId) {
         Gifticon gifticon = gifticonService.findById(gifticonId);
         return GifticonDetailDto.fromEntity(gifticon);
+    }
+
+    @PostMapping
+    public void addGifticon(GifticonCreateDto gifticonCreateDto) {
+        gifticonService.createGifticon(gifticonCreateDto);
+    }
+
+    @DeleteMapping("/{gifticonId}")
+    public void removeGifticon(@PathVariable Long gifticonId) {
+        gifticonService.deleteGifticon(gifticonId);
+    }
+
+    @PatchMapping("/{gifticonId}")
+    public void modifyGifticon(@PathVariable Long gifticonId, GifticonUpdateDto gifticonUpdateDto) {
+        gifticonService.modifyGifticon(gifticonId, gifticonUpdateDto);
     }
 
 }

@@ -79,7 +79,7 @@ function MissionDetail() {
             </div>
             <div className="mission-detail-title">
                 <div className="mission-detail-title-2">
-                    <div className="mission-detail-title-3">쓰레기 줍기</div>
+                    <div className="mission-detail-title-3">{mission ? mission.title : "Loading..."}</div>
                     <img
                         className="mission-detail-title-4"
                         alt="Mission detail title"

@@ -49,6 +49,12 @@ const _nav = [
     icon: <CIcon icon={cilPencil} customClassName="nav-icon" />,
   },
   {
+    component: CNavItem,
+    name: '기프티콘 관리',
+    to: '/admin/gifticon',
+    icon: <CIcon icon={cilPencil} customClassName="nav-icon" />,
+  },
+  {
     component: CNavGroup,
     name: '공지사항 관리',
     to: '/admin/notice',
@@ -70,6 +76,7 @@ const _nav = [
         to: '/admin/notice/fna',
       },
     ],
+
   }
 ]
 
