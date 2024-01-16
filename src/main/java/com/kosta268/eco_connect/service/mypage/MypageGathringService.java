@@ -5,15 +5,13 @@ import com.kosta268.eco_connect.entity.gathering.Gathering;
 import com.kosta268.eco_connect.entity.gathering.MemberGathering;
 import com.kosta268.eco_connect.repository.gathering.GatheringRepository;
 import com.kosta268.eco_connect.repository.gathering.MemberGatheringRepository;
+import com.kosta268.eco_connect.repository.gifticon.MemberGifticonRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
-import java.util.List;
-import java.util.stream.Collectors;
 
 @Service
 @Transactional
@@ -34,8 +32,8 @@ public class MypageGathringService {
     }
 
     public Page<MypageGatheringDto> findMyGathering(Long memberId, Pageable pageable) {
-        Page<Gathering> Gatherings = gatheringRepository.findByCreator_MemberId(memberId, pageable);
+        Page<Gathering> gatherings = gatheringRepository.findByCreator_MemberId(memberId, pageable);
 
-        return Gatherings.map(gathering -> MypageGatheringDto.fromEntity(gathering));
+        return gatherings.map(gathering -> MypageGatheringDto.fromEntity(gathering));
     }
 }

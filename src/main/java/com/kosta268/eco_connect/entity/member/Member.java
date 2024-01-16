@@ -35,6 +35,9 @@ public class Member {
     private String email;
     private String profile;
     private String address;
+    private String zoneCode;
+    private String fullAddress;
+    private String subAddress;
     private LocalDateTime createdIn;
 
     @Builder.Default

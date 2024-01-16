@@ -1,13 +1,9 @@
 package com.kosta268.eco_connect.service.member;
 
 import com.kosta268.eco_connect.dto.member.*;
-import com.kosta268.eco_connect.dto.mission.MemberMissionDto;
-import com.kosta268.eco_connect.dto.mission.MissionDto;
-import com.kosta268.eco_connect.entity.admin.Faq;
 import com.kosta268.eco_connect.entity.member.Member;
 import com.kosta268.eco_connect.entity.member.RefreshToken;
 import com.kosta268.eco_connect.entity.mission.MemberMission;
-import com.kosta268.eco_connect.entity.mission.Mission;
 import com.kosta268.eco_connect.entity.point.Point;
 import com.kosta268.eco_connect.jwt.TokenProvider;
 import com.kosta268.eco_connect.repository.member.MemberRepository;
@@ -26,7 +22,6 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.NoSuchElementException;
-import java.util.stream.Collectors;
 
 @Slf4j
 @Service
@@ -89,24 +84,12 @@ public class MemberService {
     // reissue
     public TokenResponseDto reissue(TokenReissueRequestDto tokenReissueRequestDto,
                                     HttpServletRequest request, HttpServletResponse response) throws Throwable {
-        // 1. Refresh Token 검증
-//        if (!tokenProvider.validateToken(tokenReissueDto.getRefreshToken())) {
-//            throw new IllegalArgumentException("Refresh Token이 유효하지 않습니다.");
-//        }
-        String cookieRefreshToken = tokenProvider.getCookie(request);
-        if (!tokenProvider.validateToken(cookieRefreshToken)) {
-            throw new IllegalArgumentException("Refresh Token이 유효하지 않습니다.");
-        }
 
         // 2. Access Token 에서 User ID 가져오기
         Authentication authentication = tokenProvider.getAuthentication(tokenReissueRequestDto.getAccessToken());
         // 3. 저장소에서 User ID를 기반으로 Refresh Token 값 가져오기
         RefreshToken refreshToken = refreshTokenRepository.findById(authentication.getName())
                 .orElseThrow(() -> new RuntimeException("로그아웃 된 사용자입니다."));
-        // 4. Refresh Token 일치하는지 검사
-        if (!refreshToken.getValue().equals(cookieRefreshToken)) {
-            throw new IllegalArgumentException("토큰의 유저 정보가 일치하지 않습니다.");
-        }
 
         // 5. 새로운 토큰 생성
         TokenDto tokenDto = tokenProvider.generateTokenDto(authentication);
