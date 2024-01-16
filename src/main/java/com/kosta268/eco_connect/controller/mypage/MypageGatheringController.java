@@ -38,4 +38,6 @@ public class MypageGatheringController {
         Long memberId = userDetails.getMemberId();
         return mypageGathringService.findMyGathering(memberId, pageable);
     }
+
+
 }

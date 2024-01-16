@@ -1,0 +1,373 @@
+.mypage-member-modify-index {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.mypage-member-modify-index .mypage-wrap-wrapper {
+    background-color: #ffffff;
+    height: 1076px;
+    width: 1440px;
+}
+
+.mypage-member-modify-index .mypage-wrap {
+    align-items: center;
+    background-color: #ffffff;
+    display: flex;
+    height: 1076px;
+    position: relative;
+    width: 1440px;
+}
+
+.mypage-member-modify-index .side-bar-wrap {
+    height: 1076px;
+    position: relative;
+    width: 100px;
+}
+
+.mypage-member-modify-index .content-wrap {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 1076px;
+    padding: 40px 50px;
+    position: relative;
+    width: 1340px;
+}
+
+.mypage-member-modify-index .page-info-wrap {
+    align-items: flex-start;
+    display: flex;
+    height: 125px;
+    position: relative;
+    width: 1225px;
+}
+
+.mypage-member-modify-index .frame {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 125px;
+    justify-content: center;
+    position: relative;
+    width: 160px;
+}
+
+.mypage-member-modify-index .text-wrapper {
+    color: #000000;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    height: 21.66px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: relative;
+    width: 102px;
+}
+
+.mypage-member-modify-index .div {
+    color: #000000;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    height: 19.49px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: relative;
+    text-align: center;
+    width: 160px;
+}
+
+.mypage-member-modify-index .profile-wrap {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    height: 833px;
+    overflow: hidden;
+    position: relative;
+    width: 1225px;
+}
+
+.mypage-member-modify-index .profile-title {
+    align-items: flex-start;
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    margin-right: -15px;
+    position: relative;
+    width: 1240px;
+}
+
+.mypage-member-modify-index .text-wrapper-2 {
+    color: #000000;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    height: 40px;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    width: 1240px;
+}
+
+.mypage-member-modify-index .profile-content {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 778px;
+    margin-right: -1px;
+    position: relative;
+    width: 1226px;
+}
+
+.mypage-member-modify-index .profile-content-top {
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    height: 240px;
+    padding: 10px;
+    position: relative;
+    width: 830px;
+}
+
+.mypage-member-modify-index .profile-content-top-1 {
+    align-items: center;
+    background-color: #fafafa;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 300px;
+    justify-content: center;
+    overflow: hidden;
+    padding: 10px;
+    position: relative;
+    width: 400px;
+}
+
+.mypage-member-modify-index .profile-content-top-2 {
+    align-items: center;
+    background-color: #c8c8c8;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 220px;
+    justify-content: center;
+    overflow: hidden;
+    padding: 10px;
+    position: relative;
+    width: 400px;
+}
+
+.mypage-member-modify-index .text-wrapper-3 {
+    color: #000000;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    height: 30px;
+    letter-spacing: 0;
+    line-height: 40px;
+    position: relative;
+    width: 330px;
+    padding-left: 3px;
+}
+
+.mypage-member-modify-index .profile-img-wrap {
+    /*align-items: center;*/
+    display: flex;
+    gap: 30px;
+    height: 200px;
+    position: relative;
+    width: 330px;
+}
+
+.mypage-member-modify-index .profile-img-input-wrap {
+    width: 170px;
+    height: 160px;
+}
+
+.mypage-member-modify-index .profile-img {
+    border: 1px solid #000000;
+    border-radius: 10px;
+    position: relative;
+    /*height: 140px;*/
+    /*width: 170px;*/
+    height: 100%;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.mypage-member-modify-index .file-input {
+    width: 170px;
+
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+}
+
+.mypage-member-modify-index .profile-img-btn-wrap {
+    align-items: flex-end;
+    display: flex;
+    height: 160px;
+    position: relative;
+    width: 130px;
+}
+
+.mypage-member-modify-index .div-wrapper {
+    align-items: center;
+    background-color: #03c75a;
+    border-radius: 10px;
+    display: flex;
+    gap: 10px;
+    height: 40px;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    width: 130px;
+}
+
+.mypage-member-modify-index .text-wrapper-4 {
+    color: #ffffff;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    height: 40px;
+    /*letter-spacing: 0;*/
+    /*line-height: normal;*/
+    line-height: 36px;
+    /*margin-top: -1px;*/
+    position: relative;
+    text-align: center;
+    width: 130px;
+
+    background-color: #03c75a;
+    border-radius: 10px;
+    border: 1px solid #03c75a;
+
+    cursor: pointer;
+}
+
+.mypage-member-modify-index .div-2 {
+    border: 1px solid #000000;
+    border-radius: 10px;
+    height: 40px;
+    position: relative;
+    width: 330px;
+    padding-left: 10px;
+    font-size: 15px;
+}
+
+.mypage-member-modify-index .profile-content-2 {
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    /*height: 350px;*/
+    padding: 10px;
+    position: relative;
+    width: 830px;
+}
+
+.mypage-member-modify-index .profile-content-3 {
+    align-items: center;
+    background-color: #fafafa;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    /*height: 330px;*/
+    /*justify-content: center;*/
+    justify-content: flex-start;
+    overflow: hidden;
+    padding: 10px;
+    position: relative;
+    width: 400px;
+}
+
+.mypage-member-modify-index .div-wrapper-2 {
+    align-items: flex-end;
+    display: flex;
+    gap: 20px;
+    height: 50px;
+    justify-content: flex-end;
+    position: relative;
+    width: 330px;
+}
+
+.mypage-member-modify-index .profile-content-4 {
+    align-items: center;
+    background-color: #fafafa;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    height: 330px;
+    /*justify-content: center;*/
+    justify-content: flex-start;
+    overflow: hidden;
+    padding: 10px;
+    position: relative;
+    width: 400px;
+}
+
+.mypage-member-modify-index .form-address-form {
+    align-items: center;
+    display: flex;
+    gap: 20px;
+    height: 40px;
+    position: relative;
+    width: 330px;
+}
+
+.mypage-member-modify-index .form-address-zipcode {
+    border: 1px solid #000000;
+    border-radius: 10px;
+    height: 40px;
+    position: relative;
+    width: 150px;
+    padding-left: 10px;
+}
+
+.mypage-member-modify-index .form-address-btn {
+    border: 1px solid #03c75a;
+    border-radius: 10px;
+    height: 40px;
+    overflow: hidden;
+    position: relative;
+    width: 160px;
+}
+
+.mypage-member-modify-index .form-address-btn-2 {
+    color: #03c75a;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    height: 40px;
+    left: 0;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 160px;
+}
+
+.mypage-member-modify-index .form-id-validation {
+    color: #ff0000;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    height: 16px;
+    letter-spacing: 0;
+    line-height: 16px;
+    position: relative;
+    width: 320px;
+    padding: 0 3px;
+}

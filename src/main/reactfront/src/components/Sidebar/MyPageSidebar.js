@@ -7,6 +7,7 @@ function MyPageSidebar() {
         member: false,
         mission: false,
         gathering: false,
+        gifticon: false,
     });
 
     const handleMouseEnter = (type) => {
@@ -69,6 +70,23 @@ function MyPageSidebar() {
                             }
                         </Link>
                     </div>
+                    <div className="img-div"
+                         onMouseEnter={() => handleMouseEnter('gifticon')}
+                         onMouseLeave={() => handleMouseLeave('gifticon')}
+                    >
+                        <Link to={"/mypage/gifticon"}>
+                            {
+                                hover.gifticon ?
+                                    <p className="hover-div-gifticon">나의<br/>기프티콘</p> :
+                                    <img
+                                        className="icon-qr-code-scanner"
+                                        alt="Icon qr code scanner"
+                                        src="https://cdn.animaapp.com/projects/65976440eaec1a9e33ea98d1/releases/65976459fe610333167ffe39/img/---icon--qr-code-scanner-@2x.png"
+                                    />
+                            }
+                        </Link>
+                    </div>
+
                     {/*<div className="img-div">*/}
                     {/*    <img*/}
                     {/*        className="group"*/}

@@ -57,6 +57,20 @@
     color: #FFFFFF;
 }
 
+.mypage-sidebar-index .hover-div-gifticon {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+
+    display: flex;
+    /*justify-content: center;*/
+    height: 50px;
+    text-align: center;
+    color: #FFFFFF;
+    /*line-height: 10px;*/
+
+}
+
 .mypage-sidebar-index .icon-user {
     height: 30px;
     position: relative;
@@ -79,6 +93,12 @@
     height: 30px;
     position: relative;
     width: 30px;
+}
+
+.mypage-sidebar-index .icon-qr-code-scanner {
+    height: 28px;
+    position: relative;
+    width: 28px;
 }
 
 .mypage-sidebar-index .icon-headset-help {
